@@ -1,0 +1,189 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{tabu}
+\usepackage{pifont}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+%\lstset{
+	%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+	%	rulesepcolor= \color{gray}, %代码块边框颜色
+	%	breaklines=true,  %代码过长则换行
+	%	numbers=left, %行号在左侧显示
+	%	numberstyle= \small,%行号字体
+	%	keywordstyle= \color{blue},%关键字颜色
+	%	frame=shadowbox,%用方框框住代码块
+	%	basicstyle=\ttfamily
+	%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+	\pagestyle{myheadings}
+	\thispagestyle{plain}
+	\newpage
+	\setcounter{page}{1}
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{\vspace{2mm}
+				\hbox to 6.28in { {\bf Microeconomics \hfill} {\hfill {\rm #2} {\rm #3}} }
+				\vspace{4mm}
+				\hbox to 6.28in { {\Large \hfill #1  \hfill} }
+				\vspace{3mm}}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\renewcommand\contentsname{Contents}
+\begin{document}
+	\homework{Homework03}{Group45}{吴熙楠}
+	\tableofcontents
+	\newpage
+\section{Problem\quad 1}
+\noindent
+\textbf{Answer:}
+\par(a)$MU_{x}=\dfrac{\partial u(x,y)}{\partial x}=3,MU_{y}=\dfrac{\partial u(x,y)}{\partial y}=1$
+\par (b)Yes, because $MU_{x}=3>0$ and $MU_{y}=1>0$
+\par (c)$MRS_{x,y}=-\dfrac{MU_{x}}{MU_{y}}=-3$, it means that having one book for his friends is as good as having three for himself. In other words, the utility keeps the same while he has 3 more y and 1 less x.
+\par (d)No, because MRS is constant no matter what x and y are.
+\section{Problem\quad 2}
+\noindent
+\textbf{Answer:}
+\par (a)We suppose that his utility function is $Eu=\pi u(w_{g})+(1-\pi )u(w_{b})$\\$=\pi u(w+xr_{g})+(1-\pi)u(w+xr_{b})$
+\par $\dfrac{dEu}{dx}=\pi r_{g}\dfrac{du(z)}{dz}|_{z=w+xr_{g}}+(1-\pi)r_{b}\dfrac{du(z)}{dz}|_{z=w+xr_{b}}$
+\par \ding{172} for $0\le x\le w$, if $\dfrac{dEu}{dx}>0$, then the more he invests, the more utility he can get.
+\par The best strategy is that he invests all his wealth($x=w$).
+\par \ding{173} for $0\le x\le w$, if $\dfrac{dEu}{dx}<0$, then the more he invests, the less utility he can get.
+\par The best strategy is that he invests zero($x=0$). 
+\par \ding{174} for $0\le x\le w$, if $\dfrac{dEu}{dx}==0$, then no matter what he invests, the utility is a constant.
+\par Then no matter what he invests, the utility is a constant. 
+\par \ding{175}for $0\le x\le w$, if Eu increases first but decreases later.
+\par $\dfrac{dEu}{dx}=
+		\bigg\lbrace
+		\begin{aligned}\,
+			& >0, \,
+			&&\text{for}\ \ 0\le x<x_{0}, \\[-.5ex]
+			& \le 0, 
+			&&\text{for}\ \ x_{0}\le x\le w,
+		\end{aligned}$
+\par Then for $x=x_{0}$, we can get the best utility. So the best strategy is that he invests $x_{0}$.
+\par \ding{176}for $0\le x\le w$, if Eu decreases first but increases later.
+\par $\dfrac{dEu}{dx}=
+		\bigg\lbrace
+		\begin{aligned}\,
+			& <0, \,
+			&&\text{for}\ \ 0\le x<x_{1}, \\[-.5ex]
+			& \ge 0, 
+			&&\text{for}\ \ x_{1}\le x\le w,
+		\end{aligned}$
+\par Then if $Eu(x=w)>Eu(x=0)$, then the best strategy is that he invests $w$; if $Eu(x=w)<Eu(x=0)$, then the best strategy is that he invests $0$; if $Eu(x=w)==Eu(x=0)$, then he can choose to invest 0 or $w$.
+\par (b)Similarly we should change the utility:$Eu^{\prime}=\pi u(w_{g})+(1-\pi )u(w_{b})$\\$=\pi u(w+(1-t)xr_{g})+(1-\pi)u(w+(1-t)xr_{b})$
+\par $\dfrac{dEu^{\prime}}{dx}=\pi(1-t) r_{g}\dfrac{du(z)}{dz}|_{z=w+(1-t)xr_{g}}+(1-\pi)(1-t)r_{b}\dfrac{du(z)}{dz}|_{z=w+(1-t)xr_{b}}=(1-t)\dfrac{dEu(x^{\prime})}{dx^{\prime}}|_{x^{\prime}=(1-t)x}$
+\par \ding{172} for $0\le x\le w$, if $\dfrac{dEu^{\prime}}{dx}>0$, then the more he invests, the more utility he can get.
+\par The best strategy is that he invests all his wealth($x=w$).
+\par \ding{173} for $0\le x\le w$, if $\dfrac{dEu^{\prime}}{dx}<0$, then the more he invests, the less utility he can get.
+\par The best strategy is that he invests zero($x=0$). 
+\par \ding{174} for $0\le x\le w$, if $\dfrac{dEu^{\prime}}{dx}==0$, then no matter what he invests, the utility is a constant.
+\par Then no matter what he invests, the utility is a constant. 
+\par \ding{175}for $0\le x\le w$, if $Eu^{\prime}$ increases first but decreases later.($x_{0}^{\prime}=\dfrac{x_{0}}{1-t},x_{0}<(1-t)w$)
+\par $\dfrac{dEu^{\prime}}{dx}=
+		\bigg\lbrace
+		\begin{aligned}\,
+			& >0, \,
+			&&\text{for}\ \ 0\le x<x_{0}^{\prime}, \\[-.5ex]
+			& \le 0, 
+			&&\text{for}\ \ x_{0}^{\prime}\le x\le w,
+		\end{aligned}$
+\par Then for $x=x_{0}^{\prime}$, we can get the best utility. So the best strategy is that he invests $x_{0}^{\prime}$.
+\par \ding{176}for $0\le x\le w$, if $Eu^{\prime}$ decreases first but increases later.($x_{1}^{\prime}=\dfrac{x_{1}}{1-t},x_{1}<(1-t)w$)
+\par $\dfrac{dEu^{\prime}}{dx}=
+		\bigg\lbrace
+		\begin{aligned}\,
+			& <0, \,
+			&&\text{for}\ \ 0\le x<x_{1}^{\prime}, \\[-.5ex]
+			& \ge 0, 
+			&&\text{for}\ \ x_{1}^{\prime}\le x\le w,
+		\end{aligned}$
+\par Then if $Eu^{\prime}(x=w)>Eu^{\prime}(x=0)$, then the best strategy is that he invests $w$; if $Eu^{\prime}(x=w)<Eu^{\prime}(x=0)$, then the best strategy is that he invests $0$; if $Eu^{\prime}(x=w)==Eu^{\prime}(x=0)$, then he can choose to invest 0 or $w$.
+\par We should notice that $x_{0}^{\prime}=\dfrac{x_{0}}{1-t},x_{1}^{\prime}=\dfrac{x_{1}}{1-t}$.
+\section{Problem\quad 3}
+\noindent
+\textbf{Answer:}
+\par Assume that he borrows x yuan in the first period, then $c_{1}=x$ and $c_{2}=8800-1.1x$.\\
+So $u(x)=x(8800-1.1x)$, and $\dfrac{du}{dx}=8800-2.2x$. Because this is a quadratic function, we can set $\dfrac{du}{dx}$ equal to zero and then we can get the maximum utility function.\\
+So $\dfrac{du}{dx}=8800-2.2x=0\rightarrow x=c_{1}=4000,c_{2}=4400$, and $u_{max}=17600000$
+\section{Problem\quad 4}
+\noindent
+\textbf{Answer:}
+\par (a)$\epsilon_{x,I}=\dfrac{\partial x}{\partial I}\dfrac{I}{x}=\dfrac{2-2I}{p_{x}}\dfrac{p_{x}}{2-I}=\dfrac{2(1-I)}{2-I}$
+\par (b)If beef is a normal good, then $0<\epsilon_{x,I}\rightarrow 0<\dfrac{2(1-I)}{2-I}$.
+\par So we can solve this inequality, and we can get that $I<1$ or $I>2$.
+\par But we also know that $x\ge 0$, so we can get that $0\le I\le 2$.
+\par So if $0\le I<1$, the beef is a normal good.
+\section{Problem\quad 5}
+\noindent
+\textbf{Answer:}
+\par (a)We can know that $Q^{D}=Q^{S}\rightarrow 150-50p=60+40p$, So we can solve that $p=1,Q=100$.
+\par (b)$Q^{S\prime}=60+40(p-0.5)=40+40p$,then $Q^{D}=Q^{S\prime}\rightarrow 150-50p=40+40p$.\\
+We can solve that $p^{\prime}=\dfrac{11}{9},Q^{\prime}=\dfrac{800}{9}$
+\par(c)$CS_{1}=\int_{0}^{100}(\dfrac{150-q}{50})dq-1\times 100=200-100=100$
+\par $CS_{2}=\int_{0}^{\frac{800}{9}}(\dfrac{150-q}{50})dq-\dfrac{11}{9}\times \dfrac{800}{9}=\dfrac{6400}{81}$
+\par So $\Delta CS=CS_{2}-CS_{1}=\dfrac{6400}{81}-100=-\dfrac{1700}{81}$
+\par (d)$PS_{1}=1\times 100-\int_{0}^{100}(\dfrac{q-60}{40})dq=100+25=125$
+\par $PS_{2}=\dfrac{11}{9}\times \dfrac{800}{9}-\int_{0}^{\frac{800}{9}}(\dfrac{q-40}{40})dq=\dfrac{8000}{81}$
+\par $\Delta PS=PS_{2}-PS_{1}=\dfrac{8000}{81}-125=-\dfrac{2125}{81}$
+\par (e)government benefit=$0.5\times \dfrac{800}{9}=\dfrac{400}{9}$
+\par(f)the dead-weight loss=$0.5\times (100-\dfrac{800}{9})\times 0.5=\dfrac{25}{9}$\\
+We can find that $\Delta CS+\Delta PS$ + government benefit + the dead-weight loss=0.
+\end{document} 

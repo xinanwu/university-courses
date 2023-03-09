@@ -1,0 +1,147 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{tabu}
+\usepackage{pifont}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+%\lstset{
+	%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+	%	rulesepcolor= \color{gray}, %代码块边框颜色
+	%	breaklines=true,  %代码过长则换行
+	%	numbers=left, %行号在左侧显示
+	%	numberstyle= \small,%行号字体
+	%	keywordstyle= \color{blue},%关键字颜色
+	%	frame=shadowbox,%用方框框住代码块
+	%	basicstyle=\ttfamily
+	%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+	\pagestyle{myheadings}
+	\thispagestyle{plain}
+	\newpage
+	\setcounter{page}{1}
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{\vspace{2mm}
+				\hbox to 6.28in { {\bf Microeconomics \hfill} {\hfill {\rm #2} {\rm #3}} }
+				\vspace{4mm}
+				\hbox to 6.28in { {\Large \hfill #1  \hfill} }
+				\vspace{3mm}}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\renewcommand\contentsname{Contents}
+\begin{document}
+	\homework{Homework04}{Group45}{吴熙楠}
+	\tableofcontents
+	\newpage
+\section{Problem\quad 1}
+\noindent
+\textbf{Answer:}
+\par The total revenue that the monopolist can get is that $u=x_{1}p_{1}+x_{2}p_{2}$
+\par Because the monopolist has zero marginal cost, We have no limit on $x_{1}$ and $x_{2}$.
+\par $\dfrac{\partial u}{\partial p_{1}}=\dfrac{\partial u}{\partial p_{2}}=0\Rightarrow p_{1}=\dfrac{a_{1}}{2b_{1}},p_{2}=\dfrac{a_{2}}{2b_{2}}$
+\par The monopolist will not choose to price discriminate, so $p_{1}=p_{2}$.
+\par Then we can get that $a_{1}b_{2}=a_{2}b_{1}$ or $\dfrac{a_{1}}{b_{1}}=\dfrac{a_{2}}{b_{2}}$.
+
+\section{Problem\quad 2}
+\noindent
+\textbf{Answer:}
+\par (a)We know that $b=1000-a$, so $U(a)=\sqrt{a}+\sqrt{1000-a}$.
+\par In order to maximize $U$, $\dfrac{dU}{da}=\dfrac{1}{2\sqrt{a}}-\dfrac{1}{2\sqrt{1000-a}}=0\Rightarrow a=500$.
+\par Because $b=1000-a=500$, $a=b=500$, $U_{max}=20\sqrt{5}$. It's easy to show that $U$ is the largest in this range.
+\par (b)We know that $b=1000-a$, so $U(a)=-(\dfrac{1}{a}+\dfrac{1}{1000-a})$.
+\par In order to maximize $U$, $\dfrac{dU}{da}=\dfrac{1}{a^{2}}-\dfrac{1}{(1000-a)^{2}}=0\Rightarrow a=500$.
+\par Because $b=1000-a=500$, $a=b=500$, $U_{max}=-\dfrac{1}{250}$. It's easy to show that $U$ is the largest in this range.
+\par (c)In this situation, if $a=b=500$, then $U=min(a,b)=500$.
+\par If $a\neq b$, we assume that $a<b$. Then we can get that $a<500$ and $b>500$, so $U=min(a,b)=a<500$.
+\par So $U_{max}=500$, and $a=b=500$.
+\par (d)In this situation, if $a=b=500$, then $U=max(a,b)=500$.
+\par If $a\neq b$, we assume that $a<b$. Then we can get that $a<500$ and $b>500$, so $U=max(a,b)=b>500$.($0\le a,b\le 1000$)
+\par So $b=1000$ and $a=0$, or $a=1000$ and $b=0$, $U_{max}=1000$. So she will give all of their money to A or all of their money to B.
+\par (e)We know that $b=1000-a$, so $U(a)=a^{2}+(1000-a)^{2}=2a^{2}-2000a+1000^{2}$.
+\par In order to maximize $U$, we know that this is a parabolic function.
+\par So $b=1000$ and $a=0$, or $a=1000$ and $b=0$, $U_{max}=1000000$. It's easy to show that $U$ is the largest in this range.
+\section{Problem\quad 3}
+\noindent
+\textbf{Answer:}
+\par (a)We know that $a=1000-2b$, so $U(b)=1000-b$.($0\le a\le 1000,0\le b\le 500$)
+\par We find that the bigger $b$ is, the smaller the utility function $U$ is. So in order to maximize $U$, $b=0$.
+\par Because $a=1000-2b=1000$, $a=1000,b=0$, $U_{max}=1000$. It's easy to show that $U$ is the largest in this range.
+\par (b)We know that $a=1000-2b$, so $U(b)=b-1000$.($0\le a\le 1000,0\le b\le 500$)
+\par We find that the bigger $b$ is, the bigger the utility function $U$ is. So in order to maximize $U$, $b=500$.
+\par Because $a=1000-2b=0$, $a=0,b=500$, $U_{max}=-500$. It's easy to show that $U$ is the largest in this range.
+\par (c)We know that $a=1000-2b$, so $U(b)=1000b-2b^{2}$.($0\le a\le 1000,0\le b\le 500$)
+\par In order to maximize $U$, $\dfrac{dU}{db}=1000-4b=0\Rightarrow b=250$.
+\par Because $a=1000-2b=500$, $a=500,b=250$, $U_{max}=125000$. It's easy to show that $U$ is the largest in this range.
+\section{Problem\quad 4}
+\noindent
+\textbf{Answer:}
+\par (a)$\mathcal{L}=u^{A}+\lambda(u^{B}-\bar{u})+\mu_{1}(x^{A}_{1}+x^{B}_{1}-w_{1})+\mu_{2}(x^{A}_{2}+x^{B}_{2}-w_{2})$
+\par $\dfrac{\partial \mathcal{L}}{\partial x_{1}^{A}}=\dfrac{\partial u^{A}}{\partial x_{1}^{A}}+\mu_{1}=0\qquad \dfrac{\partial \mathcal{L}}{\partial x_{2}^{A}}=\dfrac{\partial u^{A}}{\partial x_{2}^{A}}+\mu_{2}=0\Rightarrow MRS_{A}=\dfrac{\mu_{1}}{\mu_{2}}$
+\par Also we can get that $MRS_{B}=\dfrac{\mu_{1}}{\mu_{2}}=MRS_{A}$
+\par $MRS_{A}=\dfrac{\partial u^{A}/\partial x_{1}^{A}}{\partial u^{A}/\partial x_{2}^{A}}|_{x_{1}^{A\star},x_{2}^{A\star}}=\dfrac{x_{2}^{A\star}}{x_{1}^{A\star}}$\qquad$MRS_{B}=\dfrac{\partial u^{B}/\partial x_{1}^{B}}{\partial u^{B}/\partial x_{2}^{B}}|_{x_{1}^{B\star},x_{2}^{B\star}}=\dfrac{x_{2}^{B\star}}{2x_{1}^{B\star}}$
+\par From the Lagrangian procedure, we know that $MRS_{A}=MRS_{B}\Rightarrow \dfrac{x_{2}^{A\star}}{x_{1}^{A\star}}=\dfrac{x_{2}^{B\star}}{2x_{1}^{B\star}}$
+\par $\Rightarrow \dfrac{x_{2}^{A\star}}{x_{1}^{A\star}}=\dfrac{10-x_{2}^{A\star}}{2(21-x_{1}^{A\star})}$ or $\dfrac{x_{2}^{B\star}}{2x_{1}^{B\star}}=\dfrac{10-x_{2}^{B\star}}{21-x_{1}^{B\star}}$
+\par (b)We know that in order to achieve the Walrath equilibrium,\\we have $\dfrac{\partial u^{A}/\partial x_{1}^{A}}{\partial u^{A}/\partial x_{2}^{A}}|_{x_{1}^{A\star},x_{2}^{A\star}}=\dfrac{\partial u^{B}/\partial x_{1}^{B}}{\partial u^{B}/\partial x_{2}^{B}}|_{x_{1}^{B\star},x_{2}^{B\star}}=\dfrac{p_{1}}{p_{2}}\Rightarrow \dfrac{x_{2}^{A\star}}{x_{1}^{A\star}}=\dfrac{x_{2}^{B\star}}{2x_{1}^{B\star}}=\dfrac{p_{1}}{p_{2}}$
+\par Also we have $x_{1}^{A\star}+x_{1}^{B\star}=21,x_{2}^{A\star}+x_{2}^{B\star}=10$.
+\par $p_{1}x_{1}^{A\star}+p_{2}x_{2}^{A\star}=p_{1}w_{1}^{A}+p_{2}w_{2}^{A},p_{1}x_{1}^{B\star}+p_{2}x_{2}^{B\star}=p_{1}w_{1}^{B}+p_{2}w_{2}^{B}$
+\par We assume that $p_{2}=1$.
+\par Then we can solve the equations, and we can get that: 
+\par $x_{1}^{A\star}=\dfrac{29}{2},x_{2}^{A\star}=\dfrac{58}{11},x_{1}^{B\star}=\dfrac{13}{2},x_{2}^{B\star}=\dfrac{52}{11},p_{1}=\dfrac{4}{11},p_{2}=1$ 
+\end{document} 
