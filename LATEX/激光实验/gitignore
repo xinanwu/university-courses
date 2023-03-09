@@ -1,0 +1,20 @@
+Thumbs.db
+.fuse_*
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# beamer
+*.nav
+*.snm
+*.toc
+*.vrb
+
+# others
+svg*/
+_minted*/
+
+Zipped/

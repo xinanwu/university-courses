@@ -1,0 +1,43 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\providecommand{\href}[2]{#2}
+\providecommand{\doi}[1]{DOI: \href{http://dx.doi.org/#1}{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
+  \urlstyle{same}\fi
+
+\bibitem[De~Broglie(1924)]{de1924recherches}
+DE~BROGLIE L.
+\newblock Recherches sur la th{\'e}orie des quanta\allowbreak[D].
+\newblock [S.l.]: Migration-universit{\'e} en cours d'affectation, 1924.
+
+\bibitem[Davisson\ et~al.(1927)Davisson and Germer]{davisson1927diffraction}
+DAVISSON C, GERMER L H.
+\newblock Diffraction of electrons by a crystal of nickel\allowbreak[J].
+\newblock Physical review, 1927, 30\penalty0 (6): 705.
+
+\bibitem[Griffiths(2016)]{griffiths2016introduction}
+GRIFFITHS D J.
+\newblock Introduction to quantum mechanics\allowbreak[M].
+\newblock [S.l.]: Cambridge University Press, 2016.
+
+\bibitem[吴思诚{, }荀坤(2015)]{textbook}
+吴思诚{, }荀坤.
+\newblock 近代物理实验\allowbreak[M].
+\newblock 第4版.
+\newblock 北京: 高等教育出版社, 2015.
+
+\bibitem[Davey(1925)]{PhysRev.25.753}
+DAVEY W P.
+\newblock \href{https://link.aps.org/doi/10.1103/PhysRev.25.753}{Precision
+  measurements of the lattice constants of twelve common
+  metals}\allowbreak[J/OL].
+\newblock Phys. Rev., 1925, 25: 753--761.
+\newblock \url{https://link.aps.org/doi/10.1103/PhysRev.25.753}.
+
+\bibitem[COD()]{CODATAVa61:online}
+\href{https://physics.nist.gov/cgi-bin/cuu/Value?asil}{Codata value: lattice
+  parameter of silicon}\allowbreak[EB/OL].
+\newblock \url{https://physics.nist.gov/cgi-bin/cuu/Value?asil}.
+
+\end{thebibliography}
