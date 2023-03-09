@@ -1,0 +1,473 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{ash1972super}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AE}{%
+         family={Ash},
+         familyi={A\bibinitperiod},
+         given={EA},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=NG}{%
+         family={Nicholls},
+         familyi={N\bibinitperiod},
+         given={G},
+         giveni={G},
+      }}%
+    }
+    \strng{namehash}{AE+1}
+    \strng{fullhash}{AENG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/237510a0
+    \endverb
+    \field{number}{5357}
+    \field{pages}{510\bibrangedash 512}
+    \field{title}{Super-resolution aperture scanning microscope}
+    \verb{url}
+    \verb https://doi.org/10.1038/237510a0
+    \endverb
+    \field{volume}{237}
+    \field{journaltitle}{Nature}
+    \field{year}{1972}
+  \endentry
+
+  \entry{doi:10.1063/1.336848}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DU}{%
+         family={Dürig},
+         familyi={D\bibinitperiod},
+         given={U.},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=PDW}{%
+         family={Pohl},
+         familyi={P\bibinitperiod},
+         given={D.\bibnamedelima W.},
+         giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=RF}{%
+         family={Rohner},
+         familyi={R\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DU+1}
+    \strng{fullhash}{DUPDWRF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1063/1.336848
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1063/1.336848
+    \endverb
+    \field{number}{10}
+    \field{pages}{3318\bibrangedash 3327}
+    \field{title}{Near‐field optical‐scanning microscopy}
+    \verb{url}
+    \verb https://doi.org/10.1063/1.336848
+    \endverb
+    \field{volume}{59}
+    \field{journaltitle}{Journal of Applied Physics}
+    \field{year}{1986}
+  \endentry
+
+  \entry{BETZIG1986269}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BE}{%
+         family={Betzig},
+         familyi={B\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Lewis},
+         familyi={L\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Harootunian},
+         familyi={H\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=IM}{%
+         family={Isaacson},
+         familyi={I\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KE}{%
+         family={Kratschmer},
+         familyi={K\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BE+1}
+    \strng{fullhash}{BELAHAIMKE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1016/S0006-3495(86)83640-2
+    \endverb
+    \field{issn}{0006-3495}
+    \field{number}{1}
+    \field{pages}{269\bibrangedash 279}
+    \field{title}{Near Field Scanning Optical Microscopy (NSOM): Development
+  and Biophysical Applications}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S0006349586836402
+    \endverb
+    \field{volume}{49}
+    \field{journaltitle}{Biophysical Journal}
+    \field{year}{1986}
+  \endentry
+
+  \entry{doi:10.1021/acs.nanolett.1c00403}{article}{}
+    \name{author}{15}{}{%
+      {{hash=YG}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Guang},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Chi},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Yage},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YB}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Boyu},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bi},
+         familyi={B\bibinitperiod},
+         given={Yali},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Liao},
+         familyi={L\bibinitperiod},
+         given={Jiangshan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Haozheng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WH}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Hong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yuxi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Ziyu},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=GZ}{%
+         family={Gan},
+         familyi={G\bibinitperiod},
+         given={Zongsong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=YQ}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Quan},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=XJ}{%
+         family={Xia},
+         familyi={X\bibinitperiod},
+         given={Jinsong},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WP}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Ping},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YG+1}
+    \strng{fullhash}{YGYCCYYBBYLJLHWHWYLZGZYQWYXJWP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1021/acs.nanolett.1c00403
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1021/acs.nanolett.1c00403
+    \endverb
+    \field{note}{PMID: 33904733}
+    \field{number}{9}
+    \field{pages}{3887\bibrangedash 3893}
+    \field{title}{Direct Imaging of Integrated Circuits in CPU with 60 nm
+  Super-Resolution Optical Microscope}
+    \verb{url}
+    \verb https://doi.org/10.1021/acs.nanolett.1c00403
+    \endverb
+    \field{volume}{21}
+    \field{journaltitle}{Nano Letters}
+    \field{year}{2021}
+  \endentry
+
+  \entry{wang2013far}{article}{}
+    \name{author}{7}{}{%
+      {{hash=WP}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Pu},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=SMN}{%
+         family={Slipchenko},
+         familyi={S\bibinitperiod},
+         given={Mikhail\bibnamedelima N},
+         giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Mitchell},
+         familyi={M\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PEO}{%
+         family={Potma},
+         familyi={P\bibinitperiod},
+         given={Eric\bibnamedelima O},
+         giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+      {{hash=XX}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Xianfan},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=CJX}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Ji-Xin},
+         giveni={J\bibinithyphendelim X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WP+1}
+    \strng{fullhash}{WPSMNMJYCPEOXXCJX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/nphoton.2013.97
+    \endverb
+    \field{number}{6}
+    \field{pages}{449\bibrangedash 453}
+    \field{title}{Far-field imaging of non-fluorescent species with
+  subdiffraction resolution}
+    \verb{url}
+    \verb https://doi.org/10.1038/nphoton.2013.97
+    \endverb
+    \field{volume}{7}
+    \field{journaltitle}{Nature photonics}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Bi:20}{article}{}
+    \name{author}{12}{}{%
+      {{hash=BY}{%
+         family={Bi},
+         familyi={B\bibinitperiod},
+         given={Yali},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Chi},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={Tong},
+         familyi={T\bibinitperiod},
+         given={Lei},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Haozheng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YB}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Boyu},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Shuai},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=YG}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Guang},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Deng},
+         familyi={D\bibinitperiod},
+         given={Meng},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=BW}{%
+         family={Bao},
+         familyi={B\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Ye},
+         familyi={Y\bibinitperiod},
+         given={Lei},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WP}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Ping},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BY+1}
+    \strng{fullhash}{BYYCTLLHYBYSYGDMWYBWYLWP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1364/OPTICA.402009
+    \endverb
+    \field{number}{10}
+    \field{pages}{1402\bibrangedash 1407}
+    \field{title}{Far-field transient absorption nanoscopy with sub-50  nm
+  optical super-resolution}
+    \verb{url}
+    \verb http://opg.optica.org/optica/abstract.cfm?URI=optica-7-10-1402
+    \endverb
+    \field{volume}{7}
+    \field{journaltitle}{Optica}
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{doi:10.1021/acsphotonics.9b01821}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FA}{%
+         family={Fathi},
+         familyi={F\bibinitperiod},
+         given={Amir},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CCY}{%
+         family={Chung},
+         familyi={C\bibinitperiod},
+         given={Chao-Yu},
+         giveni={C\bibinithyphendelim Y\bibinitperiod},
+      }}%
+      {{hash=LYP}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Yuan-Pern},
+         giveni={Y\bibinithyphendelim P\bibinitperiod},
+      }}%
+      {{hash=DEWG}{%
+         family={Diau},
+         familyi={D\bibinitperiod},
+         given={Eric Wei-Guang},
+         giveni={E\bibinitperiod\bibinitdelim W\bibinithyphendelim
+  G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FA+1}
+    \strng{fullhash}{FACCYLYPDEWG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1021/acsphotonics.9b01821
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1021/acsphotonics.9b01821
+    \endverb
+    \field{number}{3}
+    \field{pages}{607\bibrangedash 613}
+    \field{title}{Label-Free Optical Microscope Based on a Phase-Modulated
+  Femtosecond Pump–Probe Approach with Subdiffraction Resolution}
+    \verb{url}
+    \verb https://doi.org/10.1021/acsphotonics.9b01821
+    \endverb
+    \field{volume}{7}
+    \field{journaltitle}{ACS Photonics}
+    \field{year}{2020}
+  \endentry
+\enddatalist
+\endinput
