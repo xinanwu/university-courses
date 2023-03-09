@@ -1,0 +1,60 @@
+% Copyright (c) 2008-2009 solvethis
+% Copyright (c) 2010-2016,2018-2019,2021 Casper Ti. Vector
+% Copyright (c) 2021 Kurapica
+% Copyright (c) 2021 iofu728
+% Overleaf version.
+%
+% 当前overleaf 版本字体和格式均符合2021硕士学位论文要求
+%
+% 该版本遵循北京大学研究生学位论文写作指南2019年v2版本、北京大学硕士研究生学位论文word模板，
+% 在CasperVector/pkuthss模板的基础上针对硕士研究生学位论文格式的要求进行相应修改，
+% 遵循 LaTeX Project Public License 和 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议
+% 如有任何疑问请在github/iofu728/pkuthss上提问或联系作者iofu728。
+%
+% 此处请保留 ugly 参数，参考文献管理采用GB/T 7714-2015标准。
+% 此处使用顺序编码制，如使用著者-出版年制则更改为b7714-2015av。
+% bib引用使用基本与日常学术论文写作相同，部分略有不同，
+% 参考https://github.com/hushidong/biblatex-gb7714-2015/blob/master/example/cls-beamer.tex
+\documentclass[UTF8,nocolorlinks,ugly]{pkuthss}
+\usepackage[backend=bibtex,bibstyle=gb7714-2015,citestyle=gb7714-2015]{biblatex}
+\setlength{\bibitemsep}{3bp}
+\renewcommand*{\bibfont}{\zihao{5}\linespread{1.27}\selectfont}
+
+\pkuthssinfo{
+	cthesisname = {人类生存发展与核科学课程作文},
+ 	thesiscover = {人类生存发展与核科学作文},
+	ctitle = {简述核聚变的原理及应用},
+	cauthor = {吴熙楠},
+	studentid = {1900011413},
+	date = {\zhdigits{2021}\ \ 年\ \ \zhnumber{5}\ \ 月},
+	school = {物理学院},
+	% 副教授 A.P. 讲师 Lect.
+	cmentor = {郭秋菊\ \ 教授},
+	ckeywords = {核聚变，新能源，核能文明}
+}
+\addbibresource{ref.bib}
+
+
+\begin{document}
+	\frontmatter
+	\pagestyle{empty}
+\maketitle
+\cleardoublepage
+\pagestyle{plain}
+\setcounter{page}{0}
+\pagenumbering{Roman}
+\include{chap/abs}
+\tableofcontents
+
+	\mainmatter
+	\include{chap/chap1}
+	\include{chap/chap2}
+    \include{chap/chap3}
+    \include{chap/chap4}
+    \include{chap/chap5}
+    \appendix  
+    \printbibliography[heading = bibintoc]
+
+\end{document}
+
+% vim:ts=4:sw=4

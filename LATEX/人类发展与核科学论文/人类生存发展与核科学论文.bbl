@@ -1,0 +1,151 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{Lee2011NuclearFE}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LS}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SSH}{%
+         family={Saw},
+         familyi={S\bibinitperiod},
+         given={S.\bibnamedelima H.},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LS+1}
+    \strng{fullhash}{LSSSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{398\bibrangedash 403}
+    \field{title}{Nuclear Fusion Energy—Mankind’s Giant Step Forward}
+    \field{volume}{30}
+    \field{journaltitle}{Journal of Fusion Energy}
+    \field{year}{2011}
+  \endentry
+
+  \entry{Focardi2010ANE}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=FS}{%
+         family={Focardi},
+         familyi={F\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rossi},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FS+1}
+    \strng{fullhash}{FSRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A new energy source from nuclear fusion}
+    \field{year}{2010}
+  \endentry
+
+  \entry{Petrescu2017SomePS}{article}{}
+    \name{author}{5}{}{%
+      {{hash=PR}{%
+         family={Petrescu},
+         familyi={P\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Raffaella},
+         familyi={R\bibinitperiod},
+         given={Aversa},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kozaitis},
+         familyi={K\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Antonio},
+         familyi={A\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PF}{%
+         family={Petrescu},
+         familyi={P\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PR+1}
+    \strng{fullhash}{PRRAKSAAPF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{703\bibrangedash 708}
+    \field{title}{Some Proposed Solutions to Achieve Nuclear Fusion}
+    \field{volume}{10}
+    \field{journaltitle}{American Journal of Engineering and Applied Sciences}
+    \field{year}{2017}
+  \endentry
+
+  \entry{chinaEAST2}{online}{}
+    \name{author}{1}{}{%
+      {{hash=}{%
+         family={中国政府网},
+         familyi={\bibinitperiod},
+      }}%
+    }
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+  \field{title}{我国“人造太阳”EAST装置实现1亿摄氏度等离子体运行}
+    \verb{url}
+    \verb http://www.gov.cn/xinwen/2018-11/12/content_5339518.htm
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{12}
+    \field{urlmonth}{11}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{chinaEAST1}{online}{}
+    \name{author}{1}{}{%
+      {{hash=}{%
+         family={凤凰网资讯},
+         familyi={\bibinitperiod},
+      }}%
+    }
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{中国“人造太阳”实验装置再获重大突破}
+    \verb{url}
+    \verb http://news.ifeng.com/a/20161103/50196150_0.shtml
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{03}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
+\enddatalist
+\endinput
