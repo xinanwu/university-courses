@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {A}数据检验}{2}{appendix.A}%
+\contentsline {section}{\numberline {B}四月份与七月份税收目录}{6}{appendix.B}%
+\contentsline {section}{\numberline {C}访谈稿}{7}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Camilo Mundólogo访谈稿}{7}{subsection.C.1}%
+\contentsline {subsection}{\numberline {C.2}William Andres Betancourt Villota访谈稿}{14}{subsection.C.2}%
+\contentsline {subsection}{\numberline {C.3}Airi访谈稿}{24}{subsection.C.3}%
+\contentsline {subsection}{\numberline {C.4}Jose 访谈稿}{38}{subsection.C.4}%
+\contentsline {subsection}{\numberline {C.5}La primera linea Bogotá访谈稿}{57}{subsection.C.5}%
+\contentsline {subsection}{\numberline {C.6}Julieth访谈稿}{71}{subsection.C.6}%
+\contentsline {subsection}{\numberline {C.7}Natalia Ibarra Escobar访谈稿}{84}{subsection.C.7}%

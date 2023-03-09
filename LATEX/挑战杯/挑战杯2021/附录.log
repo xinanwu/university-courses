@@ -1,0 +1,3142 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.10.25)  20 APR 2022 18:57
+entering extended mode
+**./附录.tex
+(附录.tex
+LaTeX2e <2021-06-01>
+L3 programming layer <2021-06-01> (phyasgn.cls
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval
+.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyv
+al.tex
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvut
+ils.tex
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyva
+l.tex))
+\XKV@depth=\count178
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.
+sty
+Package: expl3 2021-06-01 L3 programming layer (loader) 
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3bac
+kend-xetex.def
+File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
+ ()
+\c__kernel_sys_dvipdfmx_version_int=\count179
+\l__color_backend_stack_int=\count180
+\g__color_backend_stack_int=\count181
+\g__graphics_track_int=\count182
+\l__pdf_internal_box=\box50
+\g__pdf_backend_object_int=\count183
+\g__pdf_backend_annotation_int=\count184
+\g__pdf_backend_link_int=\count185
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xpar
+se\xparse.sty
+Package: xparse 2021-06-01 L3 Experimental document command parser
+)
+Document Class: phyasgn 2021/09/30 v0.2b PKU-PHY assignment class
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cl
+s
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.s
+ty
+Package: xeCJK 2021/06/20 v3.8.7 Typesetting CJK scripts with XeLaTeX
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex\ctexhook.s
+ty
+Package: ctexhook 2021/06/20 v2.5.7 Document and package hooks (CTEX)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3ke
+ys2e\l3keys2e.sty
+Package: l3keys2e 2021-06-01 LaTeX2e option processing using LaTeX3 keys
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtem
+plate\xtemplate.sty
+Package: xtemplate 2021-06-01 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen139
+\l__xtemplate_tmp_int=\count194
+\l__xtemplate_tmp_muskip=\muskip16
+\l__xtemplate_tmp_skip=\skip49
+)
+\l__xeCJK_tmp_int=\count195
+\l__xeCJK_tmp_box=\box51
+\l__xeCJK_tmp_dim=\dimen140
+\l__xeCJK_tmp_skip=\skip50
+\g__xeCJK_space_factor_int=\count196
+\l__xeCJK_begin_int=\count197
+\l__xeCJK_end_int=\count198
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip51
+\g__xeCJK_node_int=\count199
+\c__xeCJK_CJK_node_dim=\dimen141
+\c__xeCJK_CJK-space_node_dim=\dimen142
+\c__xeCJK_default_node_dim=\dimen143
+\c__xeCJK_default-space_node_dim=\dimen144
+\c__xeCJK_CJK-widow_node_dim=\dimen145
+\c__xeCJK_normalspace_node_dim=\dimen146
+\l__xeCJK_ccglue_skip=\skip52
+\l__xeCJK_ecglue_skip=\skip53
+\l__xeCJK_punct_kern_skip=\skip54
+\l__xeCJK_last_penalty_int=\count266
+\l__xeCJK_last_bound_dim=\dimen147
+\l__xeCJK_last_kern_dim=\dimen148
+\l__xeCJK_widow_penalty_int=\count267
+
+Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
+(xtemplate)             argument(s) on line 2335.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen149
+\l__xeCJK_mixed_punct_width_dim=\dimen150
+\l__xeCJK_middle_punct_width_dim=\dimen151
+\l__xeCJK_fixed_margin_width_dim=\dimen152
+\l__xeCJK_mixed_margin_width_dim=\dimen153
+\l__xeCJK_middle_margin_width_dim=\dimen154
+\l__xeCJK_bound_punct_width_dim=\dimen155
+\l__xeCJK_bound_margin_width_dim=\dimen156
+\l__xeCJK_margin_minimum_dim=\dimen157
+\l__xeCJK_kerning_total_width_dim=\dimen158
+\l__xeCJK_same_align_margin_dim=\dimen159
+\l__xeCJK_different_align_margin_dim=\dimen160
+\l__xeCJK_kerning_margin_width_dim=\dimen161
+\l__xeCJK_kerning_margin_minimum_dim=\dimen162
+\l__xeCJK_bound_dim=\dimen163
+\l__xeCJK_reverse_bound_dim=\dimen164
+\l__xeCJK_margin_dim=\dimen165
+\l__xeCJK_minimum_bound_dim=\dimen166
+\l__xeCJK_kerning_margin_dim=\dimen167
+\g__xeCJK_family_int=\count268
+\l__xeCJK_fam_int=\count269
+\g__xeCJK_fam_allocation_int=\count270
+\l__xeCJK_verb_case_int=\count271
+\l__xeCJK_verb_exspace_skip=\skip55
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontsp
+ec.sty
+Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontsp
+ec-xetex.sty
+Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count272
+\l__fontspec_language_int=\count273
+\l__fontspec_strnum_int=\count274
+\l__fontspec_tmp_int=\count275
+\l__fontspec_tmpa_int=\count276
+\l__fontspec_tmpb_int=\count277
+\l__fontspec_tmpc_int=\count278
+\l__fontspec_em_int=\count279
+\l__fontspec_emdef_int=\count280
+\l__fontspec_strong_int=\count281
+\l__fontspec_strongdef_int=\count282
+\l__fontspec_tmpa_dim=\dimen168
+\l__fontspec_tmpb_dim=\dimen169
+\l__fontspec_tmpc_dim=\dimen170
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.st
+y
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontsp
+ec.cfg)))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.c
+fg
+File: xeCJK.cfg 2021/06/20 v3.8.7 Configuration file for xeCJK package
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex\ctex.sty
+Package: ctex 2021/06/20 v2.5.7 Chinese adapter in LaTeX (CTEX)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex\ctexpatch.
+sty
+Package: ctexpatch 2021/06/20 v2.5.7 Patching commands (CTEX)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\l__ctex_tmp_int=\count283
+\l__ctex_tmp_box=\box52
+\l__ctex_tmp_dim=\dimen171
+\g__ctex_section_depth_int=\count284
+\g__ctex_font_size_int=\count285
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex/config\cte
+xopts.cfg
+File: ctexopts.cfg 2021/06/20 v2.5.7 Option configuration file (CTEX)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex/engine\cte
+x-engine-xetex.def
+File: ctex-engine-xetex.def 2021/06/20 v2.5.7 XeLaTeX adapter (CTEX)
+\ccwd=\dimen172
+\l__ctex_ccglue_skip=\skip56
+)
+\l__ctex_ziju_dim=\dimen173
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/zhnumber\zhnumb
+er.sty
+Package: zhnumber 2020/05/01 v2.8 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count286
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/zhnumber\zhnumb
+er-utf8.cfg
+File: zhnumber-utf8.cfg 2020/05/01 v2.8 Chinese numerals with UTF8 encoding
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex/scheme\cte
+x-scheme-chinese.def
+File: ctex-scheme-chinese.def 2021/06/20 v2.5.7 Chinese scheme for generic (CTE
+X)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex/config\cte
+x-name-utf8.cfg
+File: ctex-name-utf8.cfg 2021/06/20 v2.5.7 Caption with encoding UTF-8 (CTEX)
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfir
+st.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex/fontset\ct
+ex-fontset-windows.def
+File: ctex-fontset-windows.def 2021/06/20 v2.5.7 Windows fonts definition (CTEX
+)
+
+Package fontspec Info: Could not resolve font "KaiTi/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "SimHei/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "SimSun/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Font family 'SimSun(0)' created for font 'SimSun' with
+(fontspec)             options
+(fontspec)             [Script={CJK},BoldFont={SimHei},ItalicFont={KaiTi}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ctex/config\cte
+x.cfg
+File: ctex.cfg 2021/06/20 v2.5.7 Configuration file (CTEX)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphi
+cx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphi
+cs.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.s
+ty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gr
+aphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xe
+tex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath
+.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip57
+
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext
+.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.
+sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen176
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.
+sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen177
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.
+sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count287
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count288
+\leftroot@=\count289
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count290
+\DOTSCASE@=\count291
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen178
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count292
+\c@MaxMatrixCols=\count293
+\dotsspace@=\muskip17
+\c@parentequation=\count294
+\dspbrk@lvl=\count295
+\tag@help=\toks19
+\row@=\count296
+\column@=\count297
+\maxfields@=\count298
+\andhelp@=\toks20
+\eqnshift@=\dimen179
+\alignsep@=\dimen180
+\tagshift@=\dimen181
+\tagwidth@=\dimen182
+\totwidth@=\dimen183
+\lineht@=\dimen184
+\@envbody=\toks21
+\multlinegap=\skip58
+\multlinetaggap=\skip59
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geomet
+ry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.
+sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.s
+ty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count299
+\Gm@cntv=\count300
+\c@Gm@tempcnt=\count301
+\Gm@bindingoffset=\dimen185
+\Gm@wd@mp=\dimen186
+\Gm@odd@mp=\dimen187
+\Gm@even@mp=\dimen188
+\Gm@layoutwidth=\dimen189
+\Gm@layoutheight=\dimen190
+\Gm@layouthoffset=\dimen191
+\Gm@layoutvoffset=\dimen192
+\Gm@dimlist=\toks23
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geomet
+ry.cfg))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyh
+dr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip60
+\f@nch@O@elh=\skip61
+\f@nch@O@erh=\skip62
+\f@nch@O@olh=\skip63
+\f@nch@O@orh=\skip64
+\f@nch@O@elf=\skip65
+\f@nch@O@erf=\skip66
+\f@nch@O@olf=\skip67
+\f@nch@O@orf=\skip68
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpa
+ge.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolo
+rbox.sty
+Package: tcolorbox 2021/05/21 version 4.50 text color boxes
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\
+pgf.sty
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\p
+gfrcs.sty
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfutil-common.tex
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen193
+\pgfutil@tempdimb=\dimen194
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfutil-common-lists.tex))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfutil-latex.def
+\pgfutil@abb=\box55
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfrcs.code.tex
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revis
+ion.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\
+pgfcore.sty
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer
+\pgfsys.sty
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks27
+))
+\pgf@x=\dimen195
+\pgf@y=\dimen196
+\pgf@xa=\dimen197
+\pgf@ya=\dimen198
+\pgf@xb=\dimen199
+\pgf@yb=\dimen256
+\pgf@xc=\dimen257
+\pgf@yc=\dimen258
+\pgf@xd=\dimen259
+\pgf@yd=\dimen260
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count302
+\c@pgf@countb=\count303
+\c@pgf@countc=\count304
+\c@pgf@countd=\count305
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count306
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys-xetex.def
+File: pgfsys-xetex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)
+\pgfsys@objnum=\count307
+)))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count308
+\pgfsyssoftpath@bigbuffer@items=\count309
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.s
+ty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\co
+lor.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+ath.code.tex
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athcalc.code.tex
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athutil.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athparser.code.tex
+\pgfmath@dimen=\dimen261
+\pgfmath@count=\count310
+\pgfmath@box=\box56
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.code.tex
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.basic.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.trigonometric.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.random.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.comparison.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.base.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.round.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.misc.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.integerarithmetics.code.tex)))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count311
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfi
+nt.code.tex)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen262
+\pgf@picmaxx=\dimen263
+\pgf@picminy=\dimen264
+\pgf@picmaxy=\dimen265
+\pgf@pathminx=\dimen266
+\pgf@pathmaxx=\dimen267
+\pgf@pathminy=\dimen268
+\pgf@pathmaxy=\dimen269
+\pgf@xx=\dimen270
+\pgf@xy=\dimen271
+\pgf@yx=\dimen272
+\pgf@yy=\dimen273
+\pgf@zx=\dimen274
+\pgf@zy=\dimen275
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen276
+\pgf@path@lasty=\dimen277
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen278
+\pgf@shorten@start@additional=\dimen279
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count312
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen280
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen281
+\pgf@pt@y=\dimen282
+\pgf@pt@temp=\dimen283
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen284
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen285
+\pgf@sys@shading@range@num=\count313
+\pgf@shadingcount=\count314
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box60
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box61
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibili
+ty\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen286
+\pgf@nodesepend=\dimen287
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibili
+ty\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.
+sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks34
+\verbatim@line=\toks35
+\verbatim@in@stream=\read3
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ
+.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trim
+spaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolb
+ox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count315
+)
+\tcb@titlebox=\box62
+\tcb@upperbox=\box63
+\tcb@lowerbox=\box64
+\tcb@phantombox=\box65
+\c@tcbbreakpart=\count316
+\c@tcblayer=\count317
+\c@tcolorbox@number=\count318
+\tcb@temp=\box66
+\tcb@temp=\box67
+\tcb@temp=\box68
+\tcb@temp=\box69
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmi
+sc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks36
+\footnotemargin=\dimen288
+\c@pp@next@reset=\count319
+\c@@fnserial=\count320
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumit
+em.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks37
+\labelindent=\skip69
+\enit@outerparindent=\dimen289
+\enit@toks=\toks38
+\enit@inbox=\box70
+\enit@count@id=\count321
+\enitdp@description=\count322
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.
+sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count323
+\mult@box=\box71
+\multicol@leftmargin=\dimen290
+\c@unbalance=\count324
+\c@collectmore=\count325
+\doublecol@number=\count326
+\multicoltolerance=\count327
+\multicolpretolerance=\count328
+\full@width=\dimen291
+\page@free=\dimen292
+\premulticols=\dimen293
+\postmulticols=\dimen294
+\multicolsep=\skip70
+\multicolbaselineskip=\skip71
+\partial@page=\box72
+\last@line=\box73
+\maxbalancingoverflow=\dimen295
+\mult@rightbox=\box74
+\mult@grightbox=\box75
+\mult@gfirstbox=\box76
+\mult@firstbox=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\c@minrows=\count329
+\c@columnbadness=\count330
+\c@finalcolumnbadness=\count331
+\last@try=\dimen296
+\multicolovershoot=\dimen297
+\multicolundershoot=\dimen298
+\mult@nat@firstbox=\box115
+\colbreak@box=\box116
+\mc@col@check@num=\count332
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/ms\multitoc.sty
+Package: multitoc 1999/06/08 v2.01 MultiToc Package (MS)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+))
+\symlettersA=\mathgroup4
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfon
+ts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/nag\nag.sty
+Package: nag 2011/11/25 0.7 warning about old commands (ulmi)
+\c@nag@c=\count333
+\c@nag@sins=\count334
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx
+.sty
+Package: siunitx 2021-08-27 v3.0.28 A comprehensive (SI) units package
+\l__siunitx_angle_tmp_dim=\dimen299
+\l__siunitx_angle_marker_box=\box117
+\l__siunitx_angle_unit_box=\box118
+\l__siunitx_compound_count_int=\count335
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/translations\tr
+anslations.sty
+Package: translations 2021/01/17 v1.10a internationalization of LaTeX2e package
+s (CN)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pd
+ftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\inf
+warerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcm
+ds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+\l__siunitx_number_exponent_fixed_int=\count336
+\l__siunitx_number_min_decimal_int=\count337
+\l__siunitx_number_min_integer_int=\count338
+\l__siunitx_number_round_precision_int=\count339
+\l__siunitx_number_group_minimum_int=\count340
+\l__siunitx_table_tmp_box=\box119
+\l__siunitx_table_tmp_dim=\dimen300
+\l__siunitx_table_column_width_dim=\dimen301
+\l__siunitx_table_integer_box=\box120
+\l__siunitx_table_decimal_box=\box121
+\l__siunitx_table_before_box=\box122
+\l__siunitx_table_after_box=\box123
+\l__siunitx_table_before_dim=\dimen302
+\l__siunitx_table_carry_dim=\dimen303
+\l__siunitx_unit_tmp_int=\count341
+\l__siunitx_unit_position_int=\count342
+\l__siunitx_unit_total_int=\count343
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+\col@sep=\dimen304
+\ar@mcellbox=\box124
+\extrarowheight=\dimen305
+\NC@list=\toks39
+\extratabsurround=\skip72
+\backup@length=\skip73
+\ar@cellbox=\box125
+))
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.s
+ty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption
+.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption
+3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen306
+\captionmargin@=\dimen307
+\captionwidth=\dimen308
+\caption@tempdima=\dimen309
+\caption@indent=\dimen310
+\caption@parindent=\dimen311
+\caption@hangindent=\dimen312
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count344
+\c@continuedfloat=\count345
+)
+\c@KVtest=\count346
+\sf@farskip=\skip74
+\sf@captopadj=\dimen313
+\sf@capskip=\skip75
+\sf@nearskip=\skip76
+\c@subfigure=\count347
+\c@subfigure@save=\count348
+\c@lofdepth=\count349
+\c@subtable=\count350
+\c@subtable@save=\count351
+\c@lotdepth=\count352
+\sf@top=\skip77
+\sf@bottom=\skip78
+)
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault' (SimSun(0)).
+
+
+Package fontspec Info: Font family 'FZSSK.TTF(0)' created for font 'FZSSK.TTF'
+(fontspec)             with options
+(fontspec)             [Script={CJK},BoldFont={FZXBSK.TTF},ItalicFont={FZKTK.TT
+F}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FZSSK.TTF]/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FZXBSK.TTF]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FZKTK.TTF]/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKsfdefault' (Microsoft YaHei).
+
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKttdefault' (FangSong).
+
+
+Package fontspec Info: Font family 'TeXGyreTermes(0)' created for font 'TeX
+(fontspec)             Gyre Termes' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/OT:script=latn;language=dflt;+smcp;mapping=tex-te
+xt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/B/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"TeX
+(fontspec)             Gyre
+(fontspec)             Termes/B/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/I/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"TeX Gyre
+(fontspec)             Termes/I/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/BI/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"TeX Gyre
+(fontspec)             Termes/BI/OT:script=latn;language=dflt;+smcp;mapping=tex
+-text;"
+
+
+Package fontspec Info: TeX Gyre Heros scale = 0.8587783518999662.
+
+
+Package fontspec Info: TeX Gyre Heros scale = 0.8587783518999662.
+
+
+Package fontspec Info: TeX Gyre Heros scale = 0.8587783518999662.
+
+
+Package fontspec Info: TeX Gyre Heros/B scale = 0.833332903242455.
+
+
+Package fontspec Info: TeX Gyre Heros/B scale = 0.833332903242455.
+
+
+Package fontspec Info: TeX Gyre Heros/I scale = 0.8587783518999662.
+
+
+Package fontspec Info: TeX Gyre Heros/I scale = 0.8587783518999662.
+
+
+Package fontspec Info: TeX Gyre Heros/BI scale = 0.833332903242455.
+
+
+Package fontspec Info: TeX Gyre Heros/BI scale = 0.833332903242455.
+
+
+Package fontspec Info: Font family 'TeXGyreHeros(0)' created for font 'TeX
+(fontspec)             Gyre Heros' with options
+(fontspec)             [Ligatures=TeX,Scale=MatchLowercase].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.8587783518999662]"TeX Gyre
+(fontspec)             Heros/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[0.8587783518999662]"TeX Gyre
+(fontspec)             Heros/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.833332903242455]"TeX Gyre
+(fontspec)             Heros/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[0.833332903242455]"TeX Gyre
+(fontspec)             Heros/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.8587783518999662]"TeX Gyre
+(fontspec)             Heros/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[0.8587783518999662]"TeX Gyre
+(fontspec)             Heros/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.833332903242455]"TeX Gyre
+(fontspec)             Heros/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.833332903242455]"TeX Gyre
+(fontspec)             Heros/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
+
+
+Package fontspec Info: Font family 'UbuntuMono(0)' created for font 'Ubuntu
+(fontspec)             Mono' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Ubuntu
+(fontspec)             Mono/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Ubuntu
+(fontspec)             Mono/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Ubuntu
+(fontspec)             Mono/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Ubuntu
+(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: Font family 'LatinModernRoman(0)' created for font
+(fontspec)             'Latin Modern Roman' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Latin Modern
+(fontspec)             Roman/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Latin Modern
+(fontspec)             Roman/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Latin Modern
+(fontspec)             Roman/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Latin
+(fontspec)             Modern Roman/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/unicode-math\un
+icode-math.sty
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/unicode-math\un
+icode-math-xetex.sty
+Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLa
+TeX
+\g__um_fam_int=\count353
+\g__um_fonts_used_int=\count354
+\l__um_primecount_int=\count355
+\g__um_primekern_muskip=\muskip18
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/unicode-math\un
+icode-math-table.tex)))
+
+Package fontspec Info: Could not resolve font "TeX Gyre Termes Math/B" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Font family 'TeXGyreTermesMath(0)' created for font
+(fontspec)             'TeX Gyre Termes Math' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"TeX Gyre Termes
+(fontspec)             Math/OT:script=math;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Could not resolve font "TeX Gyre Termes Math/B" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Font family 'TeXGyreTermesMath(1)' created for font
+(fontspec)             'TeX Gyre Termes Math' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=9.5265-},{Size=7.06275-9.5265,Font=TeX
+(fontspec)             Gyre Termes
+(fontspec)             Math,Style=MathScript},{Size=-7.06275,Font=TeX Gyre
+(fontspec)             Termes Math,Style=MathScriptScript}}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <9.5265->"TeX Gyre
+(fontspec)             Termes
+(fontspec)             Math/OT:script=math;language=dflt;"<7.06275-9.5265>"TeX
+(fontspec)             Gyre Termes
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;"<-7.06275>"Te
+X
+(fontspec)             Gyre Termes Math/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TeXGyreTermesMath(1)/m/n on input li
+ne 19.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesMath(1)/b/n on input l
+ine 19.
+
+Package fontspec Info: TeX Gyre Termes Math scale = 1.0001.
+
+
+Package fontspec Info: Could not resolve font "TeX Gyre Termes Math/B" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: TeX Gyre Termes Math scale = 1.0001.
+
+
+Package fontspec Info: TeX Gyre Termes Math scale = 1.0001.
+
+
+Package fontspec Info: TeX Gyre Termes Math scale = 1.0001.
+
+
+Package fontspec Info: Font family 'TeXGyreTermesMath(2)' created for font
+(fontspec)             'TeX Gyre Termes Math' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=9.5265-},{Size=7.06275-9.5265,Font=TeX
+(fontspec)             Gyre Termes
+(fontspec)             Math,Style=MathScript},{Size=-7.06275,Font=TeX Gyre
+(fontspec)             Termes
+(fontspec)             Math,Style=MathScriptScript}},ScaleAgain=1.0001,FontAdju
+stment={\fontdimen
+(fontspec)             8\font =6.94229pt\relax \fontdimen 9\font
+(fontspec)             =4.7085pt\relax \fontdimen 10\font =4.7085pt\relax
+(fontspec)             \fontdimen 11\font =6.5481pt\relax \fontdimen 12\font
+(fontspec)             =2.9127pt\relax \fontdimen 13\font =3.71205pt\relax
+(fontspec)             \fontdimen 14\font =3.71205pt\relax \fontdimen 15\font
+(fontspec)             =3.1098pt\relax \fontdimen 16\font =2.4309pt\relax
+(fontspec)             \fontdimen 17\font =2.4309pt\relax \fontdimen 18\font
+(fontspec)             =2.4309pt\relax \fontdimen 19\font =1.21545pt\relax
+(fontspec)             \fontdimen 22\font =2.7375pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <9.5265->s*[1.0001]"TeX Gyre Termes
+(fontspec)             Math/OT:script=math;language=dflt;"<7.06275-9.5265>s*[1.
+0001]"TeX
+(fontspec)             Gyre Termes
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;"<-7.06275>s*[
+1.0001]"TeX
+(fontspec)             Gyre Termes Math/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =6.94229pt\relax \fontdimen 9\font
+(fontspec)             =4.7085pt\relax \fontdimen 10\font =4.7085pt\relax
+(fontspec)             \fontdimen 11\font =6.5481pt\relax \fontdimen 12\font
+(fontspec)             =2.9127pt\relax \fontdimen 13\font =3.71205pt\relax
+(fontspec)             \fontdimen 14\font =3.71205pt\relax \fontdimen 15\font
+(fontspec)             =3.1098pt\relax \fontdimen 16\font =2.4309pt\relax
+(fontspec)             \fontdimen 17\font =2.4309pt\relax \fontdimen 18\font
+(fontspec)             =2.4309pt\relax \fontdimen 19\font =1.21545pt\relax
+(fontspec)             \fontdimen 22\font =2.7375pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/TeXGyreTermesMath(2)/m/n on input l
+ine 19.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/TeXGyreTermesMath(2)/b/n on input l
+ine 19.
+
+Package fontspec Info: TeX Gyre Termes Math scale = 0.9999.
+
+
+Package fontspec Info: Could not resolve font "TeX Gyre Termes Math/B" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: TeX Gyre Termes Math scale = 0.9999.
+
+
+Package fontspec Info: TeX Gyre Termes Math scale = 0.9999.
+
+
+Package fontspec Info: TeX Gyre Termes Math scale = 0.9999.
+
+
+Package fontspec Info: Font family 'TeXGyreTermesMath(3)' created for font
+(fontspec)             'TeX Gyre Termes Math' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=9.5265-},{Size=7.06275-9.5265,Font=TeX
+(fontspec)             Gyre Termes
+(fontspec)             Math,Style=MathScript},{Size=-7.06275,Font=TeX Gyre
+(fontspec)             Termes
+(fontspec)             Math,Style=MathScriptScript}},ScaleAgain=0.9999,FontAdju
+stment={\fontdimen
+(fontspec)             8\font =0.5694pt\relax \fontdimen 9\font =1.095pt\relax
+(fontspec)             \fontdimen 10\font =1.095pt\relax \fontdimen 11\font
+(fontspec)             =1.095pt\relax \fontdimen 12\font =4.74135pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <9.5265->s*[0.9999]"TeX Gyre Termes
+(fontspec)             Math/OT:script=math;language=dflt;"<7.06275-9.5265>s*[0.
+9999]"TeX
+(fontspec)             Gyre Termes
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;"<-7.06275>s*[
+0.9999]"TeX
+(fontspec)             Gyre Termes Math/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.5694pt\relax \fontdimen 9\font
+(fontspec)             =1.095pt\relax \fontdimen 10\font =1.095pt\relax
+(fontspec)             \fontdimen 11\font =1.095pt\relax \fontdimen 12\font
+(fontspec)             =4.74135pt\relax \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+9.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/TeXGyreTermesMath(3)/m/n on input l
+ine 19.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 19.
+
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/TeXGyreTermesMath(3)/b/n on input l
+ine 19.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count356
+\float@exts=\toks40
+\float@box=\box126
+\@float@everytoks=\toks41
+\@floatcapt=\box127
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\bookta
+bs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen314
+\lightrulewidth=\dimen315
+\cmidrulewidth=\dimen316
+\belowrulesep=\dimen317
+\belowbottomsep=\dimen318
+\aboverulesep=\dimen319
+\abovetopsep=\dimen320
+\cmidrulesep=\dimen321
+\cmidrulekern=\dimen322
+\defaultaddspace=\dimen323
+\@cmidla=\count357
+\@cmidlb=\count358
+\@aboverulesep=\dimen324
+\@belowrulesep=\dimen325
+\@thisruleclass=\count359
+\@lastruleclass=\count360
+\@thisrulewidth=\dimen326
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/metalogo\metalo
+go.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex
+.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+\xl@everylogo=\toks42
+\xl@@everylogo=\toks43
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/marginnote\marg
+innote.sty
+Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count361
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/manfnt\manfnt.s
+ty
+Package: manfnt 1999/07/010.2LaTeX2e manfnt package
+\dbend@height=\skip79
+) (C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip19
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperr
+ef.sty
+Package: hyperref 2021-06-05 v7.00l Hypertext links for LaTeX
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvs
+etkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\
+kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdf
+escape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor
+.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\let
+ltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook
+.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvopt
+ions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen327
+\Hy@linkcounter=\count362
+\Hy@pagecounter=\count363
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc
+.def
+File: pd1enc.def 2021-06-05 v7.00l Hyperref: PDFDocEncoding definition (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperr
+ef-langpatches.def
+File: hyperref-langpatches.def 2021-06-05 v7.00l Hyperref: patches for babel la
+nguages
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intca
+lc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etex
+cmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count364
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.
+def
+File: puenc.def 2021-06-05 v7.00l Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count365
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen328
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset
+.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bi
+gintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count366
+\Field@Width=\dimen329
+\Fld@charsize=\dimen330
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-l
+tx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count367
+\c@Item=\count368
+\c@Hfootnote=\count369
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex
+.def
+File: hxetex.def 2021-06-05 v7.00l Hyperref driver for XeTeX
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\str
+ingenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box128
+\c@Hy@AnnotLevel=\count370
+\HyField@AnnotCount=\count371
+\Fld@listcount=\count372
+\c@bookmark@seq@number=\count373
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\
+rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-
+ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter
+\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip80
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/base\shortvrb.s
+ty
+Package: shortvrb 2021/05/28 v2.1n Standard LaTeX documentation package (FMi)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyv
+rb.sty
+Package: fancyvrb 2021/10/15 v3.9 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count374
+\FV@InFile=\read4
+\FV@TabBox=\box129
+\c@FancyVerbLine=\count375
+\FV@StepNumber=\count376
+\FV@OutFile=\write4
+)
+Package shortvrb Info: Made  a short reference for \verb on input line 46.
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 78.
+ (附录.aux)
+\openout1 = `附录.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(102.43008pt, 657.2585pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=657.2585pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-24.8399pt
+* \headheight=30.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=43.79999pt
+* \marginparsep=10.0pt
+* \columnsep=21.9pt
+* \skip\footins=17.52005pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 78.
+Package nag Info: Attempting subfig hack.
+Package nag Info: OK, equivalent to subfig 1.3, redefining \sf@@@subfloat.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/translations/di
+cts\translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 78.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  TU/TeXGyreTermesMath(1)/m/n --> TU/TeXGyreTermes(0)/m/n
+ on input line 78.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TeXGyreTermes(0)/m/it on input line
+ 78.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermes(0)/b/n on input line 
+78.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/TeXGyreHeros(0)/m/n on input line 7
+8.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/TeXGyreHeros(0)/b/n on input line 
+78.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/UbuntuMono(0)/m/n on input line 78.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/UbuntuMono(0)/b/n on input line 78.
+
+Package hyperref Info: Link coloring OFF on input line 78.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\namere
+f.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcou
+nt.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestrin
+g\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count377
+)
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
+ (附录.out) (附录.out)
+\@outlinefile=\write5
+\openout5 = `附录.out'.
+
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
+(Font)              scaled to size 10.95116pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
+(Font)              scaled to size 8.10385pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
+(Font)              scaled to size 6.02315pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
+(Font)              scaled to size 8.10213pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
+(Font)              scaled to size 6.02185pt on input line 80.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 8
+0.
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia.
+fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
+
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
+d
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
+
+
+(C:\Users\9999999999999\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
+d
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
+(Font)              scaled to size 9.00096pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
+(Font)              scaled to size 6.00064pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
+(Font)              scaled to size 8.99904pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 80.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 80.
+ (附录.toc
+Underfull \hbox (badness 7925) in paragraph at lines 5--5
+ [][] [][]\TU/TeXGyreTermes(0)/m/n/10.95 William Andres Betancourt 
+ []
+
+)
+\tf@toc=\write6
+\openout6 = `附录.toc'.
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [1
+
+]
+File: pic/18.png Graphic file (type bmp)
+<pic/18.png>
+File: pic/19.png Graphic file (type bmp)
+<pic/19.png>
+File: pic/20.png Graphic file (type bmp)
+<pic/20.png>
+File: pic/21.png Graphic file (type bmp)
+<pic/21.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: pic/22.png Graphic file (type bmp)
+<pic/22.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: pic/chart.pdf Graphic file (type pdf)
+<use pic/chart.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: pic/chart_peaceful.pdf Graphic file (type pdf)
+<use pic/chart_peaceful.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[2
+
+]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [3]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [4]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [5]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--235
+
+ []
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[7]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [8]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [9]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [10]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [11]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [12]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--367
+
+ []
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[14]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [15]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [16]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [17]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [18]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [19]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [20]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [21]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [22]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--475
+
+ []
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[24]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [25]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [26]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [27]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [28]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [29]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [30]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [31]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [32]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [33]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [34]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [35]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [36]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [37]
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+
+Overfull \hbox (47.8655pt too wide) in paragraph at lines 486--665
+\TU/TeXGyreTermes(0)/m/n/10.95 basicos-son-el-88-del-salario-minimo-de-colombia
+-559012 https://www.youtube.com/watch?v=kikScajebuE 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--665
+
+ []
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[38]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [39]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [40]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [41]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [42]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [43]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [44]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [45]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [46]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [47]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [48]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [49]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [50]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [51]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [52]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+
+[53]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [54]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [55]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [56]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [57]
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--790
+
+ []
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[58]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [59]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [60]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [61]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [62]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [63]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [64]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [65]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [66]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [67]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [68]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [69]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [70]
+Missing character: There is no ① in font TeX Gyre Termes/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+Missing character: There is no ② in font TeX Gyre Termes/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+Missing character: There is no ① in font TeX Gyre Termes/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+Missing character: There is no ① in font TeX Gyre Termes/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+Missing character: There is no ② in font TeX Gyre Termes/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+Missing character: There is no ① in font TeX Gyre Termes/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+Missing character: There is no ③ in font TeX Gyre Termes/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--937
+
+ []
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[71]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [72]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [73]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [74]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [75]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [76]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [77]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [78]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [79]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [80]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [81]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [82]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [83]
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--1005
+
+ []
+
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[84]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [85]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [86]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [87]
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+ [88] 
+AED: lastpage setting LastPage
+File: pkulogo.jpg Graphic file (type bmp)
+<pkulogo.jpg>
+[89]
+No complaints by nag.
+(附录.aux)
+Package rerunfilecheck Info: File `附录.out' has not changed.
+(rerunfilecheck)             Checksum: DDEBEA6D454E905DFB8DA4663C3669B9;1437.
+ ) 
+Here is how much of TeX's memory you used:
+ 34892 strings out of 411271
+ 732136 string characters out of 2827170
+ 1441128 words of memory out of 3000000
+ 54766 multiletter control sequences out of 15000+600000
+ 413376 words of font info for 153 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 102i,19n,133p,4456b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on 附录.pdf (89 pages).

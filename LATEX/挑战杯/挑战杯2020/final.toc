@@ -1,0 +1,55 @@
+\contentsline {section}{\numberline {1}绪论}{3}{section.1}%
+\contentsline {section}{\numberline {2}模型建立的理论分析}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}方程建立}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}对一类SIR模型的求解探究}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}SIR模型}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}基本的SIR模型}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}对武汉数据的实证检验}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}SIR模型的数值敏感度}{9}{subsection.3.3}%
+\contentsline {section}{\numberline {4}SEIR模型}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}模型}{10}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}模型解释}{10}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}参数意义}{10}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}参数数值和模型初值}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}$\epsilon $、$\gamma $的值}{11}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}$S$、$E$、$I$、$R$的初值}{11}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}$k_1$的值}{11}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}数值实验}{11}{subsection.4.3}%
+\contentsline {section}{\numberline {5}时滞模型}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}模型的引入}{12}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}出现症状（未被确诊）的人群}{12}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}时滞的引入}{12}{subsubsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.2}具体模型}{13}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}求解模型}{13}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}对模型的进一步改进}{15}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}修改后的模型}{15}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}参数调试与结果}{16}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}该模型的数值敏感度}{18}{subsubsection.5.4.3}%
+\contentsline {section}{\numberline {6}基于随机过程的传染病建模}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}基于随机过程的传染病建模}{19}{subsection.6.1}%
+\contentsline {paragraph}{模型}{19}{paragraph*.2}%
+\contentsline {subsection}{\numberline {6.2}模型分析}{20}{subsection.6.2}%
+\contentsline {subparagraph}{灭绝概率}{20}{subparagraph*.3}%
+\contentsline {subparagraph}{大规模人口情况}{20}{subparagraph*.4}%
+\contentsline {subparagraph}{特殊情况分析}{21}{subparagraph*.5}%
+\contentsline {subparagraph}{进一步简化}{21}{subparagraph*.6}%
+\contentsline {subsection}{\numberline {6.3}总结}{22}{subsection.6.3}%
+\contentsline {section}{\numberline {7}传染病模型中的最优控制问题}{22}{section.7}%
+\contentsline {subsection}{\numberline {7.1}最优控制问题简介}{22}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}SIR模型中的疫苗分配优化问题}{24}{subsection.7.2}%
+\contentsline {section}{\numberline {8}传染病建模的平均场网络模型}{26}{section.8}%
+\contentsline {subsection}{\numberline {8.1}概念模型建立}{26}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}传染病建模的网络模型}{27}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}一些参数解释}{27}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}传染病网络模型的初步建立}{27}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}引入函数}{29}{subsubsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.3}传染病在多层网络的传播}{29}{subsection.8.3}%
+\contentsline {section}{\numberline {9}在网络中进行疫苗接种}{30}{section.9}%
+\contentsline {subsection}{\numberline {9.1}概念模型及一些参数解释}{30}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}统一或随机接种疫苗}{31}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}基于连接程度的目标疫苗接种}{32}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}缺乏信息的疫苗接种}{34}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}熟人疫苗接种}{34}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}其余接种策略简单思考}{36}{subsubsection.9.4.2}%
+\contentsline {section}{\numberline {10}总结与展望}{36}{section.10}%
+\contentsline {section}{参考文献}{38}{section*.7}%
