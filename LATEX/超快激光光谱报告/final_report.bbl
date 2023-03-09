@@ -1,0 +1,2292 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{10.1049/ip-j.1992.0001}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MJ}{%
+         family={Midwinter},
+         familyi={M\bibinitperiod},
+         given={J.E.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJ1}
+    \strng{fullhash}{MJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{issn}{0267-3932}
+    \field{issue}{1}
+    \field{pages}{1\bibrangedash 12(11)}
+    \field{title}{Photonics in switching: the next 25 years of optical
+  communicationss?}
+    \verb{url}
+    \verb https://digital-library.theiet.org/content/journals/10.1049/ip-j.1992
+    \verb .0001
+    \endverb
+    \field{volume}{139}
+    \field{journaltitle}{IEE Proceedings J (Optoelectronics)}
+    \field{year}{1992}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{wang2005optical}{article}{}
+    \name{author}{4}{}{%
+      {{hash=WF}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Feng},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=DG}{%
+         family={Dukovic},
+         familyi={D\bibinitperiod},
+         given={Gordana},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BLE}{%
+         family={Brus},
+         familyi={B\bibinitperiod},
+         given={Louis\bibnamedelima E},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=HTF}{%
+         family={Heinz},
+         familyi={H\bibinitperiod},
+         given={Tony\bibnamedelima F},
+         giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{WF+2}
+    \strng{fullhash}{WFDGBLEHTF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5723}
+    \field{pages}{838\bibrangedash 841}
+    \field{title}{The optical resonances in carbon nanotubes arise from
+  excitons}
+    \field{volume}{308}
+    \field{journaltitle}{Science}
+    \field{year}{2005}
+  \endentry
+
+  \entry{chen2002ultrafast}{article}{}
+    \name{author}{8}{}{%
+      {{hash=CYC}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Y-C},
+         giveni={Y\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=RN}{%
+         family={Raravikar},
+         familyi={R\bibinitperiod},
+         given={NR},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Schadler},
+         familyi={S\bibinitperiod},
+         given={LS},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=AP}{%
+         family={Ajayan},
+         familyi={A\bibinitperiod},
+         given={PM},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=ZYP}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Y-P},
+         giveni={Y\bibinithyphendelim P\bibinitperiod},
+      }}%
+      {{hash=LTM}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={T-M},
+         giveni={T\bibinithyphendelim M\bibinitperiod},
+      }}%
+      {{hash=WGC}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={G-C},
+         giveni={G\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=ZXC}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={X-C},
+         giveni={X\bibinithyphendelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Institute of Physics}%
+    }
+    \strng{namehash}{CYC+1}
+    \strng{fullhash}{CYCRNSLAPZYPLTMWGCZXC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{975\bibrangedash 977}
+    \field{title}{Ultrafast optical switching properties of single-wall carbon
+  nanotube polymer composites at 1.55 $\mu$m}
+    \field{volume}{81}
+    \field{journaltitle}{Applied Physics Letters}
+    \field{year}{2002}
+  \endentry
+
+  \entry{tatsuura2003semiconductor}{article}{}
+    \name{author}{6}{}{%
+      {{hash=TS}{%
+         family={Tatsuura},
+         familyi={T\bibinitperiod},
+         given={Satoshi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Furuki},
+         familyi={F\bibinitperiod},
+         given={Makoto},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Sato},
+         familyi={S\bibinitperiod},
+         given={Yasuhiro},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=II}{%
+         family={Iwasa},
+         familyi={I\bibinitperiod},
+         given={Izumi},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tian},
+         familyi={T\bibinitperiod},
+         given={MINQUAN},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Mitsu},
+         familyi={M\bibinitperiod},
+         given={Hiroyuki},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{TS+1}
+    \strng{fullhash}{TSFMSYIITMMH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{534\bibrangedash 537}
+    \field{title}{Semiconductor carbon nanotubes as ultrafast switching
+  materials for optical telecommunications}
+    \field{volume}{15}
+    \field{journaltitle}{Advanced Materials}
+    \field{year}{2003}
+  \endentry
+
+  \entry{sakakibara2005carbon}{article}{}
+    \name{author}{5}{}{%
+      {{hash=SY}{%
+         family={Sakakibara},
+         familyi={S\bibinitperiod},
+         given={Youichi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=RAG}{%
+         family={Rozhin},
+         familyi={R\bibinitperiod},
+         given={Aleksey\bibnamedelima G},
+         giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kataura},
+         familyi={K\bibinitperiod},
+         given={Hiromichi},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=AY}{%
+         family={Achiba},
+         familyi={A\bibinitperiod},
+         given={Yohji},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tokumoto},
+         familyi={T\bibinitperiod},
+         given={Madoka},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{SY+1}
+    \strng{fullhash}{SYRAGKHAYTM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4R}
+    \field{pages}{1621}
+    \field{title}{Carbon nanotube-poly (vinylalcohol) nanocomposite film
+  devices: Applications for femtosecond fiber laser mode lockers and optical
+  amplifier noise suppressors}
+    \field{volume}{44}
+    \field{journaltitle}{Japanese journal of applied physics}
+    \field{year}{2005}
+  \endentry
+
+  \entry{set2004ultrafast}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SSY}{%
+         family={Set},
+         familyi={S\bibinitperiod},
+         given={Sze\bibnamedelima Y},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Yaguchi},
+         familyi={Y\bibinitperiod},
+         given={Hiroshi},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=TY}{%
+         family={Tanaka},
+         familyi={T\bibinitperiod},
+         given={Yuichi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=JM}{%
+         family={Jablonski},
+         familyi={J\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SSY+1}
+    \strng{fullhash}{SSYYHTYJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{137\bibrangedash 146}
+    \field{title}{Ultrafast fiber pulsed lasers incorporating carbon nanotubes}
+    \field{volume}{10}
+    \field{journaltitle}{IEEE Journal of selected topics in quantum
+  electronics}
+    \field{year}{2004}
+  \endentry
+
+  \entry{martinez2013nanotube}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MA}{%
+         family={Martinez},
+         familyi={M\bibinitperiod},
+         given={Amos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SZ}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Zhipei},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{MA+1}
+    \strng{fullhash}{MASZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{842\bibrangedash 845}
+    \field{title}{Nanotube and graphene saturable absorbers for fibre lasers}
+    \field{volume}{7}
+    \field{journaltitle}{Nature Photonics}
+    \field{year}{2013}
+  \endentry
+
+  \entry{reich2005excited}{article}{}
+    \name{author}{5}{}{%
+      {{hash=RS}{%
+         family={Reich},
+         familyi={R\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=DM}{%
+         family={Dworzak},
+         familyi={D\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=HA}{%
+         family={Hoffmann},
+         familyi={H\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=TC}{%
+         family={Thomsen},
+         familyi={T\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+      {{hash=SM}{%
+         family={Strano},
+         familyi={S\bibinitperiod},
+         given={MS},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {APS}%
+    }
+    \strng{namehash}{RS+1}
+    \strng{fullhash}{RSDMHATCSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{033402}
+    \field{title}{Excited-state carrier lifetime in single-walled carbon
+  nanotubes}
+    \field{volume}{71}
+    \field{journaltitle}{Physical Review B}
+    \field{year}{2005}
+  \endentry
+
+  \entry{yamashita2004saturable}{article}{}
+    \name{author}{7}{}{%
+      {{hash=YS}{%
+         family={Yamashita},
+         familyi={Y\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=IY}{%
+         family={Inoue},
+         familyi={I\bibinitperiod},
+         given={Y},
+         giveni={Y},
+      }}%
+      {{hash=MS}{%
+         family={Maruyama},
+         familyi={M\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=MY}{%
+         family={Murakami},
+         familyi={M\bibinitperiod},
+         given={Y},
+         giveni={Y},
+      }}%
+      {{hash=YH}{%
+         family={Yaguchi},
+         familyi={Y\bibinitperiod},
+         given={H},
+         giveni={H},
+      }}%
+      {{hash=JM}{%
+         family={Jablonski},
+         familyi={J\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=SS}{%
+         family={Set},
+         familyi={S\bibinitperiod},
+         given={SY},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Optica Publishing Group}%
+    }
+    \strng{namehash}{YS+1}
+    \strng{fullhash}{YSIYMSMYYHJMSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{14}
+    \field{pages}{1581\bibrangedash 1583}
+    \field{title}{Saturable absorbers incorporating carbon nanotubes directly
+  synthesized onto substrates and fibers and their application to mode-locked
+  fiber lasers}
+    \field{volume}{29}
+    \field{journaltitle}{Optics letters}
+    \field{year}{2004}
+  \endentry
+
+  \entry{kundrapu2012model}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KM}{%
+         family={Kundrapu},
+         familyi={K\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=LJ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+      {{hash=SA}{%
+         family={Shashurin},
+         familyi={S\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=KM}{%
+         family={Keidar},
+         familyi={K\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{KM+1}
+    \strng{fullhash}{KMLJSAKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{31}
+    \field{pages}{315305}
+    \field{title}{A model of carbon nanotube synthesis in arc discharge
+  plasmas}
+    \field{volume}{45}
+    \field{journaltitle}{Journal of Physics D: Applied Physics}
+    \field{year}{2012}
+  \endentry
+
+  \entry{hutchens2012vertically}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HS}{%
+         family={Hutchens},
+         familyi={H\bibinitperiod},
+         given={SB},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Pathak},
+         familyi={P\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=BB}{%
+         family={Bhushan},
+         familyi={B\bibinitperiod},
+         given={B},
+         giveni={B},
+      }}%
+    }
+    \strng{namehash}{HS+1}
+    \strng{fullhash}{HSPSBB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{2809\bibrangedash 2818}
+    \field{title}{Vertically aligned carbon nanotubes, collective mechanical
+  behavior}
+    \field{journaltitle}{Encyclopedia of Nanotechnology; Bhushan, B., Ed.;
+  Springer: Dordrecht, The Netherlands}
+    \field{year}{2012}
+  \endentry
+
+  \entry{li2004preferential}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yiming},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Mann},
+         familyi={M\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Rolandi},
+         familyi={R\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KW}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Woong},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=UA}{%
+         family={Ural},
+         familyi={U\bibinitperiod},
+         given={Ant},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Hung},
+         familyi={H\bibinitperiod},
+         given={Steven},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Javey},
+         familyi={J\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Jien},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Dunwei},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=YE}{%
+         family={Yenilmez},
+         familyi={Y\bibinitperiod},
+         given={Erhan},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{LY+1}
+    \strng{fullhash}{LYMDRMKWUAHSJACJWDYE+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{317\bibrangedash 321}
+    \field{title}{Preferential growth of semiconducting single-walled carbon
+  nanotubes by a plasma enhanced CVD method}
+    \field{volume}{4}
+    \field{journaltitle}{Nano letters}
+    \field{year}{2004}
+  \endentry
+
+  \entry{resasco2002scalable}{article}{}
+    \name{author}{7}{}{%
+      {{hash=RD}{%
+         family={Resasco},
+         familyi={R\bibinitperiod},
+         given={DE},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=AW}{%
+         family={Alvarez},
+         familyi={A\bibinitperiod},
+         given={WE},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=PF}{%
+         family={Pompeo},
+         familyi={P\bibinitperiod},
+         given={F},
+         giveni={F},
+      }}%
+      {{hash=BL}{%
+         family={Balzano},
+         familyi={B\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+      {{hash=HJ}{%
+         family={Herrera},
+         familyi={H\bibinitperiod},
+         given={JE},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KB}{%
+         family={Kitiyanan},
+         familyi={K\bibinitperiod},
+         given={B},
+         giveni={B},
+      }}%
+      {{hash=BA}{%
+         family={Borgna},
+         familyi={B\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{RD+1}
+    \strng{fullhash}{RDAWPFBLHJKBBA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{131\bibrangedash 136}
+    \field{title}{A scalable process for production of single-walled carbon
+  nanotubes (SWNTs) by catalytic disproportionation of CO on a solid catalyst}
+    \field{volume}{4}
+    \field{journaltitle}{Journal of Nanoparticle Research}
+    \field{year}{2002}
+  \endentry
+
+  \entry{charlier2001growth}{incollection}{}
+    \name{author}{2}{}{%
+      {{hash=CJC}{%
+         family={Charlier},
+         familyi={C\bibinitperiod},
+         given={Jean-Christophe},
+         giveni={J\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=IS}{%
+         family={Iijima},
+         familyi={I\bibinitperiod},
+         given={Sumio},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{CJC+1}
+    \strng{fullhash}{CJCIS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Carbon Nanotubes}
+    \field{pages}{55\bibrangedash 81}
+    \field{title}{Growth mechanisms of carbon nanotubes}
+    \field{year}{2001}
+  \endentry
+
+  \entry{bethune1993cobalt}{article}{}
+    \name{author}{7}{}{%
+      {{hash=BD}{%
+         family={Bethune},
+         familyi={B\bibinitperiod},
+         given={DS},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KCH}{%
+         family={Kiang},
+         familyi={K\bibinitperiod},
+         given={Ch\bibnamedelima H},
+         giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=DVM}{%
+         family={De\bibnamedelima Vries},
+         familyi={D\bibinitperiod\bibinitdelim V\bibinitperiod},
+         given={MS},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Gorman},
+         familyi={G\bibinitperiod},
+         given={G},
+         giveni={G},
+      }}%
+      {{hash=SR}{%
+         family={Savoy},
+         familyi={S\bibinitperiod},
+         given={R\_},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=VJ}{%
+         family={Vazquez},
+         familyi={V\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+      {{hash=BR}{%
+         family={Beyers},
+         familyi={B\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{BD+1}
+    \strng{fullhash}{BDKCHDVMGGSRVJBR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6430}
+    \field{pages}{605\bibrangedash 607}
+    \field{title}{Cobalt-catalysed growth of carbon nanotubes with
+  single-atomic-layer walls}
+    \field{volume}{363}
+    \field{journaltitle}{Nature}
+    \field{year}{1993}
+  \endentry
+
+  \entry{arora2014arc}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AN}{%
+         family={Arora},
+         familyi={A\bibinitperiod},
+         given={Neha},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Sharma},
+         familyi={S\bibinitperiod},
+         given={NN},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{AN+1}
+    \strng{fullhash}{ANSN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{135\bibrangedash 150}
+    \field{title}{Arc discharge synthesis of carbon nanotubes: Comprehensive
+  review}
+    \field{volume}{50}
+    \field{journaltitle}{Diamond and related materials}
+    \field{year}{2014}
+  \endentry
+
+  \entry{lin1994large}{article}{}
+    \name{author}{5}{}{%
+      {{hash=LX}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={X},
+         giveni={X},
+      }}%
+      {{hash=WX}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={XK},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=DVP}{%
+         family={Dravid},
+         familyi={D\bibinitperiod},
+         given={Vinayak\bibnamedelima P},
+         giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={RPH},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=KJB}{%
+         family={Ketterson},
+         familyi={K\bibinitperiod},
+         given={John\bibnamedelima B},
+         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Institute of Physics}%
+    }
+    \strng{namehash}{LX+1}
+    \strng{fullhash}{LXWXDVPCRKJB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{181\bibrangedash 183}
+    \field{title}{Large scale synthesis of single-shell carbon nanotubes}
+    \field{volume}{64}
+    \field{journaltitle}{Applied Physics Letters}
+    \field{year}{1994}
+  \endentry
+
+  \entry{wilson2002nanotechnology}{article}{}
+    \name{author}{5}{}{%
+      {{hash=WM}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={Mick},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kannangara},
+         familyi={K\bibinitperiod},
+         given={Kamali},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Geoff},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Simmons},
+         familyi={S\bibinitperiod},
+         given={Michelle},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RB}{%
+         family={Raguse},
+         familyi={R\bibinitperiod},
+         given={Burkhard},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {CRC press}%
+    }
+    \strng{namehash}{WM+1}
+    \strng{fullhash}{WMKKSGSMRB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Nanotechnology: basic science and emerging technologies}
+    \field{year}{2002}
+  \endentry
+
+  \entry{thess1996crystalline}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=TA}{%
+         family={Thess},
+         familyi={T\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LR}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Roland},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NP}{%
+         family={Nikolaev},
+         familyi={N\bibinitperiod},
+         given={Pavel},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=DH}{%
+         family={Dai},
+         familyi={D\bibinitperiod},
+         given={Hongjie},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Petit},
+         familyi={P\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Robert},
+         familyi={R\bibinitperiod},
+         given={Jerome},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=XC}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Chunhui},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LYH}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Young\bibnamedelima Hee},
+         giveni={Y\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=KSG}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Seong\bibnamedelima Gon},
+         giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=RAG}{%
+         family={Rinzler},
+         familyi={R\bibinitperiod},
+         given={Andrew\bibnamedelima G},
+         giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{TA+1}
+    \strng{fullhash}{TALRNPDHPPRJXCLYHKSGRAG+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5274}
+    \field{pages}{483\bibrangedash 487}
+    \field{title}{Crystalline ropes of metallic carbon nanotubes}
+    \field{volume}{273}
+    \field{journaltitle}{science}
+    \field{year}{1996}
+  \endentry
+
+  \entry{yudasaka1997single}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YM}{%
+         family={Yudasaka},
+         familyi={Y\bibinitperiod},
+         given={Masako},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KT}{%
+         family={Komatsu},
+         familyi={K\bibinitperiod},
+         given={Toshiki},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=IT}{%
+         family={Ichihashi},
+         familyi={I\bibinitperiod},
+         given={Toshinari},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=IS}{%
+         family={Iijima},
+         familyi={I\bibinitperiod},
+         given={Sumio},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{YM+1}
+    \strng{fullhash}{YMKTITIS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1-3}
+    \field{pages}{102\bibrangedash 106}
+    \field{title}{Single-wall carbon nanotube formation by laser ablation using
+  double-targets of carbon and metal}
+    \field{volume}{278}
+    \field{journaltitle}{Chemical physics letters}
+    \field{year}{1997}
+  \endentry
+
+  \entry{guo1995catalytic}{article}{}
+    \name{author}{5}{}{%
+      {{hash=GT}{%
+         family={Guo},
+         familyi={G\bibinitperiod},
+         given={Ting},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=NP}{%
+         family={Nikolaev},
+         familyi={N\bibinitperiod},
+         given={Pavel},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=TA}{%
+         family={Thess},
+         familyi={T\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CDT}{%
+         family={Colbert},
+         familyi={C\bibinitperiod},
+         given={Daniel\bibnamedelima T},
+         giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=SRE}{%
+         family={Smalley},
+         familyi={S\bibinitperiod},
+         given={Richard\bibnamedelima E},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GT+1}
+    \strng{fullhash}{GTNPTACDTSRE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1-2}
+    \field{pages}{49\bibrangedash 54}
+    \field{title}{Catalytic growth of single-walled manotubes by laser
+  vaporization}
+    \field{volume}{243}
+    \field{journaltitle}{Chemical physics letters}
+    \field{year}{1995}
+  \endentry
+
+  \entry{cassell1999large}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CAM}{%
+         family={Cassell},
+         familyi={C\bibinitperiod},
+         given={Alan\bibnamedelima M},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=RJA}{%
+         family={Raymakers},
+         familyi={R\bibinitperiod},
+         given={Jeffrey\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kong},
+         familyi={K\bibinitperiod},
+         given={Jing},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DH}{%
+         family={Dai},
+         familyi={D\bibinitperiod},
+         given={Hongjie},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{CAM+1}
+    \strng{fullhash}{CAMRJAKJDH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{31}
+    \field{pages}{6484\bibrangedash 6492}
+    \field{title}{Large scale CVD synthesis of single-walled carbon nanotubes}
+    \field{volume}{103}
+    \field{journaltitle}{The Journal of Physical Chemistry B}
+    \field{year}{1999}
+  \endentry
+
+  \entry{hata2004water}{article}{}
+    \name{author}{6}{}{%
+      {{hash=HK}{%
+         family={Hata},
+         familyi={H\bibinitperiod},
+         given={Kenji},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=FDN}{%
+         family={Futaba},
+         familyi={F\bibinitperiod},
+         given={Don\bibnamedelima N},
+         giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Mizuno},
+         familyi={M\bibinitperiod},
+         given={Kohei},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=NT}{%
+         family={Namai},
+         familyi={N\bibinitperiod},
+         given={Tatsunori},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=YM}{%
+         family={Yumura},
+         familyi={Y\bibinitperiod},
+         given={Motoo},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=IS}{%
+         family={Iijima},
+         familyi={I\bibinitperiod},
+         given={Sumio},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{HK+1}
+    \strng{fullhash}{HKFDNMKNTYMIS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5700}
+    \field{pages}{1362\bibrangedash 1364}
+    \field{title}{Water-assisted highly efficient synthesis of impurity-free
+  single-walled carbon nanotubes}
+    \field{volume}{306}
+    \field{journaltitle}{Science}
+    \field{year}{2004}
+  \endentry
+
+  \entry{kitiyanan2000controlled}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KB}{%
+         family={Kitiyanan},
+         familyi={K\bibinitperiod},
+         given={B},
+         giveni={B},
+      }}%
+      {{hash=AW}{%
+         family={Alvarez},
+         familyi={A\bibinitperiod},
+         given={WE},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Harwell},
+         familyi={H\bibinitperiod},
+         given={JH},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Resasco},
+         familyi={R\bibinitperiod},
+         given={DE},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{KB+1}
+    \strng{fullhash}{KBAWHJRD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3-5}
+    \field{pages}{497\bibrangedash 503}
+    \field{title}{Controlled production of single-wall carbon nanotubes by
+  catalytic decomposition of CO on bimetallic Co--Mo catalysts}
+    \field{volume}{317}
+    \field{journaltitle}{Chemical Physics Letters}
+    \field{year}{2000}
+  \endentry
+
+  \entry{keller2003recent}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KU}{%
+         family={Keller},
+         familyi={K\bibinitperiod},
+         given={Ursula},
+         giveni={U\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{KU1}
+    \strng{fullhash}{KU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6950}
+    \field{pages}{831\bibrangedash 838}
+    \field{title}{Recent developments in compact ultrafast lasers}
+    \field{volume}{424}
+    \field{journaltitle}{nature}
+    \field{year}{2003}
+  \endentry
+
+  \entry{song2007polarization}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SYW}{%
+         family={Song},
+         familyi={S\bibinitperiod},
+         given={Yong-Won},
+         giveni={Y\bibinithyphendelim W\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Morimune},
+         familyi={M\bibinitperiod},
+         given={Keiyo},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SSY}{%
+         family={Set},
+         familyi={S\bibinitperiod},
+         given={Sze\bibnamedelima Y},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yamashita},
+         familyi={Y\bibinitperiod},
+         given={Shinji},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Institute of Physics}%
+    }
+    \strng{namehash}{SYW+1}
+    \strng{fullhash}{SYWMKSSYYS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{021101}
+    \field{title}{Polarization insensitive all-fiber mode-lockers functioned by
+  carbon nanotubes deposited onto tapered fibers}
+    \field{volume}{90}
+    \field{journaltitle}{Applied physics letters}
+    \field{year}{2007}
+  \endentry
+
+  \entry{goh2005femtosecond}{inproceedings}{}
+    \name{author}{8}{}{%
+      {{hash=GCS}{%
+         family={Goh},
+         familyi={G\bibinitperiod},
+         given={Chee\bibnamedelima S},
+         giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kikuchi},
+         familyi={K\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+      {{hash=SSY}{%
+         family={Set},
+         familyi={S\bibinitperiod},
+         given={Sze\bibnamedelima Y},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=TD}{%
+         family={Tanaka},
+         familyi={T\bibinitperiod},
+         given={D},
+         giveni={D},
+      }}%
+      {{hash=KT}{%
+         family={Kotake},
+         familyi={K\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+      {{hash=JM}{%
+         family={Jablonski},
+         familyi={J\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=YS}{%
+         family={Yamashita},
+         familyi={Y\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=KT}{%
+         family={Kobayashi},
+         familyi={K\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{GCS+1}
+    \strng{fullhash}{GCSKKSSYTDKTJMYSKT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{(CLEO). Conference on Lasers and Electro-Optics, 2005.}
+    \field{pages}{1644\bibrangedash 1646}
+    \field{title}{Femtosecond mode-locking of a ytterbium-doped fiber laser
+  using a carbon-nanotube-based mode-locker with ultra-wide absorption band}
+    \field{volume}{3}
+    \field{year}{2005}
+  \endentry
+
+  \entry{wang2008f}{article}{}
+    \name{author}{4}{}{%
+      {{hash=WF}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={F},
+         giveni={F},
+      }}%
+      {{hash=RA}{%
+         family={Rozhin},
+         familyi={R\bibinitperiod},
+         given={AG},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Scardaci},
+         familyi={S\bibinitperiod},
+         given={V},
+         giveni={V},
+      }}%
+      {{hash=SZ}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Z},
+         giveni={Z},
+      }}%
+    }
+    \strng{namehash}{WF+1}
+    \strng{fullhash}{WFRASVSZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{738}
+    \field{title}{F. Hen nrich, IH White, WI Milne, and AC Ferrari}
+    \field{volume}{3}
+    \field{journaltitle}{Nature Nanotechnol}
+    \field{year}{2008}
+  \endentry
+
+  \entry{kelleher2010bismuth}{article}{}
+    \name{author}{7}{}{%
+      {{hash=KE}{%
+         family={Kelleher},
+         familyi={K\bibinitperiod},
+         given={EJR},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Travers},
+         familyi={T\bibinitperiod},
+         given={JC},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SZ}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Z},
+         giveni={Z},
+      }}%
+      {{hash=FA}{%
+         family={Ferrari},
+         familyi={F\bibinitperiod},
+         given={AC},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GK}{%
+         family={Golant},
+         familyi={G\bibinitperiod},
+         given={KM},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Popov},
+         familyi={P\bibinitperiod},
+         given={SV},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Taylor},
+         familyi={T\bibinitperiod},
+         given={JR},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{KE+1}
+    \strng{fullhash}{KETJSZFAGKPSTJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{790}
+    \field{title}{Bismuth fiber integrated laser mode-locked by carbon
+  nanotubes}
+    \field{volume}{7}
+    \field{journaltitle}{Laser Physics Letters}
+    \field{year}{2010}
+  \endentry
+
+  \entry{solodyankin2008mode}{article}{}
+    \name{author}{7}{}{%
+      {{hash=SMA}{%
+         family={Solodyankin},
+         familyi={S\bibinitperiod},
+         given={Max\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=OED}{%
+         family={Obraztsova},
+         familyi={O\bibinitperiod},
+         given={Elena\bibnamedelima D},
+         giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=LAS}{%
+         family={Lobach},
+         familyi={L\bibinitperiod},
+         given={Anatoly\bibnamedelima S},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=CAI}{%
+         family={Chernov},
+         familyi={C\bibinitperiod},
+         given={Alexander\bibnamedelima I},
+         giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=TAV}{%
+         family={Tausenev},
+         familyi={T\bibinitperiod},
+         given={Anton\bibnamedelima V},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=KVI}{%
+         family={Konov},
+         familyi={K\bibinitperiod},
+         given={Vitaly\bibnamedelima I},
+         giveni={V\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=DEM}{%
+         family={Dianov},
+         familyi={D\bibinitperiod},
+         given={Evgueni\bibnamedelima M},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Optical Society of America}%
+    }
+    \strng{namehash}{SMA+1}
+    \strng{fullhash}{SMAOEDLASCAITAVKVIDEM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{12}
+    \field{pages}{1336\bibrangedash 1338}
+    \field{title}{Mode-locked 1.93 $\mu$m thulium fiber laser with a carbon
+  nanotube absorber}
+    \field{volume}{33}
+    \field{journaltitle}{Optics letters}
+    \field{year}{2008}
+  \endentry
+
+  \entry{kieu2008all}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KK}{%
+         family={Kieu},
+         familyi={K\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+      {{hash=WF}{%
+         family={Wise},
+         familyi={W\bibinitperiod},
+         given={FW},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Optica Publishing Group}%
+    }
+    \strng{namehash}{KK+1}
+    \strng{fullhash}{KKWF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{15}
+    \field{pages}{11453\bibrangedash 11458}
+    \field{title}{All-fiber normal-dispersion femtosecond laser}
+    \field{volume}{16}
+    \field{journaltitle}{Optics express}
+    \field{year}{2008}
+  \endentry
+
+  \entry{kelleher2009nanosecond}{article}{}
+    \name{author}{7}{}{%
+      {{hash=KE}{%
+         family={Kelleher},
+         familyi={K\bibinitperiod},
+         given={EJR},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Travers},
+         familyi={T\bibinitperiod},
+         given={JC},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SZ}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Z},
+         giveni={Z},
+      }}%
+      {{hash=RA}{%
+         family={Rozhin},
+         familyi={R\bibinitperiod},
+         given={AG},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Ferrari},
+         familyi={F\bibinitperiod},
+         given={AC},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Popov},
+         familyi={P\bibinitperiod},
+         given={SV},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Taylor},
+         familyi={T\bibinitperiod},
+         given={JR},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Institute of Physics}%
+    }
+    \strng{namehash}{KE+1}
+    \strng{fullhash}{KETJSZRAFAPSTJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{111108}
+    \field{title}{Nanosecond-pulse fiber lasers mode-locked with nanotubes}
+    \field{volume}{95}
+    \field{journaltitle}{Applied Physics Letters}
+    \field{year}{2009}
+  \endentry
+
+  \entry{fedotov2012spectrum}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=FY}{%
+         family={Fedotov},
+         familyi={F\bibinitperiod},
+         given={YS},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kobtsev},
+         familyi={K\bibinitperiod},
+         given={SM},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rozhin},
+         familyi={R\bibinitperiod},
+         given={AG},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={Mou},
+         familyi={M\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+      {{hash=TS}{%
+         family={Turitsyn},
+         familyi={T\bibinitperiod},
+         given={SK},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FY+1}
+    \strng{fullhash}{FYKSRAMCTS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{15th Int. Conf." Laser Optics}
+    \field{pages}{25\bibrangedash 29}
+    \field{title}{Spectrum-, pulse-width and wavelength variable all-fiber
+  mode-locked Yb laser with birefringent filter}
+    \field{year}{2012}
+  \endentry
+
+  \entry{liu2008passively}{article}{}
+    \name{author}{8}{}{%
+      {{hash=LX}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={XM},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WT}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+      {{hash=SC}{%
+         family={Shu},
+         familyi={S\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+      {{hash=WL}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={LR},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=LK}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={KQ},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=ZT}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={TY},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=ZW}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={W},
+         giveni={W},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{LX+2}
+    \strng{fullhash}{LXWTSCWLLALKZTZW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{1357\bibrangedash 1361}
+    \field{title}{Passively harmonic mode-locked erbium-doped fiber soliton
+  laser with a nonlinear polarization rotation}
+    \field{volume}{18}
+    \field{journaltitle}{Laser physics}
+    \field{year}{2008}
+  \endentry
+
+  \entry{yu201366}{article}{}
+    \name{author}{6}{}{%
+      {{hash=YZ}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Zhenhua},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yonggang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xiao},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=DX}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Xinzheng},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Tian},
+         familyi={T\bibinitperiod},
+         given={Jinrong},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Song},
+         familyi={S\bibinitperiod},
+         given={Yanrong},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{YZ+1}
+    \strng{fullhash}{YZWYZXDXTJSY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{015105}
+    \field{title}{A 66 fs highly stable single wall carbon nanotube mode locked
+  fiber laser}
+    \field{volume}{24}
+    \field{journaltitle}{Laser physics}
+    \field{year}{2013}
+  \endentry
+
+  \entry{ismail2012nanosecond}{article}{}
+    \name{author}{6}{}{%
+      {{hash=IMA}{%
+         family={Ismail},
+         familyi={I\bibinitperiod},
+         given={Mohd\bibnamedelima Afiq},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HSW}{%
+         family={Harun},
+         familyi={H\bibinitperiod},
+         given={Sulaiman\bibnamedelima Wadi},
+         giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=ZNR}{%
+         family={Zulkepely},
+         familyi={Z\bibinitperiod},
+         given={Nurul\bibnamedelima Rozullyah},
+         giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=NRM}{%
+         family={Nor},
+         familyi={N\bibinitperiod},
+         given={Roslan\bibnamedelima Md},
+         giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=AF}{%
+         family={Ahmad},
+         familyi={A\bibinitperiod},
+         given={Fauzan},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=AH}{%
+         family={Ahmad},
+         familyi={A\bibinitperiod},
+         given={Harith},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Optical Society of America}%
+    }
+    \strng{namehash}{IMA+1}
+    \strng{fullhash}{IMAHSWZNRNRMAFAH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{36}
+    \field{pages}{8621\bibrangedash 8624}
+    \field{title}{Nanosecond soliton pulse generation by mode-locked
+  erbium-doped fiber laser using single-walled carbon-nanotube-based saturable
+  absorber}
+    \field{volume}{51}
+    \field{journaltitle}{Applied optics}
+    \field{year}{2012}
+  \endentry
+
+  \entry{liu2015distributed}{article}{}
+    \name{author}{5}{}{%
+      {{hash=LX}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Xueming},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Cui},
+         familyi={C\bibinitperiod},
+         given={Yudong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Han},
+         familyi={H\bibinitperiod},
+         given={Dongdong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=YX}{%
+         family={Yao},
+         familyi={Y\bibinitperiod},
+         given={Xiankun},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=SZ}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Zhipei},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{LX+3}
+    \strng{fullhash}{LXCYHDYXSZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 7}
+    \field{title}{Distributed ultrafast fibre laser}
+    \field{volume}{5}
+    \field{journaltitle}{Scientific reports}
+    \field{year}{2015}
+  \endentry
+
+  \entry{dong2011short}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DB}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Bo},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Hao},
+         familyi={H\bibinitperiod},
+         given={Jianzhong},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Junhao},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LCy}{%
+         family={Liaw},
+         familyi={L\bibinitperiod},
+         given={Chin-yi},
+         giveni={C\bibinithyphendelim y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{DB+1}
+    \strng{fullhash}{DBHJHJLCy1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{105\bibrangedash 107}
+    \field{title}{Short linear-cavity Q-switched fiber laser with a compact
+  short carbon nanotube based saturable absorber}
+    \field{volume}{17}
+    \field{journaltitle}{Optical Fiber Technology}
+    \field{year}{2011}
+  \endentry
+
+  \entry{noronen2015all}{article}{}
+    \name{author}{6}{}{%
+      {{hash=NT}{%
+         family={Noronen},
+         familyi={N\bibinitperiod},
+         given={Teppo},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Melkumov},
+         familyi={M\bibinitperiod},
+         given={Mikhail},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Stolyarov},
+         familyi={S\bibinitperiod},
+         given={Dmitrii},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KVF}{%
+         family={Khopin},
+         familyi={K\bibinitperiod},
+         given={Vladimir\bibnamedelima F},
+         giveni={V\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=DE}{%
+         family={Dianov},
+         familyi={D\bibinitperiod},
+         given={Evgenii},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=OOG}{%
+         family={Okhotnikov},
+         familyi={O\bibinitperiod},
+         given={Oleg\bibnamedelima G},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Optical Society of America}%
+    }
+    \strng{namehash}{NT+1}
+    \strng{fullhash}{NTMMSDKVFDEOOG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{10}
+    \field{pages}{2217\bibrangedash 2220}
+    \field{title}{All-bismuth fiber system for femtosecond pulse generation,
+  compression, and energy scaling}
+    \field{volume}{40}
+    \field{journaltitle}{Optics letters}
+    \field{year}{2015}
+  \endentry
+
+  \entry{ahmad2014mode}{article}{}
+    \name{author}{6}{}{%
+      {{hash=AH}{%
+         family={Ahmad},
+         familyi={A\bibinitperiod},
+         given={Harith},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZAZ}{%
+         family={Zulkifli},
+         familyi={Z\bibinitperiod},
+         given={Ahmad\bibnamedelima Zarif},
+         giveni={A\bibinitperiod\bibinitdelim Z\bibinitperiod},
+      }}%
+      {{hash=MF}{%
+         family={Muhammad},
+         familyi={M\bibinitperiod},
+         given={FD},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zulkifli},
+         familyi={Z\bibinitperiod},
+         given={MZ},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TK}{%
+         family={Thambiratnam},
+         familyi={T\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+      {{hash=HSW}{%
+         family={Harun},
+         familyi={H\bibinitperiod},
+         given={Sulaiman\bibnamedelima Wadi},
+         giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{AH+1}
+    \strng{fullhash}{AHZAZMFZMTKHSW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{407\bibrangedash 412}
+    \field{title}{Mode-locked L-band bismuth--erbium fiber laser using carbon
+  nanotubes}
+    \field{volume}{115}
+    \field{journaltitle}{Applied Physics B}
+    \field{year}{2014}
+  \endentry
+
+  \entry{chernysheva2014sesam}{article}{}
+    \name{author}{6}{}{%
+      {{hash=CMA}{%
+         family={Chernysheva},
+         familyi={C\bibinitperiod},
+         given={Maria\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=KAA}{%
+         family={Krylov},
+         familyi={K\bibinitperiod},
+         given={Alexander\bibnamedelima A},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=ANR}{%
+         family={Arutyunyan},
+         familyi={A\bibinitperiod},
+         given={Natalia\bibnamedelima R},
+         giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=PAS}{%
+         family={Pozharov},
+         familyi={P\bibinitperiod},
+         given={Anatoly\bibnamedelima S},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=OED}{%
+         family={Obraztsova},
+         familyi={O\bibinitperiod},
+         given={Elena\bibnamedelima D},
+         giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=DEM}{%
+         family={Dianov},
+         familyi={D\bibinitperiod},
+         given={Evgeny\bibnamedelima M},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CMA+1}
+    \strng{fullhash}{CMAKAAANRPASOEDDEM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{448\bibrangedash 455}
+    \field{title}{SESAM and SWCNT mode-locked all-fiber thulium-doped lasers
+  based on the nonlinear amplifying loop mirror}
+    \field{volume}{20}
+    \field{journaltitle}{IEEE Journal of Selected Topics in Quantum
+  Electronics}
+    \field{year}{2014}
+  \endentry
+
+  \entry{chernysheva2014higher}{article}{}
+    \name{author}{8}{}{%
+      {{hash=CMA}{%
+         family={Chernysheva},
+         familyi={C\bibinitperiod},
+         given={Maria\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=KAA}{%
+         family={Krylov},
+         familyi={K\bibinitperiod},
+         given={Alexander\bibnamedelima A},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={Mou},
+         familyi={M\bibinitperiod},
+         given={Chengbo},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ARN}{%
+         family={Arif},
+         familyi={A\bibinitperiod},
+         given={Raz\bibnamedelima N},
+         giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=RAG}{%
+         family={Rozhin},
+         familyi={R\bibinitperiod},
+         given={Alex\bibnamedelima G},
+         giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=RMH}{%
+         family={R{\"u}mmelli},
+         familyi={R\bibinitperiod},
+         given={Mark\bibnamedelima H},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=TSK}{%
+         family={Turitsyn},
+         familyi={T\bibinitperiod},
+         given={Sergey\bibnamedelima K},
+         giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=DEM}{%
+         family={Dianov},
+         familyi={D\bibinitperiod},
+         given={Evgeny\bibnamedelima M},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CMA+1}
+    \strng{fullhash}{CMAKAAMCARNRAGRMHTSKDEM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{425\bibrangedash 432}
+    \field{title}{Higher-order soliton generation in hybrid mode-locked
+  thulium-doped fiber ring laser}
+    \field{volume}{20}
+    \field{journaltitle}{Ieee journal of selected topics in quantum
+  electronics}
+    \field{year}{2014}
+  \endentry
+
+  \entry{kieu2010generation}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KK}{%
+         family={Kieu},
+         familyi={K\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+      {{hash=JRJ}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={R\bibnamedelima Jason},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=PN}{%
+         family={Peyghambarian},
+         familyi={P\bibinitperiod},
+         given={N},
+         giveni={N},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{KK+1}
+    \strng{fullhash}{KKJRJPN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{20}
+    \field{pages}{1521\bibrangedash 1523}
+    \field{title}{Generation of few-cycle pulses from an amplified carbon
+  nanotube mode-locked fiber laser system}
+    \field{volume}{22}
+    \field{journaltitle}{IEEE Photonics Technology Letters}
+    \field{year}{2010}
+  \endentry
+
+  \entry{freudiger2014stimulated}{article}{}
+    \name{author}{6}{}{%
+      {{hash=FCW}{%
+         family={Freudiger},
+         familyi={F\bibinitperiod},
+         given={Christian\bibnamedelima W},
+         giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=YW}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Wenlong},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=HGR}{%
+         family={Holtom},
+         familyi={H\bibinitperiod},
+         given={Gary\bibnamedelima R},
+         giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=PN}{%
+         family={Peyghambarian},
+         familyi={P\bibinitperiod},
+         given={Nasser},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=XXS}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={X\bibnamedelima Sunney},
+         giveni={X\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=KKQ}{%
+         family={Kieu},
+         familyi={K\bibinitperiod},
+         given={Khanh\bibnamedelima Q},
+         giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{FCW+1}
+    \strng{fullhash}{FCWYWHGRPNXXSKKQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{153\bibrangedash 159}
+    \field{title}{Stimulated Raman scattering microscopy with a robust fibre
+  laser source}
+    \field{volume}{8}
+    \field{journaltitle}{Nature photonics}
+    \field{year}{2014}
+  \endentry
+
+  \entry{tsuzuki2016midinfrared}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=TM}{%
+         family={Tsuzuki},
+         familyi={T\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=JL}{%
+         family={Jin},
+         familyi={J\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+      {{hash=YM}{%
+         family={Yamanaka},
+         familyi={Y\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=SV}{%
+         family={Sonnenchein},
+         familyi={S\bibinitperiod},
+         given={V},
+         giveni={V},
+      }}%
+      {{hash=TH}{%
+         family={Tomita},
+         familyi={T\bibinitperiod},
+         given={H},
+         giveni={H},
+      }}%
+      {{hash=SA}{%
+         family={Sato},
+         familyi={S\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=OT}{%
+         family={Ohara},
+         familyi={O\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+      {{hash=SY}{%
+         family={Sakakibara},
+         familyi={S\bibinitperiod},
+         given={Y},
+         giveni={Y},
+      }}%
+      {{hash=OE}{%
+         family={Omoda},
+         familyi={O\bibinitperiod},
+         given={E},
+         giveni={E},
+      }}%
+      {{hash=KH}{%
+         family={Kataura},
+         familyi={K\bibinitperiod},
+         given={H},
+         giveni={H},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Optical Society of America}%
+    }
+    \strng{namehash}{TM+1}
+    \strng{fullhash}{TMJLYMSVTHSAOTSYOEKH+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{313\bibrangedash 317}
+    \field{title}{Midinfrared optical frequency comb based on difference
+  frequency generation using high repetition rate Er-doped fiber laser with
+  single wall carbon nanotube film}
+    \field{volume}{4}
+    \field{journaltitle}{Photonics Research}
+    \field{year}{2016}
+  \endentry
+\enddatalist
+\endinput

@@ -1,0 +1,118 @@
+\documentclass{phyasgn}\usepackage{nag}
+\phyasgn{classname=English Lexicology and Culture}
+\usepackage[backend=bibtex,bibstyle=gb7714-2015,citestyle=gb7714-2015]{biblatex}
+\renewcommand\refname{Reference}
+\renewcommand{\figurename}{Fig.}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\setlength{\bibitemsep}{3bp}
+\usepackage{background}
+\backgroundsetup{scale=1,angle=0,opacity=1,contents={\includegraphics[width=\paperwidth, height=\paperwidth, keepaspectratio]{pic/phy.jpg}}}
+\addbibresource{ref.bib}
+\renewcommand*{\bibfont}{\zihao{5}\linespread{1.27}\selectfont}
+%\usepackage{background}
+%\backgroundsetup{scale=1,angle=0,opacity=1,contents={\includegraphics[width=\paperwidth, height=\paperwidth, keepaspectratio]{pic/phy.jpg}}}
+%\ctexset{punct=kaiming}
+\setCJKmainfont[ItalicFont=FZKTK.TTF,BoldFont=FZXBSK.TTF]{FZSSK.TTF}
+\setCJKsansfont[BoldFont=FZHTK.TTF]{FZXH1K.TTF}
+\setCJKmonofont[ItalicFont=FZKTK.TTF]{FZFSK.TTF}
+\newCJKfontfamily\FZSS{FZSSK.TTF}
+\newCJKfontfamily\FZKT{FZKTK.TTF}
+\newCJKfontfamily\FZFS{FZFSK.TTF}
+\newCJKfontfamily\FZHT{FZHTK.TTF}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}[Scale=MatchLowercase]
+\setmonofont{Ubuntu Mono}%[Scale=MatchLowercase]
+\newfontfamily\lm{Latin Modern Roman}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
+\usepackage{abstract}
+\setlength{\absleftindent}{0pt}
+\setlength{\absrightindent}{0pt}
+\newcommand\keywords[1]{\textbf{Keywords}: #1}
+\newcommand\pkg[1]{\textsf{#1}}
+\newenvironment{csop}{\vskip\topsep\noindent\hspace{2em}\ttfamily\small\ignorespaces}{\vskip\topsep\par}
+\usepackage{float}
+\usepackage{booktabs,metalogo,siunitx,marginnote,manfnt,url}
+\usepackage[unicode]{hyperref}
+\hypersetup{pdfstartview=XYZ,hidelinks,pdfcreator=XeTeX Output,pdfauthor=Wu Xinan,
+pdftitle=phyasgn文档类}
+\usepackage{geometry,fancyhdr}
+\geometry{left=3cm,right=3cm,marginparwidth=4em}
+\fancyhead[L]
+{\begin{tabular}[b]{@{}l@{}}
+  \hyperref{https://www.pku.edu.cn/}{}{}{\includegraphics[height=2.3em]{pic/pkulogo.jpg}}
+\end{tabular}}
+\fancyhead[C]
+{\begin{tabular}[b]{@{}c@{}}
+  \large
+  Exploring the Roots of Physics English Words
+  \\[-2pt]
+  {\scriptsize Name:~Wu Xinan\quad ID:~1900011413}
+\end{tabular}
+}
+
+\usepackage{shortvrb,fancyvrb}
+\MakeShortVerb|
+\fvset{xleftmargin=2em,fontsize=\small}
+\makeatletter
+\ifx\l@nohyphenation\undefined
+  \newlanguage\l@nohyphenation
+\fi
+\DeclareRobustCommand\meta[1]{%
+  \ensuremath\langle
+  \ifmmode \expandafter \nfss@text \fi
+  {%
+    \rmfamily\itshape
+    \edef\meta@hyphen@restore
+    {\hyphenchar\the\font\the\hyphenchar\font}%
+  \hyphenchar\font\m@ne
+  \language\l@nohyphenation
+  #1\/%
+  \meta@hyphen@restore
+  }\ensuremath\rangle
+}
+\makeatother
+
+\def\phyasgn{\pkg{phyasgn}}
+\def\version{0.2 $\upbeta$}
+
+\title{
+  {Exploring the Roots of Physics English Words}\\[-8pt]
+    {\normalsize ——A Journey Through Ancient Greek and Latin}
+}
+\author{Wu Xinan}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\vspace{-1.3em}
+This article explores the roots of physics English words, tracing their origins back to ancient Greek and Latin. It highlights the significance of interdisciplinary studies in the development of the language of physics, which has borrowed words from various fields and languages such as French and German. Understanding the etymology of these words can deepen our understanding of physics concepts and appreciate the rich history of the subject. 
+\end{abstract}
+\keywords{Physics, Etymology, Interdisciplinary studies}
+\tableofcontents
+\section{Introduction}
+Physics, the study of matter and energy, has a long and rich history that dates back to ancient times. The English language, which has evolved over time, has borrowed words from various languages, including Latin, Greek, French, and German, to name a few. Many of the words used in physics have roots in these languages, and understanding their meanings can help deepen our understanding of the subject.
+\section{Literature Review}
+\subsection{The history of science and technology\cite{1}}
+Bunch and Hellemans provide a comprehensive overview of the history of science and technology, highlighting the major discoveries and inventions that have shaped our world. The book covers a broad range of topics, including physics, chemistry, biology, astronomy, and engineering, among others. The authors place a particular emphasis on the people behind these discoveries, providing biographical information on scientists such as Isaac Newton, Galileo Galilei, Marie Curie, and Albert Einstein, to name a few. This reference is valuable in providing a broad understanding of the development of science and technology over time.
+\subsection{Physics: The language of science\cite{2}}
+Campbell's book delves into the language of physics, exploring the vocabulary and concepts that underpin the subject. The author provides an overview of the key ideas in physics, such as energy, motion, and force, and explains the terminology used to describe these concepts. The book also covers topics such as relativity, quantum mechanics, and the nature of light. Campbell highlights the importance of language in the development of science and the need for clear communication to ensure a shared understanding of scientific concepts. This reference is useful for gaining a deeper understanding of the language of physics and the concepts it describes.
+\subsection{The language of physics: A foundation for university study\cite{3}}
+Singh's book provides an introduction to the language of physics, with a focus on preparing students for university-level study. The author explains the terminology used in physics and provides examples of how it is used in context. The book covers topics such as mechanics, thermodynamics, waves, and optics. Singh also includes sections on the history of physics and the scientific method. This reference is valuable for students beginning their study of physics or those who want to refresh their understanding of the language and concepts of the subject.
+\section{Results}
+The roots of physics English words can be traced back to ancient Greek and Latin, which were the languages of science and philosophy in the Western world. For example, the word "physics" itself comes from the Greek word "physis," which means "nature." The Greek philosopher Aristotle used this word to describe his study of the natural world, which included physics as we know it today.
+\par Another important Greek word that is commonly used in physics is "atom," which means "indivisible." The ancient Greek philosophers Leucippus and Democritus first proposed the idea of atoms as the basic building blocks of matter. This idea was further developed by the English scientist John Dalton in the early 19th century, leading to the modern atomic theory.
+\par Latin also contributed many words to the language of physics, such as "gravity," which comes from the Latin word "gravitas," meaning "weight" or "heaviness." This word was first used by the English physicist Sir Isaac Newton to describe the force that pulls objects toward each other. Newton's laws of motion, which he formulated in the late 17th century, revolutionized the study of physics and laid the foundation for modern physics.
+\par French and German have also had a significant impact on the language of physics. The word "force," for example, comes from the French word "force," which means "strength" or "power." The German physicist Albert Einstein, who is best known for his theory of relativity, introduced many new words to the language of physics, such as "spacetime," "relativity," and "quantum."
+\par Understanding the roots of physics English words can help us appreciate the rich history of the subject and deepen our understanding of its concepts. It also highlights the importance of interdisciplinary studies, as physics has borrowed words from many different languages and fields of study.
+\section{Conclusion}
+In conclusion, the language of physics is rooted in ancient Greek and Latin, with many words and concepts borrowed from other languages and fields of study. Understanding the etymology of physics English words can deepen our understanding of the concepts they describe and the history of the subject. Physics has evolved over time, with major discoveries and inventions leading to new words and concepts being introduced. The interdisciplinary nature of physics has led to the incorporation of words and concepts from other fields, such as mathematics, engineering, and philosophy. The language of physics is crucial for effective communication and shared understanding of scientific concepts. Overall, exploring the roots of physics English words highlights the significance of language in the development of science and the importance of interdisciplinary studies.
+\begin{thebibliography}{99}
+	\addcontentsline{toc}{section}{References}
+	\bibitem{1}Bunch, B. S., \& Hellemans, A. (2004). The history of science and technology: A browser's guide to the great discoveries, inventions, and the people who made them, from the dawn of time to today. Boston: Houghton Mifflin Harcourt.
+    \bibitem{2}Campbell, J. (2009). Physics: The language of science. London: Routledge.
+    \bibitem{3}Singh, S. (2011). The language of physics: A foundation for university study. London: Palgrave Macmillan.
+\end{thebibliography}
+\end{document}
