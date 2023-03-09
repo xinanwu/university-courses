@@ -1,0 +1,258 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{3em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{阿贝成像原理和空间滤波}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\newcommand{\tablecell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+	\tableofcontents
+	\newpage
+	\section{实验目的}
+	(1)通过实验，加深对傅里叶光学中空间频率，空间频谱和空间滤波等概念的理解；
+	\par(2)了解阿贝成像原理和对透镜成像分辨率的影响。
+	\section{实验器材}
+	光学导轨，光具做及其附件，氦氖激光器，扩束透镜，准直透镜，成像透镜，白屏板，半透明屏板，毛玻璃屏板，读数显微镜，物样品一套，滤波器一套。
+	\section{实验过程及数据整理}
+	\subsection{散斑原理确定频谱面位置}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{cccc}
+			\toprule[0.5mm]
+			&透镜&频谱面&焦距$(F/cm)$\\
+			\midrule
+			位置$/cm$&113.85&139.15&25.30\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+		\caption{散斑原理确定频谱面位置}
+	\end{table}
+\subsection{一维光栅空间频率测量}
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c|cccc}
+		\toprule[0.5mm]
+		级次&0&1&2&3\\
+		\midrule
+		位置$x/cm$&2.0&4.0&6.0&8.0\\
+		\midrule
+		$x^{\prime}/cm$&0&2&4&6\\
+		\midrule
+		空间频率$f_{x}/\times10^{4}m^{-1}$&0&1.25&2.50&3.75\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+	\caption{一维光栅空间频率测量}
+\end{table}
+\par 其中我们取氦氖激光器波长$\lambda=632.8nm$,由表中可见基频$f_{x}=1.25\times10^{4}m^{-1}$
+\subsection{一维光栅滤波实验现象及简要解释}
+	\begin{table}[H]
+	\centering
+	\resizebox{\textwidth}{!}
+	{
+	\begin{tabular}{|c|c|c|c|c|}
+		\toprule[0.5mm]
+编号&操作&d/mm&现象描述&简要解释\\
+		\midrule
+		A&None&3.60&有周期性明暗相间的图像&\tablecell{c}{一维光
+			栅的像}
+\\
+		\midrule
+		B&只允许0级条纹通过&-&无条纹&\tablecell{c}{复振幅除常数项全被过滤\\，只剩下了均匀背景光}\\
+		\midrule
+		C&0、$\pm 1$级可通过&3.60&\tablecell{c}{与A相比变模糊，亮纹宽度变窄，\\暗纹宽度变粗，明暗纹位置相比A不变}&\tablecell{c}{高频成分被过滤，只剩下\\变化慢的$\pm 1$级保留}\\
+		\midrule
+		D&遮住$\pm 1$级&1.80&空间频率变成2倍，条纹变细，与A相比变模糊&\tablecell{c}{变化最慢的变成了$\pm 2$ 级，且低频项\\作用更大，故频率翻倍，条纹变细；\\有高频成分丢失因此变模糊}\\
+		\midrule
+		E&遮住0级&3.60&\tablecell{c}{条纹的明暗与A相比亮暗反转}&\tablecell{c}{复振幅的常数项被滤掉，整个波形下移，\\复振幅的模方即会导致条纹亮暗反转}\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+}
+	\caption{一维光栅滤波实验现象及简要解释}
+
+\end{table}
+\subsection{二维光栅滤波实验}
+\par 经过测量后可得网格间距为$d_{x}=d_{y}=3.60mm$
+	\begin{table}[H]
+	\centering
+	\resizebox{\textwidth}{!}
+	{
+	\begin{tabular}{|c|c|c|c|c|}
+		\toprule[0.5mm]
+		编号&操作&d/mm&现象描述&简要解释\\
+		\midrule
+		A&只允许0级条纹通过&-&无条纹&\tablecell{c}{复振幅除常数项全被过滤，\\只剩下了均匀背景光}\\
+		\midrule
+		B&通过$f_{x}=0$的纵向频谱&3.60&横条纹，明暗条纹不反转&\tablecell{c}{通过竖向一维光栅信息}\\
+		\midrule
+		C&通过$f_{x}=0$的纵向频谱&3.60&竖条纹，明暗条纹不反转&\tablecell{c}{通过横向一维光栅信息}\\
+		\midrule
+		D&通过$f_{x}=f_{y}$的$45^{\circ}$方向频谱&2.55&\tablecell{c}{斜条纹$45^{\circ}$方向(与滤波方向垂直)，\\明暗条纹不反转，条纹间距变为$\frac{\sqrt{2}}{2}$}&\tablecell{c}{频谱沿着与滤波方向垂\\直的斜45$^{\circ}$方向分布,\\条纹间距变为原来的$\frac{\sqrt{2}}{2}$}\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+}
+	\caption{二维光栅滤波实验现象及简要解释}
+
+\end{table}
+\subsection{低通滤波实验}
+\par \textbf{空间频谱面上是二维的点阵，类似二维光栅的频谱,网格间距为$d_{x}=d_{y}=2.00mm$。
+}
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\toprule[0.5mm]
+		编号&操作&现象描述\\
+		\midrule
+		A&用$\phi=1mm$的圆孔光阑滤波&“光”字内部网格消失，图像稍微变模糊\\
+		\midrule
+		B&\tablecell{c}{用$\phi=1mm$的圆孔光阑滤波，\\但使得不在光轴上点通过}&\tablecell{c}{像上出现了少量浅网络，\\且若取点离中心越远则像越暗}\\
+		\midrule
+		C&用$\phi=0.3mm$的圆孔光阑滤波&\tablecell{c}{“光”字内部网格消失，\\图像变更加模糊且在字周围还有少量条纹}\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+	\caption{低通滤波实验现象}
+\end{table}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|}
+		\toprule[0.5mm]
+		操作现象&简要解释\\
+		\midrule
+		\tablecell{c}{
+			用$\phi=1mm$的圆孔光阑滤波，“光”字\\内部网格消失，图像稍微变模糊}
+		&\tablecell{c}{
+			由于卷积定理，频谱的每一个光点都\\包含了完整的“光”字信息，当我们只让\\频谱面上的一个点通过时，只有一个\\“光”字的信息，光栅的信息被滤掉了}\\
+		\midrule
+		\tablecell{c}{
+			用$\phi=1mm$的圆孔光阑滤波，但使得\\不在光轴上点通过,像上出现了少量\\浅网络，且若取点离中心越远则像越暗}&\tablecell{c}{
+			由于滤波片的尺寸较小，有高频信息\\漏过去，能够显示部分细节，而\\离中心越远的点级次越高，相比于\\低频点而言强度越小故像越暗}\\
+		\midrule
+		\tablecell{c}{用$\phi=0.3mm$的圆孔光阑滤波,“光”\\字内部网格消失，图像变更加模糊,\\且在字周围还有少量条纹}&\tablecell{c}{因为圆孔直径太小了，过滤掉了一些\\“光”字的高频信息，因此像的细节变的更少了}\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\caption{低通滤波实验现象简要解释}
+\end{table}
+\noindent
+\textbf{eg.理论计算使网格消失和字迹模糊的滤波器应有的孔径}
+\par 二维光栅频谱上光点的间距为$x^{\prime}=\lambda Ff_{x}=1.92mm$
+\par 同时最多只能容下一个光点的孔径（直径）为其两倍$D=3.84mm$
+\par 对于字迹，对于其上的一小段，我们认为其长度远大于宽度，我们可以认为他无穷长。这样一根无穷长、宽$ d = 0.5mm$ 的直线对应的函数、频谱是:
+\begin{center}
+	$f_{x}=\left\{
+	\begin{array}{lr}
+		 1,\quad |x|\leq\frac{d}{2}\\
+		 0,\quad|x|>\frac{d}{2}
+	\end{array}
+	\right.$\\
+	$F(\omega)=\int_{-\infty}^{\infty}f(x)e^{-i\omega x}dx=\dfrac{sin(\omega d/2)}{\omega d/2}$
+\end{center}
+\par 特征频率为：$\omega=\dfrac{2\pi}{d}$
+\par 滤波器的孔径应为:$D=2\lambda F\dfrac{\omega}{2\pi}=0.64mm$
+\subsection{高通滤波实验}
+\textbf{将衍射物换成十字板，在频谱面上放一圆屏光阑滤去频谱中心部分，十字的内部变暗，边缘清晰可见，而且内部有部分的光点。这是因为图像的精细结构及突变部分主要是由高频部分决定，因此高通滤波后边缘及十字像细节更清晰，而十字像内部的光点应该为本身十字板的细节被高通滤波器显现出来了。}
+\subsection{卷积现象观察}
+\textbf{用激光束分别照射 20 条/mm 和 200 条/mm 的两个正交光栅，20 条/mm 的光栅频谱疏，200 条/mm 的频谱密。将两光栅重叠，重叠后在疏频谱的每个光点上都出现了密频谱。转动20条/mm的光栅，小格子产生自转现象，且自转方向与光栅转动方向相同；转动200条/mm的光栅，小格子开始绕着像中心转，但小格子不发生自转现象。这是因为两个函数的卷积的傅里叶变换等于各自傅里叶变换的乘积，而透镜有二维傅里叶变换的功能，相当于对两个正交光栅经过透镜成像后将其分别在像面进行了像的迭代。}
+	\section{分析与讨论}
+	\noindent
+	\textbf{eg.散斑原理的成因及应用}
+	\par 当相干光从粗糙表面反射或从含有散射物质的介质内部后向散射或透射时，不同的面元对入射相干光的反射或散射会引起不同的光程差，反射或散射的光波动在空间相遇时会发生干涉现象。当数目很多的面元不规则分布时，可以观察到因为干涉形成的散斑。由于衍射的原理，我们可以得到散斑的大小与被照明区域直径成负相关关系，因此当我们的屏处于透镜后焦面时，被照明区域的直径最小，也就是激光散斑的大小最大，因此可以由此得到透镜的焦距。
+\end{document}

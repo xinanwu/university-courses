@@ -1,0 +1,211 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{光的时间相干性}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		光源的时间相干性，可以由光源的相干长度或者波列长度与光速求得，超过相干时间的两束光我们可以认为是非相干的。在本实验中我们用等厚干涉测定了白光、橙光和黄光的相干时间，用等倾干涉测定了汞黄双线的相干时间和汞黄双线的波长差，并在从中再次熟悉了迈克尔逊干涉仪的调节与使用。
+		
+		\textbf{关键词：相干时间，等厚干涉，等倾干涉}
+	\end{abstract}
+	\section{实验目的}
+	(1)观测几种光源的相干长度，加深对光源时间相干性的理解；
+	\par (2)测定汞黄双线的波长差$\delta \lambda$(用两种方法)；
+	\par (3)测定测定汞黄双线的线型与线宽，定量认识谱线的线型、线宽$\delta \lambda$和双线波长差$\Delta\lambda$对干涉图样各有什么影响。
+	\section{实验器材}
+	M-干涉仪，He-Ne激光器，汞灯，白炽灯，小孔光阑，扩束透镜，黄干涉滤光片，颜色玻璃。
+	\section{实验过程及数据整理}
+	\subsection{观测白光相干长度}
+	根据观测的白光等厚干涉，我们可得等光程位置为：
+	\begin{center}
+		$d_{0}=50.430mm$
+	\end{center}
+\par 其中我们相干长度内干涉级数为：$k_{1}=\dfrac{3-1}{2}=1$,所以相干长度为：
+\begin{center}
+	$\Delta L_{1}=\lambda=5.5\times10^{2}nm$
+\end{center}
+\par 我们可以计算相干时间为：
+\begin{center}
+	$\tau_{1}=\dfrac{\Delta L_{1}}{c}=1.8\times10^{-15}s$
+\end{center}
+\subsection{观测橙光相干长度}
+我们通过观测橙光干涉条纹，并旋转手轮记录视场中移动的条纹数为：
+\begin{center}
+	$k_{2}=23$
+\end{center}
+\par 因此我们可以计算橙光相干长度为：
+\begin{center}
+	$\Delta L_{2}=k_{2}\lambda_{2}=1.44\times10^{4}nm$
+\end{center}
+\par 因此我们可以计算相干时间为：
+\begin{center}
+	$\tau_{2}=\dfrac{\Delta L_{2}}{c}=4.8\times10^{-14}s$
+\end{center}
+\subsection{观测黄光相干长度}
+我们通过观测黄光干涉条纹，并旋转手轮记录视场中移动的条纹数为：
+\begin{center}
+	$k_{3}=47$
+\end{center}
+\par 因此我们可以计算光光相干长度为：
+\begin{center}
+	$\Delta L_{3}=k_{3}\lambda_{3}=2.72\times10^{4}nm$
+\end{center}
+\par 因此我们可以计算相干时间为：
+\begin{center}
+	$\tau_{3}=\dfrac{\Delta L_{3}}{c}=9.1\times10^{-14}s$
+\end{center}
+\subsection{观测汞灯黄光相干长度}
+我们通过记录等光程与汞灯黄光消失的位置有以下数据：
+\begin{center}
+	$d_{0}=50.430mm,d_{max}=62.780mm$
+\end{center}
+\par 所以我们可以计算其相干长度为：
+\begin{center}
+	$\Delta L_{4}=2(d_{max}-d_{0})=24.700mm$
+\end{center}
+\par 因此我们计算相干时间为：
+\begin{center}
+	$\tau_{4}=\dfrac{\Delta L_{4}}{c}=8.2\times10^{-11}s$
+\end{center}
+\subsection{测定汞黄双线波长差}
+\subsubsection{用汞黄双线干涉图测定汞黄双线波长差}
+我们观测实验室提供的汞黄双线干涉图可以得到一个波节区域内干涉条纹个数为：
+\begin{center}
+	$\Delta k=272$
+\end{center}
+\par 因此我们计算汞黄双线波长差为：
+\begin{center}
+	$\Delta \lambda=\dfrac{\lambda}{\Delta k}=2.13nm$
+\end{center}
+\subsubsection{利用拍现象计算汞黄双线波长差}
+\begin{table}[H]
+	\centering
+	\caption{利用拍现象计算汞黄双线波长差}
+	\label{利用拍现象计算汞黄双线波长差}
+	\begin{tabular}{c|*{7}{c}}
+		\toprule[0.5mm]
+		拍的节点&1&2&3&4&5&6&7\\
+		\midrule
+		$d_{i}/mm$&51.516&51.597&51.680&51.760&51.840&51.916&51.982\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 线性拟合图}
+	\includegraphics[width=10cm,height=7cm]  {di.png} 
+\end{figure}
+\par 因此我们可以计算出汞黄双线波长差为：
+\begin{center}
+	$\Delta \lambda=\dfrac{\lambda^{2}}{2\Delta d}=2.13nm$
+\end{center}
+\par \textbf{可见两种方法计算出的波长差$\Delta \lambda$差不多，即两种方法均可较为准确地计算出汞黄双线的波长差。}
+	\section{收获与感想}
+	在本次实验中我们通过调节和使用迈克尔逊干涉仪观测几种光源的相干长度，用两种方法测定汞黄双线的波长差，加深了我们对光源时间相干性的理解，同时调节搭建光路也为以后我们做光学实验打下了良好的基础。
+\end{document}

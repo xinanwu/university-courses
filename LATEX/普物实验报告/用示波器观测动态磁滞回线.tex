@@ -1,0 +1,329 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{观测动态磁滞回线}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	\renewcommand{\abstractname}{\Large 摘要\\}
+	\begin{abstract}
+		{\normalsize 铁磁材料除了具有高的磁导率外，另一重要的磁性特点就是磁滞，铁磁材料的磁感应强度值的变化总是落后于磁场强度的变化，这种现象称为磁滞，是铁磁质的重要特性之一，上述闭合曲线常称为磁滞回线。磁滞回线是介质内部磁场强度和磁感应强度的关系曲线。我们将在此次实验中用示波器观测样品一和样品二的动态磁滞回线。
+			
+			\textbf{关键词：磁滞，磁场强度，磁感应强度}}
+	\end{abstract}
+	
+	\newpage
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\section{实验目的}
+	(1)学习使用示波器对动态磁滞回线进行观测，了解磁感应强度和磁场强度的测量方法；
+	\par (2)学习应用RC积分电路；
+	\par (3)了解铁磁性材料的动态磁化特性。
+	\section{实验器材}
+	动态磁滞回线测量仪(包括正弦信号源、待测铁磁样品及绕组、积分电路所用的电阻和电容),双踪读出示波器，直流电源，数字多用表，滑线变阻器。
+	\section{实验过程及数据整理}
+	\subsection{测量铁氧体的饱和动态磁滞回线}
+	\subsubsection{铁氧体饱和磁滞回线测量(100Hz)}
+	\begin{table}[H]
+		\caption{铁氧体上支饱和磁滞回线测量数据表}
+		\label{铁氧体上支饱和磁滞回线测量数据表}
+		\centering
+		\begin{tabular}{c|*{4}{c}}
+			\toprule[0.5mm]
+			测量次数&$U_{R1}(mV)$&$H(A/m)$&$U_{c}(mV)$&$B(mT)$\\
+			\midrule
+			1&400&230.8&15.10&405.9\\
+			2&301&173.1&14.70&395.2\\
+			3&100&57.7&12.60&338.7\\
+			4&47&27.1&10.00&268.8\\
+			5&0&0&3.60&96.8\\
+			6&-16.0&-9.2&0&0\\
+			7&-38.0&-21.9&-5.15&-138.4\\
+			8&-76.5&-44.1&-10.00&-268.8\\
+			9&-300&-173.1&-15.05&-404.6\\
+			10&-410&-236.5&-15.20&-408.6\\			
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+	\caption{铁氧体下支饱和磁滞回线测量数据表}
+	\label{铁氧体下支饱和磁滞回线测量数据表}
+	\centering
+	\begin{tabular}{c|*{4}{c}}
+		\toprule[0.5mm]
+		测量次数&$U_{R1}(mV)$&$H(A/m)$&$U_{c}(mV)$&$B(mT)$\\
+		\midrule
+		1&400&230.8&15.10&405.9\\
+		2&150.5&86.8&12.75&342.7\\
+		3&89.0&51.3&10.10&271.5\\
+		4&46.2&26.7&4.95&133.1\\
+		5&21.0&12.1&0&0\\
+		6&0&0&-4.50&-121.0\\
+		7&-39.4&-22.7&-10.00&-268.8\\
+		8&-300&-173.1&-15.00&-403.2\\	
+		9&-410&-236.5&-15.20&-408.6\\	
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+   \begin{figure}[H]
+	\centering
+	\caption{\label{1}铁氧体饱和磁滞回线}
+	\includegraphics[width=10cm,height=7cm]  {饱和磁滞回线.png} 
+	\end{figure}
+\par 对于$B_{s},B_{r},H_{c}$的测量值为:
+\begin{center}
+	$B_{s}=\dfrac{405.9+408.6}{2}mT=407.3mT$\\
+	$B_{r}=\dfrac{96.8+121}{2}mT=108.9mT$\\
+	$H_{c}=\dfrac{9.2+12.1}{2}A/m=10.7A/m$
+\end{center}
+    \subsubsection{不同频率下铁氧体饱和磁滞回线参量}
+	\begin{table}[H]
+	\caption{铁氧体(50Hz)下饱和磁滞回线参量}
+	\label{铁氧体(50Hz)下饱和磁滞回线参量}
+	\centering
+	\begin{tabular}{c|*{8}{c}}
+		\toprule[0.5mm]
+		测量次数&$U_{R1}(mV)$&$H_{c1}(A/m)$&$U_{R2}(mV)$&$H_{c2}(A/m)$&$U_{c1}(mV)$&$B(mT)$&$U_{c2}(mV)$&$B(mT)$\\
+		\midrule
+		1&20.2&11.7&-15.6&-9.0&3.85&103.5&-4.00&-107.5\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+	\begin{table}[H]
+	\caption{铁氧体(150Hz)下饱和磁滞回线参量}
+	\label{铁氧体(150Hz)下饱和磁滞回线参量}
+	\centering
+	\begin{tabular}{c|*{8}{c}}
+		\toprule[0.5mm]
+		测量次数&$U_{R1}(mV)$&$H_{c1}(A/m)$&$U_{R2}(mV)$&$H_{c2}(A/m)$&$U_{c1}(mV)$&$B(mT)$&$U_{c2}(mV)$&$B(mT)$\\
+		\midrule
+		1&19.0&11.0&-16.9&--9.75&3.65&98.1&-4.00&-107.5\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+\par 我们认为使用示波器的横向坐标不确定度为$e_{1}=0.1mV$,纵向坐标为$e_{2}=0.05mV$,则：
+\begin{center}
+	$\dfrac{\sigma_{H_{c}}}{H_{c}}=\dfrac{e_{1}}{\sqrt{3}U_{R}}$\\
+	$\dfrac{\sigma_{B_{r}}}{B_{r}}=\dfrac{e_{2}}{\sqrt{3}U_{c}}$
+\end{center}
+\par 我们可以计算可得：
+	\begin{table}[H]
+	\caption{不同频率下线宽计算}
+	\label{不同频率下线宽计算}
+	\centering
+	\begin{tabular}{c|*{4}{c}}
+		\toprule[0.5mm]
+		$f(Hz)$&$H_{c}(A/m)$&$\sigma_{H_{c}}(A/m)$&$B_{r}(mT)$&$\sigma_{B_{r}}(mT)$\\
+		\midrule
+		50&10.35&0.03&105.5&0.8\\
+		150&10.37&0.03&102.8&0.8\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+\par 因此对于50Hz而言，$H_{c}=(10.35\pm 0.03)A/m,B_{r}=(105.5\pm 0.8)mT$
+\par 因此对于150Hz而言，$H_{c}=(10.37\pm 0.03)A/m,B_{r}=(102.8\pm 0.8)mT$
+\par \textbf{我们观察得到在不同频率下测量得到的矫顽力和剩余磁感应强度都几乎一致，也大概在误差范围内，这是因为在饱和磁化的情况下，矫顽力与剩余磁感应强度不会因为交变磁场的频率变化而变化，所以我们测量结果也会几乎一致，只是测量时的误差导致测量结果不能完全相同。}
+    \subsubsection{不同积分常量下李萨如图形}
+    \begin{figure}[H]
+    	\centering
+    	\caption{\label{1}积分常量0.5s李萨如图形}
+    	\includegraphics[width=10cm,height=7cm]  {0.5.jpg} 
+    \end{figure}
+    \begin{figure}[H]
+	\centering
+	\caption{\label{1}积分常量0.05s李萨如图形}
+	\includegraphics[width=10cm,height=7cm]  {0.05s.jpg} 
+    \end{figure}
+    \begin{figure}[H]
+	\centering
+	\caption{\label{1}积分常量0.01s李萨如图形}
+	\includegraphics[width=10cm,height=7cm]  {0.01s.jpg} 
+    \end{figure}
+	{\large{\textbf{$Q$}}}:\normalsize 为什么积分常量会影响李萨如图形的形状？积分常量是否会影响真实磁滞回线形状？
+    \par{\large{\textbf{$A$}}}:\normalsize \textbf{若积分常量不是远大于交变磁场的周期时间，则对于积分电路的暂态过程而言电容的分压会比较显著，我们测量的电阻电压不能完全反映实际电压值，因而会影响李萨如图形的形状；积分常量不会影响真实磁滞回线的形状。}
+	\subsection{测量铁氧体的动态磁化曲线}
+	\subsubsection{铁氧体的动态磁化曲线}
+	\begin{table}[H]
+		\centering
+		\caption{铁氧体动态磁化曲线测量数据表}
+		\label{铁氧体动态磁化曲线测量数据表}
+		\begin{tabular}{|r|r|r|r|r|}
+			\toprule[0.5mm]
+			$U_{R1}(mV)$&$H_{m}(A/m)$&$U_{c}(mV)$&$B_{m}(mT)$&$\mu_{m}=\frac{B_{m}}{\mu_{0}H_{m}}$\\
+			\midrule
+			0&0&0&0&-\\
+			5     & 2.9   & 0.52  & 14    & 3341.8 \\
+			10    & 5.8   & 1.02  & 27.4  & 3759.5 \\
+			20    & 11.5  & 2.2   & 59.1  & 4089.7 \\
+			30    & 17.3  & 3.38  & 90.9  & 4181.4 \\
+			40    & 23.1  & 4.82  & 129.6 & 4364.7 \\
+			50    & 28.8  & 6.04  & 162.4 & 4587.4 \\
+			60    & 34.6  & 7.48  & 201.1 & 4825.3 \\
+			70    & 40.4  & 8.25  & 221.8 & 4569.0 \\
+			80    & 46.2  & 9.45  & 254   & 4375.2 \\
+			90    & 51.9  & 10    & 268.8 & 4121.6 \\
+			100   & 57.7  & 10.8  & 290.3 & 4003.8 \\
+			110   & 63.5  & 11.3  & 303.8 & 3807.3 \\
+			130   & 75    & 12.15 & 326.6 & 3465.4 \\
+			150   & 86.5  & 12.8  & 344.1 & 3165.7 \\
+			170   & 98.1  & 13.3  & 357.5 & 2900.1 \\
+			200   & 115.4 & 13.8  & 371   & 2558.4 \\
+			220   & 126.9 & 13.95 & 375   & 2351.6 \\
+			240   & 138.5 & 14.1  & 379   & 2177.7 \\
+			260   & 150   & 14.35 & 385.8 & 2046.8 \\
+			280   & 161.5 & 14.45 & 388.4 & 1913.9\\
+			300   & 173.1 & 14.55 & 391.1 & 1798.0 \\
+			320   & 184.6 & 14.6  & 392.5 & 1692.0 \\
+			360   & 207.7 & 14.8  & 397.8 & 1524.2 \\
+			400   & 230.8 & 15.1  & 405.9 & 1399.5 \\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+    \begin{figure}[H]
+	\centering
+	\caption{\label{1}铁氧体动态磁化曲线图}
+	\includegraphics[width=10cm,height=7cm]  {hb.png} 
+    \end{figure}
+\par \textbf{铁氧体动态磁化曲线在铁氧体达到饱和磁化之前，磁感应强度随着磁场强度增大而增大，在磁场强度很小的时候曲线接近于线性，但随着磁场强度的增大，曲线斜率逐渐变小，在达到饱和磁化的时候，曲线斜率变为接近于0。}
+\subsubsection{铁氧体的$\mu_{m}-H_{m}$曲线图}
+   \begin{figure}[H]
+	\centering
+	\caption{\label{1}$\mu_{m}-H_{m}$曲线图}
+	\includegraphics[width=10cm,height=7cm]  {mh.png} 
+\end{figure}
+\par \textbf{铁氧体$\mu_{m}-H_{m}$曲线变化规律为先是$\mu_{m}$随着磁场强度$H_{m}$的增大而增大，当达到一个极大值($H_{m}\approx 36A/m$)过后就随着$H_{m}$的增大而减小了。}
+\subsubsection{铁氧体的起始磁导率$\mu_{i}$}
+\par \textbf{我们取第一个测量点近似为为起始磁导率，则起始磁导率$\mu_{i}\approx 3341.8$}
+\begin{center}
+	$\therefore\mu_{i}\approx 3341.8$
+\end{center}
+	\subsection{观察不同频率下硅钢磁滞回线的变化规律}
+	\begin{table}[H]
+		\caption{不同频率下硅钢磁滞回线参量}
+		\label{不同频率下硅钢磁滞回线参量}
+		\centering
+		\begin{tabular}{c|*{6}{c}}
+			\toprule[0.5mm]
+			$f(Hz)$&$U_{R1}(mV)$&$H_{c}(A/m)$&$U_{c1}(mV)$&$B_{r}(mT)$&$U_{c2}(mV)$&$B_{m}(mT)$\\
+			\midrule
+			20&105&105&20.4&566.7&33.2&922.2\\
+			40&128&128&21.2&588.9&33.6&933.3\\
+			60&138&138&22.6&627.8&33.8&938.9\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\par \textbf{通过比较不同频率下的硅钢磁滞回线测量参数我们发现，改变频率后其最大磁感应强度几乎一致，因为在固定交变磁场强度的最大幅度的情况下，磁感应强度的最大值也不会变化；而剩余磁感应强度和矫顽力大小随着交变磁场的频率增大而增大，因为在达到饱和磁化之前，交变磁场的频率越大，则磁滞损耗越大，而最大磁感应强度不变，磁滞能量损耗越大，因此剩余磁感应强度和矫顽力也就越大。}
+	\section{思考题}
+	{\large{\textbf{$Q_{1}$}}}:\normalsize 铁磁材料的动态磁滞回线与静态磁滞回线在概念上有什么区别？铁磁材料动态磁滞回线的形状和面积受哪些因素的影响？
+	\par{\large{\textbf{$A$}}}:\normalsize \textbf{区别是动态磁滞回线是在交变磁场情况下测量的磁滞回线，而静态磁滞回线是在每一点都磁化完成后测量的。动态磁滞回线的形状和面积与磁化场的频率和幅度都有关，也与铁磁材料的种类，大小有关。}
+	\par {\large{\textbf{$Q_{2}$}}}:\normalsize 铁氧体和硅钢材料的动态磁化特性各有什么特点？
+	\par{\large{\textbf{$A$}}}:\normalsize \textbf{铁氧体更容易氧化，使之饱和所需要的外磁场不大，在交变磁场瞬时值变为0时的剩余磁感应强度不大，矫顽力也不大。硅钢相对难以磁化，使其饱和的外磁场较大，交变磁场瞬时值为0时的剩余磁感应强度较大，矫顽力也较大。}
+	\par {\large{\textbf{$Q_{3}$}}}:\normalsize 本实验中，电路参量应该怎样设置才能保证$u_{R1}-u_{c}$所形成的李萨如图形正确反映材料动态磁滞回线的形状？
+    \par{\large{\textbf{$A$}}}:\normalsize \textbf{主要依赖于两个参数，第一个参数是交流电的幅度，主要是为了保证材料能够被饱和磁化；第二个参数为积分电路的特征时间量RC，为了能够正确的反映材料动态磁滞回线的形状，则积分电路特征时间量RC应该远大于其交变电流的时间周期T。}
+    \par {\large{\textbf{$Q_{4}$}}}:\normalsize 实验中如何判断磁滞回线的绕行方向？
+    \par{\large{\textbf{$A$}}}:\normalsize \textbf{可以通过单独观察x方向信号和y方向信号的相位得到，若x方向相位较y方向相位超前，则是逆时针方向的；反之则为顺时针方向（在本次实验中我们可以看出磁滞回线的绕行方向为逆时针）。}
+	\section{分析与讨论}
+	\textbf{在本次实验中我们得到了各个曲线，其中不同积分常量下的李萨如图形不同是因为当积分常量与交变磁场的频率接近的时候，电容分电压比较严重，CH2上的电压值不能反映真实的磁感应强度大小，因此积分常量越小，示波器上反映的磁滞回线形状会发生畸变；铁氧体动态磁化曲线在未达到饱和磁化之前，随着磁场强度增大，磁感应强度也随之增大，但斜率逐渐递减，当到达饱和磁化的时候，磁感应强度达到最大值，斜率变为0；铁氧体的磁导率随着磁场强度变化曲线，在最开始的时候由于磁场导致的磁化作用，磁导率随着磁场强度的增加而增加，但是越接近于饱和磁化则磁感应强度随着磁场强度增加越慢，因此对于磁导率存在一个饱和磁导率，当磁场强度超过饱和磁导率对应的磁场强度过后，由于磁感应强度增加量小于磁场强度的增加量，因此磁导率将会逐渐减小，当磁场强度趋于无穷的时候磁导率将会趋于0。}
+	\section{收获与感想}
+	在本次实验中，我们学习使用示波器对动态磁滞回线进行观测，了解通过测量电压来计算磁感应强度和磁场强度的测量方法；我们学习应用了RC积分电路的使用方法，为以后学习微分电路的使用方法打下基础；同时我们本次实验课程了解了铁磁性材料的动态磁化特性，了解了磁滞回线的基本特性，为以后从事相关研究奠定基础。
+\end{document}

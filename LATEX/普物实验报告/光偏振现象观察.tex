@@ -1,0 +1,201 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	北京大学物理学院\\
+	吴熙楠}
+\title{
+	\heiti{光偏振现象观察}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	\renewcommand{\abstractname}{\Large 摘要\\}
+	\begin{abstract}
+		{\normalsize 干涉和衍射是各种波动都具有的现象，但是由衍射和干涉的现象无法鉴别某种波动是纵波还是横波。纵波和横波的区别表现在偏振现象上。纵波的振动对于波的传播方向是轴对称的，横波的振动对于波的传播方向不是轴对称的，横波的上述特点就是它的偏振性。
+			
+			\textbf{关键词：横波、纵波、偏振}}
+	\end{abstract}
+	
+	\newpage
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\section{实验目的}
+	(1)验证布儒斯特定律；
+	\par (2)观察双折射现象；
+	\par (3)产生和观察光偏振状态；
+	\par (4)了解产生与检验偏振光的元件与仪器；
+	\par (5)掌握产生与检验偏振光的条件和方法。
+	\section{实验器材}
+	偏振光镜，偏振片，方解石块，$\dfrac{1}{2}$波片，$\dfrac{1}{4}$波片，$He-Ne$激光器，钠光灯，玻璃片堆，光电管和光电流显示器。
+	\section{实验过程及数据整理}
+	\subsection{用偏振片验证布儒斯特定律}
+	(1)反射光光强在$0^{\circ}-90^{\circ}$逐渐变弱到几乎没有，在$90^{\circ}-180^{\circ}$又逐渐变强，在$180^{\circ}-270^{\circ}$逐渐变弱到几乎没有，在$270^{\circ}-360^{\circ}$又逐渐变强。原因：光以布儒斯特角入射经过P的反射光为s偏振光，转动A至$90^{\circ},270^{\circ}$时相当于透振方向与s光平行，因此这两个点处光强最小，理论上是0，但由于光路无法调节完美，所以我们仍然能观察到少量光强。
+	\par (2)透射光光强在$0^{\circ}-90^{\circ}$逐渐变强，在$90^{\circ}-180^{\circ}$又逐渐变弱到几乎没有，在$180^{\circ}-270^{\circ}$逐渐变强，在$270^{\circ}-360^{\circ}$又逐渐变弱到几乎没有。原因：光以布儒斯特角入射经过P的反射光为s偏振光，转动A至$0^{\circ},180^{\circ}$时相当于透振方向与s光垂直，因此这两个点处光强最小，理论上是0，但由于光路无法调节完美，所以我们仍然能观察到少量光强。
+	\par (3)反射光在A绕y轴转动$0^{\circ}-90^{\circ}$逐渐变强，在$90^{\circ}-180^{\circ}$又逐渐变弱到几乎没有，在$180^{\circ}-270^{\circ}$逐渐变强，在$270^{\circ}-360^{\circ}$又逐渐变弱到几乎没有。
+	\par (4)透射光光在A绕y轴转动$0^{\circ}-90^{\circ}$逐渐变弱到几乎没有，在$90^{\circ}-180^{\circ}$又逐渐变强，在$180^{\circ}-270^{\circ}$逐渐变弱到几乎没有，在$270^{\circ}-360^{\circ}$又逐渐变强。
+	\par (5)旋转偏振片$360^{\circ}$发生两次消光，则说明反射光为线偏振光，且偏振光偏振方向与垂直于入射平面，即反射光为s偏振光。
+	\subsection{观察双折射现象}
+	(1)我们看到有一深一浅两个孔，转动方解石，深的孔不动，较浅的孔绕着深的孔转动，因为方解石的e光折射率大于o折射率，e光折射产生的孔浅，会因为方解石位置变化而变化。
+	\par (2)我们只观察到一个小孔，且不随方解石位置变化而变化。
+	\par (3)由于o光和e光折射产生的小孔交替消失，o光与e光振动方向垂直，e光振动方向在主面内，o光振动方向垂直于主面。
+	\subsection{观察线偏振光通过$\frac{\lambda}{2}$片后的现象}
+	(1)旋转P，透射光强度几乎没有变化；旋转A，透射光强度会在旋转一周内出现两次消光，且消光时P与A的透振方向垂直。
+	\par (2)(不用)，4次，因为检偏器和起偏器原先就处于消光位置，当偏振光平行经过$\dfrac{1}{2}$波片的快轴或慢轴时，偏振光的方向不改变，并且每转动$\dfrac{1}{2}$波片$90^{\circ}$就会使得偏振光平行于$\dfrac{1}{2}$波片的快轴或慢轴，因此能观察到4次消光现象。
+	\par (3)2次
+	\par (4)$-16^{\circ}$
+	\par (5)
+	\begin{table}[H]
+		\caption{$\frac{\lambda}{2}$片转动影响偏振态的观察记录}
+		\centering
+			\begin{tabular}{||c|c|c||}
+				\toprule[0.5mm]
+				起偏器转动角度$\theta$&检偏器转动角度$\theta^{\prime}$&振动方向转动角度\\
+				\midrule
+				$0^{\circ}$&$0^{\circ}$&$0^{\circ}$\\
+				$15^{\circ}$&$-16^{\circ}$&$31^{\circ}$\\
+				$30^{\circ}$&$-31^{\circ}$&$61^{\circ}$\\
+				$45^{\circ}$&$-45^{\circ}$&$90^{\circ}$\\
+				$60^{\circ}$&$-59^{\circ}$&$119^{\circ}$\\
+				$75^{\circ}$&$-74^{\circ}$&$149^{\circ}$\\
+				$90^{\circ}$&$-91^{\circ}$&$181^{\circ}$\\
+				\bottomrule[0.5mm]
+			\end{tabular}
+	\end{table}
+\par \textbf{若P转动$\theta$角度，则线偏振光经过$\dfrac{\lambda}{2}$片后振动方向转动角度为$2\theta$角度。}
+\subsection{用$\frac{\lambda}{4}$片产生椭圆偏振光}
+(1)略
+\par (2)旋转A$360^{\circ}$，不发生消光，但在$86^{\circ}(+180^{\circ})$附近为光强极小，在$356^{\circ}(-180^{\circ})$附近为光强极大。
+\par (3)
+	\begin{table}[H]
+	\caption{$\frac{\lambda}{4}$片转动影响偏振态的观察记录}
+	\centering
+	\begin{tabular}{||c|c|c||}
+		\toprule[0.5mm]
+		起偏器转动角度$\theta$&A转$360^{\prime}$观察到的现象&光的偏振状态\\
+		\midrule
+		$0^{\circ}$&发生两次消光&线偏振光\\
+		$15^{\circ}$&不发生消光但有最大光强与最小光强&椭圆偏振光\\
+		$30^{\circ}$&不发生消光但有最大光强与最小光强，且最大最小光强之差很小&椭圆偏振光\\
+		$45^{\circ}$&光强几乎不变&圆偏振光\\
+		$60^{\circ}$&不发生消光但有最大光强与最小光强，且最大最小光强之差很小&椭圆偏振光\\
+		$75^{\circ}$&不发生消光但有最大光强与最小光强&椭圆偏振光\\
+		$90^{\circ}$&发生两次消光&线偏振光\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+\subsection{检验椭圆偏振光与部分偏振光}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}检验椭圆偏振光与部分偏振光}
+	\includegraphics[width=10cm,height=6cm]  {光路图.png} 
+\end{figure}
+操作步骤：
+\par (1)先放好P和A，共轴调节，然后再调节至消光，在中间插入$\dfrac{\lambda}{4}$片，再调至消光，记录下此时$P,\frac{\lambda}{4}$片的角度$\theta_{p},\theta_{c}$
+\par (2)放好玻璃片堆，偏振片P，调节至共轴，记下光强极小时P的角度$\theta_{p}^{\prime}$，玻璃片堆的作用为产生部分偏振光。
+\par (3)在玻璃片堆和P之间插入上述波晶片，调节其角度为$\theta_{p}^{\prime}+\theta_{c}-\theta_{p}$，则经过玻璃片堆出射的部分偏振光或椭圆偏振光与波晶片的一条轴重合。
+\par (4)如果为椭圆偏振光，则经过波晶片后为线偏振光，转动P会出现消光现象；反之如果为部分偏振光，则没有消光现象。
+\subsection{显色偏振现象}
+(1)略
+\par (2)红色，橙色，绿色，橙色；因为不同波长的光不可能同时满足干涉亮条纹，而是部分满足亮条纹，不同满足暗条纹，结果在偏振光干涉中会产生一定色彩，不同厚度的胶带的光程差不一样，因此出现颜色不同。
+\par (3)$A\verb*|//|P$和$A\perp P$时的透射光颜色互为互补色，因为如果在$A\verb|//| P$被偏振片截断的颜色的光，在$A\perp P$时可以显现出来，反之同理。
+\par (4)不能
+	\section{收获与感想}
+	在本次实验中，我们验证了布儒斯特定律，观察了双折射现象，产生和观察了光偏振状态，了解了产生与检验偏振光的元件与仪器，同时也了解了产生与检验偏振光的条件和方法；为我们更好的理解光的横波性和偏振现象打好了良好的基础，同时也提高了我们光学基础实验的实验技巧与方法。
+\end{document}

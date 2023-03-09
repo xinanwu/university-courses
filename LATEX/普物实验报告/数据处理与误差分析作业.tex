@@ -1,0 +1,187 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{测量误差作业}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+
+\section{数据处理练习题}
+\subsection{测量钢筒体积}
+\subsubsection{计算结果}
+\begin{table}[H] 
+	\caption{习题一}
+	\label{习题一}
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		项目&$D/cm$&$d/cm$&$H/cm$   \\
+		\hline
+		零点读数&$D_{0}=0.000$&$d_{0}=0.000$&$H_{0}=0.000 $\\
+		\hline
+		1&2.506&1.690&4.201\\
+		\hline
+		2&2.508&1.691&4.206\\
+		\hline
+		3&2.504&1.688&4.203\\
+		\hline
+		4&2.505&1.692&4.202\\
+		\hline
+		5&2.508&1.688&4.202\\
+		\hline
+		6&2.505&1.688&4.200\\
+		\hline	
+		平均值&2.506&1.690&4.202\\
+		\hline
+		平均值的标准差&0.0007&0.0008&0.0009\\
+		\hline
+		考虑仪器允差后的标准差&0.0013&0.0014&0.0015\\
+		\hline
+		修正零点后的平均值&2.506&1.690&4.202\\
+		\hline	
+	\end{tabular}
+\end{table}
+\noindent
+$\bar{D}\pm\sigma_{\bar{D}}=\left(2.5060\pm0.0013\right)cm\\
+\bar{d}\pm\sigma_{\bar{d}}=\left(1.6900\pm0.0014\right)cm\\
+\bar{H}\pm\sigma_{\bar{H}}=\left(4.2020\pm0.0015\right)cm\\
+V=\dfrac{\pi}{4}\left(\bar{D}^{2}-\bar{d}^{2}\right)\bar{H}=11.300cm^{3}\\
+\sigma_{V}=V\sqrt{\left(\dfrac{2\bar{D}\sigma_{\bar{D}}}{\bar{D}^{2}-\bar{d}^{2}}\right)^{2}+\left(\dfrac{2\bar{d}\sigma_{\bar{d}}}{\bar{D}^{2}-\bar{d}^{2}}\right)^{2}+\left(\dfrac{\sigma_{\bar{H}}}{\bar{H}}\right)^{2}}=0.027cm^{3}\\
+V\pm\sigma_{V}=\left(11.300\pm0.027\right)cm^{3}$
+\subsubsection{计算过程}
+\noindent
+$\bar{D}=\frac{\sum_{i=1}^{6}D_{i}}{6}=2.506cm\\
+\bar{d}=\frac{\sum_{i=1}^{6}d_{i}}{6}=1.690cm\\
+\bar{H}=\frac{\sum_{i=1}^{6}H_{i}}{6}=4.202cm\\
+V=\dfrac{\pi}{4}\left(\bar{D}^{2}-\bar{d}^{2}\right)\bar{H}=11.300cm^{3}\\
+\sigma_{\bar{D}A}=\sqrt{\dfrac{\sum_{i=1}^{6}\left(D_{i}-\bar{D}\right)^{2}}{6\times5}}=0.0007cm\\
+\sigma_{\bar{D}B}=\sigma_{\bar{H}B}=\sigma_{\bar{d}B}=\frac{\Delta}{\sqrt{3}}\\
+\sigma_{\bar{D}}=\sqrt{\sigma_{\bar{D}A}^{2}+\sigma_{\bar{D}B}^{2}}=0.0013cm\\$
+同理,$\sigma_{\bar{d}A}=\sqrt{\dfrac{\sum_{i=1}^{6}\left(d_{i}-\bar{d}\right)^{2}}{6\times5}}=0.0008cm\\
+\sigma_{\bar{d}}=\sqrt{\sigma_{\bar{d}A}^{2}+\sigma_{\bar{d}B}^{2}}=0.0014cm\\
+\sigma_{\bar{H}A}=\sigma_{\bar{H}A}=\sqrt{\dfrac{\sum_{i=1}^{6}\left(H_{i}-\bar{H}\right)^{2}}{6\times5}}=0.0009cm\\
+\sigma_{\bar{H}}=\sqrt{\sigma_{\bar{H}A}^{2}+\sigma_{\bar{H}B}^{2}}=0.0015cm\\
+\sigma_{V}=V\sqrt{\left(\dfrac{2\bar{D}\sigma_{\bar{D}}}{\bar{D}^{2}-\bar{d}^{2}}\right)^{2}+\left(\dfrac{2\bar{d}\sigma_{\bar{d}}}{\bar{D}^{2}-\bar{d}^{2}}\right)^{2}+\left(\dfrac{\sigma_{\bar{H}}}{\bar{H}}\right)^{2}}=0.027cm^{3}$
+\subsection{钢球体积}
+\subsubsection{已知数据表}
+\begin{table}[H] 
+	\caption{习题二}
+	\label{习题二}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		$n$&1&2&3&4&5&6&平均值\\
+		\hline
+		$d$$\left(cm\right)$&3.252&3.254&3.252&3.250&3.252&3.252&3.252\\
+		\hline
+	\end{tabular}
+\end{table}
+\noindent
+零点值$d_{0}=0.002cm,$修正后$\bar{d}=3.2500cm\\
+\sigma_{\bar{d}}=0.0013cm$
+\subsubsection{测量结果}
+\noindent
+$\bar{d}\pm\sigma_{\bar{d}}=\left(3.2500\pm0.0013\right)cm\\
+V=\dfrac{\pi}{6}\bar{d}^{3}=17.9742cm^{3}\\
+\sigma_{V}=V\sqrt{\left(\frac{3\sigma_{\bar{d}}}{\bar{d}}\right)^{2}}=0.022cm^{3}\\
+V\pm\sigma_{V}=\left(17.974\pm0.022\right)cm^{3}$
+\subsection{分析与讨论}
+\subsubsection{钢筒体积误差分析}
+根据计算结果可知,未定系统误差即仪器的允差对于实验过程中的不确定度影响更大,随机误差影响更小.
+\subsubsection{钢球体积误差分析}
+在测量钢球体积实验中,系统误差主要来源于零点误差,而零点值产生系统误差大于测量过程中的随机误差,所以随机误差影响更小.
+\subsubsection{系统误差与随机误差}
+系统误差为相同条件下多次测量一个物理量时测量值对真值的偏离总是相同的,来源有:理论公式的近似性,仪器结构不完善,环境条件改变等多方面,还有一类系统误差为仪器的允差.系统误差通常而言较大,而且不能通过增加测量次数的方法来减小.\\
+
+ 随机误差是由于不确定因素导致的每次测量值的无规律涨落,测量值对真值偏差时大时小且无法预测.来源有：测量者感官分辨率的涨落,环境条件的微小波动等等.随机误差最大的特点是随机性,因此只要增加测量次数,就可以减小随机误差,这类误差通常较系统误差而言较小.
+\section{教材课后习题}
+\noindent
+1.(1)1位(2)4位(3)2位(4)6位\\
+2.(1)c=$\frac{ab}{b-a}=10.0cm(\sigma_{c}=\sqrt{(\frac{b^{2}\sigma_{a}}{(b-a)^{2}})^{2}+(\frac{a^{2}\sigma_{b}}{(b-a)^{2}})^{2}}=0.1cm)\\
+(2)y=e^{-x^{2}}=8\times10^{-38}(|\sigma_{y}|=2x\times0.01\times e^{-x^{2}}=2\times10^{-38})\\
+(3)y=lnx=4.037(\sigma_{y}=\frac{0.1}{x}=0.002)\\
+(4)y=cosx=0.98657(\sigma_{y}= sin9.4^{\circ}\times\frac{1}{60}\times\frac{\pi}{180}=0.00005)\\
+3.(b)\sigma_{\rho}=\dfrac{m_{1}}{m_{1}-m_{2}}\rho_{0}\sqrt{\left(\dfrac{m_{2}\sigma_{m1}}{m_{1}(m_{1}-m_{2})}\right)^{2}+\left(\dfrac{\sigma_{m2}}{m_{1}-m_{2}}\right)^{2}}\\
+(c)\sigma_{y}=\sqrt{\left(\dfrac{b\sigma_{a}}{a(a+b)}\right)^{2}+\left(\dfrac{a\sigma_{b}}{b(a+b)}\right)^{2}}\\
+4.\\
+L=\dfrac{L_{1}+L_{2}}{2}\\
+\sigma_{L}=\sqrt{(\dfrac{\sigma_{L_{1}}}{2})^{2}+(\dfrac{\sigma_{L_{1}}}{2})^{2}}=0.6\mu m\\
+5.\\
+S=L_{1}L_{2}-\frac{\pi}{4}(d_{1}^{2}+d_{2}^{2})\\
+\dfrac{\sigma_{S}}{S}=\sqrt{(\frac{L_{2}\sigma_{L_{1}}}{S})^{2}+(\frac{L_{1}\sigma_{L_{2}}}{S})^{2}+(\frac{\pi d_{1}\sigma_{d_{1}}}{2S})^{2}+(\frac{\pi d_{2}\sigma_{d_{2}}}{2S})^{2}}\\$
+要求$\dfrac{\sigma_{S}}{S_{max}}=0.5\% \\ $
+代入数据可得:$\sigma_{d_{2}}=1cm,$因此,测量小孔直径用游标卡尺即可\\
+7.\\
+(1)$g_{0}=\frac{2h}{t^{2}}\\
+\sigma_{g}=g_{0}\sqrt{(\dfrac{\sigma_{h}}{h})^{2}+(\dfrac{2\sigma_{t}}{t})^{2}}=g_{0}\sqrt{10^{-8}\times2}=0.1cm/s^{2}\\
+g=g_{0}+\sigma_{g}=980.1cm/s^{2}\\
+(2)(a)\frac{1}{4}sin^{2}(\frac{\theta}{2})+\frac{9}{64}sin^{4}(\frac{\theta}{2})\leqslant0.5 \% $\\
+可得:$\theta\leqslant16.17^{\circ}\\
+(b)\frac{1}{4}sin^{2}(\frac{\theta}{2})+\frac{9}{64}sin^{4}(\frac{\theta}{2})\leqslant0.05 \%$\\
+可得:$\theta\leqslant5.12^{\circ}\\
+10.\\$
+经过线性拟合过后,$y_{i}=b_{0}+\lambda i\\
+b_{0}=18.716mm,\lambda=8.753mm,r=0.999969\\
+\sigma_{\lambda A}=\lambda\sqrt{\dfrac{\frac{1}{r^{2}}-1}{n-2}}=0.024mm\\
+\sigma_{\lambda B}=\frac{\sqrt{e^{2}+e_{y_{i}}^{2}}}{\sqrt{3}}=0.006mm\\
+\sigma_{\lambda}=\sqrt{\sigma_{\lambda A}^{2}+\sigma_{\lambda B}^{2}}=0.025mm\\
+c=f\lambda=346.44m/s\\
+\sigma_{c}=c\sqrt{(\frac{\sigma_{\lambda}}{\lambda})^{2}+(\frac{\sigma_{f}}{f})^{2}}=1.0m/s\\
+c=(346.4\pm1.0)m/s\\
+11.\\$
+(1)\begin{figure}[H] 
+	\centering
+	\caption{\label{1} $m\~{}\frac{1}{t^{2}}$关系图}
+	\includegraphics[width=13cm,height=10cm]  {11题图.png} 
+\end{figure}
+	因此观察图形可知此关系为线性关系\\
+(2)\\
+$\bar{x}=25g,\bar{y}=1.770\times10^{-2}s^{-2}\\
+\bar{xy}=52.14\times10^{-2}g\cdot s^{-2},\bar{x^{2}}=725g^{2},\bar{y^{2}}=3.757\times10^{-4}s^{-4}\\
+k_{2}=\dfrac{\bar{xy}-\bar{x}\bar{y}}{\bar{x^{2}}-(\bar{x})^{2}}=7.89\times10^{-4}/(g\cdot s^{2})\\
+b_{1}=\bar{y}-k_{2}\bar{x}=-2.03\times10^{-3}s^{-2}\\
+r_{1}=\dfrac{\bar{xy}-\bar{x}\bar{y}}{\sqrt{[\bar{x^{2}}-(\bar{x})^{2}][\bar{y^{2}}-(\bar{y})^{2}]}}=0.99933\\
+(3)\\
+$由(2)中的数据,可得$x$与$y$交换位置即可:\\
+$k_{1}=\dfrac{\bar{xy}-\bar{x}\bar{y}}{\bar{y^{2}}-(\bar{y})^{2}}=1.26\times10^{3}g\cdot s^{2}\\
+b_{1}=\bar{x}-k_{2}\bar{y}=2.62g\\
+r_{2}=\dfrac{\bar{xy}-\bar{x}\bar{y}}{\sqrt{[\bar{x^{2}}-(\bar{x})^{2}][\bar{y^{2}}-(\bar{y})^{2}]}}=0.99933\\$
+	相关系数相同,因为相关系数对于$x$和$y$是对称的,所以两种情况将$x$和$y$互换不影响相关系数大小,关系式为:$k_{1}k_{2}=r^{2}$
+\end{document} 

@@ -1,0 +1,200 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{虚拟仪器在物理实验中的应用实验报告}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		虚拟仪器技术就是利用高性能的模块化硬件，结合高效灵活的软件来完成各种测试、测量和自动化的应用。灵活高效的软件能帮助您创建完全自定义的用户界面，模块化的硬件能方便地提供全方位的系统集成，标准的软硬件平台能满足对同步和定时应用的需求。LabVIEW是一种图形化的编程语言的开发环境，它广泛地被工业界、学术界和研究实验室所接受，视为一个标准的数据采集和仪器控制软件。
+		
+		\textbf{关键词：虚拟仪器，自动化，LabVIEW}
+	\end{abstract}
+	\section{实验目的}
+	(1)了解虚拟仪器的概念；
+	\par (2)了解图形化编程语言LabVIEW，学习简单的LabVIEW编程；
+	\par (3)完成伏安法测电阻的虚拟仪器设计。
+	\section{实验器材}
+	计算机(含操作系统)，LabVIEW7.0，数据采集卡，100$\Omega$电阻，导线若干，双刀双掷开关一个，元件盒一个(包括待测电阻1$k\Omega$和50$\Omega$各一个，稳压二极管一个)。
+	\section{实验过程及数据整理}
+	\subsection{温度计}
+	\subsubsection{温度计程序框图}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=10cm,height=6cm]  {温度2.png} 
+		\caption{\label{1} 温度计设计框图}
+	\end{figure}
+	\subsubsection{温度计前面板图}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=6cm]  {温度1.png} 
+	\caption{\label{1} 温度计前面板图}
+\end{figure}
+	\subsection{伏安法测电阻}
+\subsubsection{伏安法测电阻程序框图}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=6cm]  {电阻1.png} 
+	\caption{\label{1} 伏安法测电阻程序框图}
+\end{figure}
+\subsubsection{伏安法测电阻$R_{1}$前面板图}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=6cm]  {电阻2.png} 
+	\caption{\label{1} 伏安法测电阻$R_{1}$前面板图}
+\end{figure}
+\par 由图中可知测得$R_{1}=51.2423\Omega$
+\subsubsection{伏安法测电阻$R_{2}$前面板图}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=6cm]  {电阻3.png} 
+	\caption{\label{1} 伏安法测电阻$R_{2}$前面板图}
+\end{figure}
+\par 由图中可知测得$R_{2}=1009.86\Omega$
+\section{二极管的伏安特性曲线}
+\subsection{二极管正向伏安特性曲线}
+\subsubsection{二极管正向测量程序框图}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=6cm]  {二极管11.png} 
+	\caption{\label{1} 二极管正向测量程序框图}
+\end{figure}
+\subsubsection{二极管正向测量前面板图}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=6cm]  {二极管12.png} 
+	\caption{\label{1} 二极管正向测量前面板图}
+\end{figure}
+\par 由图中可知在$I=5mA$时$U\approx 8.06V$,$R_{1}\approx 1.6k\Omega$
+\subsection{二极管反向伏安特性曲线}
+\subsubsection{二极管反向测量程序框图}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=6cm]  {二极管21.png} 
+	\caption{\label{1} 二极管反向测量程序框图}
+\end{figure}
+\subsubsection{二极管反向测量前面板图}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=6cm]  {二极管22.png} 
+	\caption{\label{1} 二极管反向测量前面板图}
+\end{figure}
+\par 由图中可知在$I=-5mA$时$U\approx -4.02V$,$R_{2}\approx 0.8k\Omega$
+	\section{思考题}
+	1.虚拟仪器与传统仪器与什么区别？
+	\par \textbf{答：使用虚拟仪器可以较为方便改变电压并且设置程序后可以自动完成多次测量并处理数据；相对的，传统仪器的数据显示单一，数据处理能力简单，自动化程度较低，且手动调节困难，不确定度较高；但传统仪器配置相对容易，入门较快，而虚拟仪器需要软件与硬件接口，还需要一定编程能力。}
+	\par 2.你对虚拟仪器在物理实验中应用有何设想，结合具体实验给出简单思路。
+	\par \textbf{答：虚拟仪器在物理实验中非常常见，几乎所有的普物实验都可以使用虚拟仪器来进行实验，而在以后的科研工作中，我们也会经常接触到LabVIEW。比如：在弗兰克赫兹实验中，我们需要调节电压以得到电子电流关于电压的曲线。我们可以使用虚拟仪器进行实验，电压调节使用DAQ卡完成，电流使用一个电流放大器即可读数，还能进行多次测量，并且管内温度可以通过温敏电阻监控，实验环境在Hg蒸汽管内时还能保证实验安全。}
+	\par 3.本实验中为何不同时测量待测电阻电压和标准电阻电压？
+	\par \textbf{答：因为实际上我们已知了总电压与标准电阻的电压，就可以很方便通过减法运算得到待测电阻电压，而如果我们同时测量待测电阻与标准电阻电压，则我们需要增加一个接口，这时候如果我们运用共同接地线，则会将标准电阻短路，将会导致实验电路错误，因此我们不同时测量待测电阻与标准电阻电压。}
+	\par 4.利用虚拟仪器测量电阻伏安特性曲线时，结果误差可能来自于哪些方面？
+	\par \textbf{答：利用虚拟仪器测量电阻伏安特性曲线时，结果误差可能来自于多次测量时测量仪器测量的数据涨落，供电源的接口接触不良，导线本身的电阻以及接触电阻等等，与传统仪器测量不同的是，虚拟仪器测量没有读数时估读的误差。}
+	\par 5.实验内容3中测量并绘制二极管伏安特性曲线需要注意什么？
+	\par \textbf{答：实验内容3中测量二极管伏安特性曲线时需要注意调整步长，控制通过二极管的电流不超过10mA，绘制二极管伏安特性曲线时需要调整坐标间距使得图像更清晰。}
+	\section{收获与感想}
+	我们在本次实验中了解了虚拟仪器的概念，同时也了解了图形化编程语言LabVIEW，学习了简单的LabVIEW编程；最后我们完成了伏安法测电阻的虚拟仪器设计，为以后使用虚拟仪器做实验打下良好的基础。
+\end{document}

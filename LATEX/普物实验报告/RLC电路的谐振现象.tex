@@ -1,0 +1,276 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{$RLC$电路的谐振现象}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	$RLC$电路是一种由电阻$R$、电感$L$、电容$C$组成的电路结构。$RLC$电路的组成结构一般有两种：串联型，并联型。作用有电子谐波振荡器、带通或带阻滤波器。本次实验中我们通过示波器，信号发生器等元件测量$RLC$电路的谐振现象。\\
+	\par\textbf{关键词:串联型，并联型，谐振 }
+
+\end{abstract}
+
+\section{实验目的}
+\noindent
+(1)研究$RLC$电路的谐振现象；\\
+(2)了解$RLC$电路的相频特性和幅频特性。
+\section{实验仪器}
+标准电感，标准电容，电阻箱，100$\Omega$标准电阻，读出示波器，函数发生器，数字多用表，隔离变压器。
+\section{实验过程及数据整理}
+\subsection{已知数据表}
+\begin{table}[H]
+	\centering
+	\caption{数据表1}
+	\label{数据表1}
+	\begin{tabular}{c|*{4}{c}}
+		\toprule[0.5mm]
+		&$R_{0}/\Omega$&$L/H$&$C/\mu F$&$R_{0}^{\prime}/\Omega$\\
+		\midrule
+		已知值&100&0.1&0.05&5000\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{串联型$RLC$电路谐振测量}
+\subsubsection{李萨如图形测量谐振频率}
+\begin{table}[H]
+	\centering
+	\caption{数据表2}
+	\label{数据表2}
+	\begin{tabular}{c|*{4}{c}}
+		\toprule[0.5mm]
+		&$f_{0}/kHz$&$u_{R}/V$&$u_{\text{总}}/V$&$u_{c}/V$\\
+		\midrule
+		测量值&2.247&0.7636&1.0007&10.640\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+$$\therefore R_{\text{总}}=\dfrac{u_{\text{总}}}{u_{R}}R_{0}=131.05\Omega$$
+$$\therefore Q_{1}=\dfrac{1}{\omega_{0}R_{\text{总}}C}=10.81$$
+$$Q_{2}=\dfrac{u_{c}}{u_{\text{总}}}=10.633$$
+我们有不确定度传递公式：$\dfrac{\sigma_{Q_{1}}}{Q_{1}}=\sqrt{(\dfrac{\sigma_{f_{0}}}{f_{0}})^{2}+(\dfrac{\sigma_{C}}{C})^{2}+(\dfrac{\sigma_{R_{\text{总}}}}{R_{\text{总}}})^{2}},\quad \dfrac{\sigma_{Q_{2}}}{Q_{2}}=\sqrt{(\dfrac{\sigma_{u_{C}}}{u_{C}})^{2}+(\dfrac{\sigma_{u_{\text{总}}}}{u_{\text{总}}})^{2}}$\\
+$$\sigma_{f_{0}}=\dfrac{0.001}{\sqrt{3}}kHz=5.77\times10^{-4}kHz$$
+$$\sigma_{C}=\dfrac{0.05\times 0.65\%}{\sqrt{3}}\mu F=0.188nF $$
+$$\sigma_{u_{\text{总}}}=\dfrac{1.0007\times 0.2\%+0.001}{\sqrt{3}}V=1.73mV$$
+$$\sigma_{u_{C}}=\dfrac{10.640\times 0.2\%+0.001}{\sqrt{3}}V=0.0129V$$
+$$\sigma_{u_{R}}=\dfrac{0.7636\times 0.2\%+0.001}{\sqrt{3}}V=1.46mV$$
+$$\sigma_{R_{\text{总}}}=R_{\text{总}}\sqrt{(\dfrac{\sigma_{u_{\text{总}}}}{u_{\text{总}}})^{2}+(\dfrac{\sigma_{u_{R}}}{u_{R}})^{2}}=0.338\Omega$$
+$$\therefore \sigma_{Q_{1}}=Q_{1}\sqrt{(\dfrac{\sigma_{f_{0}}}{f_{0}})^{2}+(\dfrac{\sigma_{C}}{C})^{2}+(\dfrac{\sigma_{R_{\text{总}}}}{R_{\text{总}}})^{2}}=0.05$$
+$$\sigma_{Q_{2}}=Q_{2}\sqrt{(\dfrac{\sigma_{u_{C}}}{u_{C}})^{2}+(\dfrac{\sigma_{u_{\text{总}}}}{u_{\text{总}}})^{2}}=0.022$$
+$$\therefore Q_{1}=10.81\pm0.05,\quad Q_{2}=10.633\pm0.022$$
+\subsubsection{串联型$RLC$电路相频特性}
+\begin{table}[H]
+	\centering
+	\caption{相频特性测量数据表}
+	\label{相频特性测量数据表}
+	\begin{tabular}{||*{3}{c|}|*{3}{c|}|}
+		\toprule[0.5mm]
+		$f/kHz$&$\Delta t/\mu s$&$\Delta \phi/^{\circ}$&$f/kHz$&$\Delta t/\mu s$&$\Delta \phi/^{\circ}$\\
+		\midrule
+		1.743&-125.0&-78.435&2.251&1.4&1.296\\
+		1.957&-100.0&-70.452&2.278&19.6&16.074\\
+		2.080&-79.0&-59.155&2.311&40.4&33.611\\
+		2.150&-56.0&-43.344&2.356&53.4&45.292\\
+		2.192&-36.0&-28.408&2.436&69.2&60.686\\
+		2.223&-16.5&-13.205&2.589&79.2&73.818\\
+		2.247&0.0&0.000&2.907&76.8&80.373\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}串联$RLC$电路相频曲线}
+	\includegraphics[width=10cm,height=7cm]  {串联相频曲线.png} 
+\end{figure}
+\begin{center}
+	我们从图中可以得到谐振频率$f_{0}$为$2.247kHz$
+\end{center}
+\subsubsection{串联型$RLC$电路幅频特性}
+\begin{table}[H]
+	\centering
+	\caption{幅频特性测量数据表}
+	\label{幅频特性测量数据表}
+	\begin{tabular}{||c||*{7}{c}||}
+		\toprule[0.5mm]
+		$f/kHz$&2.907&2.707&2.589&2.489&2.436&2.406&2.356\\
+		$u_{R}/mV$&133.45&182.61&235.67&313.51&377.9&426.3&531.2\\
+		$i/mA$&1.3345&1.8261&2.3567&3.1351&3.779&4.263&5.312\\
+		\midrule
+        $f/kHz$&2.355&2.336&2.311&2.291&2.278&2.261&2.251\\
+        $u_{R}/mV$&539.0&582.3&650.4&702.3&730.1&755.4&762.1\\
+        $i/mA$&5.390&5.823&6.504&7.023&7.301&7.554&7.621\\
+        \midrule
+        $f/kHz$&2.248&2.241&2.223&2.213&2.192&2.172&2.150\\
+        $u_{R}/mV$&762.7&762.0&744.6&726.6&675.3&618.0&554.8\\
+        $i/mA$&7.627&7.620&7.446&7.266&6.753&6.180&5.548\\
+        \midrule
+        $f/kHz$&2.144&2.110&2.080&2.000&1.957&1.857&1.743\\
+        $u_{R}/mV$&539.7&454.4&394.1&282.34&242.46&179.53&135.76\\
+        $i/mA$&5.397&4.544&3.941&2.8234&2.4246&1.7953&1.3576\\
+        \bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}串联$RLC$电路幅频曲线}
+	\includegraphics[width=10cm,height=7cm]  {串联幅频曲线.png} 
+\end{figure}
+$$\therefore Q_{3}=\dfrac{f_{0}}{\Delta f}=\dfrac{f_{0}}{f_{2}-f_{1}}=10.66$$
+我们取$\sigma_{f}$统一为$\sigma_{f_{0}}$,则：\\
+$$\sigma_{Q_{3}}=\sqrt{(\dfrac{\sigma_{f}}{f_{2}-f_{1}})^{2}+(\dfrac{f_{0}\sigma_{f}}{(f_{2}-f_{1})^{2}})^{2}+(\dfrac{f_{0}\sigma_{f}}{(f_{2}-f_{1})^{2}})^{2}}=0.04$$
+$$\therefore Q_{3}=10.66\pm 0.04$$
+\subsection{并联型$RLC$电路谐振测量}
+\subsubsection{李萨如图形测量谐振频率}
+\begin{table}[H]
+	\centering
+	\caption{数据表1}
+	\label{数据表1}
+	\begin{tabular}{c|*{3}{c}}
+		\toprule[0.5mm]
+		&$f_{0}/kHz$&$u_{R_{0}}/mV$&$u_{R_{0}^{\prime}}/mV$\\
+		\midrule
+		测量值&2.239&53.15&247.79\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+$$\because R_{\text{总}}=131.05\Omega$$
+$$\therefore Q_{1}=\dfrac{1}{\omega_{0}R_{\text{总}}C}=10.84$$
+$$Q_{2}=\dfrac{i_{L}}{i_{\text{总}}}=\dfrac{u_{R_{0}}R_{0}^{\prime}}{R_{0}u_{R_{0}^{\prime}}}=10.725$$
+我们有不确定度传递公式：$\dfrac{\sigma_{Q_{1}}}{Q_{1}}=\sqrt{(\dfrac{\sigma_{f_{0}}}{f_{0}})^{2}+(\dfrac{\sigma_{C}}{C})^{2}+(\dfrac{\sigma_{R_{\text{总}}}}{R_{\text{总}}})^{2}},\quad \dfrac{\sigma_{Q_{2}}}{Q_{2}}=\sqrt{(\dfrac{\sigma_{u_{R_{0}}}}{R_{0}})^{2}+(\dfrac{\sigma_{u_{R_{0}^{\prime}}}}{u_{R_{0}^{\prime}}})^{2}+(\dfrac{\sigma_{R_{0}^{\prime}}}{R_{0}^{\prime}})^{2}}$\\
+$$\sigma_{f_{0}}=\dfrac{0.001}{\sqrt{3}}kHz=5.77\times10^{-4}kHz$$
+$$\sigma_{C}=\dfrac{0.05\times 0.65\%}{\sqrt{3}}\mu F=0.188nF $$
+$$\sigma_{u_{R_{0}}}=\dfrac{53.15\times 0.2\%+0.01}{\sqrt{3}}mV=0.0671mV$$
+$$\sigma_{u_{R_{0}^{\prime}}}=\dfrac{247.79\times 0.2\%+0.01}{\sqrt{3}}V=0.292mV$$
+$$\sigma_{R_{\text{总}}}=R_{\text{总}}\sqrt{(\dfrac{\sigma_{u_{\text{总}}}}{u_{\text{总}}})^{2}+(\dfrac{\sigma_{u_{R}}}{u_{R}})^{2}}=0.338\Omega$$
+$$\sigma_{R_{0}^{\prime}}=\dfrac{5000\times0.1\%}{\sqrt{3}}=2.89\Omega$$
+$$\therefore \sigma_{Q_{1}}=Q_{1}\sqrt{(\dfrac{\sigma_{f_{0}}}{f_{0}})^{2}+(\dfrac{\sigma_{C}}{C})^{2}+(\dfrac{\sigma_{R_{\text{总}}}}{R_{\text{总}}})^{2}}=0.05$$
+$$\sigma_{Q_{2}}=Q_{2}\sqrt{(\dfrac{\sigma_{u_{R_{0}}}}{R_{0}})^{2}+(\dfrac{\sigma_{u_{R_{0}^{\prime}}}}{u_{R_{0}^{\prime}}})^{2}+(\dfrac{\sigma_{R_{0}^{\prime}}}{R_{0}^{\prime}})^{2}}=0.022$$
+$$\therefore Q_{1}=10.84\pm0.05,\quad Q_{2}=10.725\pm0.020$$
+\subsubsection{并联型$RLC$电路相频特性}
+\begin{table}[H]
+	\centering
+	\caption{相频特性测量数据表}
+	\label{相频特性测量数据表}
+	\begin{tabular}{||*{3}{c|}|*{3}{c|}|}
+		\toprule[0.5mm]
+		$f/kHz$&$\Delta t/\mu s$&$\Delta \phi/^{\circ}$&$f/kHz$&$\Delta t/\mu s$&$\Delta \phi/^{\circ}$\\
+		\midrule
+		0.200&590.0&42.48&2.000&86.0&61.92\\
+		0.400&410.0&59.04&2.100&71.0&53.68\\
+		0.600&297.0&64.15&2.200&33.0&26.14\\
+		0.800&218.0&65.42&2.240&0.0&0.00\\
+		1.000&187.0&67.32&2.300&-37.0&-30.64\\
+		1.200&152.0&68.66&2.400&-72.0&-62.21\\
+		1.400&124.0&68.50&2.500&-76.0&-68.44\\
+		1.600&110.0&67.36&2.600&-83.0&-77.69\\
+		1.800&107.0&69.34&2.700&-82.0&-79.70\\
+		1.900&94.0&64.30&2.800&-84.0&-84.67\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}并联$RLC$电路相频曲线}
+	\includegraphics[width=10cm,height=7cm]  {并联相频曲线.png} 
+\end{figure}
+\begin{center}
+	我们从图中可以得到谐振频率$f_{0}$为$2.240kHz$
+\end{center}
+\subsubsection{并联型$RLC$电路幅频特性}
+\begin{table}[H]
+	\centering
+	\caption{幅频特性测量数据表}
+	\label{幅频特性测量数据表}
+	\begin{tabular}{||c||*{6}{c}||}
+		\toprule[0.5mm]
+		$f/kHz$&0.200&0.400&0.600&0.800&1.000&1.200\\
+		$u/V$&0.0703&0.1158&0.1715&0.2382&0.3213&0.4299\\
+		\midrule
+		$f/kHz$&1.400&1.600&1.700&1.800&1.900&2.000\\
+		$u/V$&0.5827&0.8217&1.0036&1.2882&1.7772&2.6986\\
+		\midrule
+		$f/kHz$&2.043&2.100&2.145&2.200&2.247&2.300\\
+		$u/V$&3.0112&4.048&4.245&3.889&3.0164&2.8146\\
+		\midrule
+		$f/kHz$&2.400&2.500&2.600&2.700&2.800&-\\
+		$u/V$&2.2450&1.8211&1.5359&1.3308&1.1754&-\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}并联$RLC$电路幅频曲线}
+	\includegraphics[width=10cm,height=7cm]  {并联幅频曲线.png} 
+\end{figure}
+$$\therefore Q_{3}=\dfrac{f_{p}}{\Delta f}=\dfrac{f_{p}}{f_{2}-f_{1}}=10.53$$
+我们取$\sigma_{f}$统一为$\sigma_{f_{0}}$,则：\\
+$$\sigma_{Q_{3}}=\sqrt{(\dfrac{\sigma_{f}}{f_{2}-f_{1}})^{2}+(\dfrac{f_{p}\sigma_{f}}{(f_{2}-f_{1})^{2}})^{2}+(\dfrac{f_{p}\sigma_{f}}{(f_{2}-f_{1})^{2}})^{2}}=0.03$$
+$$\therefore Q_{3}=10.53\pm 0.03$$
+\section{思考题}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=7cm]  {Q表原理图.png} 
+	\caption{\label{1} Q表原理图}
+\end{figure}
+\subsection{说明测量原理}
+调节信号频率将电路调节到谐振状态下，测量此时的$u$与$u_{C}$，此时已知$C$与$f_{0}$的值，可以通过$RLC$电路谐振频率公式得到$L=\dfrac{1}{\omega^{2}C}$,同理可以得到$u_{C}=\dfrac{u}{\omega CR_{r}}$,从而得到$R_{r}=\dfrac{u}{\omega Cu_{C}}$,品质因素$Q=\dfrac{u_{C}}{u}$。
+\subsection{写出测量步骤}
+实验前记录我们所用的电容的电容值，保持总电压不变，调节信号发生器频率使得电容器上电压最大，当电阻很小时($R_{r}<<\sqrt{\dfrac{L}{C}}$)可以认为此时的频率近似等于谐振频率，记录下此时的频率，然后测得总电压$u$与电容上的电压$u_{C}$,通过实验原理上的公式即可计算出$L,R_{r},Q$的值。
+\subsection{根据条件计算$L,R_{r},Q$的值}
+$$\because \dfrac{1}{\omega C}=\omega L\Rightarrow L=2.132\times 10^{-4}H$$
+$$\dfrac{u}{\sqrt{(\omega CR_{r})^{2}+(\omega^{2}LC-1)^{2}}}=u_{C}\Rightarrow R_{r}=8.038\Omega$$
+$$Q=\dfrac{u_{C}}{u}=100$$
+\section{分析与讨论}
+\subsection{实验中测得的各种曲线有什么主要特征？如何理解？}
+\subsubsection{串联谐振曲线}
+当$f<f_{0}$时,$\phi <0$,电流的相位超前于电压,整个电路呈电容性,且随$f$降低,$\phi$趋近于-$\dfrac{\pi}{2}$;而当$f>f_{0}$时,$\phi>0$,电流的相位落后于电压,整个电路呈电感性,且随$f$升高,$\phi$趋近于$\dfrac{\pi}{2}$;随$f$偏离$f_{0}$越远,阻抗越大,而电流越小;当处于谐振频率时，电压与电流同相位,整个电路呈纯电阻性,总阻抗达到极小值$Z=R$,而总电流达到极大值$i_{m}=\dfrac{u}{R}$.这种特殊状态称为串联谐振,此时频率$f$称为谐振频率,在$f_{0}$处,串联电路幅频曲线有明显尖锐的峰。
+\subsubsection{并联谐振曲线}
+由并联电路相频关系曲线可见,在谐振频率$f=f_{0}$两侧,当$f<f_{0}$时,$\phi>0$,电流的相位落后于电压,整个电路呈电感性;当$f>f_{0}$时,$\phi <0$,电流的相位超前于电压,整个电路呈电容性.显然,在谐振频率两边区域,并联电路的电抗特性与串联电路时截然相反(且此曲线相位先随频率升高很快，然后变得平坦，后来在接近$f_{0}$时又下降的很快).由并联电路幅频特性曲线可见,在$f=f_{p}$处(注意:$f_{p}$与谐振频率$f_{0}$稍有不同)总阻抗达到极大值,总电压达到极大值,而在$f$两侧,随$f$偏离$f_{p}$越远阻抗越小,电压越小,这种特性,与串联电路时相同.
+\subsection{比较三种方法测得的$Q$值}
+从处理不确定度的角度来说，第一种方法测量的品质因素$Q$最不准确，其次为第三种方法测量的品质因素，最为精确的方法为第二种方法。第一种方法测量不准确的最主要原因是标准电容的相对不确定度太大导致品质因素的不确定度较大；第三种方法测量不准确的原因是通频带宽度$\Delta f$较小，导致分母较小引起的相对不确定度变大了；第二种方法测量的品质因素最为精确的原因是只依靠于交流电压表测量的电压，而交流电压表测量电压的精确度较高，因此第二种方法测量的品质因素最为精确。
+\par 从品质因素代表的含义来说，第一种方法测量的品质因素代表着电路的储耗能特性:$Q$值越大,相对储能的耗能越小,储能效率越高(可以证明$Q$值等于$LC$元件总储能与每周期内耗能之比的2倍);第二种方法测量的品质因素代表着电路的电压分配特性:谐振时$u_{L}=u_{C}=Qu$,电感、电容上的电压均为总电压的$Q$倍,利用电压谐振,在某些传感器、信息接收中,可显著提高灵敏度或效率;第三种方法测量的品质因素代表着电路的频率选择性:设$f_{1},f_{2}$为谐振峰两侧$i=\dfrac{i_{m}}{\sqrt{2}}$处所对应频率,则$\Delta f=f_{2}-f_{1}$称为通频带宽度,简称带宽,显然,$Q$值越大,带宽越窄,峰越尖锐,频率选择性越好。
+\section{收获与感想}
+通过本次实验我们研究了$RLC$电路的谐振现象，而且通过实验数据作图我们了解观察了$RLC$电路的相频特性和幅频特性，并且因为谐振电路在放大器，振荡器，滤波器电路中有重要作用，这也为我们以后的学习打下良好的基础，提升了我们的实验技巧。
+\end{document} 

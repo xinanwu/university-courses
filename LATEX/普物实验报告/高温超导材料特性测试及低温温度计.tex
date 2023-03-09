@@ -1,0 +1,272 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{高温超导材料特性测试及低温温度计}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		高温超导是一种物理现象，指一些具有较其他超导物质相对较高的临界温度的物质在液态氮的环境下产生的超导现象。高温超导体是超导物质中的一种族类，具有一般的结构特征以及相对上适度间隔的铜氧化物平面。它们也被称作铜氧化物超导体。此族类中一些化合物中，超导性出现的临界温度是已知超导体中最高的。我们将在本次实验中探究高温超导特性以及使学习低温温度计的使用。
+
+		\textbf{关键词：高温超导，临界温度，低温温度计}
+	\end{abstract}
+	\section{实验目的}
+	(1)了解高临界温度超导材料的基本特性及其测试方法；
+	\par (2)了解金属和半导体PN节的伏安特性随温度变化以及温差电效应；
+	\par (3)学习几种低温温度计的比对和使用方法，以及低温温度控制的简便方法。
+	\section{实验器材}
+	低温恒温器，不锈钢杜瓦容器和支架，PZ158型直流数字电压表，BW2型高温超导材料特性测试装置，以及一根两头带有19芯插头的装置连接电缆和若干根两头带有香蕉插头的面板连接导线。
+	\section{实验过程及数据整理}
+	\subsection{室温检测实验数据}
+	\textbf{室温$T_{0}\approx296.16K$}\\
+	
+	\textbf{1.铂电阻温度计}
+	\begin{center}
+		$i_{i}=\dfrac{100.00mV}{100\Omega}=1.0000mA$
+	\end{center}
+	\par \textbf{2.硅二极管温度计}
+	\begin{center}
+		$i_{2}=\dfrac{1.0001V}{10k\Omega}=0.10001mA$
+	\end{center}
+	\par \textbf{3.样品电流}
+	\begin{center}
+		$i_{3}=\dfrac{100.187mV}{10\Omega}=10.0187mA$\\
+		$R_{\text{样品室温}}=\dfrac{0.104V}{10.0187mA}=10.4\Omega$
+	\end{center}
+	\subsection{低温温度计比对}
+	\begin{center}
+\begin{longtable}{|r|r|r|r|r|r|r|}
+	\caption{不同温度下温度计对照数据表}
+	\label{不同温度下温度计对照数据表}\\
+		\hline
+		$U_{Pt}$/mV & $U_{Si}$/V & $U_{r}$/mV & $U_{t}$/mV & $R_{Pt}/\Omega$ & T/K   & $r/m\Omega$ \\
+		\hline
+		108.70 & 0.5179 &   -    & 5.962 & 108.70 & 295.21 &  -\\
+		106.04 & 0.5337 &  -     & 5.719 & 106.04 & 288.38 &  -\\
+		104.05 & 0.5471 &   -    & 5.527 & 104.05 & 283.28 &  -\\
+		100.64 & 0.5698 &    -   & 5.181 & 100.64 & 274.57 & - \\
+		97.12 & 0.5889 &      - & 4.883 & 97.12 & 265.60 &  -\\
+		94.12 & 0.6107 &       -& 4.612 & 94.12 & 257.96 &  -\\
+		91.07 & 0.6284 & -      & 4.342 & 91.07 & 250.22 &  -\\
+		88.25 & 0.6452 &  -     & 4.103 & 88.25 & 243.08 &  -\\
+		84.82 & 0.6656 &   -    & 3.815 & 84.82 & 234.42 &  -\\
+		81.22 & 0.6869 &    -   & 3.521 & 81.22 & 225.36 &  -\\
+		78.15 & 0.7045 &     -  & 3.270 & 78.15 & 217.67 &  -\\
+		75.14 & 0.7220 &      - & 3.049 & 75.14 & 210.13 &  -\\
+		71.40 & 0.7437 &       -& 2.766 & 71.40 & 200.81 &  -\\
+		68.40 & 0.7610 &       -& 2.522 & 68.40 & 193.34 &  -\\
+		65.57 & 0.7770 &       -& 2.350 & 65.57 & 186.32 &  -\\
+		62.09 & 0.7963 &       -& 2.117 & 62.09 & 177.72 &  -\\
+		58.70 & 0.8161 &       -& 1.880 & 58.70 & 169.37 &  -\\
+		55.86 & 0.8322 &       -& 1.708 & 55.86 & 162.40 &  -\\
+		52.77 & 0.8492 &       -& 1.511 & 52.77 & 154.83 & - \\
+		48.70 & 0.8745 &       -& 1.223 & 48.70 & 144.93 &  -\\
+		44.10 & 0.8989 &       -& 0.988 & 44.10 & 133.83 &  -\\
+		42.71 & 0.9063 &       -& 0.921 & 42.71 & 130.45 &  -\\
+		40.59 & 0.9180 & 0.047 &-       & 40.59 & 125.35 & 4.69 \\
+		39.00 & 0.9261 & 0.047 & -      & 39.00 & 121.55 & 4.69 \\
+		37.51 & 0.9341 & 0.046 &  -     & 37.51 & 117.99 & 4.59 \\
+		36.00 & 0.9424 & 0.045 &   -    & 36.00 & 114.40 & 4.49 \\
+		34.50 & 0.9498 & 0.044 &    -   & 34.50 & 110.84 & 4.39 \\
+		33.00 & 0.9579 & 0.042 &     -  & 33.00 & 107.28 & 4.19 \\
+		31.50 & 0.9656 & 0.041 &      - & 31.50 & 103.74 & 4.09 \\
+				\hline
+		\hline
+		30.00 & 0.9736 & 0.040 &       -& 30.00 & 100.20 & 3.99 \\
+		28.50 & 0.9849 & 0.039 &-       & 28.50 & 96.67 & 3.89 \\
+        26.51 & 0.9921 & 0.032 & -      & 26.51 & 92.01 & 3.19 \\
+        26.50 & 0.9922 & 0.030 &  -     & 26.50 & 91.98 & 2.99 \\
+        26.49 & 0.9923 & 0.029 &   -    & 26.49 & 91.96 & 2.89 \\
+        26.48 & 0.9923 & 0.026 &    -   & 26.48 & 91.94 & 2.60 \\
+        26.47 & 0.9924 & 0.017 &     -  & 26.47 & 91.91 & 1.70 \\
+        26.46 & 0.9925 & 0.010 &      - & 26.46 & 91.89 & 1.00 \\
+        26.45 & 0.9925 & 0.005 &       -& 26.45 & 91.86 & 0.50 \\
+        26.44 & 0.9926 & 0.002 &-       & 26.44 & 91.84 & 0.20 \\
+        26.43 & 0.9927 & 0.001 &  -     & 26.43 & 91.82 & 0.10 \\
+        26.38 & 0.9928 & 0.000 & -      & 26.38 & 91.95 & 0.00 \\
+		\hline
+    \end{longtable}
+\end{center}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 低温温度计对比图}
+	\includegraphics[width=10cm,height=7cm]  {温度计.png} 
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 铂电阻温度计}
+	\includegraphics[width=10cm,height=7cm]  {温度计1.png} 
+\end{figure}
+\par \textbf{因为实验过程中的电流相等，由图可知铂电阻温度计电阻随着温度升高而增大，而由图可知铂电阻温度计曲线相对于直线稍微有弯曲，向下弯曲说明其电阻变化率随着温度增大而减小，用直线拟合相关系数较差，而用二次曲线拟合相关系数较好。}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 硅二极管温度计}
+	\includegraphics[width=10cm,height=7cm]  {温度计2.png} 
+\end{figure}
+\par \textbf{因为实验过程中的电流相等，由图可知硅二极管温度计电阻随着温度增大而减小，同样我们发现其温度电阻曲线与直线相差不多，说明在实验温度下用直线拟合也较为合理。}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 温差电偶温度计}
+	\includegraphics[width=10cm,height=7cm]  {温度计3.png} 
+\end{figure}
+\par \textbf{因为实验过程中的电流相等，由图可知温差电偶温度计电阻随着温度升高而增大，而由图可知温差电偶温度计曲线相对于直线稍微有弯曲，向上弯曲说明其电阻变化率随着温度增大而增大，用直线拟合相关系数较差，而用二次曲线拟合相关系数较好。}
+	\subsection{超导样品实验数据}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 超导样品温度电阻曲线}
+	\includegraphics[width=10cm,height=7cm]  {超导1.png} 
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 超导样品温度电阻最小二乘法拟合直线}
+	\includegraphics[width=10cm,height=7cm]  {超导2.png} 
+\end{figure}
+\par 其中转变温度前样品的温度电阻关系拟合直线为:$r(m\Omega)=0.03411\times T+0.56574$,转变温度后拟合直线为：$r(m\Omega)=20.124444\times T-1847.9628$,我们认为其交点即为转变温度，读出图中的数据为：
+\begin{center}
+	$T_{c}=92.06K$
+\end{center}
+\par 同理我们可以计算可得转变中点温度为：
+\begin{center}
+	$T_{cm}=91.92K$
+\end{center}
+	\subsection{液氮温度下的测量数据}
+	\begin{table}[H]
+		\caption{液氮温度样品测量数据}
+		\label{液氮温度样品测量数据}
+		\centering
+		\begin{tabular}{|r|r|r|r|r|}
+			\hline
+			$U_{Pt}/mV$&$U_{Si}/V$&$U_{r}/mV$&$r/m\Omega$&T/K\\
+			\midrule
+			20.37&1.0241&0.000&0.00&77.63\\
+			\hline
+		\end{tabular}
+	\end{table}
+\par 显然液氮温度为77.63K时超导样品已经处于超导态，电阻为0.
+	\begin{table}[H]
+	\caption{液氮温度电流测量数据}
+	\label{液氮温度电流测量数据}
+	\centering
+	\begin{tabular}{|r|r|r|}
+		\hline
+		$i_{1}/mA$&$i_{2}/mA$&$i_{3}/mA$\\
+		\midrule
+		1.0003&0.10004&10.0212\\
+		\hline
+	\end{tabular}
+\end{table}
+\par 我们发现这次实验中电流稳定得较好，电流在本次实验过程中波动误差不超过0.03\%,而我们将用其计算出的铂电阻值计算温度，这样我们的温度误差将会在不超过$10^{-4}$数量级，因此可见我们实验系统的稳定性和精确度都较高，实验数据也具有较高的可信度。
+	\section{分析与讨论}
+	我们在本次实验中探究了高温超导实验以及低温温度计的使用，铂电阻温度计电阻随着温度升高而增大，铂电阻温度计曲线相对于直线稍微有弯曲，向下弯曲说明其电阻变化率随着温度增大而减小，用直线拟合相关系数较差，而用二次曲线拟合相关系数较好；硅二极管温度计电阻随着温度增大而减小，同样我们发现其温度电阻曲线与直线相差不多，说明在实验温度下用直线拟合也较为合理；温差电偶温度计电阻随着温度升高而增大，而温差电偶温度计曲线相对于直线稍微有弯曲，向上弯曲说明其电阻变化率随着温度增大而增大，用直线拟合相关系数较差，而用二次曲线拟合相关系数较好。
+	
+	同时我们探究了超导样品的超导转变温度，我们通过最小二乘法得出超导样品的转变温度大致为92.06K,转变中点温度大致为91.92K。同时我们也得到了液氮沸点为77.63K,与标准数据吻合度较高。
+	
+	最后我们测量了三个测量电路的电流变化，发现其变化量较小，说明我们本次实验的精确度和系统稳定性都较好，我们本次实验数据可信度较高。
+	\section{收获与感想}
+	我们在本次实验了解了高临界温度超导材料的基本特性及其测试方法，同时了解金属和半导体PN节的伏安特性随温度变化以及温差电效应，学习几种低温温度计的比对和使用方法，以及低温温度控制的简便方法，同时为我们以后从事超导方面研究打下了坚实的基础。
+\end{document}

@@ -1,0 +1,273 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{北京大学物理学院\\
+	吴熙楠}
+\title{
+	\heiti{霍尔效应实验报告}
+}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	\renewcommand{\abstractname}{\Large 摘要\\}
+	\begin{abstract}
+		{\normalsize 固体材料中的载流子在外加磁场中运动时，因为受到洛仑兹力的作用而使轨迹发生偏移，并在材料两侧产生电荷积累，形成垂直于电流方向的电场，最终使载流子受到的洛仑兹力与电场斥力相平衡，从而在两侧建立起一个稳定的电势差即霍尔电压。这个就叫“霍尔效应”。在此次实验过程中，我们将学习霍尔效应测量磁场。
+			
+			\textbf{关键词：载流子、洛伦兹力、霍尔电压}}
+	\end{abstract}
+	
+	\newpage
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\section{实验目的}
+	(1)了解霍尔效应的基本原理；
+	\par (2)学习用霍尔效应测量磁场。
+	\section{实验器材}
+	霍尔效应仪，稳流电源，稳压电源，电流表，毫安表，功率函数发生器，特斯拉计，数字多用表，电阻箱，导线
+	\section{实验过程及数据整理}
+	\subsection{测量霍尔电流$I_{H}$和霍尔电压$U_{H}$的关系}
+	\begin{center}
+	$U_{H}=\dfrac{1}{4}(U_{1}-U_{2}+U_{3}-U_{4})$
+    \end{center}
+	\subsubsection{电流从$1,2$端流入，$I_{M}=0.600A$}
+	\begin{table}[H]
+		\caption{测量数据(电流从$1,2$端流入，$I_{M}=0.600A$)}
+		\label{测量数据(电流从$1,2$端流入，$I_{M}=0.600A$)}
+		\centering
+		\begin{tabular}{c|*{5}{c}}
+			\toprule[0.5mm]
+			$I_{H}(mA)$&2.000&4.000&6.000&8.000&10.000\\
+			\midrule
+			$U_{1}(mV)$&4.31&8.61&13.17&17.27&21.78\\
+			$U_{2}(mV)$&-4.34&-8.65&-13.25&-17.42&-22.02\\
+			$U_{3}(mV)$&3.82&7.64&11.67&15.34&19.43\\
+			$U_{4}(mV)$&-3.84&-7.66&-11.75&-15.45&-19.61\\
+			\midrule
+			$U_{H}(mV)$&4.08&8.14&12.46&16.37&20.71\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+    \begin{figure}[H]
+	\centering
+	\caption{\label{1} 霍尔电流$I_{H}$和霍尔电压$U_{H}$的关系图}
+	\includegraphics[width=12cm,height=9cm]  {iu1.png} 
+	\end{figure}
+\textbf{由图可知，霍尔电流$I_{H}$与霍尔电压$U_{H}$呈线性关系，相关系数$r=0.99998$也可以佐证其线性关系。}
+	\subsubsection{电流从3,4端流入，$I_{M}=0.600A$}
+	\begin{table}[H]
+	\caption{测量数据(电流从$3,4$端流入，$I_{M}=0.600A$)}
+	\label{测量数据(电流从$3,4$端流入，$I_{M}=0.600A$)}
+	\centering
+	\begin{tabular}{c|*{5}{c}}
+		\toprule[0.5mm]
+		$I_{H}(mA)$&2.000&4.000&6.000&8.000&10.000\\
+		\midrule
+		$U_{1}(mV)$&3.82&7.69&11.68&15.67&19.42\\
+		$U_{2}(mV)$&-3.83&-7.73&-11.76&-15.81&-19.29\\
+		$U_{3}(mV)$&4.31&8.65&13.11&17.46&21.77\\
+        $U_{4}(mV)$&-4.32&-8.70&-13.20&-17.73&-21.96\\
+		\midrule
+		$U_{H}(mV)$&4.07&8.19&12.44&16.66&20.61\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+    \begin{figure}[H]
+	\centering
+	\caption{\label{1} 霍尔电流$I_{H}$和霍尔电压$U_{H}$的关系图}
+	\includegraphics[width=12cm,height=9cm]  {iu2.png} 
+    \end{figure}
+\textbf{由图可知，霍尔电流$I_{H}$与霍尔电压$U_{H}$呈线性关系，相关系数$r=0.999993$也可以佐证其线性关系。}
+	\subsection{测量霍尔元件灵敏度$K_{H}$}
+	\begin{table}[H]
+	\caption{测量数据(电流从$1,2$端流入，$I_{H}=10.000mA$)}
+	\label{测量数据(电流从$1,2$端流入，$I_{H}=10.000mA$)}
+	\centering
+	\begin{tabular}{c|*{11}{c}}
+		\toprule[0.5mm]
+		$I_{M}(A)$&0.000&0.100&0.200&0.300&0.400&0.500&0.600&0.700&0.800&0.900&1.000\\
+		\midrule
+		$B(mT)$&3.4&39.2&78.4&113.1&156.6&197.2&239.2&276.3&310.0&350.7&385.0\\
+		\midrule
+		$U_{1}(mV)$&1.22&4.40&7.60&10.94&14.42&17.76&21.20&24.42&28.42&31.81&34.65\\
+		$U_{2}(mV)$&-1.42&-4.61&-7.78&-11.12&-14.61&-17.96&-21.41&-24.63&-28.63&-32.01&-34.82\\
+		$U_{3}(mV)$&0.94&2.21&5.49&8.85&12.28&15.59&19.03&22.38&26.25&29.68&32.70\\
+		$U_{4}(mV)$&-1.14&-2.43&-5.66&-9.03&-12.46&-15.78&-19.23&-22.59&-26.45&-29.92&-32.88\\
+		\midrule
+		$U_{H}(mV)$&1.18&3.41&6.63&9.99&13.44&16.77&20.22&23.51&27.44&30.86&33.76\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+    \begin{figure}[H]
+	\centering
+	\caption{\label{1} $U_{H}-B$图}
+	\includegraphics[width=12cm,height=9cm]  {bu.png} 
+    \end{figure}
+\textbf{由图可知，霍尔电压$U_{H}$与磁感应强度$B$呈线性关系，相关系数$r=0.9993$也可以佐证其线性关系。}
+\par 考察斜率的不确定度，随机误差造成的部分为：
+\begin{center}
+	$\sigma_{k}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}=1.08\times10^{-3}T/A$
+\end{center}
+\par 我们认为霍尔电流$I_{H}$存在允差为$0.1mA$，则：
+\begin{center}
+	$\sigma_{I_{H}}=\dfrac{e}{\sqrt{3}}=0.0578mA$
+\end{center}
+\par 因此计算$K_{H}=\dfrac{k}{I_{H}}=8.66V/(T\cdot A)$
+\par 不确定度为:
+\begin{center}
+	$\sigma_{K_{H}}=K_{H}\sqrt{(\dfrac{\sigma_{k}}{k})^{2}+(\dfrac{\sigma_{I_{H}}}{I_{H}})^{2}}=0.12V/(T\cdot A)$
+\end{center}
+\par \textbf{因此霍尔灵敏度$K_{H}=(8.66\pm 0.12)V/(T\cdot A)$}
+	\subsection{做出磁化曲线图}
+	我们由上一问求得的$K_{H}$可以通过$B=\dfrac{U_{H}}{K_{H}I_{H}}$计算出磁感应强度$B$的值：
+	\begin{table}[H]
+	\caption{$B-I_{M}$数据表}
+	\label{$B-I_{M}$数据表}
+	\centering
+	\begin{tabular}{c|*{11}{c}}
+		\toprule[0.5mm]
+		$I_{M}(A)$&0.000&0.100&0.200&0.300&0.400&0.500&0.600&0.700&0.800&0.900&1.000\\
+		\midrule
+		$B(mT)$&13.6&39.4&76.5&115.3&155.2&193.6&233.4&271.4&316.8&356.3&389.8\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+    \begin{figure}[H]
+	\centering
+	\caption{\label{1} 磁化曲线图}
+	\includegraphics[width=12cm,height=9cm]  {b-i.png} 
+    \end{figure}
+	\subsection{测量电磁铁磁场的水平分布}
+	\begin{table}[H]
+	\caption{$B-x$数据表($I_{H}=10.000mA,I_{M}=0.600A$)}
+	\label{$B-x$数据表($I_{H}=10.000mA,I_{M}=0.600A$)}
+	\centering
+	\begin{tabular}{c|*{4}{c}|c|c}
+		\toprule[0.5mm]
+        $x(mm)$&$U_{1}(mV)$&$U_{2}(mV)$&$U_{3}(mV)$&$U_{4}(mV)$&$U_{H}(mV)$&$B(mT)$\\
+		\midrule
+		40.00&21.41&-21.62&19.39&-19.57&20.50&236.7\\
+		45.00&21.36&-21.57&19.33&-19.53&20.45&236.1\\
+		50.00&21.53&-21.74&19.52&-19.72&20.63&238.2\\
+		55.00&22.32&-22.54&20.20&-20.35&21.35&246.5\\		
+		56.00&20.02&-20.23&17.90&-17.98&19.03&219.7\\
+		57.00&15.61&-15.81&13.55&-13.72&14.67&169.4\\
+		58.00&12.43&-12.63&10.40&-10.57&11.51&132.9\\
+		59.00&10.44&-10.63&8.43&-8.62&9.53&110.0\\
+		60.00&8.99&-9.17&7.00&-7.17&8.08&93.3\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+    \begin{figure}[H]
+	\centering
+	\caption{\label{1} 电磁场水平分布(一半)}
+	\includegraphics[width=10cm,height=7.6cm]  {b-x.png} 
+    \end{figure}
+\textbf{我们观察到磁感应强度$B$的值随着距离变化会在中心位置比较平缓，在边缘处下降比较陡峭。}
+	\section{思考题}
+	{\large{\textbf{Q}}}:\normalsize 在测量$B-I_{M}$曲线中，$I_{M}=0$时$U_{H}$测量端仍有较小的电压，这是为什么？
+	\par{\large{\textbf{A}}}:\normalsize \textbf{因为$I_{M}=0$的时候会有众多的副效应，比如不等位效应，埃廷豪森效应，能斯特效应，里吉勒杜克效应，就算没有磁场$B$，也会存在电势差；而且有可能存在磁滞现象，即可能就算$I_{M}=0$，但磁感应强度$B$并不等于0。因此这样测量端仍然会有较小的电压。}
+	\section{分析与讨论}
+	(1){\large{\textbf{Q}}}:\normalsize 比较实验内容$4.1$中$(a)、(b)$两种接法观测的结果，并解释现象？
+	\par{\large{\textbf{A}}}:\normalsize \textbf{我们交换接法后测量的结果发现$(a)$接法中$U_{1}$和$U_{2}$与$(b)$接法中$U_{3}$和$U_{4}$接近；$(a)$接法中$U_{3}$和$U_{4}$与$(b)$接法中$U_{1}$和$U_{2}$接近；但虽然接近，却不完全一致，因为会有很多的环境影响因此不会完全相同；而接近的原因是两种接法相当于电流方向反向，因此我们改变电流方向与改变接法是等效的，因此接近。}
+	\par (2){\large{\textbf{Q}}}:\normalsize 说明实验内容$4.3$中为什么用计算的$B$作磁化曲线比用直接测量的$B$更好？
+	\par{\large{\textbf{A}}}:\normalsize \textbf{因为我们直接测量的磁感应强度$B$只测量了一次，随机误差较大，可能对于线性比较不合理，而用计算的磁感应强度$B$完全反映线性结果，更适合拿来观察线性趋势。}
+	\par (3){\large{\textbf{Q}}}:\normalsize 实验中观测到的各种曲线有什么主要特征，如何解释？
+    \par{\large{\textbf{A}}}:\normalsize\textbf{(1)霍尔电流$I_{H}$和霍尔电压$U_{H}$线性正相关，因为霍尔电流$I_{H}$越大，则力平衡需要的电场越大，即霍尔电压$U_{H}$越大。(2)励磁电流$I_{M}$越大，磁感应强度$B$越大，霍尔电压$U_{H}$也越大，大致呈线性关系因为励磁电流越大，产生磁感应强度越大，同理力平衡需要的电场强度越大，即霍尔电压越大。(3)电磁铁磁场水平分布在中心最大，且变化比较平缓，然后改变较快，在边缘处大致变为中心磁感应强度的$\frac{1}{2}$，因为在中心处大概我们可以将其视作为无限长螺线管，在边缘处大致为半无限长螺线管，因此中心处磁场大致为边缘处磁场的$\frac{1}{2}$。} 
+	\section{收获与感想}
+    在我们本次实验中，我们通过老师的讲解，了解了霍尔效应的基本原理，同时通过使用活儿效应的仪器学习了使用霍尔效应测量磁场的方式。为我们以后将要从事凝聚态物理的同学学习量子霍尔效应，分数霍尔效应，量子反常霍尔效应等霍尔效应的衍生效应打下了基础，做好了铺垫。
+\end{document}

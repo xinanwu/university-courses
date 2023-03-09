@@ -1,0 +1,323 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{闪光法测不良导体热导率实验报告}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		我们在本次实验中使用闪光法测量不良导体的热导率，我们采用一系列的实验方法保证了测量时原理近似的正确，同时最后我们使用软件进行了散热修正后，得到不良导体的热导率，同时学习了实验软件的使用。
+		
+		\textbf{关键词：闪光法，热导率，散热修正}
+	\end{abstract}
+	\section{实验目的}
+	(1)测定不良导体的热导率；
+	\par (2)了解一种测定材料热物性参量的方法；
+	\par (3)了解热物性参量测量中的基本问题；
+	\par (4)学习正确使用高压脉冲光源和光路调节技术以及用微机控制实验和采集、处理数据。
+	\section{实验器材}
+	闪光法热导仪(包括高压脉冲氙灯，光学调节系统，待测样品酚醛胶布板，花岗岩，瓷砖各一片，pn结温度传感器，放大电路板，AD/DA卡，微机，软件等).
+	\section{实验过程及数据整理}
+	\subsection{大理石热导率的测定}
+	\subsubsection{大理石密度的测定}
+		\begin{table}[H]
+	\centering
+	\caption{大理石几何参数数据表}
+	\label{大理石几何参数数据表}
+	\begin{tabular}{|c|*{3}{c}|}
+		\toprule[0.5mm]
+		&$L/cm$&$w/cm$&$h/cm$\\
+		\midrule
+		1&10.122&5.020&1.868\\
+		2&10.090&5.010&1.854\\
+		3&10.108&5.000&1.850\\
+		平均值&10.107&5.010&1.857\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{大理石的密度}
+	\begin{tabular}{|c|c|c|}
+		\toprule[0.5mm]
+		质量$m/g$&体积$V/cm^{3}$&密度$\rho/(g/cm^{3})$\\
+		\midrule
+		284.31&94.03&3.024\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+我们通过验证其他数据表示，三组数据中$(\dfrac{\Delta \rho}{\rho})_{max}=0.84\%<1\%$，因此数据可用。
+\par $\sigma_{\rho}=\rho\sqrt{(\dfrac{\sigma_{L}}{L})^{2}+(\dfrac{\sigma_{w}}{w})^{2}+(\dfrac{\sigma_{h}}{h})^{2}+(\dfrac{\sigma_{m}}{m})^{2}}$
+\par $e_{L}=e_{w}=e_{h}=0.001cm,e_{m}=0.01g$,\quad$\sigma_{LA}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(L_{i}-\bar{L})^{2}}{2}}=0.016cm$
+\par $\sigma_{wA}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(w_{i}-\bar{w})^{2}}{2}}=0.01cm$,\quad$\sigma_{hA}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(h_{i}-\bar{h})^{2}}{2}}=0.0095cm$
+\par 因此计算出$\sigma_{\rho}=0.017g/cm^{3}$,\quad$\rho=(3.024\pm 0.017)g/cm^{3}$
+	\subsubsection{闪光法测定大理石热导率}
+		\begin{table}[H]
+		\centering
+		\caption{大理石闪光法数据表1(L=3.02mm)}
+		\begin{tabular}{|c|*{6}{c}|}
+			\toprule[0.5mm]
+			&软件散热修正($K/s$)&$T_{0}/K$&$T_{M}/K$&$T_{\frac{1}{2}}/K$&$t_{\frac{1}{2}}/s$&$\lambda/(W/m\cdot K)$\\
+			\midrule
+			1&N/A&-0.7251&-0.3112&-0.5182&2.6264&1.042\\
+			2&0.001492&-0.7251&-0.2863&-0.5058&2.7267&1.004\\
+			3&0.001411&-0.7230&-0.2882&-0.5056&2.7382&1.0001\\
+			4&0.001492&-0.7252&-0.2868&-0.5060&2.7174&1.008\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\par 通过对比未散热修正与散热修正的数据，我们发现没有散热修正的数据比散热修正的数据计算出的热导率更高，这是因为一定的散热将会使得曲线在达到最高温度稳定之前就出现峰值，因此$T_{M}$将会更低，所以测得的$t_{\frac{1}{2}}$也会更小，而热导率与$t_{\frac{1}{2}}$成反比，因此没有散热修正的数据计算出的热导率会比散热修正后计算出的热导率更高。
+	\begin{table}[H]
+		\centering
+		\caption{大理石闪光法数据表2(L=3.02mm)}
+		\begin{tabular}{|c|*{6}{c}|}
+			\toprule[0.5mm]
+			&软件散热修正($K/s$)&$T_{0}/K$&$T_{M}/K$&$T_{\frac{1}{2}}/K$&$t_{\frac{1}{2}}/s$&$\lambda/(W/m\cdot K)$\\
+			\midrule
+			1&N/A&-0.5237&-0.1231&-0.3234&2.5566&1.071\\
+			2&0.001446&-0.5233&-0.1011&-0.3122&2.6511&1.033\\
+			3&0.001327&-0.5216&-0.1038&-0.3127&2.6553&1.031\\
+			4&0.001446&-0.5236&-0.1015&-0.3122&2.6458&1.035\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\par 通过对比未散热修正与散热修正的数据，我们发现没有散热修正的数据比散热修正的数据计算出的热导率更高，这是因为一定的散热将会使得曲线在达到最高温度稳定之前就出现峰值，因此$T_{M}$将会更低，所以测得的$t_{\frac{1}{2}}$也会更小，而热导率与$t_{\frac{1}{2}}$成反比，因此没有散热修正的数据计算出的热导率会比散热修正后计算出的热导率更高。
+	\begin{table}[H]
+		\centering
+		\caption{大理石散热曲线数据表}
+		\begin{tabular}{|c|*{6}{c}|}
+			\toprule[0.5mm]
+			&1&2&3&4&5&6\\
+			\midrule
+			$t/s$&19.1182&20.9455&23.4755&25.7947&28.3248&30.644\\
+			$T/K$&-0.1290&-0.1308&-0.1348&-0.1381&-0.1418&-0.1458\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {大理石.png} 
+	\caption{\label{1} 大理石散热速率拟合图}
+\end{figure}
+\par 我们对比发现使用电脑拟合出来的散热速率$0.001446K/s$与我们从图像取点拟合出来的散热速率$0.001468K/s$差别很小，对比拟合得较好。
+	\subsection{胶布板热导率的测定}
+	\subsubsection{胶布板密度的测定}
+		\begin{table}[H]
+		\centering
+		\caption{胶布板几何参数数据表}
+		\label{胶布板几何参数数据表}
+		\begin{tabular}{|c|*{3}{c}|}
+			\toprule[0.5mm]
+			&$L/cm$&$w/cm$&$h/cm$\\
+			\midrule
+			1&9.950&9.936&0.3072\\
+			2&9.950&9.930&0.3085\\
+			3&9.956&9.936&0.3081\\
+			平均值&9.952&9.934&0.3079\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\caption{胶布板的密度}
+		\begin{tabular}{|c|c|c|}
+			\toprule[0.5mm]
+			质量$m/g$&体积$V/cm^{3}$&密度$\rho/(g/cm^{3})$\\
+			\midrule
+			41.29&30.44&1.356\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	我们通过验证其他数据表示，三组数据中$(\dfrac{\Delta \rho}{\rho})_{max}=0.14\%<1\%$，因此数据可用。
+\par $\sigma_{\rho}=\rho\sqrt{(\dfrac{\sigma_{L}}{L})^{2}+(\dfrac{\sigma_{w}}{w})^{2}+(\dfrac{\sigma_{h}}{h})^{2}+(\dfrac{\sigma_{m}}{m})^{2}}$
+\par $e_{L}=e_{w}=0.001cm,e_{h}=0.0001cm,e_{m}=0.01g$,\quad$\sigma_{LA}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(L_{i}-\bar{L})^{2}}{2}}=0.00346cm$
+\par $\sigma_{wA}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(w_{i}-\bar{w})^{2}}{2}}=0.00346cm$,\quad$\sigma_{hA}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(h_{i}-\bar{h})^{2}}{2}}=0.00057cm$
+\par 因此计算出$\sigma_{\rho}=0.003g/cm^{3}$,\quad$\rho=(1.356\pm 0.003)g/cm^{3}$
+	\subsubsection{闪光法测定胶布板热导率}
+	\begin{table}[H]
+		\centering
+		\caption{胶布板闪光法数据表1(L=3.00mm)}
+		\begin{tabular}{|c|*{6}{c}|}
+			\toprule[0.5mm]
+			&软件散热修正($K/s$)&$T_{0}/K$&$T_{M}/K$&$T_{\frac{1}{2}}/K$&$t_{\frac{1}{2}}/s$&$\lambda/(W/m\cdot K)$\\
+			\midrule
+			1&N/A&-0.184&0.3219&0.0685&6.7251&0.2639\\
+			2&0.003022&-0.185&0.3919&0.1035&7.009&0.2534\\
+			3&0.002924&-0.183&0.3886&0.1028&7.017&0.2530\\
+			4&0.003022&-0.185&0.3911&0.1031&7.011&0.2532\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\par 通过对比未散热修正与散热修正的数据，我们发现没有散热修正的数据比散热修正的数据计算出的热导率更高，这是因为一定的散热将会使得曲线在达到最高温度稳定之前就出现峰值，因此$T_{M}$将会更低，所以测得的$t_{\frac{1}{2}}$也会更小，而热导率与$t_{\frac{1}{2}}$成反比，因此没有散热修正的数据计算出的热导率会比散热修正后计算出的热导率更高。
+	\begin{table}[H]
+	\centering
+	\caption{胶布板闪光法数据表2(L=3.00mm)}
+	\begin{tabular}{|c|*{6}{c}|}
+		\toprule[0.5mm]
+		&软件散热修正($K/s$)&$T_{0}/K$&$T_{M}/K$&$T_{\frac{1}{2}}/K$&$t_{\frac{1}{2}}/s$&$\lambda/(W/m\cdot K)$\\
+		\midrule
+		1&N/A&-0.4129&0.0174&-0.1978&6.900&0.2573\\
+		2&0.002060&-0.4131&0.0664&-0.1734&7.1271&0.2491\\
+		3&0.002007&-0.4110&0.0647&-0.1732&7.1380&0.2487\\
+		4&0.002060&-0.4132&0.0664&-0.1734&7.1234&0.2492\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+    \end{table}
+\par 通过对比未散热修正与散热修正的数据，我们发现没有散热修正的数据比散热修正的数据计算出的热导率更高，这是因为一定的散热将会使得曲线在达到最高温度稳定之前就出现峰值，因此$T_{M}$将会更低，所以测得的$t_{\frac{1}{2}}$也会更小，而热导率与$t_{\frac{1}{2}}$成反比，因此没有散热修正的数据计算出的热导率会比散热修正后计算出的热导率更高。
+\begin{table}[H]
+	\centering
+	\caption{胶布板散热曲线数据表}
+	\begin{tabular}{|c|*{6}{c}|}
+		\toprule[0.5mm]
+		&1&2&3&4&5&6\\
+		\midrule
+		$t/s$&27.6463&28.4299&29.8796&32.0344&33.4057&35.2080\\
+		$T/K$&0.0103&0.0093&0.0065&0.0006&-0.0032&-0.0081\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {胶布板.png} 
+	\caption{\label{1} 胶布板散热速率拟合图}
+\end{figure}
+\par 我们对比发现使用电脑拟合出来的散热速率$0.002060K/s$与我们从图像取点拟合出来的散热速率$0.002305K/s$差别不大，有少量差别应为在图像取点时范围取到非线性区域所致。
+\subsection{误差讨论}
+这个实验中主要误差就结果来看主要来自于薄片的厚度以及对于时间的测量，同时各项几何参数以及测量$t_{\frac{1}{2}}$存在随机误差，并且可以看出电脑对于散热系数的修正也可能会有一定的误差，可能来自于算法的不准确。同时，样品使用时背景噪声的影响，外部环境的干扰，测温温度传感器的热噪声，实验过程中不能很好控制样品与氙灯的距离等等原因均影响实验最后的精度。
+	\section{思考题}
+	(1)用本方法测$\lambda$时，从物理原理上要满足什么条件？实验中如何保证？
+	\par \textbf{答：物理原理上需要满足:(a)受热时间远小于传热时间。实验中使用闪光法保证前表面辐照时间很短，远小于热传导的特征时间，这一点用脉冲电源保证。(b)一维热传导：我们为了理论公式可用，必须保证热流方向基本垂直薄片。实验中将样品置于反光镜第二焦点前方，尽可能使样品表面均匀受热。并且半径远大于厚度，使得侧柱面散热可以忽略。}
+	\par (2)测温的pn结温度传感器为何选得小，从物理原理如何考虑的？
+	\par \textbf{答：由于传感器也会吸收热量，对实验结果产生影响，所以尽可能做小以减小对实验结果产生的影响。}
+	\par (3)$t_{\frac{1}{2}}$的意义、热导率的物理含义和比热的物理含义是什么？
+	\par \textbf{答：$t_{\frac{1}{2}}$指以最低温度为零点，上升至最高温度一半所用的时间；热导率反映了物质热传导的能力，等于单位温度梯度在单位时间内经过单位截面积传递的热量；比热是单位质量物质的热容量，即单位质量物体改变单位温度时的吸收或者释放的内能。}
+	\par (4)在测定$t_{\frac{1}{2}}$时，根据实际的实验曲线考虑温度$T_{0}$如何测定？时间起点$t_{0}$如何确定？
+	\par \textbf{答：实验曲线的温度$T_{0}$应该是温升曲线一个小峰或者小谷过后的开始较为平滑上升的最小值；时间起点$t_{0}$应为温度$T_{0}$所对应的时刻，即小峰或小谷过后温度最低点所在的时刻为$t_{0}$。}
+	\par (5)为什么对实验曲线散热修正？请考虑如何修正并写出进行散热修正的具体做法和公式。
+	\par \textbf{答：散热修正必须进行的原因为，当样品受光侧将热量向背光侧传导的同时，背光侧向外界散发热量，这会导致背光侧热电偶测得的温度并非准确表达了受光侧传导而来的热量，这与实验前提中假设的“样品与外界绝热”不符合。为了使得实验结果准确，就必须进行散热修正。具体计算利用牛顿冷却定律，$\dfrac{dT}{dt}=k(T-T_{0})$，其中$T_{0}$为环境温度。那么对于微小时间内温度损失为$\Delta Q=Mk(T-T_{0})\Delta t$，M为系统的热容。因此考虑同时从受光侧传导的热量得到：$dT=\dfrac{Q_{in}}{M}-(T-T_{0})kdt$。利用该公式对测量结果反向补偿就能起到散热修正效果。}
+	\par (6)在脉冲光启动的一瞬间，测量者能看到一个小峰，根据大量实验结果分析其原因。
+	\par \textbf{答：由于氙光灯工作原理为利用高压电脉冲激发氙气气体使其发光。在通电瞬间，通过氙气灯的强电脉冲会产生一个电磁波脉冲，这个电磁波脉冲被温度检测和转换电路捕捉到，形成明显的背景噪声干扰，出现在温升曲线上，而这个脉冲方向为不定的，因而曲线的波峰和波谷都有可能出现。}
+	\section{TDTR(时域热反射法)原理}
+	如今，许多产品都要用到微米甚至纳米厚度的材料，因此十分有必要对其热导率有所了解。然而，它们的热导率很难从理论模型得出，因为它对晶体薄膜的结构有很强的依赖性。因此，测量这类材料的热导率是十分必要的。时域热反射法就是其中一种十分重要测量的方法。
+	\subsection{简单介绍}
+	超快脉冲激光加热金属是一个先非平衡热传输后平衡热传输的过程。目前，金属中微尺度非平衡热输运过程采用抛物两步模型描述，平衡热输运则满足经典傅里叶定律。用一束汞激光照射物体，为物体提供热流。经过时间$\Delta t$后用另一束探测激光照射物体表面使其反射，并接收反射束。由于物体表面的反射率与其温度有关，而温度又与物体的导热率有关。因此可以通过测量物体表面对探测束的反射率与$\Delta t$的关系并与数学模型比较来得到物体的导热率。但是由于数学推导较为复杂，此处不予介绍。
+	\subsection{实验系统介绍}
+	系统主要包括飞秒激光器系统、光学系统、数据采集和仪器控制系统等三大部分。
+	\par 飞秒激光器系统作为实验系统的光源，输出的激光脉宽约为100飞秒，现代先进的激光仪器能够保证激光输出稳定纯净，这对于实验意义巨大。
+	\par 光学系统是实验系统的核心，由泵浦光光路和探测光光路两部分组成，如图3：
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=10.5cm,height=6cm]  {TDTR.png} 
+		\caption{\label{1} TDTR实验系统光路图}
+	\end{figure}
+	\par 激光器输出的偏振脉冲激光通过光学隔离系统和第一反射镜后，经准直透镜射入第一分光器件，激光光束被第一分光器件分成偏振相互正交的两束激光，分别作为泵浦光和探测光。泵浦光经过电光调制器后，经过第二反射镜射入光学延迟器，再依次经过短波通滤光片、第三反射镜射入第二分光器件，被第二分光器件反射。探测光由光学斩波器调制后，经第四反射镜反射，射入长波通滤光片，然后再经过第三分光器件被反射射入所述第二分光器件，与泵浦光合并为一束激光，共线后的激光经过物镜聚焦至样品表面。激光射到样品表面后，其反射的激光透过第二分光器件和第三分光器件，然后经过聚焦透镜和带波通滤光片，射入光电探测器，进入数据采集与分析阶段。
+	\par 数据采集和仪器控制系统由光电探测器、锁相放大器、计算机软硬件等电子仪器共同组成。其主要功能是对信号进行提取放大，对接受到的光信号进行自动化分析给出实验所需数据，同时协调仪器各个部分运行。
+	\subsection{优点}
+	TDTR方法有高效，廉价，方便，测量速度相对较快等优点。此方法不仅能测大块物体的热导率，而且还能测量薄层材料的热导率。不仅能测单层材料，还能测多层材料的热导率。陶瓷，金属，玻璃，聚合物，且几乎所有类型的材料的热导率都能测量。样品也容易制备，只需在测量之前镀一层金属薄膜。测量环境的温度跨度较大，高温也可测量。
+	\subsection{应用}
+	TDTR主要被用于测量大块和薄膜固体材料的热性质。此外TDTR也能用于测流体的热性质(如液体的导热率，热容。固/液界面的热导率。蒸发，冷凝，微通道冷却，流动沸腾过程中流体的传热系数)。此外，TDTR还可以用来研究纳米颗粒溶液中的热物理现象(如粒子向周围的热扩散和表面活性剂之间的热传输)，TDTR还可结合X射线衍射来研究quasi-ballistic regime的传热特性。
+\end{document}

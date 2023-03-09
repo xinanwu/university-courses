@@ -1,0 +1,319 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{交流电桥实验}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		交流电桥是测量各种交流阻抗的基本仪器，如电容的电容量，电感的电感量等。此外还可利用交流电桥平衡条件与频率的相关性来测量与电容、电感有关的其他物理量，如互感、磁性材料的磁导率、电容的介质损耗、介电常数和电源频率等，其测量准确度和灵敏度都很高，在电磁测量中应用极为广泛。我们将在本次实验中学习使用交流电桥。
+		
+		\textbf{关键词：交流，频率，电桥}
+	\end{abstract}
+	\section{实验目的}
+	(1)学会使用交流电桥测量电容和电感及其损耗；
+	\par (2)了解交流桥路的特点和调节平衡的方法。
+	\section{实验器材}
+	函数信号发生器，电阻箱3个，十进式电容箱，十进式电感箱，待测电容，待测电感，待测磁环，标准互感器，数字多用电表，开关，导线。
+	\section{实验过程及数据整理}
+	\subsection{电容桥测量电容}
+	条件：对于纸质电容而言，其损耗角很小，因此需要测量其本底电压，电容桥一般为了电容测量准确，使$R_{1}=R_{2}$，此方法适合测量损耗小的电容。
+	\subsubsection{纸质电容的测量}
+	\begin{table}[H]
+		\centering
+		\caption{纸质电容测量数据表(本底$U_{0}=0.21mV$,$f=1kHz$)}
+		\label{纸质电容测量数据表}
+		\begin{tabular}{|r|r|r|r|r|}
+			\toprule[0.5mm]
+			$R_{1}/\Omega$&$R_{2}/\Omega$&$C_{0}/\mu F$&$R_{0}/\Omega$&$U/mV$\\
+			\midrule
+			100.0&100.0&0.2359&2.1&0.20\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	$\therefore C_{x}=\dfrac{R_{2}}{R_{1}}C_{0}=0.2359\mu F,\quad R_{c}=\dfrac{R_{1}}{R_{2}}R_{0}=2.1\Omega$
+	\par 损耗角$tan\delta=\omega C_{0}R_{0}=3.112\times 10^{-3}$
+	\par $Z=\sqrt{(R_{0})^{2}+(\dfrac{1}{\omega C_{x}})^{2}}=674.67\Omega$
+	\par 当$\Delta R_{0}=(2.8-2.1)\Omega=0.7\Omega$时，$\Delta U=(0.72-0.20)mV=0.52mV$,灵敏度$S_{R}=\dfrac{\Delta U}{\Delta R_{0}/Z}=501.7mV$
+	\par 当$\Delta C_{0}=(0.2362-0.2359)\mu F=0.0003\mu F$时，$\Delta U=(0.79-0.20)mV=0.59mV$,灵敏度$S_{C}=\dfrac{\omega C_{0}^{2}\Delta U}{\Delta C_{0}/Z}=464.8mV$
+	\par 可见理论上$S_{R}$与$S_{C}$是相同的，而实际测量结果也是接近的。
+	\par 对于不确定度的计算：$\sigma_{c}=C_{x}\sqrt{(\dfrac{\sigma_{c_{0}}}{C_{0}})^{2}+(\dfrac{\sigma_{R_{1}}}{R_{1}})^{2}+(\dfrac{\sigma_{R_{2}}}{R_{2}})^{2}},\sigma_{R}=R_{c}\sqrt{(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}+(\dfrac{\sigma_{R_{1}}}{R_{1}})^{2}+(\dfrac{\sigma_{R_{2}}}{R_{2}})^{2}}$
+	\par \textbf{因为信号发生器产生频率波动对于不确定度影响很小，所以}$\sigma_{tan\delta}=tan\delta\sqrt{(\dfrac{\sigma_{c_{0}}}{C_{0}})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}=0.014\times10^{-3}$
+	\par $e_{c}=(0.2\times 0.5\%+0.03\times0.65\%+0.005\times2\%+0.0009\times5\%)\mu F=1.34\times10^{-3}\mu F$
+	\par $e_{R_{1}}=e_{R_{2}}=100\times0.1\%\Omega=0.1\Omega,\quad e_{R_{0}}=(2\times0.5\%+0.1\times2\%)\Omega=0.012\Omega$
+	\par 因此计算可得$\sigma_{c}=0.0008\mu F,\quad\sigma_{R}=0.007\Omega,\quad\sigma_{tan\delta}=0.014\times10^{-3}$
+	\par 因此$C_{x}=(0.2359\pm 0.0008)\mu F,\quad R_{c}=(2.100\pm 0.007)\Omega,\quad\tan\delta=(3.112\pm 0.014)\times10^{-3}$(\textbf{其中因为灵敏度经过计算发现很大，因此在不确定度计算中可以忽略不计})
+	\subsubsection{电解电容的测量}
+	\begin{table}[H]
+		\centering
+		\caption{电解电容测量数据表($f=1kHz$)}
+		\label{电解电容测量数据表}
+		\begin{tabular}{|r|r|r|r|r|}
+			\toprule[0.5mm]
+			$R_{1}/\Omega$&$R_{2}/\Omega$&$C_{0}/\mu F$&$R_{0}/\Omega$&$U/mV$\\
+			\midrule
+			100.0&1000.0&0.6628&30.5&0.02\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	$\therefore C_{x}=\dfrac{R_{2}}{R_{1}}C_{0}=6.628\mu F,\quad R_{c}=\dfrac{R_{1}}{R_{2}}R_{0}=3.05\Omega$
+	\par 损耗角$tan\delta=\omega C_{0}R_{0}=0.127$
+	\par 当$\Delta R_{0}=(30.9-30.5)\Omega=0.4\Omega$时，$\Delta U=(0.50-0.02)mV=0.48mV$,灵敏度$S_{R}=\dfrac{\Delta U}{\Delta R_{0}/Z}=284.7mV$
+	\par 当$\Delta C_{0}=(0.6642-0.6628)\mu F=0.0014\mu F$时，$\Delta U=(0.54-0.02)mV=0.52mV$,灵敏度$S_{C}=\dfrac{\omega C_{0}^{2}\Delta U}{\Delta C_{0}/Z}=259.8mV$
+	\par 可见理论上$S_{R}$与$S_{C}$是相同的，而实际测量结果也是接近的。
+	\par 对于不确定度的计算：$\sigma_{c}=C_{x}\sqrt{(\dfrac{\sigma_{c_{0}}}{C_{0}})^{2}+(\dfrac{\sigma_{R_{1}}}{R_{1}})^{2}+(\dfrac{\sigma_{R_{2}}}{R_{2}})^{2}},\sigma_{R}=R_{c}\sqrt{(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}+(\dfrac{\sigma_{R_{1}}}{R_{1}})^{2}+(\dfrac{\sigma_{R_{2}}}{R_{2}})^{2}}$
+	\par \textbf{因为信号发生器产生频率波动对于不确定度影响很小，所以}$\sigma_{tan\delta}=tan\delta\sqrt{(\dfrac{\sigma_{c_{0}}}{C_{0}})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}=0.0004$
+	\par $e_{c}=(0.6\times 0.5\%+0.06\times0.65\%+0.002\times2\%+0.0008\times5\%)\mu F=3.47\times10^{-3}\mu F$
+	\par $e_{R_{1}}=(100\times0.1\%)\Omega=0.1\Omega,\quad e_{R_{2}}=(1000\times0.1\%)\Omega=1\Omega$
+	\par $e_{R_{0}}=(30\times 0.1\%+0.5\times 2\%)\Omega=0.04\Omega$
+	\par 因此计算可得$\sigma_{c}=0.021\mu F,\quad\sigma_{R}=0.003\Omega,\quad \sigma_{tan\delta}=0.0004$
+	\par 因此$C_{x}=(6.628\pm 0.021)\mu F,\quad R_{c}=(3.050\pm 0.003)\Omega,\quad tan\delta=(0.1270\pm 0.0004)$(\textbf{其中因为灵敏度经过计算发现很大，因此在不确定度计算中可以忽略不计})
+	\subsection{麦克斯韦-维恩桥测量电感}
+	条件：测量电感时为了保证电阻的感抗可以忽略，因此$R_{1}$与$R_{2}$的设定值不应过高，此方法适合测定低$Q$值得电感。
+	\begin{table}[H]
+		\centering
+		\caption{电感测量数据表($f=1kHz$)}
+		\label{电感测量数据表}
+		\begin{tabular}{|r|r|r|r|r|}
+			\toprule[0.5mm]
+			$R_{1}/\Omega$&$R_{2}/\Omega$&$C_{0}/\mu F$&$R_{0}/\Omega$&$U/mV$\\
+			\midrule
+			500.0&500.0&0.0388&2335.7&0.02\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	$\therefore L_{x}=C_{0}R_{1}R_{2}=9.70mH,\quad R_{L}=\dfrac{R_{1}R_{2}}{R_{0}}=107.03\Omega$
+	\par 品质因素$Q=\dfrac{\omega L_{x}}{R_{L}}=0.569$
+	\par 对于不确定度的计算:$\sigma_{L}=L_{x}\sqrt{(\dfrac{\sigma_{c_{0}}}{C_{0}})^{2}+(\dfrac{\sigma_{R_{1}}}{R_{1}})^{2}+(\dfrac{\sigma_{R_{2}}}{R_{2}})^{2}},\sigma_{R_{L}}=R_{L}\sqrt{(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}+(\dfrac{\sigma_{R_{1}}}{R_{1}})^{2}+(\dfrac{\sigma_{R_{2}}}{R_{2}})^{2}}$
+	\par \textbf{因为信号发生器产生频率波动对于不确定度影响很小，所以}$\sigma_{Q}=Q\sqrt{(\dfrac{\sigma_{c_{0}}}{C_{0}})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}$
+	\par $e_{R_{1}}=e_{R_{2}}=(500\times0.1\%)\Omega=0.5\Omega$
+	\par $e_{R_{0}}=(2330\times0.1\%+5\times0.5\%+0.7\times2\%)\Omega=2.369\Omega$
+	\par $e_{c_{0}}=(0.03\times 0.65\%+0.008\times2\%+0.0008\times5\%)\mu F=3.95\times 10^{-4}\mu F$
+	\par 因此计算可得：$\sigma_{L}=0.06mH,\quad\sigma_{R_{L}}=0.11\Omega,\quad\sigma_{Q}=0.003$
+	\par 因此$L_{x}=(9.70\pm 0.06)mH,\quad R_{L}=(107.03\pm 0.11)\Omega,\quad Q=(0.569\pm 0.003)$(\textbf{其中因为灵敏度经过计算发现很大，因此在不确定度计算中可以忽略不计})
+	\par \textbf{通过实验，可以看出麦克斯韦-维恩桥的收敛性较好，能够较快调节到平衡。}
+	\subsection{麦克斯韦桥测量电感}
+	条件：测量电感时为了保证电阻的感抗可以忽略，因此$R_{1}$与$R_{2}$的设定值不应过高，且由于电感箱不可以连续调节，因此在最初时设定一个好的$R_{1}$与$R_{2}$的值较为重要。
+	\begin{table}[H]
+		\centering
+		\caption{电感测量数据表(本底$U_{0}=0.09mV$,$f=1kHz$)}
+		\label{电感测量数据表}
+		\begin{tabular}{|r|r|r|r|r|r|}
+			\toprule[0.5mm]
+			$R_{1}/\Omega$&$R_{2}/\Omega$&$L_{0}/mH$&$R_{L0}/\Omega$&$R_{0}/\Omega$&$U/mV$\\
+			\midrule
+			491.9&499.3&10&6.86&101.8&0.18\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	$\therefore L_{x}=L_{0}\dfrac{R_{1}}{R_{2}}=10.15mH,\quad R_{L}=(R_{0}+R_{L0})\dfrac{R_{1}}{R_{2}}=107.15\Omega$
+	\par 品质因素$Q=\dfrac{\omega L_{x}}{R_{L}}=0.595$
+	\par 对于不确定度的计算:$\sigma_{L}=L_{x}\sqrt{(\dfrac{\sigma_{L_{0}}}{L_{0}})^{2}+(\dfrac{\sigma_{R_{1}}}{R_{1}})^{2}+(\dfrac{\sigma_{R_{2}}}{R_{2}})^{2}},\sigma_{R_{L}}=R_{L}\sqrt{(\dfrac{\sigma_{R_{0}}}{R_{L0}+R_{0}})^{2}+(\dfrac{\sigma_{R_{1}}}{R_{1}})^{2}+(\dfrac{\sigma_{R_{2}}}{R_{2}})^{2}}$
+	\par \textbf{因为信号发生器产生频率波动对于不确定度影响很小，所以}$\sigma_{Q}=Q\sqrt{(\dfrac{\sigma_{L_{0}}}{L_{0}})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}+R_{L0}})^{2}}$
+	\par $e_{R_{1}}=(490\times0.1\%+1\times0.5\%+0.9\times2\%)\Omega=0.513\Omega$
+	\par $e_{R_{2}}=(490\times0.1\%+9\times0.5\%+0.3\times2\%)\Omega=0.541\Omega$
+	\par $e_{R_{0}}=(100\times0.1\%+1\times0.5\%+0.8\times2\%)\Omega=0.121\Omega$
+	\par $e_{L_{0}}=(10\times2\%)mH=0.2mH$
+	\par 因此计算可得：$\sigma_{L}=0.12mH,\quad\sigma_{R_{L}}=0.12\Omega,\quad\sigma_{Q}=0.007$
+	\par 因此$L_{x}=(10.15\pm 0.12)mH,\quad R_{L}=(107.15\pm 0.12)\Omega,\quad Q=(0.595\pm 0.007)$(\textbf{其中因为灵敏度经过计算发现很大，因此在不确定度计算中可以忽略不计})
+	\par \textbf{通过实验，可以看出麦克斯韦桥的收敛性相比于麦克斯韦-维恩桥而言收敛性较差，需要多次调节才能达到近似平衡。}
+	\subsection{麦克斯韦-维恩桥测量磁环}
+	条件：在测量磁环的磁导率时，我们需要保证其工作区域在线性区域，即监测信号不会出现倍频项，同时我们的$R_{1}$与$R_{2}$也不应该设定过大以保证电阻箱的感抗可以忽略。
+	\begin{table}[H]
+		\centering
+		\caption{磁环测量数据表}
+		\label{磁环测量数据表}
+		\begin{tabular}{|r|r|r|r|r|}
+			\toprule[0.5mm]
+			$f/kHz$&$R_{0}/\Omega$&$C_{0}/\mu F$&$L/mH$&$R/\Omega$\\
+			\midrule
+			0.1&1963.2&0.4436&1.109&1.273\\
+			0.4&1243.2&0.2166&0.542&2.011\\
+			0.7&1008.0&0.1585&0.396&2.480\\
+			1&885.7&0.1294&0.324&2.823\\
+			2&677.7&0.0885&0.221&3.689\\
+			3&606.2&0.0686&0.172&4.124\\
+			5&502.2&0.0536&0.134&4.978\\
+			7&412.2&0.0436&0.109&6.065\\
+			9&363.2&0.0406&0.102&6.883\\
+			10&353.2&0.0386&0.097&7.078\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	\par $D=8.56cm,S=2.00cm^{2},N=180$匝,$R_{c}=0.683\Omega,R_{1}=R_{2}=50.0\Omega$
+	\par 因此我们计算其磁导率的实部$\mu^{\prime}=\dfrac{L_{x}\pi D}{\mu_{0}N^{2}S},$虚部$\mu^{\prime\prime}=\dfrac{(R_{L}-R_{c})\pi D}{2\pi f\mu_{0}N^{2}S}$,品质因素$Q=\dfrac{2\pi fL_{x}}{R_{L}}$
+	\begin{table}[H]
+		\centering
+		\caption{磁环参数数据表}
+		\label{磁环参数数据表}
+		\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|}
+			\toprule[0.5mm]
+			$f/kHz$&0.1&0.4&0.7&1&2&3&5&7&9&10\\
+			\midrule
+			$\mu^{\prime}$&36.62&17.90&13.08&10.70&7.30&5.68&4.43&3.60&3.37&3.20\\
+			$\mu^{\prime\prime}$&31.01&17.45&13.49&11.25&7.90&6.02&4.79&4.04&3.62&3.36\\
+			$Q$&0.547&0.677&0.702&0.721&0.753&0.786&0.805&0.830&0.852&0.861\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\par 因此我们作图可得：
+\begin{figure}[H]
+	\centering
+	
+	\subfigure[$L_{x}$随频率$f$变化图]{
+		\begin{minipage}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=2.7in]{lf.png}
+		\end{minipage}
+	}
+	\subfigure[$R$随频率$f$变化图]{
+		\begin{minipage}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=2.7in]{rf.png}
+		\end{minipage}
+	}
+
+	\subfigure[$\mu^{\prime}$随频率$f$变化图]{
+		\begin{minipage}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=2.7in]{1f.png}
+		\end{minipage}
+	}
+	\subfigure[$\mu^{\prime\prime}$随频率$f$变化图]{
+		\begin{minipage}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=2.7in]{2f.png}
+		\end{minipage}
+	}
+	
+	\subfigure[品质因素$Q$随频率$f$变化图]{
+		\begin{minipage}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=3.2in]{qf.png}
+		\end{minipage}
+	}
+	\centering
+	\caption{磁环参数随频率变化曲线图}
+\end{figure}
+	\section{思考题}
+	\textbf{画出麦克斯韦-维恩桥测量电感时电桥达到平衡的过程图}
+	\par 令$\vec{A}=\dfrac{R_{L}}{R_{1}}+i\dfrac{\omega L_{x}}{R_{1}},\vec{B}=\dfrac{R_{2}}{R_{0}}+i\omega R_{2}C_{0}$,则：$\vec{A}=\vec{B}$时电桥平衡
+	\par 调节$R_{0}$和$C_{0}$不改变$\vec{A}$,同时调节$R_{0}$只是改变$\vec{B}$的实部，调节$C_{0}$只是改变$\vec{B}$的虚部，则示意图如下：
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=7cm,height=7cm]  {g1.png} 
+		\caption{\label{1}麦克斯韦-维恩桥平衡过程图}
+	\end{figure}
+\par 其中$g_{1}$过程为减小$R_{0}$,\quad$g_{2}$过程为减小$C_{0}$。
+	\section{分析与讨论}
+	\textbf{1.两种电桥测量电感的收敛性差别是否很大，与什么因素有关?}
+	\par \textbf{答：}在以上的实验过程中，我们发现两种电桥测量电感的收敛性差别很大，其中麦克斯韦-维恩桥的收敛性较好，麦克斯韦桥的收敛性较差。这是因为麦克斯韦桥的标准电感箱每格变化量较大，因此电感箱的变化不是连续变化的，我们只能通过调节$R_{0}$与$R_{2}$的值来达到平衡，但这两个量是相互影响的，因此调节得收敛性较差，需要反复多次调节才行；而麦克斯韦-维恩桥的调节我们通过改变$R_{0}$与$C_{0}$，可以视为连续变化的，因此调节过程的收敛性较好，能很快达到平衡。
+	\par \textbf{2.磁环的损耗电阻和磁导率随频率怎样变化?为什么?}
+	\par \textbf{答：}通过实验我们发现磁环的损耗电阻随频率增大而增大，这是因为加入交流信号频率越高，其趋肤深度越小，等效于导体的截面积变小，因此损耗电阻变大；通过实验我们发现磁环的磁导率的实部与虚部均随频率增大而减小，因为对于交变信号下磁体的畴壁处于运动状态，因此磁畴的运动为受迫振动与阻尼迟豫振动的叠加，又因为我们的交流信号频率最低$100Hz$也大于其本征频率，因此在远离本征频率下驱动频率越大，磁导率越小，因此其复数磁导率的实部与虚部均减小。
+	\section{收获与感想}
+	在本次实验中我们学会了使用交流电桥测量电容和电感及其损耗，了解了交流桥路的特点和调节平衡的方法，交流电桥在电磁学实验中有很大的应用，因此也为我们未来电磁学实验奠定基础。
+\end{document}

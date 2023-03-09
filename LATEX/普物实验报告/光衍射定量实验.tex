@@ -1,0 +1,443 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{光衍射定量实验}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	光在传播过程中，遇到障碍物或小孔时，光将偏离直线传播的路径而绕到障碍物后面传播的现象叫光的衍射。光的衍射和光的干涉一样证明了光具有波动性。光的衍射决定光学仪器的分辨本领，在现代光学乃至现代物理学和科学技术中，光的衍射得到了越来越广泛的应用。在我们本次试验中，我们将定量研究远场条件下夫琅禾费衍射的相关性质。\\
+	\par\textbf{关键词: 夫琅禾费衍射，波动性，远场条件}
+
+\end{abstract}
+
+\section{实验目的}
+\noindent
+(1)掌握在光学平台上组装，调整光路的基本方法；\\
+(2)观察并定量测量不同衍射元件产生的光衍射图像；\\
+(3)了解光强测量的一种方法；\\
+(4)学习微机自动控制和测量衍射光强分布及相关参量。
+\section{实验仪器}
+光学平台及附件，激光器及电源，衍射元件，反射镜，光探测器，光栅尺，A/D转换器，微机等。
+\section{测量单缝衍射的光强分布}
+从记录实验中测得的$txt$文件中，我们得到主极强的相对光强为：
+$$I_{0}=3419$$
+\par 而左右两个次极强的位置和相对光强为：
+$$x_{1}=2.455mm,\quad I_{1}=170$$
+$$x_{2}=12.695mm,\quad I_{2}=179$$
+\par 通过计算可得：
+$$\dfrac{I_{1}+I_{2}}{2I_{0}}=5.1\% \in(4\%,5.5\%) $$
+$$\dfrac{|I_{1}-I_{2}|}{(I_{1}+I_{2})/2}=5.2\%<10\%$$
+\par 因此符合实验要求
+\subsection{利用衍射次极强计算缝宽a}
+根据我们获得的$txt$文件，我们发现在次极强的位置周围$0.005mm$内光相对强度没有变化，因此我们可以取极限允差为$e=0.010mm$
+$$\Delta x=\dfrac{x_{2}-x_{1}}{2}=5.120mm$$
+\par 不确定度为：
+$$\sigma_{\Delta x}=\sqrt{2\times (\dfrac{e}{2\sqrt{3}})^{2}}=0.004mm$$
+\par 用钢尺测得衍射元件和传感器的间距为：
+$$z=(88.90-16.00+0.40)cm=73.30cm$$
+\par 最大允差取钢尺的最小分度值$e=0.10cm$
+\par 我们有公式$sin\theta=1.43\dfrac{\lambda}{a}$，且满足傍轴条件，$sin\theta=\Delta x/z$
+$$\therefore a=1.43\dfrac{\lambda}{\Delta x/z}=129.58\mu m$$
+\par 缝宽$a$的不确定度为：
+$$\sigma_{a}=a\sqrt{(\dfrac{\sigma_{\Delta x}}{\Delta x})^{2}+(\dfrac{e_{z}}{\sqrt{3}z})^{2}}=0.14\mu m$$
+\par 因此最后结果为：$a=(129.58\pm 0.14)\mu m$
+\subsection{利用一级暗纹计算缝宽a}
+由$txt$文件，左右两个暗纹的位置为：
+$$x_{1}=3.880mm,\quad x_{2}=11.075mm$$
+\par 根据我们获得的$txt$文件，我们发现在左右暗纹的位置周围$0.005mm$内光相对强度没有变化，因此我们可以取极限允差为$e=0.010mm$
+$$\Delta x=\dfrac{x_{2}-x_{1}}{2}=3.598mm$$
+\par 不确定度为：
+$$\sigma_{\Delta x}=\sqrt{2\times (\dfrac{e}{2\sqrt{3}})^{2}}=0.004mm$$
+\par 用钢尺测得衍射元件和传感器的间距为：
+$$z=(88.90-16.00+0.40)cm=73.30cm$$
+\par 最大允差取钢尺的最小分度值$e=0.10cm$
+\par 我们有公式$sin\theta=\dfrac{\lambda}{a}$，且满足傍轴条件，$sin\theta=\Delta x/z$
+$$\therefore a=\dfrac{\lambda}{\Delta x/z}=129.92\mu m$$
+\par 缝宽$a$的不确定度为：
+$$\sigma_{a}=a\sqrt{(\dfrac{\sigma_{\Delta x}}{\Delta x})^{2}+(\dfrac{e_{z}}{\sqrt{3}z})^{2}}=0.18\mu m$$
+\par 因此最后结果为：$a=(129.92\pm 0.18)\mu m$
+\subsection{数据可视化}
+\subsubsection{原始数据绘图}
+我们可以将得到的$txt$文件画出散点图，通过数据可视化的方法来得到单缝衍射光强的分布。
+\par 由原始数据作出的散点图如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {单缝原始数据.png} 
+	\caption{\label{1}单缝衍射光强分布原始数据散点图}
+\end{figure}
+\subsubsection{理论与实验比较}
+为检验理论与实验的符合程度，我们将两者的曲线进行比较分析。\\ 在$3.1$与$3.2$节中，我们计算用两种方法出了$a_{1}=(129.58\pm 0.14)\mu m,\quad a_{2}=(129.92\pm 0.18)\mu m$
+\par 我们不妨取$\bar{a}=\dfrac{a_{1}+a_{2}}{2}=129.75\mu m$，且傍轴条件使得$sin\theta=\Delta x/z$\\ 因此我们带入$\bar{a}$绘制图像如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {单缝对比.png} 
+	\caption{\label{1}单缝衍射光强分布原始数据与理论对比曲线}
+\end{figure}
+其中黑色虚线为代入狭缝宽度和中心光强后的理论曲线，蓝色散点图为通过实验数据画出的散点图，从上图我们可以看到，我们的实验曲线和理论曲线的吻合程度还是相当高的，从而验证了理论的正确性以及实验的准确性。
+\subsubsection{曲线拟合绘图}
+除了直接通过原始数据计算以外，我们还可以通过理论公式进行曲线的拟合计算，来求得最适合的拟合参数，即缝宽$a$和中心相对光强$I_{0}$。
+\par 我们将全部原始数据输入，并使得曲线调整至最佳收敛状态，得到的曲线如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {单缝拟合.png} 
+	\caption{\label{1}单缝衍射光强分布原始数据与拟合曲线}
+\end{figure}
+其中红色虚线为拟合曲线，蓝色曲线为原始数据散点图，这样我们观察图像可知$I=I_{0}(\dfrac{sin u}{u})^{2}=3448.8(\dfrac{sin u}{u})^{2}$
+\par 其中$I_{0}=3448.8\pm 1.3,\quad x_{0}=(7.4426\pm 0.0007)mm,\quad u=(0.8552\pm 0.0004)(x-x_{0})$\\
+(其中的不确定度可以由拟合曲线后的协方差矩阵$\sum$得出)
+\par 因此我们可以计算各参量的不确定度为：
+\par \textcircled{1}中心最大相对光强:$I_{0}=3448.8\pm 1.3$
+\par \textcircled{2}中心最大相对光强位置:$x_{0}=(7.4426\pm 0.0007)mm$
+\par \textcircled{3}缝宽:$a=(126.26\pm0.05 )\mu m$
+\par $\therefore $拟合出来的$a=(126.26\pm0.05 )\mu m$,与我们的计算值$129.75\mu m$也较为接近，实验数据也比较合理。
+\subsubsection{python代码拟合作图}
+我们在程序中将$I_{0}=3448.8,x_{0}=7.4426mm$定为常量，只拟合缝宽$a$,我们取缝宽$a$从$120\mu m\~{}130\mu m$等间距取100个点，拟合作图如下($python$代码在后面)：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {单缝拟合1.png} 
+	\caption{\label{1}单缝衍射光强分布原始数据与代码拟合曲线}
+\end{figure}
+其中红色虚线为拟合曲线，橙色曲线为原始数据的散点图，我们通过代码运行给出的参数有:
+$$a=\dfrac{(0.812757+63\times0.00067)\times632.8\times0.733}{\pi}\mu m=126.23\mu m$$
+\par 从中我们可以看到与软件曲线拟合的参数极为接近，画出来的图几乎没有差别，可以验证我们的代码的正确性以及数据的正确性。
+\section{测量双缝衍射的光强分布}
+\subsection{利用衍射次极强计算缝间距d}
+由$txt$文件，左右两个次极强的位置为：
+$$x_{1}=28.710mm,\quad x_{2}=38.580mm$$
+\par 根据我们获得的$txt$文件，我们发现在左次极强的位置周围$0.065mm$内光相对强度没有变化，右次极强的位置周围$0.035mm$内光的强度没有变化，因此我们可以取极限允差为$e=0.065mm$
+$$\Delta x=\dfrac{x_{2}-x_{1}}{2}=4.935mm$$
+\par 不确定度为：
+$$\sigma_{\Delta x}=\sqrt{2\times (\dfrac{e}{2\sqrt{3}})^{2}}=0.027mm$$
+\par 用钢尺测得衍射元件和传感器的间距为：
+$$z=(88.90-12.00+0.40)cm=77.30cm$$
+\par 最大允差取钢尺的最小分度值$e=0.10cm$
+\par 我们有公式$sin\theta=\dfrac{\lambda}{d}$，且满足傍轴条件，$sin\theta=\Delta x/z$
+$$\therefore d=\dfrac{\lambda}{\Delta x/z}=98.4\mu m$$
+\par 缝间距$d$的不确定度为：
+$$\sigma_{d}=d\sqrt{(\dfrac{\sigma_{\Delta x}}{\Delta x})^{2}+(\dfrac{e_{z}}{\sqrt{3}z})^{2}}=0.5\mu m$$
+\par 因此最后结果为：$d=(98.4\pm 0.5)\mu m$
+\subsection{利用一级暗纹计算缝间距d}
+由$txt$文件，左右两个暗纹的位置为：
+$$x_{1}=30.875mm,\quad x_{2}=36.200mm$$
+\par 根据我们获得的$txt$文件，我们发现在左暗纹的位置周围$0.070mm$内光相对强度没有变化，右暗纹的位置周围$0.085mm$内光的相对强度没有变化，因此我们可以取极限允差为$e=0.085mm$
+$$\Delta x=\dfrac{x_{2}-x_{1}}{2}=2.668mm$$
+\par 不确定度为：
+$$\sigma_{\Delta x}=\sqrt{2\times (\dfrac{e}{2\sqrt{3}})^{2}}=0.07mm$$
+\par 用钢尺测得衍射元件和传感器的间距为：
+$$z=(88.90-12.00+0.40)cm=77.30cm$$
+\par 最大允差取钢尺的最小分度值$e=0.10cm$
+\par 我们有公式$sin\theta=\dfrac{\lambda}{2d}$，且满足傍轴条件，$sin\theta=\Delta x/z$
+$$\therefore d=\dfrac{\lambda}{2\Delta x/z}=96.7\mu m$$
+\par 缝间距$d$的不确定度为：
+$$\sigma_{d}=d\sqrt{(\dfrac{\sigma_{\Delta x}}{\Delta x})^{2}+(\dfrac{e_{z}}{\sqrt{3}z})^{2}}=2.4\mu m$$
+\par 因此最后结果为：$d=(96.7\pm 2.4)\mu m$
+\subsection{利用包络线出现一级暗纹计算缝宽a}
+由$txt$文件，左右两个暗纹的位置为：
+$$x_{1}=20.735mm,\quad x_{2}=46.260mm$$
+\par 根据我们获得的$txt$文件，我们发现在左右暗纹的位置周围$0.030mm$内光相对强度没有变化，因此我们可以取极限允差为$e=0.030mm$
+$$\Delta x=\dfrac{x_{2}-x_{1}}{2}=12.763mm$$
+\par 不确定度为：
+$$\sigma_{\Delta x}=\sqrt{2\times (\dfrac{e}{2\sqrt{3}})^{2}}=0.024mm$$
+\par 用钢尺测得衍射元件和传感器的间距为：
+$$z=(88.90-12.00+0.40)cm=77.30cm$$
+\par 最大允差取钢尺的最小分度值$e=0.10cm$
+\par 我们有公式$sin\theta=\dfrac{\lambda}{a}$，且满足傍轴条件，$sin\theta=\Delta x/z$
+$$\therefore a=\dfrac{\lambda}{\Delta x/z}=38.33\mu m$$
+\par 缝宽$a$的不确定度为：
+$$\sigma_{a}=a\sqrt{(\dfrac{\sigma_{\Delta x}}{\Delta x})^{2}+(\dfrac{e_{z}}{\sqrt{3}z})^{2}}=0.08\mu m$$
+\par 因此最后结果为：$a=(38.33\pm 0.08)\mu m$
+\subsection{数据可视化}
+\subsubsection{原始数据绘图}
+我们可以将得到的$txt$文件画出散点图，通过数据可视化的方法来得到双缝衍射光强的分布。
+\par 由原始数据作出的散点图如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {双缝原始数据.png} 
+	\caption{\label{1}双缝衍射光强分布原始数据散点图}
+\end{figure}
+\subsubsection{理论与实验比较}
+为检验理论与实验的符合程度，我们将两者的曲线进行比较分析。\\ 在$3.1$与$3.2$节中，我们计算用两种方法出了$d_{1}=(96.7\pm 2.4)\mu m,\quad d_{2}=(98.4\pm 0.5)\mu m$
+\par 我们不妨取$\bar{d}=\dfrac{d_{1}+d_{2}}{2}=97.5\mu m$，$a=38.33\mu m$,且傍轴条件使得$sin\theta=\Delta x/z$\\
+因此我们带入$\bar{d}$和$a$绘制图像如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {双缝对比.png} 
+	\caption{\label{1}双缝衍射光强分布原始数据与理论对比曲线}
+\end{figure}
+其中黑色虚线为代入狭缝宽度和中心光强后的理论曲线，橙色散点图为通过实验数据画出的散点图，红色虚线为包络线，从上图我们可以看到，我们的实验曲线和理论曲线除了次极强的位置实验比理论差了一点，其余部分的吻合程度还是相当高的，从而验证了理论的正确性以及实验的准确性。
+\subsubsection{曲线拟合绘图}
+除了直接通过原始数据计算以外，我们还可以通过理论公式进行曲线的拟合计算，来求得最适合的拟合参数，即缝宽$a$,缝间距$d$以及中心相对光强$I_{0}$。
+\par 我们将全部原始数据输入，并使得曲线调整至最佳收敛状态，得到的曲线如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {双缝拟合.png} 
+	\caption{\label{1}双缝衍射光强分布原始数据与拟合曲线}
+\end{figure}
+其中黑色虚线为拟合曲线，红色虚线为包络线，橙色曲线为原始数据的散点图，这样我们观察图像可知$I=I_{0}(\dfrac{sin u}{u})^{2}(\dfrac{sinN\beta}{sin\beta})^{2}$
+\par 其中$I_{0}=2552.6\pm 1.3,\quad x_{0}=(33.6233\pm 0.0007)mm,\quad u=(0.2678\pm 0.0003)(x-x_{0}),\quad\beta=(0.5844\pm 0.0003)(x-x_{0})$\\
+(其中的不确定度可以由拟合曲线后的协方差矩阵$\sum$得出)
+\par 因此我们可以计算各参量的不确定度为：
+\par \textcircled{1}中心最大相对光强:$I_{0}=2552.6\pm 1.3$
+\par \textcircled{2}中心最大相对光强位置:$x_{0}=(33.6233\pm 0.0007)mm$
+\par \textcircled{3}缝宽:$a=(41.70\pm0.03 )\mu m$
+\par \textcircled{4}缝间距:$d=(91.00\pm 0.05)\mu m$
+\par $\therefore $拟合出来的$a=(41.70\pm0.03 )\mu m$,与我们的计算值$a=38.33\mu m$也较为接近，$d=(91.00\pm 0.05)\mu m$,与我们计算出来的$d=97.9\mu m$相差稍大，应该是实验过程中测量暗纹时光强测量不准造成的误差，但不影响实验数据也较为合理。
+\subsubsection{python代码拟合作图}
+因为若只拟合$a$和$d$两个参量，达到$0.0001$的精度的时候我们代码已经要运行10min，因此我们在程序中将$I_{0}=2552.6,x_{0}=33.6233mm$定为常量，只拟合缝宽$a$和缝间距$d$,其中缝宽$a$从$35\mu m\~{}45\mu m$等间距取100个点，缝间距$d$从$85\mu m\~{}95\mu m$等间距取100个点，拟合作图如下($python$代码在后面)：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {双缝拟合.png} 
+	\caption{\label{1}双缝衍射光强分布原始数据与代码拟合曲线}
+\end{figure}
+其中黑色虚线为拟合曲线，红色虚线为包络线，橙色曲线为原始数据的散点图，我们通过代码运行给出的参数有:
+$$a=\dfrac{(0.224787+67\times0.00064)\times632.8\times0.773}{\pi}\mu m=41.68\mu m$$
+$$d=\dfrac{(0.545912+60\times0.00064)\times632.8\times0.773}{\pi}\mu m=90.98\mu m$$
+\par 从中我们可以看到与软件曲线拟合的参数极为接近，画出来的图几乎没有差别，可以验证我们的代码的正确性以及数据的正确性。
+\section{测量三缝衍射的光强分布}
+\subsection{利用衍射次极强计算缝间距d}
+由$txt$文件，左右两个次极强的位置为：
+$$x_{1}=24.835mm,\quad x_{2}=35.075mm$$
+\par 根据我们获得的$txt$文件，我们发现在左次极强的位置周围$0.025mm$内光相对强度没有变化，右次极强的位置周围$0.050mm$内光的强度没有变化，因此我们可以取极限允差为$e=0.050mm$
+$$\Delta x=\dfrac{x_{2}-x_{1}}{2}=5.120mm$$
+\par 不确定度为：
+$$\sigma_{\Delta x}=\sqrt{2\times (\dfrac{e}{2\sqrt{3}})^{2}}=0.041mm$$
+\par 用钢尺测得衍射元件和传感器的间距为：
+$$z=(88.90-13.00+0.40)cm=76.30cm$$
+\par 最大允差取钢尺的最小分度值$e=0.10cm$
+\par 我们有公式$sin\theta=\dfrac{\lambda}{d}$，且满足傍轴条件，$sin\theta=\Delta x/z$
+$$\therefore d=\dfrac{\lambda}{\Delta x/z}=91.6\mu m$$
+\par 缝间距$d$的不确定度为：
+$$\sigma_{d}=d\sqrt{(\dfrac{\sigma_{\Delta x}}{\Delta x})^{2}+(\dfrac{e_{z}}{\sqrt{3}z})^{2}}=0.8\mu m$$
+\par 因此最后结果为：$d=(91.6\pm 0.8)\mu m$
+\subsection{利用一级暗纹计算缝间距d}
+由$txt$文件，左右两个暗纹的位置为：
+$$x_{1}=28.055mm,\quad x_{2}=31.620mm$$
+\par 根据我们获得的$txt$文件，我们发现在左暗纹的位置周围$0.055mm$内光相对强度没有变化，右暗纹的位置周围$0.015mm$内光的相对强度没有变化，因此我们可以取极限允差为$e=0.055mm$
+$$\Delta x=\dfrac{x_{2}-x_{1}}{2}=1.783mm$$
+\par 不确定度为：
+$$\sigma_{\Delta x}=\sqrt{2\times (\dfrac{e}{2\sqrt{3}})^{2}}=0.045mm$$
+\par 用钢尺测得衍射元件和传感器的间距为：
+$$z=(88.90-13.00+0.40)cm=76.30cm$$
+\par 最大允差取钢尺的最小分度值$e=0.10cm$
+\par 我们有公式$sin\theta=\dfrac{\lambda}{3d}$，且满足傍轴条件，$sin\theta=\Delta x/z$
+$$\therefore d=\dfrac{\lambda}{3\Delta x/z}=90.3\mu m$$
+\par 缝间距$d$的不确定度为：
+$$\sigma_{d}=d\sqrt{(\dfrac{\sigma_{\Delta x}}{\Delta x})^{2}+(\dfrac{e_{z}}{\sqrt{3}z})^{2}}=2.3\mu m$$
+\par 因此最后结果为：$d=(90.3\pm 2.3)\mu m$
+\subsection{利用包络线出现一级暗纹计算缝宽a}
+由$txt$文件，左右两个暗纹的位置为：
+$$x_{1}=15.630mm,\quad x_{2}=43.820mm$$
+\par 根据我们获得的$txt$文件，我们发现在左右暗纹的位置周围$0.040mm$内光相对强度没有变化，因此我们可以取极限允差为$e=0.040mm$
+$$\Delta x=\dfrac{x_{2}-x_{1}}{2}=14.095mm$$
+\par 不确定度为：
+$$\sigma_{\Delta x}=\sqrt{2\times (\dfrac{e}{2\sqrt{3}})^{2}}=0.033mm$$
+\par 用钢尺测得衍射元件和传感器的间距为：
+$$z=(88.90-13.00+0.40)cm=76.30cm$$
+\par 最大允差取钢尺的最小分度值$e=0.10cm$
+\par 我们有公式$sin\theta=\dfrac{\lambda}{a}$，且满足傍轴条件，$sin\theta=\Delta x/z$
+$$\therefore a=\dfrac{\lambda}{\Delta x/z}=34.26\mu m$$
+\par 缝宽$a$的不确定度为：
+$$\sigma_{a}=a\sqrt{(\dfrac{\sigma_{\Delta x}}{\Delta x})^{2}+(\dfrac{e_{z}}{\sqrt{3}z})^{2}}=0.08\mu m$$
+\par 因此最后结果为：$a=(34.26\pm 0.08)\mu m$
+\subsection{数据可视化}
+\subsubsection{原始数据绘图}
+我们可以将得到的$txt$文件画出散点图，通过数据可视化的方法来得到三缝衍射光强的分布。
+\par 由原始数据作出的散点图如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {三缝原始数据.png} 
+	\caption{\label{1}三缝衍射光强分布原始数据散点图}
+\end{figure}
+\subsubsection{理论与实验比较}
+为检验理论与实验的符合程度，我们将两者的曲线进行比较分析。\\ 在$3.1$与$3.2$节中，我们计算用两种方法出了$d_{1}=(91.6\pm 0.8)\mu m,\quad d_{2}=(90.3\pm 2.3)\mu m$
+\par 我们不妨取$\bar{d}=\dfrac{d_{1}+d_{2}}{2}=90.9\mu m$和$a=34.26\mu m$，且傍轴条件使得$sin\theta=\Delta x/z$\\
+因此我们带入$\bar{d}$和$a$绘制图像如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {三缝对比.png} 
+	\caption{\label{1}三缝衍射光强分布原始数据与理论对比曲线}
+\end{figure}
+其中黑色虚线为代入狭缝宽度和中心光强后的理论曲线，橙色散点图为通过实验数据画出的散点图，红色虚线为包络线，从上图我们可以看到，我们的实验曲线和理论曲线除了次极强的位置实验比理论差了一点，其余部分的吻合程度还是相当高的，从而验证了理论的正确性以及实验的准确性。
+\subsubsection{曲线拟合绘图}
+除了直接通过原始数据计算以外，我们还可以通过理论公式进行曲线的拟合计算，来求得最适合的拟合参数，即缝宽$a$，缝间距$d$以及中心相对光强$I_{0}$。
+\par 我们将全部原始数据输入，并使得曲线调整至最佳收敛状态，得到的曲线如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {三缝拟合.png} 
+	\caption{\label{1}三缝衍射光强分布原始数据与拟合曲线}
+\end{figure}
+其中黑色虚线为拟合曲线，红色虚线为包络线，橙色曲线为原始数据的散点图，这样我们观察图像可知$I=I_{0}(\dfrac{sin u}{u})^{2}(\dfrac{sinN\beta}{sin\beta})^{2}$
+\par 其中$I_{0}=3250.3\pm 1.9,\quad x_{0}=(29.9066\pm 0.0005)mm,\quad u=(0.2652\pm 0.0003)(x-x_{0}),\quad\beta=(0.5933\pm 0.0003)(x-x_{0})$\\
+(其中的不确定度可以由拟合曲线后的协方差矩阵$\sum$得出)
+\par 因此我们可以计算各参量的不确定度为：
+\par \textcircled{1}中心最大相对光强:$I_{0}=3250.3\pm 1.9$
+\par \textcircled{2}中心最大相对光强位置:$x_{0}=(29.9066\pm 0.0005)mm$
+\par \textcircled{3}缝宽:$a=(40.76\pm0.04 )\mu m$
+\par \textcircled{4}缝间距:$d=(91.18\pm 0.03)\mu m$
+\par $\therefore $拟合出来的$a=(40.76\pm0.04 )\mu m$,与我们的计算值$a=34.26\mu m$相差较大，应该是实验过程中测量暗纹时光强测量不准造成的误差，$d=(91.18\pm 0.03)\mu m$,与我们计算出来的$d=90.9\mu m$极为接近，因此可以看出我们的实验数据比较合理。
+\subsubsection{python代码拟合作图}
+因为若只拟合$a$和$d$两个参量，达到$0.0001$的精度的时候我们代码已经要运行10min，因此我们在程序中将$I_{0}=3250.3,x_{0}=29.9066mm$定为常量，只拟合缝宽$a$和缝间距$d$,其中缝宽$a$从$35\mu m\~{}45\mu m$等间距取100个点，缝间距$d$从$85\mu m\~{}95\mu m$等间距取100个点，拟合作图如下($python$代码在后面)：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm,height=8cm]  {三缝拟合.png} 
+	\caption{\label{1}三缝衍射光强分布原始数据与代码拟合曲线}
+\end{figure}
+其中黑色虚线为拟合曲线，红色虚线为包络线，橙色曲线为原始数据的散点图，我们通过代码运行给出的参数有:
+$$a=\dfrac{(0.227733+59\times0.00064)\times632.8\times0.763}{\pi}\mu m=40.80\mu m$$
+$$d=\dfrac{(0.553067+63\times0.00064)\times632.8\times0.763}{\pi}\mu m=91.20\mu m$$
+\par 从中我们可以看到与软件曲线拟合的参数极为接近，画出来的图几乎没有差别，可以验证我们的代码的正确性以及数据的正确性。
+\section{python源代码(以三缝数据为例)}
+\begin{lstlisting}[language=python]
+import numpy as np
+import matplotlib.pyplot as plt
+filename = '三缝.txt'
+pos = []
+Efield = []
+list1=[]
+list2=[]
+with open(filename, 'r') as file_to_read:
+    while True:
+        lines = file_to_read.readline() # 整行读取数据
+        if not lines:
+            break
+        pass
+        p_tmp, E_tmp = [float(i) for i in lines.split()] 
+        pos.append(p_tmp)  
+        Efield.append(E_tmp)
+        pass
+    pos = np.array(pos) # 将数据从list类型转换为array类型。
+    Efield = np.array(Efield)
+l=[[] for i in range(100)]
+m=361.14
+n=29.9066
+e=0.00064
+c=0.227733
+w=0.553067
+k=0
+g=0
+def residual_function(a,d):
+    s=0
+    i=0
+    while i <=13999:
+        s+=(Efield[i]-m*(((np.sin(a*(pos[i]-n)))/(a*(pos[i]-n)))**2)*(((np.sin(d*3*(pos[i]-n)))/(np.sin(d*(pos[i]-n))))**2))**2
+        i+=1
+    return s
+while k<=99:
+    j=0
+    while j<=99:
+        l[k].append(residual_function(c+j*e,w+k*e))
+        j+=1
+    k+=1
+while g<=99:
+    list1.append(min(l[g]))
+    list2.append(l[g].index(min(l[g])))
+    g+=1
+q=list1.index(min(list1))
+p=list2[q]
+print(p,q)
+x1=np.linspace(0,70,14000)
+y1=9*m*(((np.sin((c+p*e)*(x1-n)))/((c+p*e)*(x1-n)))**2)
+x2=np.linspace(0,70,14000)
+y2=m*(((np.sin((c+p*e)*(x2-n)))/((c+p*e)*(x2-n)))**2)*(((np.sin((w+q*e)*3*(x2-n)))/(np.sin((w+q*e)*(x2-n))))**2)
+plt.plot(pos,Efield,'orange')
+plt.plot(x2,y2,'black',linestyle='--')
+plt.plot(x1,y1,'r',linestyle='--')
+plt.xlabel('$\Delta x/mm$')
+plt.ylabel('$I$')
+plt.grid()
+plt.text(57,2880,'xScatter\n---FitLine\n---EnvelopingLine',size = 8,family = "fantasy",style = "italic",bbox = dict(alpha = 0.2))
+plt.show()      
+\end{lstlisting}
+此代码主要由以下几个部分构成:\textcircled{1}读取已有的实验数据$txt$文件；\textcircled{2}定义残差函数；\textcircled{3}创建一个二维数组，用于储存不同参数下的残差函数值；\textcircled{4}遍历此二维数组，找出数组内元素值最小的位置，并输出其行数和列数；\textcircled{5}通过输出值计算出缝宽$a$和缝间距$d$；\textcircled{6}用$matplotlib$作原始数据散点图以及拟合曲线图。
+\section{分析与讨论}
+\subsection{实验中误差来源分析}
+\textcircled{1}由于夫琅禾费衍射是确定在远场条件下的，因此如果衍射屏与接收屏的距离不足以达到远场条件，那么我们的原理公式将会不成立，傍轴条件的不满足也会导致原理公式的错误。
+\par \textcircled{2}我们的公式要求是在光线正入射的情况下满足的，但我们调节光路时不一定能够调节得光路一定共轴等高，以及不一定能够满足光线正入射的条件，而光线斜入射时候的原理公式会发生改变，因此这也会成为误差来源之一。
+\par \textcircled{3}我们测量衍射屏到接收屏距离的时候会有测量的误差，而光强检测器测量光强时因为仪器的精度也会有一定误差。
+\par \textcircled{4}我们在测量光强时因为周围都有各种因素的干扰，存在背景灯光，以及时不时的各种遮挡而导致的光强测量不准确，这一点在利用一级暗纹来测量缝宽和缝间距上极为明显，因为本来光强较小，因此这一点误差将会从造成极大影响。
+\end{document} 

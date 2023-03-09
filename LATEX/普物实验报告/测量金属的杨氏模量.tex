@@ -1,0 +1,422 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{测定金属的杨氏模量}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	杨氏模量是反映固体材料性质的一个重要的力学量。本次实验中我们用了CCD成像法以及梁弯曲法两种方法测量待测金属的杨氏模量，并学习了使用逐差法以及最小二乘法对于实验数据的处理。本实验的重要之处在于运用光学手段放大微小长度，从而实现对于微小伸长量的测量。\\
+	\par\textbf{关键词: CCD成像法，梁弯曲法，光放大}
+
+\end{abstract}
+
+\section{实验目的}
+\noindent
+(1)用伸长法和梁弯曲法测定金属丝的杨氏模量\\
+(2)用CCD成像系统和读数显微镜测量微小长度变化\\
+(3)用逐差法、作图法和直线拟合法处理数据
+\section{实验仪器}
+待测金属丝，金属梁，CCD成像系统WAT-308A，测定杨氏模量专用支架，砝码若干，砝码托盘，螺旋测微计，米尺，游标卡尺，平行刀口及基座，显微镜，读数显微镜
+\section{实验过程及数据记录}
+\subsection{CCD成像系统测定杨氏模量}
+这一实验中我们测量一悬挂金属丝的杨氏模量。实验时首先调节支架的竖直，使得金属丝下端的圆柱处于周围钳型平台的最中心。然后调节螺丝使得既能限制金属丝线的摆动又能使小圆柱与螺丝之间摩擦最小。
+\par 调节显微镜的光轴至与小圆柱上的刻线共轴，调节目镜使得分划板的像清晰，然后调节像距使得能够清晰看到小圆柱上的细横线。
+\par 为了便于观察和记录我们不每次使用肉眼读数而是在目镜处放上CCD镜头以观察显微镜成的像。加入CCD镜头后调节共轴，并使光圈大小和焦距合适，以在屏幕上看到清晰的图像。
+\par 调节好整套装置之后，在砝码盘中先放入本底砝码以使金属丝完全伸直，然后逐个放入砝码并记录圆柱上细横线的位置$r_{i}(i=1,2,\cdots,9)$，之后逐个减去砝码也记下对应的读数$r_{i}^{\prime}(i=1,2,\cdots,9)$。
+\par 实验中，砝码标称值为200g，将9个砝码编号并用电子天平测量每个砝码的实际质量得到表1中的结果。
+\begin{table}[H]
+	\caption{砝码质量测量}
+	\label{砝码质量测量}
+	\centering
+	\begin{tabular}{c|*{9}{c}}
+		\toprule[0.5mm]
+		编号$i$&1&2&3&4&5&6&7&8&9\\
+		\midrule
+		$m/g$&200.00&199.85&200.31&200.04&200.04&199.71&200.01&199.95&200.44\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+使用木质米尺测量金属丝的长度得到:$L=80.58cm$。其允差取为$0.15cm$，折合不确定度为$\sigma_{L}=0.09cm$。$L$的表达结果为：
+\begin{center}
+	$L=(80.58\pm0.09)cm$
+\end{center}
+\par 使用螺旋测微器测量金属丝直径10次，在实验中我对金属丝的不同位置都进行了测量，得到的结果记录在表2中。
+\begin{table}[H]
+	\caption{金属直径的测量}
+	\label{金属直径的测量}
+	\centering
+	\begin{tabular}{c|*{10}{c}}
+		\toprule[0.5mm]
+		次数$i$&1&2&3&4&5&6&7&8&9&10\\
+		\midrule
+		$d/mm$&0.328&0.328&0.328&0.328&0.326&0.323&0.321&0.323&0.321&0.323\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+测量使用的螺旋测微器的零点读数为$d_{0}=0.000mm$，校正并计算得到金属丝质量的平均值$\bar{d}=0.325mm$多次测量结果的标准差为:
+\begin{center}
+	$\sigma_{\bar{d}}=\sqrt{\dfrac{\sum\limits_{i=1}^{10}(d_{i}-\bar{d})^{2}}{n(n-1)}}=0.00102mm$
+\end{center}
+\par 加上仪器允差$e_{d}=4\times10^{-3}mm$影响，合成得到:
+\begin{center}
+	$\sigma_{d}=\sqrt{\sigma_{\bar{d}}^{2}+\dfrac{e_{d}^{2}}{3}}=3\times10^{-3}mm$
+\end{center}
+\par $d$的含不确定度表达式为:
+\begin{center}
+	$d=(0.325\pm0.003)mm$
+\end{center}
+\par 最后，增减砝码时小圆柱上细横线落在显微镜分划板刻线上的读数变化如表3(其中$f_{i}=r_{i+5}-r_{i}$)。
+\begin{table}[H]
+	\caption{金属丝的伸长量}
+	\label{金属丝的伸长量}
+	\centering
+	\begin{tabular}{c|c|c|c|c|c}
+		\toprule[0.5mm]
+		编号$i$&$m/g$&$r_{i}/mm$&$r_{i}^{\prime}/mm$&$\bar{r_{i}}/mm$&$f_{i}/mm$\\
+		\midrule
+		1&0&2.50&2.50&2.50&0.575\\
+		2&200.00&2.62&2.62&2.620&0.580\\
+		3&399.85&2.74&2.74&2.740&0.575\\
+		4&600.16&2.85&2.85&2.850&0.585\\
+		5&800.20&2.96&2.96&2.960&0.580\\
+		6&1000.24&3.08&3.07&3.075&-\\
+		7&1199.95&3.20&3.20&3.200&-\\
+		8&1399.96&3.32&3.31&3.315&-\\
+		9&1599.91&3.44&3.43&3.435&-\\
+		10&1800.35&3.54&3.54&3.540&-\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{梁弯曲法测定杨氏模量}
+这部分实验中测量的是一金属梁的杨氏模量。我们将梁架在两个支柱的刀口上，在两刀口中间架设悬挂着砝码盘的金属框。实验中添加砝码使得梁发生弯曲，并用一读数显微镜观察梁中点的位置变化。实验中用钢尺测量的刀口间距$l$，用螺旋测微器(零点值$h_{0}=0.000mm$)测量的梁的厚度$h$和用游标卡尺测量的梁的宽度$a$分别如下：
+\begin{table}[H]
+	\caption{金属梁长度参量的测量}
+	\label{金属梁长度参量的测量}
+	\centering
+	\begin{tabular}{*{5}{c}}
+		\toprule[0.5mm]
+		次数$i$&1&2&3&$average$\\
+		\midrule
+		$h/mm$&1.537&1.538&1.536&1.537\\
+		$a/cm$&1.005&0.995&1.000&1.000\\
+		$l/cm$&21.60&-&-&21.60\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+对于梁的厚度$h$，我们有:
+\begin{center}
+	$\sigma_{\bar{h}}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(h_{i}-\bar{h})^{2}}{n(n-1)}}=5.8\times10^{-4}mm$
+\end{center}
+\par 加上允差取$4\times10^{-3}mm$,合成得到:
+\begin{center}
+	$\sigma_{h}=\sqrt{\sigma_{\bar{h}}^{2}+\dfrac{e_{h}^{2}}{3}}=2\times10^{-3}mm$
+\end{center}
+\par $h$含不确定度表达式为:
+\begin{center}
+	$h=(1.537\pm0.002)mm$
+\end{center}
+\par 对于梁的宽度$a$，我们有:
+\begin{center}
+	$\sigma_{\bar{a}}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(a_{i}-\bar{a})^{2}}{n(n-1)}}=2.9\times10^{-3}cm$
+\end{center}
+\par 加上允差取$2\times10^{-3}cm$,合成得到:
+\begin{center}
+	$\sigma_{a}=\sqrt{\sigma_{\bar{a}}^{2}+\dfrac{e_{a}^{2}}{3}}=3\times10^{-3}cm$
+\end{center}
+\par $a$含不确定度表达式为:
+\begin{center}
+	$a=(1.000\pm0.003)cm$
+\end{center}
+\par 对于梁的长度$l$,我们取仪器允差$e_{l}=0.015cm$,折合不确定度为$\sigma_{l}=0.01cm$。$l$的表达式结果为:
+\begin{center}
+	$l=(21.60\pm0.01)cm$
+\end{center}
+\par 将每个砝码逐个添加到砝码盘，用读数显微镜读出梁中点的位置如表5(其中$f_{i}=|r_{i+3}-r_{i}|$)：
+\begin{table}[H]
+	\caption{砝码质量及相应梁中点位置}
+	\label{砝码质量及相应梁中点位置}
+	\centering
+	\begin{tabular}{*{8}{c}}
+		\toprule[0.5mm]
+		编号$i$&1&2&3&4&5&6&7\\
+		\midrule
+		$m/g$&0&200&400&600&800&1000&1200\\
+		$r_{i}/mm$&46.410&45.740&45.067&44.431&43.766&43.088&42.445\\
+		$f_{i}/mm$&1.979&1.974&1.979&-&-&-&-\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\section{实验数据处理}
+\subsection{CCD成像系统测定杨氏模量}
+\subsubsection{逐差法处理数据}
+表3中的$\bar{r}$一列为隔5项求差得到的金属丝长度改变量，逐差法得到的单次伸长量平均值为：
+\begin{center}
+	$\delta \bar{L}=\dfrac{1}{25}\sum\limits_{i=1}^{5}f_{i}=0.1155mm$
+\end{center}
+
+\par $f_{i}$平均值为:$\bar{f}=5\delta \bar{L}=0.5775mm$,多次测量不确定度为:
+\begin{center}
+	$\sigma_{\bar{f}}=\sqrt{\dfrac{\sum\limits_{i=1}^{5}(f_{i}-\bar{f})^{2}}{n(n-1)}}=1.87\times10^{-3}mm$
+\end{center}
+\par 分划板刻度的允差取$e_{f}=0.05mm$，以标准差表示并与$\sigma_{\bar{f}}$合成得：
+\begin{center}
+	$\sigma_{f}=\sqrt{\sigma_{\bar{f}}^{2}+\dfrac{e_{f}^{2}}{3}}=0.03mm$
+\end{center}
+\par 由于相邻项之差为隔5项差的$\dfrac{1}{5}$，所以折算为$\delta L$不确定度时也要乘$\dfrac{1}{5}$，即:$\sigma_{\delta L}=6\times10^{-3}mm$
+\par 对$m_{i}$也做逐差法处理，记每5项差为$g_{i}$，类似上述处理得到：
+\begin{center}
+	$\bar{m}=\dfrac{1}{25}\sum\limits_{i=1}^{5}g_{i}=200.008g$\\
+	$\sigma_{\bar{g}}=\sqrt{\dfrac{\sum\limits_{i=1}^{5}(g_{i}-\bar{g})^{2}}{n(n-1)}}=0.09g$
+\end{center}
+\par 我们取允差$e_{g}=0.02g$,合成不确定度为:
+\begin{center}
+	$\sigma_{g}=\sqrt{\sigma_{\bar{g}}^{2}+\dfrac{e_{g}^{2}}{3}}=0.09g$\\
+	$\therefore \sigma_{m}=\dfrac{1}{5}\sigma_{g}=0.02g$
+\end{center}
+\par 计算杨氏模量为:
+\begin{center}
+	$E=\dfrac{4mgL}{\pi d^{2}\delta L}=1.659\times 10^{11}Pa$
+\end{center}
+\par 计算不确定度(取$g=9.801m/s^{2},\sigma_{g}=0.001m/s^{2}$):
+\begin{center}
+	$\sigma_{E}=E\sqrt{(\dfrac{\sigma_{m}}{m})^{2}+(\dfrac{\sigma_{g}}{g})^{2}+(\dfrac{\sigma_{L}}{L})^{2}+(\dfrac{-2\sigma_{d}}{d})^{2}+(\dfrac{-\sigma_{\delta L}}{\delta L})^{2}}=9\times10^{9}Pa$
+\end{center}
+\par 故最终结果为:
+\begin{center}
+	$E=(1.66\pm0.09)\times10^{11}Pa$
+\end{center}
+\subsubsection{最小二乘法处理数据}
+也可以将$\bar{r}$和$m$的数据点用最小二乘法进行拟合。由于$m$的相对不确定度比$\bar{r}$的小得多，我们用$m$作为$x$轴来进行拟合，得到如图1所示的结果。
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} CCD成像法$m\~{}r$线性拟合}
+	\includegraphics[width=13cm,height=10cm]  {CCD成像法线性拟合.png} 
+\end{figure}
+根据斜率计算出杨氏模量：
+\begin{center}
+	$E=\dfrac{4gL}{\pi d^{2}k}=1.646\times10^{11}Pa$
+\end{center}
+\par 考察斜率的不确定度，随机误差造成的部分为：
+\begin{center}
+	$\sigma_{kA}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}=2.722\times10^{-6}m\cdot kg^{-1}$
+\end{center}
+\par 考虑仪器允差造成的误差，允差仍取$e_{f}$=0.05mm。对于单个$\bar{r}$值有：
+\begin{center}
+	$\sigma=\dfrac{e_{f}}{\sqrt{3}}=0.02887mm$
+\end{center}
+\par 故对斜率造成不确定度为：
+\begin{center}
+$\sigma_{kB}=\dfrac{\sigma}{\sqrt{\sum\limits_{i=1}^{9}(m_{i}-\bar{m})^{2}}}=1.589\times 10^{-5}m\cdot kg^{-1}$
+\end{center}
+\par 合成为：
+\begin{center}
+	$\sigma_{k}=\sqrt{\sigma_{kA}^{2}+\sigma_{kB}^{2}}=1.612\times 10^{-5}m\cdot kg^{-1}$
+\end{center}
+\par 进而对于杨氏模量有：
+\begin{center}
+	$\sigma_{E}=E\sqrt{(\dfrac{\sigma_{g}}{g})^{2}+(\dfrac{\sigma_{L}}{L})^{2}+(\dfrac{-2\sigma_{d}}{d})^{2}+(\dfrac{-\sigma_{k}}{k})^{2}}=5\times10^{9}Pa$
+\end{center}
+\par 因此我们得到：
+\begin{center}
+	$E=(1.65\pm0.05)\times10^{11}Pa$
+\end{center}
+\subsection{梁弯曲法测定杨氏模量}
+\subsubsection{逐差法处理数据}
+将表4中$r_{i}$一行每三个数据逐差求得单次伸长量平均值为：
+\begin{center}
+	$\delta \bar{L}=\dfrac{1}{9}\sum\limits_{i=1}^{3}f_{i}=0.6591mm$
+\end{center}
+\par $f_{i}$平均值为：$\bar{f}=5\delta \bar{L}=1.9773mm$,多次测量不确定度为：
+\begin{center}
+	$\sigma_{\bar{f}}=\sqrt{\dfrac{\sum\limits_{i=1}^{3}(f_{i}-\bar{f})^{2}}{n(n-1)}}=1.667\times10^{-3}mm$
+\end{center}
+\par 取读数显微镜仪器允差为$e_{f}=0.005mm$,则合成不确定度为：
+\begin{center}
+	$\sigma_{f}=\sqrt{\sigma_{\bar{f}}^{2}+\dfrac{e_{f}^{2}}{3}}=3.33\times 10^{-3}mm$
+\end{center}
+\par 由于相邻项之差为隔3项差的$\dfrac{1}{3}$，所以折算为$\delta L$不确定度时也要乘$\dfrac{1}{3}$，即:$\sigma_{\delta L}=1.11\times10^{-3}mm$
+\par 我们对于杨氏模量$E=\dfrac{3mg}{ah^{3}\delta L}(\dfrac{l}{2}x^{2}-\dfrac{1}{3}x^{3})$有：
+\begin{center}
+	$\left.\dfrac{\delta E}{E}\right|_{x=\frac{l}{2}}=\dfrac{3\delta x}{l}$
+\end{center}
+\par 计算杨氏模量为：
+\begin{center}
+	$E=\dfrac{mgl^{3}}{4ah^{3}\delta L}=2.064\times10^{11}Pa$
+\end{center}
+\par 计算不确定度(取$g=9.801m/s^{2},\sigma_{g}=0.001m/s^{2},\delta x=0.1cm$):
+\begin{center}
+	$\sigma_{E}=E\sqrt{(\dfrac{\sigma_{g}}{g})^{2}+(\dfrac{3\sigma_{l}}{l})^{2}+(\dfrac{-\sigma_{a}}{a})^{2}+(\dfrac{-3\sigma_{h}}{h})^{2}+(\dfrac{-\sigma_{\delta L}}{\delta L})^{2}+(\dfrac{3\delta x}{l})^{2}}=3\times10^{9}Pa$
+\end{center}
+\par 故最终结果为:
+\begin{center}
+	$E=(2.06\pm0.03)\times10^{11}Pa$
+\end{center}
+\subsubsection{最小二乘法处理数据}
+也可以将$r$和$m$的数据点用最小二乘法进行拟合。由于$m$的相对不确定度比$\bar{r}$的小得多，我们用$m$作为$x$轴来进行拟合，得到如图2所示的结果。
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 梁弯曲法$m\~{}r$线性拟合}
+	\includegraphics[width=13cm,height=10cm]  {梁弯曲法线性拟合.png} 
+\end{figure}
+根据斜率计算出杨氏模量：
+\begin{center}
+	$E=\dfrac{gl^{3}}{4|k|ah^{3}}=2.0586\times10^{11}Pa$
+\end{center}
+\par 考察斜率的不确定度，随机误差造成的部分为：
+\begin{center}
+	$\sigma_{kA}=|k|\sqrt{\dfrac{1/r^{2}-1}{n-2}}=1.012\times10^{-5}m\cdot kg^{-1}$
+\end{center}
+\par 考虑仪器允差造成的误差，允差仍取$e_{f}$=0.005mm。对于单个$\bar{r}$值有：
+\begin{center}
+	$\sigma=\dfrac{e_{f}}{\sqrt{3}}=0.002887mm$
+\end{center}
+\par 故对斜率造成不确定度为：
+\begin{center}
+	$\sigma_{kB}=\dfrac{\sigma}{\sqrt{\sum\limits_{i=1}^{7}(m_{i}-\bar{m})^{2}}}=2.728\times 10^{-6}m\cdot kg^{-1}$
+\end{center}
+\par 合成为：
+\begin{center}
+	$\sigma_{k}=\sqrt{\sigma_{kA}^{2}+\sigma_{kB}^{2}}=1.048\times 10^{-5}m\cdot kg^{-1}$
+\end{center}
+\par 计算不确定度(取$g=9.801m/s^{2},\sigma_{g}=0.001m/s^{2},\delta x=0.1cm$):
+\begin{center}
+	$\sigma_{E}=E\sqrt{(\dfrac{\sigma_{g}}{g})^{2}+(\dfrac{3\sigma_{l}}{l})^{2}+(\dfrac{-\sigma_{a}}{a})^{2}+(\dfrac{-\sigma_{k}}{k})^{2}+(\dfrac{-3\sigma_{h}}{h})^{2}+(\dfrac{3\delta x}{l})^{2}}=3\times10^{9}Pa$
+\end{center}
+\par 因此我们得到：
+\begin{center}
+	$E=(2.06\pm0.03)\times10^{11}Pa$
+\end{center}
+\section{分析与讨论}
+\subsection{误差来源讨论以及两种方法测定杨氏模量的比较}
+\begin{center}
+	误差来源讨论
+\end{center}
+\par 通过分析用逐差法处理CCD成像法测定杨氏模量的实验数据，对于相对不确定度而言，$\delta L$和$d$的相对不确定度贡献($10^{-2}$)远大于其他项的贡献($10^{-4}$)，而对于$d$而言，随机误差与未定系统误差对于不确定度的贡献几乎相同，对于$\delta L$而言，不确定度贡献主要来自于未定系统误差，因此用逐差法处理数据误差主要来自于$d$的随机误差和未定系统误差以及$\delta L$的未定系统误差。\\
+\par 通过分析用最小二乘法法处理CCD成像法测定杨氏模量的实验数据，对于相对不确定度而言，斜率$k$和金属丝直径$d$的贡献($10^{-2}$)远大于其他项的贡献($10^{-4}$)，而对于$d$而言，随机误差与未定系统误差对于不确定度的贡献几乎相同，对于$k$而言，不确定度贡献主要来自于未定系统误差，因此用最小二乘法处理数据误差主要来自于$d$的随机误差和未定系统误差以及斜率$k$的未定系统误差。(当我们使用最小二乘法处理数据进行误差分析时，我们已经将自变量$m$视为无误差量，但考虑$m$对于不确定度的影响量级为$10^{-4}$，远小于$k$和$d$的影响，因此其实这样处理也是合适的，对于不确定度不会有太大影响。)\\
+\par 通过分析用逐差法处理梁弯曲法测定杨氏模量的实验数据，对于相对不确定度而言，$\delta x$的贡献($10^{-2}$)远大于其他项的贡献($10^{-4}$)或($10^{-3}$)，这就意味着我们在用梁弯曲法测量杨氏模量的时候，需要将砝码放在梁的正中心的位置，否则偏离一点都会造成较大的误差。因此用逐差法处理数据误差主要来自于将砝码置于梁中心偏离造成的系统误差。\\
+\par 通过分析用最小二乘法处理梁弯曲法测定杨氏模量的实验数据，对于相对不确定度而言，和逐差法一样，$\delta x$的贡献($10^{-2}$)远大于其他项的贡献($10^{-4}$)或($10^{-3}$)。因此用最小二乘法处理数据误差主要来自于将砝码置于梁中心偏离造成的系统误差。
+\begin{center}
+	两种方法测量杨氏模量的比较
+\end{center}
+\par CCD成像法是使用拉伸伸长的方法用杨氏模量的定义式来计算杨氏模量，微小伸长量利用CCD成像的方法进行测定。实验的关键在于将支架调节竖直以及能让小圆柱无摩擦滑动，因为我们取的是一根细金属丝，所以很可能会出现金属丝部分弯折的情况，我们需要先用几个砝码将其尽量拉直，否则会导致测量杨氏模量值偏小。通过误差分析我们知道CCD成像法测定杨氏模量误差主要来自于$d$和$\delta L$，因此在实验仪器都调整规范的情况下，我们减小误差的一个办法就是尽量多次测量。\\
+\par 梁弯曲法是利用在梁上挂一个重物，会对梁的薄层产生一个扭转力矩，用力矩平衡求得关系表达式，进而计算出梁的杨氏模量。实验的关键在于将刀口放平行以及将金属框和砝码置于梁的正中心位置上，以及读数时单向读数避免回程差。通过误差分析我们知道梁弯曲法测定杨氏模量误差主要来自于将砝码置于梁中心偏离造成的系统误差，因此这时将砝码置于正中心位置将会变得很关键，否则将会有较大的系统误差。
+\subsection{实验过程与现象}
+在我们进行CCD法测定杨氏模量的实验中，均没有观察到加第一、二个砝码时伸长量明显大于或小于后面再加砝码时的伸长量。若观察到加第一、二个砝码时伸长量偏大，则可能是本底砝码不够重，使得初始状态下金属丝并未伸直，刚开始加砝码时其方完全伸直，导致伸长量偏大。若是前两个砝码造成的伸长量偏小，则可能是开始是螺丝把小圆柱卡得太紧，摩擦力较大，前两个砝码的重力有一部分用于克服摩擦力了，后来的砝码重力才使得金属丝的伸长接近线性。
+但是在测量过程中我们发现加减砝码时小圆柱体在不断抖动，且本身最后一位数字就是估读，这样导致测量精度不够高，在后面不确定度计算也证明了这一点，用CCD成像法测量杨氏模量的不确定度竟然高达$5\%$！
+\par 在我们进行梁弯曲法测定杨氏模量过程中，我们选择的是叉丝平面对准梁的一个固定边缘，因为直线比一个点更容易对准。我们发现在加砝码的时候，梁并没有明显的像CCD成像法那样的不断抖动，测量值也比CCD成像法更稳定，在后面不确定度的计算中也证实了这一点，在不考虑将砝码置于梁中心偏离造成的系统误差时，梁弯曲法测量的不确定度几乎比CCD法测量的不确定度小一个数量级！
+\section{收获与感想}
+在本次实验中，我们学习了使用CCD成像法和梁弯曲法测量杨氏模量。在测量杨氏模量的实验中，我们利用光放大和显微镜成像测量的方法解决了不易测定的微小长度问题，这种光放大的思想值得我们借鉴，在以后的学习中也会发挥出重要的作用。同时我们在本次的实验中学习使用逐差法以及最小二乘法处理已得的实验数据，我们对实验数据以及不同处理方法进行了误差处理，进一步巩固了我们的误差处理知识。
+\section{原始数据整理}
+\subsection{CCD成像系统测定杨氏模量原始数据}
+\begin{center}
+	用米尺测量金属丝长度为:$L=80.58cm$
+\end{center}
+\begin{table}[H]
+	\caption{砝码质量测量}
+	\label{砝码质量测量}
+	\centering
+	\begin{tabular}{c|*{9}{c}}
+		\toprule[0.5mm]
+		编号$i$&1&2&3&4&5&6&7&8&9\\
+		\midrule
+		$m/g$&200.00&199.85&200.31&200.04&200.04&199.71&200.01&199.95&200.44\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{金属直径的测量}
+	\label{金属直径的测量}
+	\centering
+	\begin{tabular}{c|*{10}{c}}
+		\toprule[0.5mm]
+		次数$i$&1&2&3&4&5&6&7&8&9&10\\
+		\midrule
+		$d/mm$&0.328&0.328&0.328&0.328&0.326&0.323&0.321&0.323&0.321&0.323\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{金属丝的伸长量}
+	\label{金属丝的伸长量}
+	\centering
+	\begin{tabular}{*{11}{c}}
+		\toprule[0.5mm]
+		编号$i$&1&2&3&4&5&6&7&8&9&10\\
+		\midrule
+		$r_{i}/mm$&2.50&2.62&2.74&2.85&2.96&3.08&3.20&3.32&3.44&3.54\\
+		$r_{i}^{\prime}/mm$&2.50&2.62&2.74&2.85&2.96&3.07&3.20&3.31&3.43&3.54\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{梁弯曲法测定杨氏模量原始数据}
+\begin{table}[H]
+	\caption{金属梁长度参量的测量}
+	\label{金属梁长度参量的测量}
+	\centering
+	\begin{tabular}{*{4}{c}}
+		\toprule[0.5mm]
+		次数$i$&1&2&3\\
+		\midrule
+		$h/mm$&1.537&1.538&1.536\\
+		$a/cm$&1.005&0.995&1.000\\
+		$l/cm$&21.60&-&-\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{砝码质量及相应梁中点位置}
+	\label{砝码质量及相应梁中点位置}
+	\centering
+	\begin{tabular}{*{8}{c}}
+		\toprule[0.5mm]
+		编号$i$&1&2&3&4&5&6&7\\
+		\midrule
+		$m/g$&0&200&400&600&800&1000&1200\\
+		$r_{i}/mm$&46.410&45.740&45.067&44.431&43.766&43.088&42.445\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\end{document} 

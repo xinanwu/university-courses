@@ -1,0 +1,217 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{真空镀膜实验报告}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		真空镀膜也叫物理气相沉积，物理气相沉积技术是指在真空条件下，利用各种物理方法，将镀料气化成原子、分子或使其离化为离子，直接沉积到基体表面上的方法。在本次实验中，我们在真空环境中利用热蒸发的方法将铜镀在了玻璃片上。
+		
+		\textbf{关键词：物理气相沉积，真空，热蒸发}
+	\end{abstract}
+	\section{实验目的}
+	(1)了解并学习真空的获得与测量；
+	\par(2)学习用热蒸发法和溅射法制备金属薄膜。
+	\section{实验器材}
+	多功能薄膜制备系统，6JA型干涉显微镜
+	\section{实验过程及数据整理}
+	\subsection{真空镀膜真空度下限}
+	因为对于气体分子而言满足关系:$p=\dfrac{kT}{\sqrt{2}\pi d^{2}\lambda}$
+	\par 我们取$\lambda>>L,\lambda\approx10L\approx1m,T=297K,d\approx3.5A$
+	\par 因此我们计算可得：$p\le 8\times10^{-3}Pa$(其中真空镀膜要求$\lambda>>L$，即气体分子自由程远大于系统线度，我们取$\lambda=10L$,而分子直径我们取氮气分子直径与氧气分子直径的平均值，因为氮气分子与氧气分子占空气成分最多)
+	\subsection{分子泵开始工作后压强随时间关系}
+	\begin{table}[H]
+		\centering
+		\caption{分子泵开始工作后压强随时间关系表(单位：mPa)}
+		\begin{tabular}{|r|r|r|r|r|r|r|r|}
+			\toprule[0.5mm]
+			+5s & 122.1 & 73.0    & 55.2  & 44.2  & 32.6  & 21.8  & 14.7 \\
+			\hline
+			0.0     & 108.0   & 70.8  & 53.6  & 42.8  & +60s & 20.7  & +300s \\
+			\hline
+			0.0     & 97.7  & 68.8  & 52.1  & +30s & 30.5  & 19.4  & 13.4 \\
+			\hline
+			0.0     & 89.0    & 66.6  & 50.6  & 40.8  & 28.8  & 18.4  & 12.5 \\
+			\hline
+			0.0     & 84.5  & +10s & 49.5  & 39.0    & 27.1  & 17.6  & 11.8 \\
+			\hline
+			176.3 & 80.7  & 63.0    & 48.2  & 37.3  & 25.7  & 16.8  & - \\
+			\hline
+			152.7 & 78.2  & 59.6  & +20s & 35.6  & +120s & 16.0    &  -\\
+			\hline
+			146.0   & 76.0    & 57.0    & 46.2  & 33.8  & 23.6  & 15.3  &-  \\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{压强1.png}
+			\caption{分子泵开始工作后压强随时间关系图}
+		\end{center}
+	\end{figure}
+\par \textbf{我们可以发现分子泵打开后系统压强随时间增大而减小，且下降速率逐渐减小，这是因为当系统压强减小到一定数值后，诸如系统内壁上的附着水分子之类的极性分子难以被去除，因此压强减小速率逐渐降低。}
+\subsection{预蒸发电流变化}
+\textbf{我们通过实验发现电流在变小，这是因为系统温度升高，金属的电阻变大，因此电流变小。}
+\subsection{预蒸发实验压强变化}
+\begin{table}[H]
+	\centering
+	\caption{预蒸发实验压强变化表(单位：mPa)}
+	\begin{tabular}{|r|r|r|r|r|}
+		\toprule[0.5mm]
+		+15s & +25s & +5s    & 11.6  & 11.3 \\
+		\hline
+		11.7  & 11.8  & 11.7 & 11.6  & 11.3 \\
+		\hline
+		11.7  & 11.9  & 11.7 & 11.5  & 11.2 \\
+		\hline
+		11.8  & +35s & 11.6 & +30s & 11.2 \\
+		\hline
+		11.8  & 11.8  & +10s   & 11.4  & 11.1 \\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+	\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{压强2.png}
+		\caption{预蒸发实验压强变化图(注：我们作曲线时均取压强最后变化的点)}
+	\end{center}
+\end{figure}
+\par \textbf{我们可以发现预蒸发时系统压强值先增大后减小，这是因为我们预蒸发时最开始的铜蒸汽产生速率大于分子泵的抽气速率，因此分子密度增大，压强上升；当铜蒸汽产生速率等于分子泵的抽气速率时，压强达到最大值；随后因为铜蒸汽产生速率小于分子泵的抽气速率，因此分子密度减小，压强下降。}
+\subsection{热蒸发镀膜}
+\textbf{热蒸发镀膜现象:我们将蒸发电流调节至30A，电阻发热发光如同白炽灯，我们维持蒸发电流不变，由于铜丝被热蒸发，压强计示数不断上涨，同时筒壁的窗口也逐渐镀上一层铜将窗口盖住。最后当压强计示数达到$122.2\times 10^{-3}Pa$时我们关闭蒸发电流，镀膜完成。 }
+\par \textbf{系统最大压强值为：$122.2mPa$}
+\subsection{第二次抽气真空实验}
+\begin{table}[H]
+	\centering
+	\caption{第二次抽真空实验数据表(单位：mPa)}
+	\begin{tabular}{|r|r|r|r|}
+		\toprule[0.5mm]
+		+5s & 31.7  & 13.0    & 12.3 \\
+		\hline
+		177.3 & 23.3  & 12.8  & 12.2 \\
+		\hline
+		160.7 & 18.7  & 12.7  & 12.0 \\
+		\hline
+		113.6 & 16.0    & 12.6  & 11.9 \\
+		\hline
+		52.9  & 14.2  & 12.5  & - \\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+	\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{压强3.png}
+		\caption{第二次抽真空实验压强变化图}
+	\end{center}
+\end{figure}
+\par \textbf{我们发现第二次抽真空时所用时间远小于第一次实验所用时间，这是因为第一次实验中的加热步骤以及抽气步骤已经将系统内壁中难以去除的水分子等极性分子去除掉了。}
+	\section{分析与讨论}
+	在本次实验中，我们发现第二次抽真空时所用时间远小于第一次实验所用时间，这是因为第一次实验中的加热步骤以及抽气步骤已经将系统内壁中难以去除的水分子等极性分子去除掉了，因此在第二次实验中的抽真空时间远小于第一次实验，因此我们在抽真空时尽量把系统一直保持干燥少水分子。我们在绕钼丝时，尽量不要弯折，否则很容易出现加热铜丝将钼丝熔断的情况。在预蒸发过程中我们发现了电流下降的情况，这是因为金属电阻随温度升高而增大，因此我们为了控制变量需要注意蒸发电流的大小，尽量维持一个稳定的值。同时我们在开始蒸发镀膜过程中，我们必须将真空度维持在一定的水准，先用机械泵抽真空到极限压强再用分子泵抽真空至要求压强。
+	\section{收获与感想}
+	在本次实验中，我们首先了解并学习了真空的获得与测量，明白了真空获得的不易，然后学习并使用热蒸发的方法制备了铜薄膜，整个实验过程轻松有趣，为我们以后从事材料方面的研究奠定了一定的基础。
+\end{document}

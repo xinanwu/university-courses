@@ -1,0 +1,174 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{全息照相实验报告}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		全息照片是一种记录被摄物体反射（或透射）光波中全部信息的先进照相技术。全息照相的原理是依据光的干涉原理，利用两束光的干涉记录被摄物体的信息，并通过衍射重现被摄物体信息。激光束被分光镜一分为二，其中一束照到被拍摄的景物上，被称物光束；另一束直接照到感光胶片即全息干板上，称为参考光束。当物光束被物体反射后，其反射光束也照射在胶片上，就完成了全息照片的摄制过程，彩虹全息照相技术还可拍立体图像。
+		
+		\textbf{关键词：干涉，衍射，激光束}
+	\end{abstract}
+	\section{实验目的}
+	(1)了解全息照相的基本原理；
+	\par (2)学习全息照相的实验技术，拍摄合格的全息图；
+	\par (3)了解摄影暗室技术。
+	\section{实验器材}
+	光学平台，He-Ne激光器及电源，快门及定时曝光器，扩束透镜，反射镜和分束器，光功率计，全息底片，被摄物体，显微镜，暗室技术及使用设备。
+	\section{实验过程及数据整理}
+	\subsection{实验光路}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=10cm,height=7cm]  {记录光路.png} 
+		\caption{\label{1}全息记录光路图}
+	\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {再现光路.png} 
+		\caption{\label{1}全息再现光路图}
+\end{figure}
+\par 参考光光程$L_{1}=109.0cm$,物光光程$L_{2}=107.5cm$,物光与参考光夹角$\alpha \approx 25^{\circ}$，曝光时间$t=4.0s$
+\subsection{实验现象记录及分析}
+\textbf{1、原位观察虚像}
+\par (1)虚像位于原物处，与原物基本等大，正立,如图3所示；(2)从底片不同位置观察，像基本不变；(3)旋转底片，改变入射角，像的大小未变，发生转动，且转动方向与底片转动方向相反，同时光强发生变化，当入射角增大到某一个值时像将会消失；(4)将底片向远离透镜方向移动，像变大，反之向靠近透镜方向移动，像变小。\textbf{原因：再现时照明光为发散球面波，等效于在底片后放入一球心在球面波球心的凹透镜。移远底片相当于增大凹透镜焦距，由放大率公式$\beta=\frac{1}{1+|s/f|}$可知，横向放大率也会增大;反之靠近的话像会变小。}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm,height=8cm]  {叶子.png} 
+	\caption{\label{1}原位观察虚像图}
+\end{figure}
+\par (当我们参考光使用会聚光时，我们观察到的像为原像关于胶板法线的等大镜面对称像，如图4所示，旋转底片，改变入射角，像的大小未变，发生转动，且转动方向与底片转动方向相反，同时因为底片在虚光源与透镜中间，所以将底片向远离透镜方向移动，像变小，反之向靠近透镜方向移动，像变大，原因同上。)
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm,height=7cm]  {叶子2.png} 
+	\caption{\label{1}共轭光观察虚像图}
+\end{figure}
+\par \textbf{2、另一个像有没有？位置？实像还是虚像？为什么？如果没有，请分析原因。}
+\par 未观察到另一个像，原因为：参考光、照明光均为发散球面波，对于-1级衍射像，其像距计算可为$v=\frac{uR}{R-2u}$,$u$为物距，$R$为参考光球心。观察不到像说明成像在较远处，即$u\sim \frac{R}{2}$,且光强较小。
+\par \textbf{3、底片翻转 180 度，用共轭光照射，观察实像，记录实像位置，大小，正倒}
+\par 共轭光照射将会形成放大正立的实像，其位置如图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {共轭光.png} 
+	\caption{\label{1}共轭光照射实像位置图}
+\end{figure}
+\par \textbf{4、用激光直接照射来再现，像有什么特点，请与共轭光再现做对比并分析其原因。}
+\par 当激光从底片背面正入射时，可在法线两侧分别看到放大正立的实像与很弱的虚像；当激光从底片正面正入射时，仅仅在法线一侧看到放大正立的虚像。如图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {激光背射.png} 
+	\caption{\label{1}激光背射光路图}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {激光正射.png} 
+	\caption{\label{1}激光正射光路图}
+\end{figure}
+\par 原因：因为参考光为发散球面波，等效于在底片处的一凸透镜，使得在原物后成一放大正立的像（虚实由光入射方向决定），在以底片为镜像的另一侧有一同样放大正立的共轭像。激光直接正入射时，照明光为平面波，故最终成像如图6,7所示。而共轭光再现的图5中，照明光为会聚球面波，等效于在底片处的一凸透镜，这使得经过参考光等效的凸透镜所成的像再次被放大，仍为正立放大的像。
+	\section{收获与感想}
+	在本次实验中我们了解了全息照相的基本原理，学习了全息照相的实验技术，并拍摄了合格的全息图，同时也了解了摄影暗室技术，同时也为我们一年的普物实验课程画上了圆满的句号！
+\end{document}

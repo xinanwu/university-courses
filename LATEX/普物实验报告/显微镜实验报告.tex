@@ -1,0 +1,207 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+	\pagestyle{myheadings}
+	\thispagestyle{plain}
+	\newpage
+	\setcounter{page}{1}
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{\vspace{2mm}
+				\hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+				\vspace{4mm}
+				\hbox to 6.28in { {\Large \hfill #1  \hfill} }
+				\vspace{3mm}}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+	\homework{显微镜测量实验}{1900011413}{吴熙楠}
+	\tableofcontents
+	\newpage
+	\begin{abstract}
+		通过学习使用显微镜测量了解显微镜的原理,掌握显微镜测量微小长度的方法和规范.
+	\end{abstract}
+\section{实验目的}	
+\noindent
+(1)了解显微镜原理\\
+(2)掌握了使用显微镜测量微小长度的方法和规范
+\section{主要实验仪器与实验步骤}
+
+\subsection{实验仪器}
+读数显微镜,生物显微镜及照明设备,标准测微尺,测微目镜,被测物体
+\subsection{实验步骤}
+\noindent
+\subsubsection{显微镜调焦}
+将观测样品放在载物台上并固定它,转动粗调手轮(注意不要让物镜与样品接触),通过目镜观察看到清晰的像即可
+\subsubsection{显微镜物镜放大倍数的测定}
+\noindent
+(1)按照规定组装上生物显微镜,目镜用测微目镜\\
+(2)调好照明,将标准测微尺放在载物台上,调焦\\
+(3)测量经过放大后的标准测微尺的单位长度,从而计算出物镜的放大倍数
+\subsubsection{未知长度的测量}
+将标准测微尺换成被测对象,对显微镜进行调焦,测量出放大后的条纹间距,再除以物镜放大倍数可得物体长度
+\subsubsection{用读数显微镜测量未知长度}
+\noindent
+(1)将被测物体放在载物台上,调节读数显微镜,使得叉丝平面与物体同时在视野中达到最清晰\\
+(2)用读数显微镜测量未知长度，取平均值即可
+
+\section{实验数据处理}
+
+\subsection{测量物镜放大率$\beta_{0}$}
+\begin{table}[H] 
+	\caption{测物镜放大率数据表}
+	\label{测物镜放大率数据表}
+	\centering
+		\begin{tabular}{cccccc}
+			\toprule[0.5mm]
+			次数 & $n $& 起始$x_{1}/mm $ & 终止$x_{2}/mm$&$ny_{1}^{\prime}/mm$&$y_{1}^{\prime}/mm$  \\
+			\midrule
+			1 & 3  & 0.782  & 4.277&3.495&1.165  \\
+			2 & 4 & 0.492  & 4.800&4.308&1.077   \\
+			3 & 5  & 0.530  & 6.377&5.847&1.169  \\
+			平均值&/&/&/&/&1.137   \\
+			\bottomrule[0.5mm]
+			\end{tabular}
+\end{table}
+$\beta_{0}=\frac{y_{1}^{\prime}}{y_{1}}=11.37$\\
+
+\subsection{用测微目镜测未知长度$y_{1}$}
+\begin{table}[H] 
+	\caption{用测微目镜测未知长度数据表}
+	\label{用测微目镜测未知长度数据表}
+	\centering
+		\begin{tabular}{ccccccc}
+			\toprule[0.5mm]
+			次数 &$ n $& 起始$x_{1}/mm $ & 终止$x_{2}/mm$&$ny_{1}^{\prime}/mm$&$y_{1}^{\prime}/mm$&$y_{1}=\frac{y_{1}^{\prime}}{\beta_{0}}/mm$ \\
+			\midrule
+			1 & 5  & 0.410  & 3.385&2.975&0.595&0.052  \\
+			2 & 10 & 0.748  & 6.821&6.073&0.607&0.053   \\
+			3 & 10  & 0.590  & 6.542&5.952&0.595&0.052  \\
+			平均值&/&/&/&/&0.599&0.052  \\
+			\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+$\frac{1}{y_{1}}=1.923 \times 10^{4}  m^{-1}$\\
+
+\subsection{用读数显微镜测未知长度$y$}
+\begin{table}[H] 
+	\caption{用读数显微镜测未知长度数据表}
+	\label{用读数显微镜测未知长度数据表}
+	\centering
+		\begin{tabular}{cccccc}
+			\toprule[0.5mm]
+			次数 & $n$ & 起始$x_{1}/mm $ & 终止$x_{2}/mm$&$ny/mm$&$y/mm$  \\
+			\midrule
+			1 & 10  & 17.961  & 18.514&0.552&0.055 \\
+			2 & 15 & 18.720  & 19.492&0.772&0.052  \\
+			3 & 20  & 19.686  & 20.711&1.025&0.051  \\
+			平均值&/&/&/&/&0.053  \\
+			\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+$\frac{1}{y}=1.899 \times 10^{4} m^{-1}$\\
+
+\section{分析与讨论}
+
+\subsection{生物显微镜和读数显微镜的异同}
+\subsubsection{相同点}
+\noindent
+(1)两种显微镜都可以测量微小长度\\
+(2)生物显微镜和读数显微镜在使用前都要进行调焦的操作\\
+(3)读数显微镜和生物显微镜使用前都需要用反射镜反射聚集光线\\
+(4)读数显微镜和生物显微镜在测量时都要注意鼓轮转动方向一致,否则会有空程差
+\subsubsection{不同点}
+\noindent
+(1)生物显微镜是先进行物镜放大后测量,因此可以测量更加微小的物体;读数显微镜直接测量物体,因此测量物体的尺度不能过小\\
+(2)生物显微镜测量物体需要先校准物镜的放大倍数,而读数显微镜不需要
+\subsection{实验中测量误差的来源分析}
+\noindent
+(1)显微镜使用前未调焦\\
+(2)测量时因为条纹数过多而数错数目或者数错鼓轮转动圈数\\
+(3)鼓轮转动时未保持单次测量必须同方向而造成的空程差\\
+(4)物体过小而边界确定不准确\\
+(5)叉丝平面的叉丝和条纹并不平行而是有夹角,导致测量长度与待测长度差了一个余弦
+\subsection{为何读数显微镜测量时只能单向转动鼓轮}
+ 在显微镜的内部构造中,读数部分是由互相咬合的齿轮构成的,两个齿轮之间不是完全无缝隙地咬合的,而是留有一定的空隙,所以当你前进时是一直带着后一个齿轮前进的,但是如果后退一点的时候,就得先移动过那个空隙再带动后一齿轮后退,这就是空程差.因此当我们转动鼓轮时必须小心,以免移动过多的距离,但就算我们移动了过多的距离也不要反转鼓轮以避免空程差.
+\subsection{为何显微镜观测之前调焦是必要的}
+\noindent
+(1)调焦不准会导致观测时有视差,被观测物体的位置会随着观察角度的改变而改变,无端增加了实验的误差\\
+(2)调焦不准会导致边界观察的不清晰,从而导致边界位置定的不准,同样也增加了实验的误差
+
+\section{收获与感想}
+
+   经过本次实验学习,我们了解了显微镜的实验原理,掌握了使用显微镜测量微小长度的方法和规范;了解了测微目镜使用的规范,为后续光学实验奠定基础;同时明白了在进行实验记录时必须要专心,否则就会出现条纹数目或者鼓轮圈数数错的情况(在本次实验中,我就因为鼓轮圈数数错而导致第一步测量物镜放大率错误(实验数据未列出)).
+
+\section{原始数据整理}
+
+\begin{table}[H] 
+	\caption{测物镜放大率原始数据表}
+	\label{测物镜放大率原始数据表}
+	\centering
+		\begin{tabular}{cccc}
+			\toprule
+			次数 &$ n $& 起始$x_{1}/mm $ & 终止$x_{2}/mm$  \\
+			\midrule
+			1 & 3  & 0.782  & 4.277  \\
+			2 & 4 & 0.492  & 4.800   \\
+			3 & 5  & 0.530  & 6.377  \\
+			\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+
+\begin{table}[H] 
+	\caption{用测微目镜测未知长度原始数据表}
+	\label{用测微目镜测未知长度原始数据表}
+	\centering
+		\begin{tabular}{cccc}
+			\toprule[0.5mm]
+			次数 &$ n$ & 起始$x_{1}/mm $ & 终止$x_{2}/mm$  \\
+			\midrule
+			1 & 5  & 0.410  & 3.385  \\
+			2 & 10 & 0.748  & 6.821   \\
+			3 & 10  & 0.590  & 6.542  \\
+			\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+
+\begin{table}[H] 
+	\caption{用读数显微镜测未知长度原始数据表}
+	\label{用读数显微镜测未知长度原始数据表}
+	\centering
+		\begin{tabular}{cccc}
+			\toprule[0.5mm]
+			次数 & $n$ & 起始$x_{1}/mm $ & 终止$x_{2}/mm$  \\
+			\midrule
+			1 & 10  & 17.961  & 18.514 \\
+			2 & 15 & 18.720  & 19.492  \\
+			3 & 20  & 19.686  & 20.711  \\
+			\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+
+\end{document} 

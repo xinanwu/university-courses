@@ -1,0 +1,235 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{测量薄透镜焦距}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	
+	通过测量薄透镜的焦距实验了解光学实验的入门知识及要求,掌握测量薄透镜焦距的基本实验方法,了解位移法和自准直法此类光学实验方法.
+
+\end{abstract}
+\section{实验目的}
+\noindent
+(1)了解光学实验入门知识要求\\
+(2)掌握测量薄透镜焦距的基本方法
+\section{主要实验仪器与实验步骤}
+\subsection{实验仪器}
+光学导轨,滑块,凸透镜,凹透镜,屏板,平面反射镜,光源,物等
+\subsection{实验步骤}
+\subsubsection{共轴调节}
+\noindent
+(1)粗调:先将所用光学器件元件放在光学平台上粗成直线,用眼睛观察调节各元件高矮使其大致在一条直线上，注意在水平和竖直方向均要调节\\
+(2)细调:打开光学元件利用透镜成像规律调节共轴,在物和屏之间放一个凸透镜,若已调节共轴,则大像和小像的中心将会重合.若不重合,则:成小像,调光屏,使得屏中心和像中心相重合;成大像,调透镜,使得像中心和屏中心相重合.重复几次过后便可调好
+\subsubsection{位移法测凸透镜焦距}
+\noindent
+(1)以远处自然景物为物,粗测焦距\\
+(2)把光学元件放在光学平台上或者导轨上,物体离光源近,二者等高\\
+(3)共轴调节\\
+(4)记录物体和屏所在的位置,移动凸透镜,使得在屏上分别成一个大像和一个小像,记录在像最清晰的时刻凸透镜所在的位置\\
+(5)分别测量三组数据,列出数据表，计算焦距的平均值
+\subsubsection{自准直法测量凸透镜焦距}
+\noindent
+(1)按照光路图摆好器件,调节光学元件共轴\\
+(2)移动凸透镜,使得在物屏上成一个与物等大倒立的实像\\
+(3)记录此时物和凸透镜的位置,计算凸透镜的焦距
+\subsubsection{物像距法测量凹透镜焦距}
+\noindent
+(1)按照光路图摆好器件,调节所有光学器件共轴\\
+(2)调节凹透镜的位置,使得在屏上成一个小像,记录此时的物,凸透镜,凹透镜以及屏的位置\\
+(3)改变位置,重复测量三次,计算凹透镜焦距的平均值
+\subsubsection{自准直法测量凹透镜焦距}
+\noindent
+(1)按照光路图摆好器件,调节所有光学器件共轴\\
+(2)移动凹透镜的位置,使得在屏上出现清晰的像,记录下此时物,凸透镜以及凹透镜的位置\\
+(3)代入凸透镜的焦距计算出凹透镜焦距
+
+\section{实验数据处理}
+
+\subsection{位移法测凸透镜焦距}
+\begin{table}[H] 
+	\caption{位移法测凸透镜焦距}
+	\label{位移法测凸透镜焦距}
+	\centering
+	\begin{tabular}{cccccccc}
+		\toprule
+		次数 & $x_{1}/cm$  & $x_{2}/cm $& $A/cm $ & $x_{3}/cm$  & $x_{4}/cm $ &$ l/cm$ & $f_{1}/cm $\\
+		\midrule
+		1 & 31.10  & 95.00  &63.90& 54.60  & 72.12&17.52&14.77  \\
+		2 & 31.10  & 100.00  &68.90& 52.75  & 78.86&26.11&14.75  \\
+		3 & 31.10  & 105.00  &73.90& 51.60  & 84.78&33.18&14.75  \\
+		平均值&/&/&/&/&/&/&14.76  \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+其中,$x_{1}$为物屏所在的位置,$x_{2}$为像屏所在的位置,$A$为物屏与像屏之间的距离$(A=|x_{1}-x_{2}|)$,$x_{3}$为凸透镜成大像时的位置,$x_{4}$为凸透镜成小像时的位置,$l$为两次凸透镜成像位置之差$(l=|x_{3}-x_{4}|)$,$f_{1}$为计算所得的凸透镜焦距$(f_{1}=\frac{A^{2}-l^{2}}{4A})$
+
+\subsection{自准直法测凸透镜焦距}
+\begin{table}[H] 
+	\caption{自准直法测凸透镜焦距}
+	\label{自准直法测凸透镜焦距}
+	\centering
+	\begin{tabular}{cccc}
+		\toprule[0.5mm]
+			次数&$x_{1}/cm$  &$x_{2}/cm$&$f_{1}/cm$  \\
+			\midrule
+			1&31.10&46.14&15.04 \\
+			\bottomrule[0.4mm]
+	\end{tabular}
+\end{table}
+其中,$x_{1}$为物屏的位置,$x_{2}$为在物屏上成等大倒立实像时凸透镜的位置,$f_{1}$为计算所得凸透镜的焦距$(f_{1}=|x_{1}-x_{2}|)$
+
+\subsection{物像法测凹透镜焦距}
+\begin{table}[H] 
+	\caption{物像法测凹透镜焦距}
+	\label{物像法测凹透镜焦距}
+	\centering
+		\begin{tabular}{ccccccc}
+			\toprule[0.5mm]
+			次数 & $x_{1}/cm$  & $x_{2}/cm $ & $x_{3}/cm$  & $x_{4}/cm$&$x_{5}/cm$&$f_{2}/cm$  \\
+			\midrule
+			1 & 31.10  & 110.00  & 75.00  & 88.81&97.24&-13.99  \\
+			2 & 31.10  & 105.00  & 75.00  & 90.00&97.24&-13.98  \\
+			3 & 31.10  & 115.00  & 75.00 & 87.86 &97.24&-14.32 \\
+			平均值&/&/&/&/&97.24&-14.10   \\
+			\bottomrule
+	\end{tabular}
+\end{table}
+其中,$x_{1}$为物屏的位置,$x_{2}$为像屏所在的位置,$x_{3}$为成像时凸透镜所在的位置,$x_{4}$为物在像屏成像时凹透镜所在的位置,$x_{5}$为计算所得物通过凸透镜第一次成像所在的位置$(x_{5}=\frac{x_{3}^{2}-x_{1}x_{3}-f_{1}x_{1}}{x_{3}-x_{1}-f_{1}})$,$f_{2}$为计算所得凹透镜焦距$(f_{2}=\frac{(x_{4}-x_{5})(x_{2}-x_{4})}{x_{2}-x_{5}})$
+
+\subsection{自准直法测凹透镜焦距}
+\begin{table}[H] 
+	\caption{自准直法测凹透镜焦距}
+	\label{自准直法测凹透镜焦距}
+	\centering
+		\begin{tabular}{cccccc}
+			\toprule
+			次数 & $x_{1}/cm$ & $x_{2}/cm$ & $x_{3}/cm$&$x_{4}/cm$&$f_{2}=|x_{3}-x_{4}|/cm$ \\
+			\midrule
+			1 & 31.10 & 62.60 & 76.01&90.37&-14.36 \\
+			\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+其中,$x_{1}$为物屏所在位置,$x_{2}$为凸透镜所在位置,$x_{3}$为成像时凹透镜所在位置,$x_{4}$为计算所得物经过凸透镜第一次成像所在的位置$(x_{4}=\frac{f_{1}x_{1}+x_{1}x_{2}-x_{2}^{2}}{f_{1}+x_{1}-x_{2}})$,$f_{2}$为计算所得凹透镜焦距$(|x_{3}-x_{4}|)$
+
+\section{分析与讨论}
+\subsection{位移法和自准直法各自的优缺点}
+\noindent
+(1)位移法:优点是不用直接测量透镜的位置上,只用测量两次成像的相对位移,减少了因为透镜光心不准而造成的误差;缺点是调节比较繁琐,并且要求物与像之间的距离必须大于四倍焦距,否则无法使用此方法\\
+(2)自准直法:优点是比较方便调节,可以用于光具的调节;缺点是因为光具的中心不易测准而造成的测量误差,比如:本次实验发现的自准直法测量焦距总是比另外方法测量焦距更大,有可能就是因为透镜的光心不在中央导致的误差
+\subsection{测量过程中误差来源分析}
+\noindent
+(1)未调节完全共轴导致的误差或者物体较大不符合傍轴条件,会出现像差和色差\\
+(2)非位移法测量会有因为透镜光心测量不准带来的误差\\
+(3)成像的清晰度因为不同人而有不同的差别\\
+(4)读数不准造成的误差\\
+(5)透镜不同位置材料不同导致折射率不同或者不同位置尺寸不同的误差\\
+(6)成像像差或者视差带来的误差
+\subsection{自准直法测量薄透镜焦距减小误差的一种方法}
+由于透镜的光心不一定在底座刻线的平面内,因此会对于透镜和物之间距离测量不准,所测结果可能偏大或偏小.要消除这一系统误差,可将透镜和物反转,再测量一次,然后取其平均值,这样就可以消除因为光心测量不准带来的系统误差
+\subsection{透镜自准直法为何能在两个位置成两个像}
+在自准直法测量薄透镜焦距过程中我们观察到移动透镜可以在两个位置成像,一个一定是因为折射光线经过平面镜反射成像,而另外一个是物被凸透镜反射成像,因此在具体测量之前我们用平行光束汇聚的方法粗测透镜焦距是有必要的
+\subsection{观测像的清晰度导致的误差}
+我们在观测像的时候都会发现,在一定的观测区间内,像感觉上都是清晰的,而因为光学器件不能保证严格的傍轴条件,并且透镜也不能做成严格的薄透镜,因此成像时会出现色差和像差的情况,对于不同物距所成的像,就算是对于同一个人而言感觉上的清晰区间也不一样,因此也会导致不同程度上的误差
+
+\section{收获与感想}
+
+通过本次实验,我明白了在实验过程中需要对于实验条件的满足十分重要,否则会出现实验原理的错误(比如调节光具共轴);当我们遇到测量一个物体的位置不能准确测量的时候,我们可以考虑测量它的相对位置(位移法测量焦距);多次测量取平均值可以减小误差.
+\section{原始数据整理}
+
+\begin{table}[H] 
+	\caption{位移法测凸透镜焦距原始数据}
+	\label{位移法测凸透镜焦距原始数据}
+	\centering
+	\begin{tabular}{ccccc}
+		\toprule[0.5mm]
+		 次数 & $x_{1}/cm$  & $x_{2}/cm $ & $x_{3}/cm$  & $x_{4}/cm$  \\
+		 \midrule
+        1 & 31.10  & 95.00  & 54.60  & 72.12  \\
+        2 & 31.10  & 100.00  & 52.75  & 78.86  \\
+        3 & 31.10  & 105.00  & 51.60  & 84.78  \\
+        \bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+其中,$x_{1}$为物屏所在的位置,$x_{2}$为像屏所在的位置,$x_{3}$为凸透镜成大像时的位置,$x_{4}$为凸透镜成小像时的位置
+
+\begin{table}[H] 
+	\caption{自准直法测凸透镜焦距原始数据}
+	\label{自准直法测凸透镜焦距原始数据}
+	\centering
+		\begin{tabular}{ccc}
+			\toprule[0.5mm]
+			 次数&$x_{1}/cm$  &$x_{2}/cm$  \\
+            \midrule
+            1&31.10&46.14 \\
+			\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+其中,$x_{1}$为物屏的位置,$x_{2}$为在物屏上成等大倒立实像时凸透镜的位置
+
+\begin{table}[H] 
+	\caption{物像法测凹透镜焦距原始数据}
+	\label{物像法测凹透镜焦距原始数据}
+	\centering
+	    \begin{tabular}{ccccc}
+	        \toprule[0.5mm]
+	        次数 & $x_{1}/cm$  & $x_{2}/cm $ & $x_{3}/cm$  & $x_{4}/cm$  \\
+	        \midrule
+          	1 & 31.10  & 110.00  & 75.00  & 88.81  \\
+	        2 & 31.10  & 105.00  & 75.00  & 90.00  \\
+	        3 & 31.10  & 115.00  & 75.00 & 87.86  \\
+         	\bottomrule[0.5mm]
+     \end{tabular}
+ \end{table}
+其中,$x_{1}$为物屏的位置,$x_{2}$为像屏所在的位置,$x_{3}$为成像时凸透镜所在的位置,$x_{4}$为物在像屏成像时凹透镜所在的位置
+\begin{table}[H] 
+	\caption{自准直法测凹透镜焦距原始数据}
+	\label{自准直法测凹透镜焦距原始数据}
+	\centering
+		\begin{tabular}{cccc}
+			\toprule[0.5mm]
+			次数 & $x_{1}/cm$ & $x_{2}/cm$ & $x_{3}/cm$ \\
+			\midrule
+			1 & 31.10 & 62.60 & 76.01 \\
+			\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+其中,$x_{1}$为物屏所在位置,$x_{2}$为凸透镜所在位置,$x_{3}$为成像时凹透镜所在位置
+
+\end{document} 

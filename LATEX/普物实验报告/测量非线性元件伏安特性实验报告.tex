@@ -1,0 +1,353 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{测量非线性元件的伏安特性}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	本实验利用直流电源,电阻箱,电阻,稳压二极管,电流表,电压表,数字多用表等器材测量电阻和稳压二极管的伏安特性曲线,掌握分压电路实验方法以及二极管的单向导电性,了解了误差估算方法,为以后电学实验的开展打下良好基础.\\
+	\par\textbf{关键词: } 电阻,二极管,伏安特性
+\end{abstract}
+
+\section{实验目的}
+\noindent
+(1)了解常用电学实验仪器的规格和使用,重点学习使用数字多用表\\
+(2)学习电学实验操作规程,练习连接电路,重点掌握分压电路\
+(3)学习测量非线性元件的伏安特性,掌握测量方法、基本电路,了解误差和估算方法\\
+(4)了解二极管的单向导电性以及稳压二极管特性
+\section{实验仪器}
+直流电源,电位器(2个),电阻箱,固定电阻,稳压二极管,指针式电流表,指针式电压表,数字多用表(2块),导线和开关
+\section{实验数据处理}
+\subsection{测量稳压二极管伏安特性}
+\begin{table}[H]
+	\caption{测量稳压二极管正向伏安特性}
+	\label{测量稳压二极管正向伏安特性}
+	\centering
+	\begin{tabular}{*{11}{c}}
+		\toprule[0.5mm]
+		$I/mA$&0.003&0.007&0.009&0.011&0.014&0.023&0.083&0.139&0.299&0.442\\
+		\midrule
+		$U/V$&0.4942&0.5282&0.5436&0.5502&0.5620&0.5867&0.6425&0.6632&0.6921&0.7061\\
+		\bottomrule[0.5mm]
+		$I/mA$&0.718&0.846&1.046&2.449&3.923&5.194&6.510&8.140&8.440&9.837\\
+		\midrule
+		$U/V$&0.7228&0.7284&0.7354&0.7630&0.7779&0.7867&0.7939&0.8000&0.8016&0.8064\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} 稳压二极管正向伏安特性曲线}
+	\includegraphics[width=13cm,height=10cm]  {稳压二极管正向伏安特性曲线.png} 
+\end{figure}
+
+\begin{center}
+	测量$U=0.8000V$时的静态电阻:$R_{1}=98.28\Omega$
+\end{center}
+
+\begin{table}[H]
+	\caption{测量稳压二极管反向伏安特性}
+	\label{测量稳压二极管反向伏安特性}
+	\begin{tabular}{*{10}{c}}
+		\toprule[0.5mm]
+		$I/\mu A$&-0.08&-0.13&-0.19&-0.26&-0.35&-0.42&-0.46&-0.59&-0.79\\
+		\midrule
+		$U/V$&-0.511&-0.820&-1.125&-1.448&-1.839&-2.058&-2.213&-2.560&-3.026\\
+		\bottomrule[0.5mm]
+		$I/\mu A$&-1.01&-1.16&-1.42&-1.48&-1.58&-1.91&-6.00&-8.47&-17.24\\
+		\midrule
+		$U/V$&-3.401&-3.615&-3.881&-3.926&-4.000&-4.202&-4.964&-5.100&-5.297\\
+		\bottomrule[0.5mm]
+		$I/mA$&-0.8349&-1.740&-2.524&-3.751&-5.526&-5.574&-7.162&-7.677&-9.534\\
+		\midrule
+		$U/V$&-5.507&-5.514&-5.518&-5.523&-5.529&-5.532&-5.536&-5.539&-5.544\\
+		\bottomrule[0.5mm]
+		$I/mA$&-9.989&-10.000&-10.011&-13.119&-16.029&-17.324&-18.149&-19.411&-19.940\\
+		\midrule
+		$U/V$&-5.549&-5.550&-5.551&-5.559&-5.567&-5.571&-5.574&-5.578&-5.581\\
+		\toprule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} 稳压二极管反向伏安特性曲线}
+	\includegraphics[width=13cm,height=10cm]  {稳压二极管反向伏安特性曲线.png} 
+\end{figure}
+\begin{center}
+	测量$U=-4.000V$时的静态电阻:$R_{2}=2.53\times10^{6}\Omega$\\
+	测量$I=-10.000mA$时的动态电阻:$R_{3}=\dfrac{\Delta U}{\Delta I}=90.91\Omega$
+\end{center}
+
+\subsection{测定线性电阻伏安特性}
+\subsubsection{万用表初测电阻}
+\begin{table}[H]
+	\caption{万用表初测电阻阻值}
+	\label{万用表初测电阻阻值}
+	\centering
+	\begin{tabular}{*{3}{c}}
+		\toprule[0.5mm]
+		万用表内阻$r_{0}/\Omega$&$R_{1}/\Omega$&$R_{2}/\Omega$\\
+		\midrule
+		1.31&53.14&956.9\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsubsection{测定$R_{1}$伏安特性}
+\begin{table}[H]
+	\caption{测量$R_{1}$电表参量选定}
+	\label{测量$R_{1}$电表参量选定}
+	\centering
+	\begin{tabular}{c|cccc}
+		\toprule[0.5mm]
+		&电表量程&准确度等级&分度值&内阻\\
+		\hline
+		电流表&30$mA$&1.0&0.4$mA$&4.8$\Omega$\\
+		电压表&1.5$V$&1.0&0.02$V$&1.5$k\Omega$\\
+		\toprule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{测量$R_{1}$伏安特性}
+	\label{测量$R_{1}$伏安特性}
+	\centering
+	\begin{tabular}{*{9}{c}}
+		\toprule[0.5mm]
+		$I/mA$&2.00&4.00&6.00&8.00&10.00&12.00&14.00&16.00\\
+		\midrule
+		$U/V$&0.100&0.190&0.300&0.380&0.500&0.600&0.680&0.780\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} $R_{1}$伏安特性曲线}
+	\includegraphics[width=13cm,height=10cm]  {测量R1伏安特性曲线.png} 
+\end{figure}
+\begin{center}
+	$R_{1}^{\prime}=\dfrac{1}{k_{1}}=49.1\Omega$\\
+	$R_{1}=\dfrac{R_{V}R_{1}^{\prime}}{R_{V}-R_{1}^{\prime}}=50.7\Omega$
+\end{center}
+线性拟合误差:
+\begin{center}
+	$\sigma_{k_{1}A}=k_{1}\sqrt{\dfrac{1/r^{2}-1}{n-2}}=2.880\times10^{-4}\Omega^{-1}$\\
+\end{center}
+由仪器允差造成误差:
+\begin{center}
+	$\sigma_{B}=\dfrac{\Delta}{\sqrt{3}}=1.732\times10^{-4}A$\\
+	$\sigma_{k_{1}B}=\dfrac{\sigma_{B}}{\sqrt{\sum_{i=1}^{8}(x_{i}-\bar{x})^{2}}}=2.726\times10^{-4}\Omega^{-1}$\\
+\end{center}
+合成误差为:
+\begin{center}
+	$\sigma_{k_{1}}=\sqrt{\sigma_{k_{1}A}^{2}+\sigma_{k_{1}B}^{2}}=4\times10^{-4}\Omega^{-1}$\\
+	$\sigma_{R_{1}^{\prime}}=\dfrac{\sigma_{k_{1}}}{k_{1}^{2}}=0.956\Omega$\\
+	$\sigma_{R_{1}}=\frac{R_{V}^{2}}{(R_{V}-R_{1}^{\prime})^{2}}\sigma_{R_{1}^{\prime}}=1.0\Omega$\\
+\end{center}
+$R_{1}$电阻值为:
+\begin{center}
+	$R_{1}=(50.7\pm1.0)\Omega$
+\end{center}
+\subsubsection{测量$R_{2}$伏安特性}
+\begin{table}[H]
+	\caption{测量$R_{2}$电表参量选定}
+	\label{测量$R_{2}$电表参量选定}
+	\centering
+	\begin{tabular}{c|cccc}
+		\toprule[0.5mm]
+		&电表量程&准确度等级&分度值&内阻\\
+		\hline
+		电流表&7.5$mA$&1.0&0.1$mA$&16.9$\Omega$\\
+		电压表&7.5$V$&1.0&0.1$V$&7.5$k\Omega$\\
+		\toprule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{测量$R_{2}$伏安特性}
+	\label{测量$R_{2}$伏安特性}
+	\centering
+	\begin{tabular}{*{9}{c}}
+		\toprule[0.5mm]
+		$I/mA$&0.50&1.50&2.00&2.50&3.00&4.00&5.00&6.00\\
+		\midrule
+		$U/V$&0.50&1.47&1.90&2.40&2.90&3.84&4.75&5.75\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} $R_{2}$伏安特性曲线}
+	\includegraphics[width=13cm,height=10cm]  {测量R2伏安特性曲线.png} 
+\end{figure}
+\begin{center}
+	$R_{2}^{\prime}=\dfrac{1}{k_{2}}=951.51\Omega$\\
+	$R_{2}=R_{2}^{\prime}-R_{A}=934.61\Omega$
+\end{center}
+线性拟合误差:
+\begin{center}
+		$\sigma_{k_{2}A}=k_{2}\sqrt{\dfrac{1/r^{2}-1}{n-2}}=5.072\times10^{-6}\Omega^{-1}$
+	\end{center}
+		由仪器允差造成误差:
+		\begin{center}
+			$\sigma_{B}=\dfrac{\Delta}{\sqrt{3}}=4.330\times10^{-5}A$\\
+			$\sigma_{k_{2}B}=\dfrac{\sigma_{B}}{\sqrt{\sum_{i=1}^{8}(x_{i}-\bar{x})^{2}}}=9.345\times10^{-6}\Omega^{-1}$\\
+		\end{center}
+合成误差为:
+\begin{center}
+	$\sigma_{k_{2}}=\sqrt{\sigma_{k_{2}A}^{2}+\sigma_{k_{2}B}^{2}}=1.1\times10^{-5}\Omega^{-1}$\\
+	$\sigma_{R_{2}}=\dfrac{\sigma_{k_{1}}}{k_{1}^{2}}=9\Omega$\\
+\end{center}
+$R_{2}$电阻值为:
+\begin{center}
+	$R_{2}=(9.35\pm0.09)\times10^{2}\Omega$
+\end{center}
+
+\section{思考题}
+\subsection{思考题一}
+因为万用表不同档位对应的内阻值不一样,因此不同档位测量二极管正向电阻时流过二极管的电流不同,二极管为非线性元件,电压和电流有关,因此不同的电流下测出来的正向电阻值不同.
+\subsection{思考题二}
+电流表外接法.因为对于稳压二极管而言,其正向电阻很小,因此如果用电流表外接法,则电压表分流的影响很小,测量曲线相对更准确,因此用电流表外接法.
+\section{分析与讨论}
+\subsection{分析修正电表内阻误差后对测量结果的影响}
+对于内接法测大电阻而言,$\eta=\frac{\Delta R}{R}=1.8\%$,经过误差分析计算过后发现合成误差值达到了10$\Omega$量级,几乎与电流表内阻带来误差相当,因此除了修正内阻误差还需要修正测量偏差.\\
+
+对于外接法测小电阻而言,$\eta=\frac{\Delta R}{R}=3.2\%$,经过误差分析发现曲线拟合误差和电压表分压产生误差相当,因此除了修正内阻误差还需要修正测量偏差.\\
+
+而对于内外接法而言,修正电表内阻带来的对于测量值的影响大致在同一个数量级,但在本次实验而言,内接法测量大电阻带来的影响相对于外接法而言稍大.
+\subsection{稳压二极管的静态、动态电阻}
+稳压二极管的静态电阻反映了稳压二极管对电流的阻碍作用,稳压二极管的动态电阻反映了稳压二极管伏安特性曲线电压随电流变化的快慢.
+\subsection{比较、分析不同方法测电阻的结果}
+内接法测量电阻会因为电流表分压导致测量值偏大,外接法测量电阻会因为电压表分流导致测量值偏小,但这是可以用电表内阻修正的;但接触电阻的影响无法消去,可能会导致电阻测量偏小或者偏大,但偏离量是小量(但测量很小电阻时接触电阻的影响会比较显著).\\
+
+但通过观察本次实验数据我们发现不管是内接法还是外接法测量电阻阻值带来的系统误差(原理误差)大概是相同量级的.用指针式电表测量对于数据每个人估测差别可能会更大,用数字式电表测量会更精确一些.
+\section{收获与感想}
+在本次实验中我练习了使用数字多用表以及指针式电流表以及指针式电压表,了解了电表的准确度等级以及使用方法,学习了电学实验的操作规程以及分压调节电路,了解了估算误差的方法以及作图法处理实验数据的方法,为后续实验打下基础.\\
+
+在使用过程中感觉学校部分导线中的导体裸露在外,开关接触不良,可能会引起安全事故,这可能会是一个安全隐患.对于电学实验仪器中的电表,感觉指针式电表用来作为示零计比较适合,而用来作为数据的测量感觉不如数字式电表精确,但可以用来帮助我们了解电学实验仪器的原理.
+\section{原始数据整理}
+\begin{table}[H]
+	\caption{测量稳压二极管正向伏安特性}
+	\label{测量稳压二极管正向伏安特性}
+	\centering
+	\begin{tabular}{*{11}{c}}
+		\toprule[0.5mm]
+		$I/mA$&0.003&0.007&0.009&0.011&0.014&0.023&0.083&0.139&0.299&0.442\\
+		\midrule
+		$U/V$&0.4942&0.5282&0.5436&0.5502&0.5620&0.5867&0.6425&0.6632&0.6921&0.7061\\
+		\bottomrule[0.5mm]
+		$I/mA$&0.718&0.846&1.046&2.449&3.923&5.194&6.510&8.140&8.440&9.837\\
+		\midrule
+		$U/V$&0.7228&0.7284&0.7354&0.7630&0.7779&0.7867&0.7939&0.8000&0.8016&0.8064\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{测量稳压二极管反向伏安特性}
+	\label{测量稳压二极管反向伏安特性}
+	\begin{tabular}{*{10}{c}}
+		\toprule[0.5mm]
+		$I/\mu A$&-0.08&-0.13&-0.19&-0.26&-0.35&-0.42&-0.46&-0.59&-0.79\\
+		\midrule
+		$U/V$&-0.511&-0.820&-1.125&-1.448&-1.839&-2.058&-2.213&-2.560&-3.026\\
+		\bottomrule[0.5mm]
+		$I/\mu A$&-1.01&-1.16&-1.42&-1.48&-1.58&-1.91&-6.00&-8.47&-17.24\\
+		\midrule
+		$U/V$&-3.401&-3.615&-3.881&-3.926&-4.000&-4.202&-4.964&-5.100&-5.297\\
+		\bottomrule[0.5mm]
+		$I/mA$&-0.8349&-1.740&-2.524&-3.751&-5.526&-5.574&-7.162&-7.677&-9.534\\
+		\midrule
+		$U/V$&-5.507&-5.514&-5.518&-5.523&-5.529&-5.532&-5.536&-5.539&-5.544\\
+		\bottomrule[0.5mm]
+		$I/mA$&-9.989&-10.000&-10.011&-13.119&-16.029&-17.324&-18.149&-19.411&-19.940\\
+		\midrule
+		$U/V$&-5.549&-5.550&-5.551&-5.559&-5.567&-5.571&-5.574&-5.578&-5.581\\
+		\toprule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{测量$R_{1}$电表参量选定}
+	\label{测量$R_{1}$电表参量选定}
+	\centering
+	\begin{tabular}{c|cccc}
+		\toprule
+		&电表量程&准确度等级&分度值&内阻\\
+		\hline
+		电流表&30$mA$&1.0&0.4$mA$&4.8$\Omega$\\
+		电压表&1.5$V$&1.0&0.02$V$&1.5$k\Omega$\\
+		\toprule
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{测量$R_{1}$伏安特性}
+	\label{测量$R_{1}$伏安特性}
+	\centering
+	\begin{tabular}{*{9}{c}}
+		\toprule[0.5mm]
+		$I/mA$&2.00&4.00&6.00&8.00&10.00&12.00&14.00&16.00\\
+		\midrule
+		$U/V$&0.100&0.190&0.300&0.380&0.500&0.600&0.680&0.780\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{测量$R_{2}$电表参量选定}
+	\label{测量$R_{2}$电表参量选定}
+	\centering
+	\begin{tabular}{c|cccc}
+		\toprule[0.5mm]
+		&电表量程&准确度等级&分度值&内阻\\
+		\hline
+		电流表&7.5$mA$&1.0&0.1$mA$&16.9$\Omega$\\
+		电压表&7.5$V$&1.0&0.1$V$&7.5$k\Omega$\\
+		\toprule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\caption{测量$R_{2}$伏安特性}
+	\label{测量$R_{2}$伏安特性}
+	\centering
+	\begin{tabular}{*{9}{c}}
+		\toprule[0.5mm]
+		$I/mA$&0.50&1.50&2.00&2.50&3.00&4.00&5.00&6.00\\
+		\midrule
+		$U/V$&0.50&1.47&1.90&2.40&2.90&3.84&4.75&5.75\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\end{document} 

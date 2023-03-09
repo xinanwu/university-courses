@@ -1,0 +1,242 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{弦上驻波实验报告}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	\renewcommand{\abstractname}{\Large 摘要\\}
+	\begin{abstract}
+		{\normalsize 驻波是指频率相同、传输方向相反的两种波，沿传输线形成的一种分布状态。对于弦上的驻波，当声波传播到固定端时会发生反射，反射波与入射波传播方向相反，振幅和频率都相同。因此，入射波和反射波的叠加形成驻波。我们本次实验将通过实验来探究弦上驻波的特性。
+			
+			\textbf{关键词：驻波、反射、频率}}
+	\end{abstract}
+	
+	\newpage
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\section{实验目的}
+	(1)观察在两端被固定的弦线上形成的驻波现象；了解弦线达到共振和形成稳定驻波的条件；
+	\par (2)测定弦线上横波的传播速度；
+	\par (3)用实验方法确定弦线做受迫振动时的共振频率与驻波波长、张力和弦线线密度之间的关系；
+	\par (4)对(3)中的实验结果用作图或者最小二乘法作线性拟合数据，并给出结论。
+	\section{实验器材}
+	弦音计装置一套（包括驱动线圈和探测线圈各一个、1kg砝码和不同线密度的吉他弦），信号（功率函数）发生器，示波器，千分尺，米尺，电子天平。
+	\section{实验过程及数据整理}
+	\subsection{弦线密度的测量}
+	\begin{center}
+		$m=4.56g,l=(851.00-78.00)mm=773.00mm$\\
+		$\lambda=\dfrac{m}{l}=5.900\times 10^{-3}kg/m$
+	\end{center}
+\par 我们取$e_{m}=0.01g,e_{l}=1mm$,则：
+\begin{center}
+	$\dfrac{\sigma_{\lambda}}{\lambda}=\sqrt{(\dfrac{e_{m}}{\sqrt{3}m})^{2}+(\dfrac{e_{l}}{\sqrt{3}l})^{2}}=1.47\times 10^{-3}$
+\end{center}
+\par 因此可得：$\lambda=(5.900\pm 0.009)\times10^{-3}kg/m$
+\subsection{频率$f$与波腹个数$n$的关系($L=60cm,T=3mg$)}
+\begin{table}[H]
+	\centering
+	\caption{频率$f$与波腹个数$n$的关系($L=60cm,T=3mg$)}
+	\label{频率$f$与波腹个数$n$的关系($L=60cm,T=3mg$)}
+	\begin{tabular}{|c|cc|}
+		\toprule[0.5mm]
+		$n$&$f_{\textbf{信}}(Hz)$&$f_{\textbf{波}}(Hz)$\\
+		\midrule
+		1&30.40&60.71\\
+		2&60.80&119.3\\
+		3&91.40&181.7\\
+		4&125.40&249.20\\
+		5&156.70&312.5\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}频率$f$与波腹个数$n$的关系($L=60cm,T=3mg$)}
+	\includegraphics[width=10cm,height=7cm]  {fn.png} 
+\end{figure}
+\par 我们使用公式$v_{1}=\sqrt{\dfrac{T}{\lambda}}=70.59m/s$
+\begin{center}
+	$\sigma_{v_{1}}=v_{1}\cdot (\dfrac{\sigma_{\lambda}}{2\lambda})=0.10m/s$\\
+	$\therefore v_{1}=(70.59\pm 0.10)m/s$
+\end{center}
+\par 我们使用公式$v=4k_{1}L=2k_{2}L$,我们取$e_{L}=0.2cm$
+\begin{center}
+	$\sigma_{k_{1}}=k_{1}\sqrt{\dfrac{\frac{1}{r_{1}^{2}}-1}{n-2}}=0.3663Hz$\\
+	$\sigma_{k_{2}}=k_{2}\sqrt{\dfrac{\frac{1}{r_{2}^{2}}-1}{n-2}}=0.8961Hz$\\
+\end{center}
+\par 因此我们计算$v_{2}=76.1m/s,v_{3}=76.0m/s$
+\par 不确定度计算为：
+\begin{center}
+	$\sigma_{v_{2}}=v_{2}\sqrt{(\dfrac{e_{L}}{\sqrt{3}L})^{2}+(\dfrac{\sigma_{k_{1}}}{k_{1}})^{2}}=0.9m/s$\\
+	$\sigma_{v_{3}}=v_{3}\sqrt{(\dfrac{e_{L}}{\sqrt{3}L})^{2}+(\dfrac{\sigma_{k_{2}}}{k_{2}})^{2}}=1.1m/s$
+\end{center}
+\par 因此我们计算出速度为：
+\begin{center}
+	$v_{1}=(70.59\pm 0.10)m/s$(利用拉力与线密度计算出的速度)\\
+	$v_{2}=(76.1\pm 0.9)m/s$(利用信号发生器信号频率曲线计算出的速度)\\
+	$v_{3}=(76.0\pm 1.1)m/s$(利用弦线共振频率曲线计算出的速度)
+\end{center}
+\subsection{频率$f$与拉力$T$的关系($n=1,L=60cm$)}
+\begin{table}[H]
+	\centering
+	\caption{频率$f$与拉力$T$的关系($L=60cm,n=1$)}
+	\label{频率$f$与拉力$T$的关系($L=60cm,n=1$)}
+	\begin{tabular}{|c|cc|}
+		\toprule[0.5mm]
+		$T/mg$&$f_{\textbf{信}}(Hz)$&$f_{\textbf{波}}(Hz)$\\
+		\midrule
+		1&17.60&35.61\\
+		2&24.80&49.70\\
+		3&30.40&60.71\\
+		4&35.10&70.02\\
+		5&39.25&78.12\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}频率$f$与拉力$T$的关系($L=60cm,n=1$)}
+	\includegraphics[width=10cm,height=7cm]  {ft1.png} 
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}频率$f$与拉力$T$的关系($L=60cm,n=1$)}
+	\includegraphics[width=10cm,height=7cm]  {ft2.png} 
+\end{figure}
+\par \textbf{由第一个图可以看出频率$f$与拉力$T$的0.5次方接近线性关系；由第二个图可得系数$k\approx 0.5$，即频率$f$与拉力$T$的0.5次方接近线性关系。}
+\subsection{频率$f$与有效长度$L$的关系($n=1,T=3mg$)}
+\begin{table}[H]
+	\centering
+	\caption{频率$f$与有效长度$L$的关系($T=3mg,n=1$)}
+	\label{频率$f$与有效长度$L$的关系($T=3mg,n=1$)}
+	\begin{tabular}{|c|cc|}
+		\toprule[0.5mm]
+		$L/cm$&$f_{\textbf{信}}(Hz)$&$f_{\textbf{波}}(Hz)$\\
+		\midrule
+		60&30.40&60.71\\
+		55&33.20&66.23\\
+		50&36.80&74.18\\
+		45&40.50&83.42\\
+		40&45.80&91.70\\
+		35&52.70&105.3\\
+		30&61.90&123.9\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}频率$f$与有效长度$L$的关系($T=3mg,n=1$)}
+	\includegraphics[width=10cm,height=7cm]  {fl1.png} 
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1}频率$f$与有效长度$L$的关系($T=3mg,n=1$)}
+	\includegraphics[width=10cm,height=7cm]  {fl2.png} 
+\end{figure}
+\par \textbf{由第一个图可以看出频率$f$与有效长度$L$的-1次方接近线性关系；由第二个图可得系数$k\approx -1$，即频率$f$与有效长度$L$的-1次方接近线性关系。}
+	\section{分析与讨论}
+	\textbf{在本次实验中，我们算出来了三个速度，其中第一个速度是利用拉力$T$与线密度$\lambda$计算出来的，其不确定度最小；第二个速度与第三个速度分别是用信号发生器信号频率与弦线共振频率计算可得的，其不确定度较大，而通过计算$L$与$k$的相对不确定度后我们发现$\dfrac{\sigma_{k}}{k}$在$10^{-2}$量级，而$\dfrac{\sigma_{L}}{L}$在$10^{-3}$量级，因此对于实验不确定度起主导作用的为频率项。而我们通过实验确实能够发现，对于弦线真正的共振频率，我们是很难测量准确的，有外界的各种干扰以及测量者的判断不同都会出现不同的结果。}
+	\section{收获与感想}
+	\textbf{在本次实验过程中，我们观察学习了弦上驻波实验，通过实验我们明白了由于线圈中磁场变化而产生的力频率与实际上信号发生器输出的信号频率存在着二倍的关系；通过观察Driver与Detector的耦合我们知道了要使得实验减少误差必须使其距离够远；通过观察共振触发输出的信号，我们可以明显体会到现实中的波并不是单一的单色波，而是由不同频率的波叠加而成这一事实。同时我们也学会了考虑问题的方法，为以后学习思考打下更好的基础。}
+\end{document}

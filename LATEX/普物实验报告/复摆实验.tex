@@ -1,0 +1,241 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{listings}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=2,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+	\pagestyle{myheadings}
+	\thispagestyle{plain}
+	\newpage
+	\setcounter{page}{1}
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{\vspace{2mm}
+				\hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+				\vspace{4mm}
+				\hbox to 6.28in { {\Large \hfill #1  \hfill} }
+				\vspace{3mm}}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{复摆实验}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	复摆又称物理摆，是在重力作用下，能绕通过自身某固定水平轴摆动的刚体。我们将在本次实验中研究复摆的物理特性，测定重力加速度以及用作图法和最小二乘法处理数据等。\\
+	\par\textbf{关键词: 刚体，物理摆，最小二乘法}
+
+\end{abstract}
+
+\section{实验目的}
+\noindent
+(1)研究复摆的物理特性；
+(2)用复摆测定重力加速度；
+(3)用作图法和最小二乘法研究问题和处理数据。
+\section{实验仪器}
+复摆，光电计时器，电子天平，米尺等。
+\section{实验过程及实验数据处理}
+\subsection{原始实验数据整理}
+在本实验中我们先测定复摆的质心的位置$x_{c}=0.05cm$，以及复摆的质量$m=411.45g$
+\par 我们测量了复摆右半部分的周期随悬点变化规律数据如下：
+\begin{table}[H]
+	\caption{复摆右半部分周期随悬点位置变化数据}
+	\centering
+	\begin{tabular}{|ccc||ccc|}
+		\toprule[0.5mm]
+		$n$&$x/cm$&$20T/s$&$n$&$x/cm$&$20T/s$\\
+		\midrule
+		2&1.30&61.9980&17&16.30&23.6538\\
+		4&3.30&39.2057&18&17.30&23.6095\\
+		6&5.30&31.5759&19&18.30&23.5960\\
+		7&6.30&29.6196&20&19.30&23.7310\\
+		8&7.30&27.8731&21&20.30&23.7617\\
+		9&8.30&26.8721&22&21.30&23.9183\\
+		10&9.30&25.8186&23&22.30&23.9704\\
+		11&10.30&25.1991&24&23.30&24.1802\\
+		12&11.30&24.6291&25&24.30&24.2441\\
+		13&12.30&24.3280&26&25.30&24.4998\\
+		14&13.30&24.0754&27&26.30&24.6865\\
+		15&14.30&23.8560&28&27.30&24.8709\\
+		16&15.30&23.7352&29&28.30&25.0630\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\par 我们测量了复摆左半部分的周期随悬点变化规律数据如下：
+\begin{table}[H]
+	\caption{复摆左半部分周期随悬点位置变化数据}
+	\centering
+	\begin{tabular}{|ccc||ccc|}
+		\toprule[0.5mm]
+		$n$&$x/cm$&$20T/s$&$n$&$x/cm$&$20T/s$\\
+		\midrule
+		2&1.10&62.5855&17&16.10&23.6510\\
+		4&3.10&39.5622&18&17.10&23.6623\\
+		6&5.10&31.9736&19&18.10&23.6809\\
+		7&6.10&29.7545&20&19.10&23.7423\\
+		8&7.10&28.1041&21&20.10&23.7590\\
+		9&8.10&26.9417&22&21.10&23.8978\\
+		10&9.10&25.9171&23&22.10&24.0396\\
+		11&10.10&25.3603&24&23.10&24.1491\\
+		12&11.10&24.7889&25&24.10&24.3237\\
+		13&12.10&24.4077&26&25.10&24.4927\\
+		14&13.10&24.0488&27&26.10&24.6441\\
+		15&14.10&23.8682&28&27.10&24.8132\\
+		16&15.10&23.7470&29&28.10&24.9751\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{最小二乘法处理实验数据}
+\subsubsection{对于$right$部分复摆数据处理}
+由题目中可得:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm,height=10cm]  {右半曲线.png} 
+	\caption{\label{1}$right$部分的线性拟合曲线}
+\end{figure}
+\begin{center}
+	$g_{R}=400\times\dfrac{4\pi^{2}}{k}=9.8047m/s^{2}$\\
+	$I_{GR}=m\cdot\dfrac{b}{k}=0.012393kg\cdot m^{2}$\\
+	$R_{G1}=\sqrt{\dfrac{b}{k}}=0.1736m$
+\end{center}
+\par 对于实验误差分析$r=0.999944$,因此我们有$\sigma_{k}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}=3.48(m/s^{2})^{-1}$
+$$\sigma_{g_{R}}=g_{R}\cdot \dfrac{\sigma_{k}}{k}=0.021m/s^{2}$$
+\par 因此$g_{R}=(9.805\pm 0.021)m/s^{2}$
+\subsubsection{对于$left$部分复摆数据处理}
+由题目中可得:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm,height=10cm]  {左半部分.png} 
+	\caption{\label{1}$left$部分的线性拟合曲线}
+\end{figure}
+\begin{center}
+	$g_{L}=400\times\dfrac{4\pi^{2}}{k}=9.7778m/s^{2}$\\
+	$I_{GR}=m\cdot\dfrac{b}{k}=0.01212kg\cdot m^{2}$\\
+	$R_{G2}=\sqrt{\dfrac{b}{k}}=0.1716m$
+\end{center}
+\par 对于实验误差分析$r=0.99986$,因此我们有$\sigma_{k}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}=5.52(m/s^{2})^{-1}$
+$$\sigma_{g_{L}}=g_{L}\cdot \dfrac{\sigma_{k}}{k}=0.03m/s^{2}$$
+\par 因此$g_{L}=(9.78\pm 0.03)m/s^{2}$
+\subsubsection{综合实验数据处理}
+\begin{center}
+	$\bar{g}=\dfrac{g_{R}+g_{L}}{2}=9.793m/s^{2}$\\
+	$\sigma_{\bar{g}}=\dfrac{\sqrt{\sigma_{g_{L}}^{2}+\sigma_{g_{R}}^{2}}}{2}=0.019m/s^{2}$
+	\end{center}
+\par 因此$\bar{g}=(9.793\pm 0.019)m/s^{2}$
+\begin{center}
+	$I_{G}=\dfrac{I_{GR}+I_{GL}}{2}=0.012257kg\cdot m^{2}$\\
+	$R_{G}=\dfrac{R_{G1}+R_{G2}}{2}=0.1726m$
+\end{center}
+\subsection{近似共轭点法计算重力加速度}
+\textcircled{1}我们取$x_{1}=11.30cm,20T_{1}=24.6291s,x_{2}=26.30cm,20T_{2}=24.6865s$
+\par 因此$\dfrac{4\pi^{2}}{g}=\dfrac{T_{1}^{2}+T_{2}^{2}}{2(x_{1}+x_{2})}+\dfrac{T_{1}^{2}-T_{2}^{2}}{2(x_{1}-x_{2})}$
+\par 我们计算可得：$g_{1}=9.719m/s^{2}$
+\par \textcircled{2}我们取$x_{1}=15.30cm,20T_{1}=23.7352s,x_{2}=20.30cm,20T_{2}=23.7617s$
+\par 因此$\dfrac{4\pi^{2}}{g}=\dfrac{T_{1}^{2}+T_{2}^{2}}{2(x_{1}+x_{2})}+\dfrac{T_{1}^{2}-T_{2}^{2}}{2(x_{1}-x_{2})}$
+\par 我们计算可得：$g_{2}=9.889m/s^{2}$
+\par \textcircled{3}我们取$x_{1}=15.10cm,20T_{1}=23.7470s,x_{2}=20.10cm,20T_{2}=23.7590s$
+\par 因此$\dfrac{4\pi^{2}}{g}=\dfrac{T_{1}^{2}+T_{2}^{2}}{2(x_{1}+x_{2})}+\dfrac{T_{1}^{2}-T_{2}^{2}}{2(x_{1}-x_{2})}$
+\par 我们计算可得：$g_{3}=9.817m/s^{2}$
+\par 因此$\bar{g}=\dfrac{1}{3}(g_{1}+g_{2}+g_{3})=9.808m/s^{2}$
+\subsection{利用复摆周期与悬点位置关系求重力加速度}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm,height=10cm]  {周期位置曲线.png} 
+	\caption{\label{1}复摆悬点位置与周期曲线}
+\end{figure}
+\textcircled{1}我们取$x_{1}=11.66cm,20T_{1}=24.7127s,x_{2}=26.08cm,20T_{2}=24.7127s$
+\par 因此$\dfrac{4\pi^{2}}{g}=\dfrac{T_{1}^{2}+T_{2}^{2}}{2(x_{1}+x_{2})}+\dfrac{T_{1}^{2}-T_{2}^{2}}{2(x_{1}-x_{2})}$
+\par 我们计算可得：$g_{1}=9.758m/s^{2}$
+\par \textcircled{2}我们取$x_{1}=13.69cm,20T_{1}=24.0954s,x_{2}=22.28cm,20T_{2}=24.0954s$
+\par 因此$\dfrac{4\pi^{2}}{g}=\dfrac{T_{1}^{2}+T_{2}^{2}}{2(x_{1}+x_{2})}+\dfrac{T_{1}^{2}-T_{2}^{2}}{2(x_{1}-x_{2})}$
+\par 我们计算可得：$g_{2}=9.783m/s^{2}$
+\par \textcircled{3}我们取$x_{1}=16.44cm,20T_{1}=23.6367s,x_{2}=18.26cm,20T_{2}=23.6367s$
+\par 因此$\dfrac{4\pi^{2}}{g}=\dfrac{T_{1}^{2}+T_{2}^{2}}{2(x_{1}+x_{2})}+\dfrac{T_{1}^{2}-T_{2}^{2}}{2(x_{1}-x_{2})}$
+\par 我们计算可得：$g_{3}=9.808m/s^{2}$
+\par 因此$\bar{g}=\dfrac{1}{3}(g_{1}+g_{2}+g_{3})=9.783m/s^{2}$
+\par\textcircled{4} 同时我们观察曲线最低点还得到了回转半径$R_{G1}=17.16cm,R_{G2}=17.36cm,20T=23.5171s$
+\par 因此$I_{G1}=0.012116kg \cdot m^{2},I_{G2}=0.012400kg\cdot m^{2}$
+	\par $I_{G}=\dfrac{I_{G1}+I_{G2}}{2}=0.012258kg\cdot m^{2}$
+	\par $R_{G}=\dfrac{R_{G1}+R_{G2}}{2}=0.1726m$
+\section{分析与讨论}
+\subsection{复摆振动周期测量的误差分析}
+\textcircled{1}我们在处理数据时没有考虑刀口的质量，而实际上刀口的质量是存在的而且对于每次的测量都不同，这会引起误差。
+\par \textcircled{2}我们的支架未调节竖直以及光电门为调节好会使得原理公式出现错误，因此这也会出现误差。
+\par \textcircled{3}我们在使用复摆时，复摆通常不会只在一个平面内摆动，通常是伴随着另一个平面的进动同时进行的，这会使得我们的周期测量不准。
+\par \textcircled{4}我们实验场地存在着空气阻力，这会使得我们周期测量偏大，从而使得我们原理公式出现误差。
+\par \textcircled{5}实验仪器精度所限。
+\subsection{处理数据三种方法的优缺点}
+\textcircled{1}最小二乘法作图：最下二乘法作图优点在于方便直观能看出数据的线性关系，而且能够省略一些不重要的量，直接通过斜率和截距的计算就能得出我们需要的量；缺点在于当数据点很多的时候输入数据比较麻烦且我们很难通过这种方法看出某些数据点有错误，需要一个一个查找十分不便。\\
+\par \textcircled{2}近似共轭点法：近似共轭点法优点在与能够用很少的数据(比如两个近似共轭点)计算出我们所需要的数据，比较方便，且物理思想比较能体现出来；缺点在于这种方法对于测量精度不够或者随机误差较大时，我们计算出来的量可能相差很大，精度有所欠缺。\\
+\par \textcircled{3}共轭点作图法：共轭点作图法优点在于能够用较少的数据计算出我们所需要的数据；缺点在于画图若采取最小二乘拟合则有可能选取的两个点误差变大，若插值函数拟合有可能难以找到合适的共轭点。
+\section{收获与感想}
+我们在本次实验中研究了复摆的物理特性，测定了重力加速度，以及学习了用作图法和最小二乘法处理实验数据，为我们本学期的实验课程画上了一个完美的句号。
+\end{document} 

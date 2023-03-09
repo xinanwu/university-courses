@@ -1,0 +1,177 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{graphicx,psfrag,epsfig}
+\usepackage{caption}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,bm,upgreek}
+\usepackage[mathscr]{eucal}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{普物实验报告}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+		\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		 芜湖
+			
+	\textbf{关键词：}
+	\end{abstract}
+\section{实验目的}
+\section{实验器材}
+\section{实验过程及数据整理}
+\section{分析与讨论}
+\section{收获与感想}
+\section{python源代码}
+\begin{lstlisting}[language=python]
+	import numpy as np
+	import matplotlib.pyplot as plt
+	filename = '三缝.txt'
+	pos = []
+	Efield = []
+	list1=[]
+	list2=[]
+	with open(filename, 'r') as file_to_read:
+	while True:
+	lines = file_to_read.readline() # 整行读取数据
+	if not lines:
+	break
+	pass
+	p_tmp, E_tmp = [float(i) for i in lines.split()] 
+	pos.append(p_tmp)  
+	Efield.append(E_tmp)
+	pass
+	pos = np.array(pos) # 将数据从list类型转换为array类型。
+	Efield = np.array(Efield)
+	l=[[] for i in range(100)]
+	m=361.14
+	n=29.9066
+	e=0.00064
+	c=0.227733
+	w=0.553067
+	k=0
+	g=0
+	def residual_function(a,d):
+	s=0
+	i=0
+	while i <=13999:
+	s+=(Efield[i]-m*(((np.sin(a*(pos[i]-n)))/(a*(pos[i]-n)))**2)*(((np.sin(d*3*(pos[i]-n)))/(np.sin(d*(pos[i]-n))))**2))**2
+	i+=1
+	return s
+	while k<=99:
+	j=0
+	while j<=99:
+	l[k].append(residual_function(c+j*e,w+k*e))
+	j+=1
+	k+=1
+	while g<=99:
+	list1.append(min(l[g]))
+	list2.append(l[g].index(min(l[g])))
+	g+=1
+	q=list1.index(min(list1))
+	p=list2[q]
+	print(p,q)
+	x1=np.linspace(0,70,14000)
+	y1=9*m*(((np.sin((c+p*e)*(x1-n)))/((c+p*e)*(x1-n)))**2)
+	x2=np.linspace(0,70,14000)
+	y2=m*(((np.sin((c+p*e)*(x2-n)))/((c+p*e)*(x2-n)))**2)*(((np.sin((w+q*e)*3*(x2-n)))/(np.sin((w+q*e)*(x2-n))))**2)
+	plt.plot(pos,Efield,'orange')
+	plt.plot(x2,y2,'black',linestyle='--')
+	plt.plot(x1,y1,'r',linestyle='--')
+	plt.xlabel('$\Delta x/mm$')
+	plt.ylabel('$I$')
+	plt.grid()
+	plt.text(57,2880,'xScatter\n---FitLine\n---EnvelopingLine',size = 8,family = "fantasy",style = "italic",bbox = dict(alpha = 0.2))
+	plt.show()      
+\end{lstlisting}
+	\begin{thebibliography}{99}  
+		\bibitem{ref1}Pontryagin, L. S., V. G. Boltyanskii, R. V. Gamkrelize, and E. F. Mishchenko, The Mathematical
+		Theory of Optimal Processes, New York, Wiley, 1962.
+		\bibitem{ref2}Miller Neilan, Rachael \& Lenhart, Suzanne. (2010). An Introduction to Optimal Control with an Application in Disease Modeling. DIMACS Series in Discrete Mathematics. 75. 10.1090/dimacs/075/03. 
+		\bibitem{ref3}J. R. Norris, Markov Chains. Cambridge;New York;: Cambridge University Press, 1997no. 2?.
+		\bibitem{ref4}Gumel AB, Lenhart S (2010) Modeling paradigms and analysis of disease transmission models, vol 75. American Mathematical Society, Providence
+	\end{thebibliography}
+\end{document}

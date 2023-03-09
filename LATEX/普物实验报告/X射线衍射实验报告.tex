@@ -1,0 +1,259 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{X射线衍射实验报告}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		X射线具有波动特性，当一束单色X射线入射到晶体时，由于晶体是由原子规则排列成的晶胞组成，这些规则排列的原子间距离与入射X射线波长有X射线衍射分析相同数量级，在某些特殊方向上产生强X射线衍射，衍射线在空间分布的方位和强度，与晶体结构密切相关，每种晶体所产生的衍射花样都反映出该晶体内部的原子排列规律。在本次实验中，我们将学习测量X射线通过单晶的衍射曲线。
+		
+		\textbf{关键词：X射线，衍射，原子}
+	\end{abstract}
+	\section{实验目的}
+	(1)了解X射线的基本性质；
+	\par (2)理解X射线衍射的原理和实验技术；
+	\par (3)测量X射线通过单晶的布拉格衍射曲线。
+	\section{实验器材}
+	X射线实验装置，NaCl晶体，LiF晶体
+	\section{实验过程及数据整理}
+	\subsection{NaCl晶体衍射实验}
+{
+		\centering
+	\begin{longtable}{||r|r||r|r||r|r||r|r||r|r||r|r||}
+		\caption{NaCl晶体衍射实验数据表}
+	\\ \hline
+	\hline
+		$\beta/^{\circ}$     & $R/s$     & $\beta/^{\circ}$     & $R/s$     & $\beta/^{\circ}$     & $R/s$     & $\beta/^{\circ}$     & $R/s$ & $\beta/^{\circ}$     & $R/s$ & $\beta/^{\circ}$     & $R/s$\\
+		\hline
+		2.5   & 5.4   & 6.3   & 1535.2  & 10.1  & 151.0  & 13.9  & 79.4  & 17.7  & 33.8  & 21.5  & 18.8  \\
+		2.6   & 4.0   & 6.4   & 1517.2  & 10.2  & 143.8  & 14.0  & 77.4  & 17.8  & 36.8  & 21.6  & 22.6  \\
+		2.7   & 6.0   & 6.5   & 993.6  & 10.3  & 133.2  & 14.1  & 84.0  & 17.9  & 31.8  & 21.7  & 18.6  \\
+		2.8   & 4.8   & 6.6   & 669.4  & 10.4  & 131.6  & 14.2  & 88.0  & 18.0  & 36.0  & 21.8  & 19.0  \\
+		2.9   & 4.8   & 6.7   & 609.0  & 10.5  & 142.8  & 14.3  & 185.2  & 18.1  & 32.0  & 21.9  & 47.8  \\
+		3.0   & 4.6   & 6.8   & 603.4  & 10.6  & 132.0  & 14.4  & 479.0  & 18.2  & 29.6  & 22.0  & 104.6  \\
+		3.1   & 3.8   & 6.9   & 792.4  & 10.7  & 136.0  & 14.5  & 736.2  & 18.3  & 39.0  & 22.1  & 167.8  \\
+		3.2   & 4.2   & 7.0   & 1626.4  & 10.8  & 118.6  & 14.6  & 575.8  & 18.4  & 27.8  & 22.2  & 121.0  \\
+		3.3   & 6.8   & 7.1   & 2844.4  & 10.9  & 127.2  & 14.7  & 232.2  & 18.5  & 29.6  & 22.3  & 68.0  \\
+		3.4   & 12.6  & 7.2   & 2972.6  & 11.0  & 123.0  & 14.8  & 84.6  & 18.6  & 33.2  & 22.4  & 28.0  \\
+		\hline
+		\hline
+		3.5   & 56.8  & 7.3   & 1601.2  & 11.1  & 122.4  & 14.9  & 66.2  & 18.7  & 30.2  & 22.5  & 18.2  \\
+		3.6   & 159.0  & 7.4   & 544.4  & 11.2  & 116.4  & 15.0  & 61.8  & 18.8  & 28.4  & 22.6  & 19.0  \\
+		3.7   & 345.0  & 7.5   & 432.0  & 11.3  & 111.8  & 15.1  & 67.4  & 18.9  & 24.2  & 22.7  & 15.2  \\
+		3.8   & 490.8  & 7.6   & 407.0  & 11.4  & 112.6  & 15.2  & 64.6  & 19.0  & 26.2  & 22.8  & 17.0  \\
+		3.9   & 634.4  & 7.7   & 398.4  & 11.5  & 104.4  & 15.3  & 65.4  & 19.1  & 31.6  & 22.9  & 18.6  \\
+		4.0   & 723.2  & 7.8   & 363.2  & 11.6  & 110.6  & 15.4  & 60.0  & 19.2  & 35.8  & 23.0  & 15.2  \\
+		4.1   & 800.4  & 7.9   & 361.2  & 11.7  & 107.8  & 15.5  & 62.6  & 19.3  & 37.4  & 23.1  & 11.6  \\
+		4.2   & 846.0  & 8.0   & 342.4  & 11.8  & 103.6  & 15.6  & 58.6  & 19.4  & 35.6  & 23.2  & 17.2  \\
+		4.3   & 923.6  & 8.1   & 332.4  & 11.9  & 94.2  & 15.7  & 55.4  & 19.5  & 64.0  & 23.3  & 10.2  \\
+		4.4   & 945.4  & 8.2   & 322.0  & 12.0  & 97.8  & 15.8  & 57.2  & 19.6  & 64.2  & 23.4  & 15.6  \\
+		4.5   & 959.2  & 8.3   & 316.4  & 12.1  & 104.0  & 15.9  & 55.6  & 19.7  & 42.6  & 23.5  & 16.4  \\
+		4.6   & 969.8  & 8.4   & 277.4  & 12.2  & 102.8  & 16.0  & 54.0  & 19.8  & 30.2  & 23.6  & 10.0  \\
+		4.7   & 1008.8  & 8.5   & 294.0  & 12.3  & 96.2  & 16.1  & 51.2  & 19.9  & 21.8  & 23.7  & 14.2  \\
+		4.8   & 977.8  & 8.6   & 271.2  & 12.4  & 89.2  & 16.2  & 53.4  & 20.0  & 21.4  & 23.8  & 14.6  \\
+		4.9   & 964.8  & 8.7   & 256.6  & 12.5  & 108.6  & 16.3  & 50.2  & 20.1  & 20.4  & 23.9  & 12.2  \\
+		5.0   & 980.0  & 8.8   & 264.2  & 12.6  & 128.0  & 16.4  & 46.2  & 20.2  & 20.6  & 24.0  & 11.6  \\
+		5.1   & 972.0  & 8.9   & 243.2  & 12.7  & 168.0  & 16.5  & 48.4  & 20.3  & 18.4  & 24.1  & 12.6  \\
+		5.2   & 955.4  & 9.0   & 229.2  & 12.8  & 249.4  & 16.6  & 48.2  & 20.4  & 22.2  & 24.2  & 12.0  \\
+		5.3   & 929.8  & 9.1   & 232.8  & 12.9  & 294.0  & 16.7  & 43.6  & 20.5  & 20.6  & 24.3  & 13.8  \\
+		5.4   & 902.6  & 9.2   & 215.4  & 13.0  & 194.0  & 16.8  & 44.0  & 20.6  & 22.2  & 24.4  & 14.8  \\
+		5.5   & 882.2  & 9.3   & 202.0  & 13.1  & 101.6  & 16.9  & 40.0  & 20.7  & 21.8  & 24.5  & 10.0  \\
+		5.6   & 869.6  & 9.4   & 189.0  & 13.2  & 91.6  & 17.0  & 37.2  & 20.8  & 18.2  & 24.6  & 11.6  \\
+		5.7   & 841.6  & 9.5   & 173.6  & 13.3  & 93.0  & 17.1  & 40.8  & 20.9  & 18.8  & 24.7  & 7.6  \\
+		5.8   & 788.4  & 9.6   & 179.2  & 13.4  & 86.4  & 17.2  & 35.8  & 21.0  & 19.6  & 24.8  & 9.6  \\
+		5.9   & 757.2  & 9.7   & 170.2  & 13.5  & 86.0  & 17.3  & 40.2  & 21.1  & 18.0  & 24.9  & 9.6  \\
+		6.0   & 734.4  & 9.8   & 160.2  & 13.6  & 83.6  & 17.4  & 34.0  & 21.2  & 16.8  & 25.0  & 8.6  \\
+		6.1   & 849.0  & 9.9   & 160.6  & 13.7  & 82.2  & 17.5  & 33.6  & 21.3  & 19.0  &-       &-  \\
+		6.2   & 1100.4  & 10.0  & 161.6  & 13.8  & 79.8  & 17.6  & 40.4  & 21.4  & 18.2  & -      &-  \\
+		\hline
+		\hline
+	\end{longtable}
+}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=10cm,height=7cm]  {nacl.png} 
+		\caption{\label{1}NaCl晶体衍射曲线}
+	\end{figure}
+	\subsection{LiF晶体衍射实验}{
+		\centering
+	\begin{longtable}{||r|r||r|r||r|r||r|r||r|r||r|r||}
+		\caption{LiF晶体衍射实验数据表}
+		\\ \hline
+		\hline
+		$\beta/^{\circ}$     & $R/s$     & $\beta/^{\circ}$     & $R/s$     & $\beta/^{\circ}$     & $R/s$     & $\beta/^{\circ}$     & $R/s$ & $\beta/^{\circ}$     & $R/s$ & $\beta/^{\circ}$     & $R/s$\\
+		\hline
+		3.0   & 7.8   & 7.6   & 63.4  & 12.2  & 36.8  & 16.8  & 26.4  & 21.4  & 20.2  & 26.0  & 17.8  \\
+		3.1   & 8.2   & 7.7   & 67.6  & 12.3  & 44.0  & 16.9  & 25.0  & 21.5  & 23.8  & 26.1  & 12.0  \\
+		3.2   & 9.2   & 7.8   & 59.6  & 12.4  & 32.2  & 17.0  & 25.6  & 21.6  & 19.2  & 26.2  & 15.6  \\
+		3.3   & 9.2   & 7.9   & 61.4  & 12.5  & 29.0  & 17.1  & 27.4  & 21.7  & 18.4  & 26.3  & 16.6  \\
+		3.4   & 11.4  & 8.0   & 60.8  & 12.6  & 32.4  & 17.2  & 22.4  & 21.8  & 20.2  & 26.4  & 14.2  \\
+		3.5   & 11.4  & 8.1   & 66.6  & 12.7  & 31.0  & 17.3  & 25.2  & 21.9  & 18.6  & 26.5  & 17.0  \\
+		3.6   & 7.8   & 8.2   & 67.8  & 12.8  & 31.4  & 17.4  & 22.0  & 22.0  & 19.4  & 26.6  & 12.4  \\
+		3.7   & 9.0   & 8.3   & 64.0  & 12.9  & 35.6  & 17.5  & 26.6  & 22.1  & 15.2  & 26.7  & 12.4  \\
+		3.8   & 10.8  & 8.4   & 66.2  & 13.0  & 34.4  & 17.6  & 25.8  & 22.2  & 21.8  & 26.8  & 15.8  \\
+		3.9   & 11.2  & 8.5   & 62.8  & 13.1  & 28.2  & 17.7  & 22.0  & 22.3  & 17.8  & 26.9  & 13.2  \\
+		4.0   & 9.8   & 8.6   & 71.8  & 13.2  & 25.2  & 17.8  & 26.8  & 22.4  & 18.8  & 27.0  & 16.8  \\
+		4.1   & 13.2  & 8.7   & 73.2  & 13.3  & 30.6  & 17.9  & 22.2  & 22.5  & 19.4  & 27.1  & 13.0  \\
+		4.2   & 9.8   & 8.8   & 76.8  & 13.4  & 26.8  & 18.0  & 23.0  & 22.6  & 20.0  & 27.2  & 16.0  \\
+		4.3   & 9.8   & 8.9   & 91.4  & 13.5  & 26.0  & 18.1  & 24.6  & 22.7  & 16.2  & 27.3  & 12.6  \\
+		\hline
+		\hline
+		4.4   & 12.0  & 9.0   & 113.2  & 13.6  & 28.8  & 18.2  & 24.4  & 22.8  & 19.2  & 27.4  & 15.8  \\
+		4.5   & 10.0  & 9.1   & 148.6  & 13.7  & 30.0  & 18.3  & 25.8  & 22.9  & 16.6  & 27.5  & 15.2  \\
+		4.6   & 13.8  & 9.2   & 98.4  & 13.8  & 27.8  & 18.4  & 28.2  & 23.0  & 18.6  & 27.6  & 15.2  \\
+		4.7   & 12.0  & 9.3   & 58.2  & 13.9  & 22.8  & 18.5  & 22.8  & 23.1  & 18.8  & 27.7  & 15.0  \\
+		4.8   & 17.2  & 9.4   & 58.8  & 14.0  & 29.6  & 18.6  & 24.6  & 23.2  & 16.6  & 27.8  & 11.4  \\
+		4.9   & 14.6  & 9.5   & 65.0  & 14.1  & 24.8  & 18.7  & 22.4  & 23.3  & 15.8  & 27.9  & 13.4  \\
+		5.0   & 15.4  & 9.6   & 55.8  & 14.2  & 27.4  & 18.8  & 26.4  & 23.4  & 19.4  & 28.0  & 12.6  \\
+		5.1   & 17.6  & 9.7   & 61.2  & 14.3  & 25.2  & 18.9  & 25.4  & 23.5  & 15.4  & 28.1  & 14.4  \\
+		5.2   & 21.2  & 9.8   & 72.6  & 14.4  & 29.8  & 19.0  & 25.2  & 23.6  & 17.0  & 28.2  & 15.2  \\
+		5.3   & 25.6  & 9.9   & 94.8  & 14.5  & 27.2  & 19.1  & 21.6  & 23.7  & 19.8  & 28.3  & 11.8  \\
+		5.4   & 33.0  & 10.0  & 123.6  & 14.6  & 27.8  & 19.2  & 23.6  & 23.8  & 17.0  & 28.4  & 15.2  \\
+		5.5   & 32.4  & 10.1  & 171.2  & 14.7  & 26.8  & 19.3  & 20.0  & 23.9  & 16.0  & 28.5  & 14.4  \\
+		5.6   & 45.0  & 10.2  & 259.2  & 14.8  & 19.4  & 19.4  & 28.2  & 24.0  & 14.4  & 28.6  & 15.8  \\
+		5.7   & 44.0  & 10.3  & 245.8  & 14.9  & 23.4  & 19.5  & 22.2  & 24.1  & 15.0  & 28.7  & 12.2  \\
+		5.8   & 44.2  & 10.4  & 98.6  & 15.0  & 24.0  & 19.6  & 19.2  & 24.2  & 18.6  & 28.8  & 14.4  \\
+		5.9   & 49.8  & 10.5  & 53.8  & 15.1  & 22.2  & 19.7  & 22.6  & 24.3  & 18.6  & 28.9  & 14.4  \\
+		6.0   & 52.6  & 10.6  & 46.0  & 15.2  & 23.4  & 19.8  & 24.2  & 24.4  & 15.6  & 29.0  & 14.8  \\
+		6.1   & 50.0  & 10.7  & 47.0  & 15.3  & 24.4  & 19.9  & 25.2  & 24.5  & 17.0  & 29.1  & 15.2  \\
+		6.2   & 58.0  & 10.8  & 37.8  & 15.4  & 24.6  & 20.0  & 22.8  & 24.6  & 16.4  & 29.2  & 13.8  \\
+		6.3   & 60.4  & 10.9  & 46.2  & 15.5  & 24.4  & 20.1  & 26.0  & 24.7  & 14.6  & 29.3  & 13.8  \\
+		6.4   & 61.2  & 11.0  & 44.6  & 15.6  & 29.0  & 20.2  & 24.8  & 24.8  & 16.2  & 29.4  & 10.6  \\
+		6.5   & 59.6  & 11.1  & 42.8  & 15.7  & 24.2  & 20.3  & 28.0  & 24.9  & 15.8  & 29.5  & 18.4  \\
+		6.6   & 64.4  & 11.2  & 44.0  & 15.8  & 22.4  & 20.4  & 27.8  & 25.0  & 18.8  & 29.6  & 13.0  \\
+		6.7   & 68.8  & 11.3  & 38.8  & 15.9  & 18.8  & 20.5  & 24.6  & 25.1  & 17.0  & 29.7  & 14.4  \\
+		6.8   & 57.2  & 11.4  & 41.6  & 16.0  & 18.8  & 20.6  & 29.0  & 25.2  & 17.0  & 29.8  & 16.0  \\
+		6.9   & 61.2  & 11.5  & 36.0  & 16.1  & 23.0  & 20.7  & 39.0  & 25.3  & 12.0  & 29.9  & 11.6  \\
+		7.0   & 56.0  & 11.6  & 36.8  & 16.2  & 25.0  & 20.8  & 34.6  & 25.4  & 14.0  & 30.0  & 10.8  \\
+		7.1   & 63.2  & 11.7  & 32.6  & 16.3  & 21.8  & 20.9  & 27.8  & 25.5  & 14.6  &-       & - \\
+		7.2   & 64.6  & 11.8  & 39.8  & 16.4  & 24.4  & 21.0  & 25.8  & 25.6  & 13.4  & -      &  -\\
+		7.3   & 58.8  & 11.9  & 39.2  & 16.5  & 24.8  & 21.1  & 23.0  & 25.7  & 11.4  &  -     &  -\\
+		7.4   & 59.4  & 12.0  & 37.8  & 16.6  & 21.6  & 21.2  & 22.2  & 25.8  & 17.2  &   -    & - \\
+		7.5   & 67.0  & 12.1  & 37.8  & 16.7  & 24.2  & 21.3  & 22.6  & 25.9  & 18.8  &    -   &-  \\
+		\hline
+		\hline
+	\end{longtable}
+}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=10cm,height=7cm]  {lif.png} 
+		\caption{\label{1}LiF晶体衍射}
+	\end{figure}
+\par 通过观察$LiF$的X射线衍射图可知$K_{\alpha}$线的衍射峰$\theta=10.2^{\circ}$,$2dsin\theta=\lambda\Rightarrow d=200.75pm$,即\textbf{$LiF$的晶面间距为$200.75pm$。}
+	\section{思考题}
+	\textbf{说明测角器零点的方法的原理}
+	\par \textbf{因为机器虽然调到了couple模式，但是入射角和接收角仍然可能不一样，为此就要调整角度使得入射角和接收角一致，因为我们考虑标准峰位和测角器峰位的偏差就是测角器的零点偏差，因此最后倒回去就是零点。}
+	\section{分析与讨论}
+	\textbf{Q:NaCl晶体各个衍射峰的来源}
+	\par \textbf{A:从左至右第一个峰为连续谱，为电子与阳极撞击产生的辐射；第二个峰为$K_{\beta}$线一级衍射峰，理论值为$6.4^{\circ}$，实际值为$6.3^{\circ}$；第三个峰为$K_{\alpha}$线一级衍射峰，理论值为$7.2^{\circ}$，实际值为$7.2^{\circ}$；第四个峰为$K_{\beta}$线二级衍射峰，理论值为$12.9^{\circ}$，实际值为$12.9^{\circ}$；第五个峰为$K_{\alpha}$线二级衍射峰，理论值为$14.6^{\circ}$，实际值为:$14.5^{\circ}$；第六个峰为$K_{\beta}$线三级衍射峰，理论值为$19.7^{\circ}$，实际值为:$19.6^{\circ}$；第七个峰为$K_{\alpha}$线三级衍射峰，理论值为$22.2^{\circ}$，实际值为$22.1^{\circ}$；因此可以看出衍射峰对应角度实际值与理论值还是符合的较好的。}
+	\par \textbf{Q:LiF晶体各个衍射峰的来源}
+	\par \textbf{A:从左至右第一个峰为连续谱，为电子与阳极撞击产生的辐射；第二个峰为$K_{\beta}$线一级衍射峰，理论值为$9.1^{\circ}$，实际值为$9.1^{\circ}$；第三个峰为$K_{\alpha}$线一级衍射峰，理论值为$10.2^{\circ}$，实际值为$10.2^{\circ}$；此图中不能看出剩余峰值具体分布在什么位置，信号稳定度比NaCl晶体较差。}
+	\section{收获与感想}
+	在本次实验中，我们通过实验了解了X射线的基本性质，理解了X射线衍射的原理和实验技术，同时也测量了X射线通过单晶的布拉格衍射曲线。更进一步加深了我们对于X射线衍射的认识，为我们以后从事相关工作奠定了良好的知识储备与实验储备。
+\end{document}

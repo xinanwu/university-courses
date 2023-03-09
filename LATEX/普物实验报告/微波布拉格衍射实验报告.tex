@@ -1,0 +1,229 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{ntheorem}
+\usepackage{subfigure}
+\usepackage{txfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\setlength{\parindent}{2em}
+\usepackage{IEEEtrantools}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{chngpage}
+%\lstset{
+%	commentstyle=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+%	rulesepcolor= \color{gray}, %代码块边框颜色
+%	breaklines=true,  %代码过长则换行
+%	numbers=left, %行号在左侧显示
+%	numberstyle= \small,%行号字体
+%	keywordstyle= \color{blue},%关键字颜色
+%	frame=shadowbox,%用方框框住代码块
+%	basicstyle=\ttfamily
+%}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.9,0.1,0.4}
+\definecolor{ash}{rgb}{0.8,0.8,0.8}
+\lstset{ 
+	language=Octave,                % the language of the code
+	basicstyle=\ttfamily,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\small\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{ash},      % choose the background color. You must add \usepackage{color}
+	rulesepcolor= \color{gray}, %代码块边框颜色
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	frame=shadowbox,%用方框框住代码块
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+	escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+	morekeywords={*,...}               % if you want to add more keywords to the set
+}
+\graphicspath{{figs/}}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+\author{
+	吴熙楠}
+\title{
+	\heiti{微波布拉格衍射实验报告}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+
+\begin{document}
+	\maketitle
+	\newtheorem{definition}{定义}[subsection]
+	\newtheorem{function}{公式}[subsection]
+	\newtheorem{summary}{小结}[subsection]
+	\newtheorem{deduction}{推论}[subsection]
+	\newtheorem{property}{性质}[subsection]
+	\newtheorem{theo}{定理}[subsection]
+	\newtheorem{step}{步骤}[subsection]
+	\newtheorem{remark}{注记}[subsection]
+	\newtheorem{proof}{证明}[subsection]
+	\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+	\newcommand{\rbra}[1]{\left( #1 \right)}
+	\newcommand{\sbra}[1]{\left[ #1 \right]}
+	\newcommand{\cbra}[1]{\left\{ #1 \right\}}
+	\newcommand{\pbra}[1]{\left< #1 \right>}
+	\newcommand{\abs}[1]{\left| #1 \right|}
+	\newcommand{\fs}[2]{\displaystyle\frac{#1}{#2}}
+	
+	\newenvironment{myproof}{{\color{blue}证：}}
+	
+	\newenvironment{partlist}[1][]
+	{\begin{enumerate}[itemsep=0pt, label=(\arabic*), wide, labelindent=\parindent, listparindent=\parindent, #1]}
+		{\end{enumerate}}
+	
+	\renewcommand{\contentsname}{目录} %将content转为目录
+	\tableofcontents
+	\newpage
+	\renewcommand{\abstractname}{\large 摘要\\}
+	\begin{abstract}
+		晶体有规则的几何形状，晶体中原子按规则排列组成晶格，对于晶体的散射而言，同一层的散射线，当散线与晶面间的夹角等于掠射角时，在这个方向上射线产生相长干涉，而对于不同层的散射线，当光程差为波长的整数倍时，各个面的散射线相互加强，形成光强的极大，即布拉格衍射。我们在本次实验中将会采用模拟晶体进行微波布拉格衍射实验，从而证明布拉格公式。
+		
+		\textbf{关键词：晶体，散射，布拉格公式}
+	\end{abstract}
+	\section{实验目的}
+	(1)了解并学习微波器件的使用；
+	\par (2)了解布拉格衍射原理，利用微波在模拟晶体上的衍射验证布拉格公式。
+	\section{实验器材}
+	微波分光仪，模拟晶体，单缝，反射板(两块)，分束板
+	\section{实验过程及数据整理}
+	\subsection{模拟晶体布拉格衍射}
+	\subsubsection{[100]面模拟布拉格衍射}
+	\begin{table}[H]
+		\centering
+		\caption{[100]面模拟晶体布拉格衍射数据表}
+		\begin{tabular}{||r|r||r|r||r|r||r|r||}
+			\toprule[0.5mm]
+			$\theta/^{\circ}$     & $I/\mu A$     & $\theta/^{\circ}$     & $I/\mu A$     & $\theta/^{\circ}$     & $I/\mu A$     & $\theta/^{\circ}$     & $I/\mu A$ \\
+			\midrule
+			90    & 44    & 69    & 62    & 55    & 5     & 37    & 20 \\
+			89    & 64    & 68    & 49    & 50    & 6     & 36    & 22 \\
+			88    & 87    & 67    & 26    & 45    & 4     & 35    & 15 \\
+			87    & 98    & 66    & 20    & 44    & 6     & 34    & 10 \\
+			86    & 100   & 65    & 19    & 43    & 8     & 33    & 6 \\
+			85    & 87    & 64    & 12    & 42    & 8     & 32    & 5 \\
+			84    & 52    & 63    & 7     & 41    & 10    & 31    & 6 \\
+			80    & 4     & 62    & 4     & 40    & 12    & 30    & 10 \\
+			75    & 7     & 61    & 3     & 39    & 14    & 25    & 2 \\
+			70    & 30    & 60    & 2     & 38    & 18    & -     &-  \\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {100.png} 
+	\caption{\label{1}[100]面模拟布拉格衍射}
+\end{figure}
+\par 从图中我们可以看到有三个峰，其中前两个是我们需要的，而最后一个峰是因为微波在不同晶面的透射导致的增强，因此我们只计入前两个峰的角度，$\theta_{1}=37^{\circ},\theta_{2}=69^{\circ}$
+\par 其中我们按照理论公式计算出的理论值为:$\theta_{1}=36.9^{\circ},\theta_{2}=66.4^{\circ}$,可见实际上我们模拟晶体的布拉格衍射还算较为准确（在可以允许的误差范围内），但由于转动角度不能准确读出以及初始位置没有准确对准等原因，与理论值还是有一些偏差。
+	\subsubsection{[110]面模拟布拉格衍射}
+\begin{table}[H]
+	\centering
+	\caption{[110]面模拟晶体布拉格衍射数据表}
+	\begin{tabular}{||r|r||r|r||r|r||}
+		\toprule[0.5mm]
+		$\theta/^{\circ}$     & $I/\mu A$     & $\theta/^{\circ}$     & $I/\mu A$     & $\theta/^{\circ}$     & $I/\mu A$    \\
+		\midrule
+		90    & 52    & 80    & 42    & 54    & 14 \\
+		89    & 54    & 75    & 12    & 53    & 11 \\
+		88    & 58    & 70    & 2     & 52    & 6 \\
+		87    & 58    & 65    & 1     & 51    & 4 \\
+		86    & 64    & 60    & 8     & 50    & 4 \\
+		85    & 77    & 59    & 14    & 45    & 0 \\
+		84    & 90    & 58    & 18    & 40    & 0 \\
+		83    & 90    & 57    & 20    & 35    & 0 \\
+		82    & 78    & 56    & 18    & 30    & 0 \\
+		81    & 66    & 55    & 15    & 25    & 0 \\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {110.png} 
+	\caption{\label{1}[110]面模拟布拉格衍射}
+\end{figure}
+\par 从图中我们可以看到有两个峰，其中第一个是我们需要的，而第二个峰是因为微波在不同晶面的透射导致的增强，因此我们只计入第一个峰的角度，$\theta=57^{\circ}$
+\par 其中我们按照理论公式计算出的理论值为:$\theta=55.5^{\circ}$,可见实际上我们模拟晶体的布拉格衍射还算较为准确（在可以允许的误差范围内），但由于转动角度不能准确读出以及初始位置没有准确对准等原因，与理论值还是有一些偏差。
+	\subsection{单缝衍射}
+	\begin{table}[H]
+		\centering
+		\caption{单缝衍射数据表}
+		\begin{tabular}{||r|r||r|r||r|r||r|r||}
+			\toprule[0.5mm]
+			$\theta/^{\circ}$     & $I/\mu A$     & $\theta/^{\circ}$     & $I/\mu A$     & $\theta/^{\circ}$     & $I/\mu A$     & $\theta/^{\circ}$     & $I/\mu A$ \\
+			\midrule
+			0     & 82    & 24    & 2     & -10   & 42    & -27   & 1 \\
+			5     & 68    & 26    & 1     & -15   & 24    & -28   & 0 \\
+			10    & 45    & 27    & 0     & -20   & 8     & -29   & 0 \\
+			15    & 22    & 28    & 0     & -22   & 6     & -30   & 0 \\
+			20    & 4     & 30    & 0     & -24   & 4     & -      &-  \\
+			22    & 3     & -5    & 72    & -26   & 2     &  -     & - \\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {单缝衍射.png} 
+	\caption{\label{1}模拟单缝衍射图}
+\end{figure}
+\par 我们通过测量数据可得：微波在衍射第一次达到极小值的时候$\theta\approx\dfrac{28^{\circ}+27^{\circ}}{2}=27.5^{\circ}\Rightarrow \lambda=asin\theta=3.23cm$
+\par 我们比较微波波长的理论值$\lambda=\dfrac{c}{f}=3.20cm$可得，我们利用单缝衍射的方法测得的微波波长也是较为准确的。
+	\subsection{迈克尔逊干涉}
+	\begin{table}[H]
+		\centering
+		\caption{迈克尔逊干涉数据表}
+		\begin{tabular}{|r|rrrr|}
+			\toprule[0.5mm]
+			$n$&1&2&3&4\\
+			\midrule
+			$d/mm$&59.962&43.417&26.965&11.785\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=7cm]  {迈干.png} 
+	\caption{\label{1}模拟迈克尔逊干涉实验数据图}
+\end{figure}
+\par 我们从图中作图可得斜率为:$\dfrac{\lambda}{2}=16.098mm\Rightarrow \lambda=32.2mm$
+\par 而实际上我们计算理论值可得$\lambda=\dfrac{c}{f}=32.02mm$,可见我们用迈克尔逊干涉的方法测出的微波波长还是较为准确的。
+	\section{分析与讨论}
+	\textbf{为何在模拟晶体布拉格衍射实验中入射角在$80^{\circ}+$时会出现一个衍射峰？}
+	\par \textbf{答：因为入射角超过80$^{\circ}$时，因为已经接近垂直入射，而模拟晶体中间间隙为空的，因此微波的透射被接收器接受到的几率增大，因此接收到的电流强度会增大，但因为模拟晶体的小球有一定的体积大小，故如果完全垂直入射，则必然会导致微波被小球180$^{\circ}$反射的几率增大，接受到的电流减小，故两种效应叠加将会在$80^{\circ}-90^{\circ}$范围内形成一个峰位。}
+	\section{收获与感想}
+	在本次实验中，我们了解并学习了微波器件的使用，了解了布拉格衍射原理，同时我们利用微波在模拟晶体上的衍射验证了布拉格公式。布拉格衍射为我们学习晶体以及光学中的重要知识，本次实验给我们拓宽了眼界同时从实验方面了解了此公式的意义。
+	
+\end{document}

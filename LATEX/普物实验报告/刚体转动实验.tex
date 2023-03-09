@@ -1,0 +1,229 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{刚体转动实验}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	刚体是力学中的一个科学抽象概念，在我们的理论课尤其是力学课程学习中有着关键的作用，将一个物体抽象为刚体可以为我们的计算提供很好的简化。在本次实验中我们将验证刚体的转动定理以及平行轴定理，我们也将从中看到在不涉及结构形变的过程中将固体近似为刚体是一种很好的近似。\\
+	\par\textbf{关键词: 刚体，转动定理，平行轴定理}
+
+\end{abstract}
+
+\section{实验目的}
+\noindent
+(1)测定刚体转动惯量，用实验方法检验刚体的转动定理以及平行轴定理\\
+(2)观测刚体的转动惯量随其质量分布以及转动轴线不同的改变\\
+(3)用作图法和最小二乘法作直线拟合
+\section{实验仪器}
+刚体转动实验装置、停表、砝码及砝码托、游标卡尺、钢卷尺
+\section{实验过程与原始数据整理}
+\subsection{改变重物质量测量转动惯量($h=85.30cm,r=2.50cm)$}
+\begin{table}[H]
+	\centering
+	\caption{铁片质量测量}
+	\label{铁片质量测量}
+	\begin{tabular}{c|*{7}{c}}
+		\toprule[0.5mm]
+		$m_{i}/g$&5.00&5.02&4.98&5.03&4.96&5.00&5.00\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{时间与质量关系}
+	\label{时间与质量关系}
+	\begin{tabular}{c|*{7}{c}}
+		\toprule[0.5mm]
+		$m_{0}/g$&5.00&10.00&15.00&20.00&25.00&30.00&35.00\\
+		\midrule
+		$t_{1}/s$&17.53&11.56&9.22&7.91&7.00&6.46&5.97\\
+		$t_{2}/s$&17.57&11.68&9.18&7.88&7.03&6.44&5.92\\
+		$t_{3}/s$&17.54&11.77&9.26&7.93&7.03&6.44&5.97\\
+		$\bar{t}/s$&17.547&11.670&9.220&7.907&7.020&6.447&5.953\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{改变转轮半径测转动惯量($m_{0}=20.00g,h=85.30cm$)}
+\begin{table}[H]
+	\centering
+	\caption{时间与半径关系}
+	\label{时间与半径关系}
+	\begin{tabular}{c|*{5}{c}}
+		\toprule[0.5mm]
+		$r/cm$&1.50&2.00&2.50&3.00&1.00\\
+		\midrule
+		$t_{1}/s$&13.75&10.16&7.91&6.63&20.53\\
+		$t_{2}/s$&13.75&10.19&7.88&6.56&20.50\\
+		$t_{3}/s$&13.71&10.19&7.93&6.60&20.56\\
+		$\bar{t}/s$&13.737&10.180&7.907&6.597&20.530\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{对称改变物块位置验证平行轴定理($m_{0}=10.00g,r=2.50cm$)}
+$$L_{1}=4.518cm,L_{2}=9.230cm$$
+$$\therefore x_{1}=\dfrac{1}{4}(L_{1}+L_{2})=3.437cm$$
+\begin{table}[H]
+	\centering
+	\caption{时间与物块位置关系}
+	\label{时间与物块位置关系}
+	\begin{tabular}{c|*{5}{c}}
+		\toprule[0.5mm]
+		$x_{i}/cm$&13.437&10.937&8.437&5.937&3.437\\
+		\midrule
+		$t_{1}/s$&11.56&10.37&9.00&7.69&6.75\\
+		$t_{2}/s$&11.68&10.47&9.06&7.75&6.81\\
+		$t_{3}/s$&11.77&10.39&9.07&7.76&6.81\\
+		$\bar{t}/s$&11.670&10.410&9.043&7.733&6.790\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{三个特殊位置放置物块验证平行轴定理($m_{0}=10.00g,r=2.50cm$)}
+\begin{table}[H]
+	\centering
+	\caption{物块放置位置与时间关系}
+	\label{物块放置位置与时间关系}
+	\begin{tabular}{c|*{3}{c}}
+		\toprule[0.5mm]
+		&(3,3)&(2,4)&(1,5)\\
+		\midrule
+		$t_{1}/s$&9.00&9.75&10.78\\
+		$t_{2}/s$&9.06&9.75&10.75\\
+		$t_{3}/s$&9.07&9.72&10.68\\
+		$\bar{t}/s$&9.043&9.730&10.737\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+$$\therefore\dfrac{t_{(2,4)}^{2}-t_{(3,3)}^{2}}{t_{(1,5)}^{2}-t_{(3,3)}^{2}}=0.385>0.25$$
+\par 可以看出我们实验测量值与理论计算值有着较大的差别，这是因为我们的测量仪器不够精确以及测量数据太少造成的，如果我们改进仪器并增加测量数据将会有更好的结果。
+\section{实验数据处理}
+\subsection{改变重物质量测量转动惯量($h=85.30cm,r=2.50cm)$}
+由于使用线性拟合需要选择相对不确定度小的参量作为横坐标，因此我们对$m$与$\dfrac{1}{t^{2}}$进行相对不确定度大小的比较。
+\par 对于质量$m$，我们有$\dfrac{\sigma_{m}}{m}=\dfrac{0.04}{5}=8\times10^{-3}$(我们取测量铁片与标称值的最大相对误差)
+\par 对于另一个指标我们有$\dfrac{\sigma_{\frac{1}{t^{2}}}}{\frac{1}{t^{2}}}=\dfrac{2\sigma_{t}}{t}$,而$\sigma_{t}$我们取三次测量相对不确定度最大的一组(即三次数据差别最大的一组),$\sigma_{t1}=\sqrt{\frac{\sum\limits_{i=1}^{3}(t_{i}-\bar{t})^{2}}{2}}=0.105s$,再取个人反应误差$0.1s$,所以$\sigma_{t}=\sqrt{0.105^{2}+0.1^{2}}s=0.145s$,$\dfrac{2\sigma_{t}}{t}=0.025>0.008$
+\par 因此质量$m$的相对不确定度对实验数据的影响更小,我们取质量$m$为横坐标，时间平方的倒数为纵坐标作线性拟合可得：
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 改变重物质量测量转动惯量}
+	\includegraphics[width=11cm,height=8cm]  {mt关系.png} 
+\end{figure}
+\begin{center}
+我们有$\dfrac{1}{t^{2}}=\dfrac{gr^{2}}{2hI}m-\dfrac{M_{\mu}r}{2hI}$
+\end{center}
+\par $$\therefore k=\dfrac{gr^{2}}{2hI},\quad b=-\dfrac{M_{\mu}r}{2hI}$$
+\par $$\therefore I=\dfrac{gr^{2}}{2hk}=3.97\times10^{-3}kg\cdot m^{2},\quad M_{\mu}=-\dfrac{2hIb}{r}=2.3\times10^{-4}N\cdot m$$
+\begin{center} 我们取$g$，$r$，$m$为不确定度贡献为0的量，则：
+\end{center}
+$$\dfrac{\sigma_{I}}{I}=\sqrt{(\dfrac{\sigma_{h}}{h})^{2}+(\dfrac{\sigma_{k}}{k})^{2}}$$
+\begin{center}
+	我们取$\sigma_{h}=\frac{0.8mm}{\sqrt{3}}=0.46mm$
+\end{center}
+$$\sigma_{kA}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}=6.123\times10^{-3}kg^{-1}\cdot s^{-2}$$
+\par $$\sigma_{kB}=\dfrac{\sigma_{\frac{1}{t^{2}}}}{\sqrt{\sum\limits_{i=1}^{7}(m_{i}-\bar{m})^{2}}}=6.9\times10^{-3}kg^{-1}\cdot s^{-2}$$
+\par $$\therefore \sigma_{k}=\sqrt{\sigma_{kA}^{2}+\sigma_{kB}^{2}}=9.2\times10^{-3}kg^{-1}\cdot s^{-2}$$
+\par $$\therefore\sigma_{I}=I\sqrt{(\dfrac{\sigma_{h}}{h})^{2}+(\dfrac{\sigma_{k}}{k})^{2}}=0.04\times10^{-3}kg\cdot m^{2}$$
+\par $$\therefore I=(3.97\pm 0.04)\times10^{-3}kg\cdot m^{2}$$
+\subsection{改变转轮半径测转动惯量($m_{0}=20.00g,h=85.30cm$)}
+由于使用线性拟合需要选择相对不确定度小的参量作为横坐标，因此我们对$r$与$\dfrac{1}{rt^{2}}$进行相对不确定度大小的比较。
+\par 因为$\dfrac{\sigma_{\frac{1}{rt^{2}}}}{\frac{1}{rt^{2}}}=\sqrt{(\frac{2\sigma_{t}}{t})^{2}+(\frac{\sigma_{r}}{r})^{2}}>\dfrac{\sigma_{r}}{r}$
+\par 所以$r$相对于$\dfrac{1}{rt^{2}}$对于实验结果的影响较小，我们选取$r$作为横坐标，$\dfrac{1}{rt^{2}}$作为纵坐标
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 改变转轮半径测转动惯量}
+	\includegraphics[width=10cm,height=7cm]  {rt关系.png} 
+\end{figure}
+\begin{center}
+	我们有$\dfrac{1}{rt^{2}}=\dfrac{mg}{2hI}r-\dfrac{M_{\mu}}{2hI}$
+\end{center}
+\par $$\therefore k=\dfrac{mg}{2hI},\quad b=\dfrac{M_{\mu}}{2hI}$$
+\par $$\therefore I=\dfrac{mg}{2kh}=4.27\times10^{-3}kg\cdot m^{2},\quad M_{\mu}=-2hIb=3.0\times10^{-4}N\cdot m$$
+\begin{center}
+我们取$g$，$r$，$m$为不确定度贡献为0的量，则：
+\end{center}
+$$\dfrac{\sigma_{I}}{I}=\sqrt{(\dfrac{\sigma_{h}}{h})^{2}+(\dfrac{\sigma_{k}}{k})^{2}}$$
+\begin{center}
+我们取$\sigma_{h}=\frac{0.8mm}{\sqrt{3}}=0.46mm$
+\end{center}
+$$\sigma_{kA}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}=0.761m^{-2}\cdot s^{-2}$$
+\begin{center}
+ $\sigma_{kB}=\dfrac{\sigma_{\frac{1}{rt^{2}}}}{\sqrt{\sum\limits_{i=1}^{7}(r_{i}-\bar{r})^{2}}}=0.955m^{-2}\cdot s^{-2}$(我们取误差最大的一组数据)
+ \end{center}
+\par $$\therefore \sigma_{k}=\sqrt{\sigma_{kA}^{2}+\sigma_{kB}^{2}}=1.22m^{-2}\cdot s^{-2}$$
+\par $$\therefore\sigma_{I}=I\sqrt{(\dfrac{\sigma_{h}}{h})^{2}+(\dfrac{\sigma_{k}}{k})^{2}}=0.18\times10^{-3}kg\cdot m^{2}$$
+\par $$\therefore I=(4.27\pm 0.18)\times10^{-3}kg\cdot m^{2}$$
+\subsection{对称改变物块位置验证平行轴定理($m_{0}=10.00g,r=2.50cm$)}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 对称改变物块位置验证平行轴定理}
+	\includegraphics[width=10cm,height=7cm]  {平行轴定理.png} 
+\end{figure}
+\par 我们从线性拟合图像以及散点图可以看出测量的五组数据基本是满足线性关系的，五组数据的散点也并没有偏离线性拟合直线太远，并且相关系数$r=0.9982$接近于1，差值并没有过于大，因此我们可以认为这组实验数据验证了平行轴定理。
+\section{分析与讨论}
+\subsection{误差分析讨论}
+\subsubsection{误差来源分析}
+\textcircled{1}实验操作的系统误差：若如同教材分析忽略重物加速度，从计算转动惯量的不确定度来看，人掐秒表的反应时间误差占了较大部分，测量数据的随机误差对于不确定度的贡献稍小于前者，但对于转动惯量不确定度仍有不可忽略的影响。螺丝未拧紧导致的摩擦力矩变化，未紧绕细线导致的细线交错的系统误差(此项对于转动惯量测量影响极大)，细线与转轴不严格垂直导致有一个小夹角的系统误差，未调节装置水平导致的系统误差。
+\par \textcircled{2}实验装置的系统误差：滑轮摩擦以及滑轮与细线具有质量导致的误差，重物具有不可忽略的加速度导致的误差，实验装置过于老旧导致摩擦力矩过大产生的误差。
+\subsubsection{减小误差方法}
+\textcircled{1}减小实验操作的系统误差方法：多测几组数据减小随机误差，尽量保证每次掐表的反应时间较小或者一定；开始时将实验装置调整为水平状态，将螺丝拧紧，绕线时尽量密绕为一层，调整细线与转轴为垂直状态(尤其是改变半径$r$测量转动惯量的实验中每次改变完半径$r$均要同步调整细线与转轴为垂直状态)。
+\par \textcircled{2}减小实验装置的误差方法：细线尽量取得质量可以忽略，细线半径尽量小可以忽略，滑轮要小而轻(即滑轮转动惯量要尽量小得来可以忽略)；同时重物不能取得过重，否则由于重物带来的加速度的影响就变得不可忽略，导致计算公式出现较大的偏差。
+\subsection{思考题五}
+\subsubsection{考虑加速度对于测量值的影响}
+在公式$m(g-a)-M_{\mu}=\dfrac{2hI}{rt^{2}}$中，我们认为加速度$a$与重力加速度$g$相比很小可以忽略，而实际上若考虑$a$的影响，则令等效重力加速度$g^{\prime}$($g^{\prime}<g$)，则当我们改变重物质量时，所导致的重物引起的加速度也发生了变化，重物越重所导致的加速度越大，因此等效加速度$g^{\prime}$就更小，又因为我们计算刚体转动惯量的公式与$g^{\prime}$正相关，因此在改变重物质量测量转动惯量的实验中我们测量的转动惯量一般小于改变半径$r$测量转动惯量实验测得的转动惯量。
+\par 我们有公式$m(g-\dfrac{2h}{t^{2}})r-M_{\mu}=I\dfrac{2h}{rt^{2}}$,我们对于改变质量测量转动惯量的实验将横坐标$m^{\prime}=m(1-\dfrac{2h}{gt^{2}})$,对于改变半径测量转动惯量的实验将横坐标$r^{\prime}=r(1-\dfrac{2h}{gt^{2}})$,重新进行直线拟合可得：
+\par \textcircled{1}改变质量测量转动惯量拟合数据： $k_{1}=0.90982kg^{-1}\cdot s^{-2},b_{1}=-8.87\times10^{-4}s^{-2},r_{1}=0.99984$
+\par \textcircled{2}改变半径测量转动惯量拟合数据：$k_{2}=27.03m^{-2}\cdot s^{-2},b_{2}=-0.04356s^{-2}\cdot m^{-1},r_{2}=0.9987$
+\par 因此我们可以重新计算刚体转动惯量为$I_{1}=3.95\times10^{-3}kg\cdot m^{2},I_{2}=4.24\times10^{-3}kg\cdot m^{2}$
+\subsubsection{细线半径对于刚体转动惯量的影响}
+我们通过上述计算发现，其实重物加速度对于刚体转动惯量的影响幅度几乎是相同的，但我们发现细线半径其实对于半径小的转轮不可以忽略，尤其是在半径小的转轮上细线密铺了两层，细线半径的影响更不可以忽略。我们认为在改变半径测量刚体转动惯量的实验中，$r=1.00cm,1.50cm$细线铺了两层，$r=2.00cm$细线铺了1.5层，$r=2.50cm,r=3.00cm$细线密铺了一层，取细线直径$d=0.05cm$,则我们将实验数据重新计算可得(同时考虑加速度的影响)：
+\par \textcircled{1}改变质量测量转动惯量拟合数据(虽然拟合数据没变,但之前的定值$r$变为了$2.525cm$)： $k_{1}=0.90982kg^{-1}\cdot s^{-2},b_{1}=-8.87\times10^{-4}s^{-2},r_{1}=0.99984$
+\par \textcircled{2}改变半径测量转动惯量拟合数据：$k_{2}=28.33m^{-2}\cdot s^{-2},b_{2}=-0.0966s^{-2}\cdot m^{-1},r_{2}=0.9982$
+\par 因此我们可以重新计算刚体转动惯量为$I_{1}=4.03\times10^{-3}kg\cdot m^{2},I_{2}=4.05\times10^{-3}kg\cdot m^{2}$
+\subsubsection{结论}
+\textbf{我们通过上述的计算可以发现，实际上加速度和细线半径都会造成对于测量刚体转动惯量的影响，但是由于实验一和实验二均存在加速度的影响，我们计算可得加速度对于测量转动惯量影响的变化幅度基本一致。我们考虑细线半径对于转动惯量测量的影响，由于在实验二中，小半径转轮会导致密铺多层细线且细线相对于小半径转轮的影响较大，我们取定一个细线半径代入后发现两次测量的刚体转动惯量数值较之前接近了许多，因此最大的影响来自于细线半径。但由于刚体在转动过程中细线绕在刚体上的层数一直在变化，因此若要得到更加精确的数值，我们应该做进一步的理论近似才行，或者增加刚体转轮半径，使得细线半径的影响真正可以忽略不计。}
+\section{收获与感想}
+在本次实验中我们使用转动法测量了刚体的转动惯量，同时我们通过改变转动轴线的位置通过实验验证了刚体转动的平行轴定理，我们也是观测了刚体的转动惯量随其质量分布以及转动轴线不同的改变情况，对于将固体近似为刚体这一个物理基本模型的正确性和合理性进行了验证。同时我们也复习了通过作图法和最小二乘法直线拟合来计算物理量，以及最小二乘法拟合的误差处理，进一步提升了我们的物理实验技巧。
+
+\end{document} 

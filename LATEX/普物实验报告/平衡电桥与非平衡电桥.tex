@@ -1,0 +1,228 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{平衡电桥与非平衡电桥}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	平衡电桥法测量电阻是电阻测量法中的一种重要的方法，而非平衡电桥往往与一些传感器配合使用，可以将外界的变化转化为桥臂电阻的变化，从而转化为电压或者电流输出，达到精确测量外界变化的目的。\\
+	\par\textbf{关键词: 平衡电桥，非平衡电桥，传感器}
+
+\end{abstract}
+
+\section{实验目的}
+\noindent
+(1)学习使用直流电桥的基本原理以及非平衡电桥的测量方法.\\
+(2)学习了解直流电桥的灵敏度以及影响它的因素.\\
+(3)学习测量铂电阻温度传感器的输出-输入特性，并测定其温度系数.
+\section{实验仪器}
+电阻箱3个，指针式检流计，电位器，待测电阻3个，直流稳压电源，双刀双掷开关2个，恒流源，稳压源，数字多用表，数字温度计，电热杯，导线
+\section{误差处理原理}
+\subsection{直流电桥测电阻}
+在直流电桥测电阻的实验中，我们用公式$R_{x}=\dfrac{R_{1}R_{0}}{R_{2}}$,通过不确定度传递公式我们得到：
+\begin{center}
+	$\sigma_{R_{x}}=\sqrt{(\dfrac{R_{0}}{R_{2}})^{2}\sigma_{R_{1}}^{2}+(\dfrac{R_{0}R_{1}}{R_{2}^{2}})^{2}\sigma_{R_{2}^{2}}+(\dfrac{R_{1}}{R_{2}})^{2}\sigma_{R_{0}}^{2}}$
+\end{center}
+\par 同时因为检流计的灵敏度的关系，我们会引入一个检流计灵敏度的误差$\delta R_{x}=\dfrac{0.2R_{x}}{S}$\\
+\par 所以综合不确定度公式为：
+\begin{center}
+	$\sigma_{R_{x}}=\sqrt{\delta R_{x}^{2}+(\dfrac{R_{0}}{R_{2}})^{2}\sigma_{R_{1}}^{2}+(\dfrac{R_{0}R_{1}}{R_{2}^{2}})^{2}\sigma_{R_{2}}^{2}+(\dfrac{R_{1}}{R_{2}})^{2}\sigma_{R_{0}}^{2}}$
+\end{center}
+\par 同样的有交换桥臂测量法，考虑了检流计灵敏度后不确定度公式为：
+\begin{center}
+	$\sigma_{R_{x}}=\sqrt{\delta R_{x}^{2}+\dfrac{R_{01}}{4R_{02}}\sigma_{R_{02}}^{2}+\dfrac{R_{02}}{4R_{01}}\sigma_{R_{01}}^{2}}$
+\end{center}
+\par (这其中的电阻箱不确定度由电阻箱上的铭牌标记的各档不确定度等级给出)
+\par 而对于电桥灵敏度的理论值的计算，我么有灵敏度的理论公式$S=\frac{S_{i}E}{R_{1}+R_{2}+R_{0}+R_{x}+R_{g}(2+\frac{R_{1}}{R_{x}}+\frac{R_{0}}{R_{2}})}$,其中电源电压$E$以及桥臂电阻的值我们在测量过程中都会给出，观察检流计铭牌后我们得到$S_{i}=6.7\times10^{5}A^{-1}$,内阻$R_{g}=43\Omega$,从而我们可以计算出电桥灵敏度的理论值
+\subsection{非平衡电桥测铂电阻温度系数}
+在本实验中我们采用线性拟合的办法测量温度系数，公式为$A=\dfrac{2k}{I_{0}R_{0}}$,由不确定度传递公式可得：
+\begin{center}
+	$\sigma_{A}=A\sqrt{(\dfrac{\sigma_{k}}{k})^{2}+(\dfrac{\sigma_{I_{0}}}{I_{0}})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}$
+\end{center}
+\par 其中$I_{0}$的不确定度可由$e_{I_{0}}=0.5\%\times$读数+$0.004mA$得出，$R_{0}$的不确定度可由电阻箱铭牌上标注的各档不确定度等级配合读数一起给出
+\par 由于线性拟合造成的A类误差可由$\sigma_{k,A}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}$给出
+\par 而拟合过程中横纵坐标也有误差，由输出电压$U_{out}$读数造成的误差可由$\sigma_{k,u}=\dfrac{e_{u}/\sqrt{3}}{\sqrt{\sum\limits_{i=1}^{7}(T_{i}-\bar{T})^{2}}}$给出，而$e_{u}=0.05\%\times$读数+$0.03mV$,因此我们可以得到输出电压读数对于斜率的不确定度影响
+\par 横坐标$T$读数造成的误差我们可以将其投影在纵坐标上从而套用纵坐标误差公式计算器不确定度影响，$\sigma_{k,T}=\dfrac{ke_{T}/\sqrt{3}}{\sqrt{\sum\limits_{i=1}^{7}(T_{i}-\bar{T})^{2}}}$
+\par 我们对于斜率$k$有不确定度合成公式$\sigma_{k}=\sqrt{\sigma_{k,A}^{2}+\sigma_{k,T}^{2}+\sigma_{k,u}^{2}}$
+\par 从而可以通过$\sigma_{A}=A\sqrt{(\dfrac{\sigma_{k}}{k})^{2}+(\dfrac{\sigma_{I_{0}}}{I_{0}})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}$计算出铂电阻温度系数的不确定度
+\subsection{平衡电桥测铂电阻温度系数}
+我们对于数据采用线性拟合的方式,用公式$A=\dfrac{k}{R_{0}}$来计算铂电阻温度系数的不确定度，由不确定度传递公式得：
+\begin{center}
+	$\sigma_{A}=A\sqrt{(\dfrac{\sigma_{k}}{k})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}$
+\end{center}
+\par 由于线性拟合造成的A类误差可由$\sigma_{k,A}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}$给出
+\par 而拟合过程中横纵坐标也有误差，由电阻箱读数$R_{0}$读数造成的误差可由$\sigma_{k,R}=\dfrac{e_{R}/\sqrt{3}}{\sqrt{\sum\limits_{i=1}^{7}(T_{i}-\bar{T})^{2}}}$给出，而$e_{R}$可由电阻箱铭牌上各档不确定度等级给出(因为检流计灵敏度影响造成的$\delta R=\dfrac{0.03R_{0}}{S}$影响较小($10^{-3}$)可以忽略不计),因此我们可以得到电阻箱读数对于斜率的不确定度影响
+\par 横坐标$T$读数造成的误差我们可以将其投影在纵坐标上从而套用纵坐标误差公式计算器不确定度影响，$\sigma_{k,T}=\dfrac{ke_{T}/\sqrt{3}}{\sqrt{\sum\limits_{i=1}^{7}(T_{i}-\bar{T})^{2}}}$
+\par 我们对于斜率$k$有不确定度合成公式$\sigma_{k}=\sqrt{\sigma_{k,A}^{2}+\sigma_{k,T}^{2}+\sigma_{k,R}^{2}}$
+\par 从而我们可以通过$\sigma_{A}=A\sqrt{(\dfrac{\sigma_{k}}{k})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}$计算出铂电阻温度系数的不确定度
+\section{实验数据处理}
+\subsection{非平衡电桥测铂电阻温度系数}
+\begin{table}[H]
+	\centering
+	\caption{非平衡电桥测铂电阻温度系数数据表($I_{0}=4.000mA,R_{0}=99.7\Omega$)}
+	\label{非平衡电桥测铂电阻温度系数数据表}
+	\begin{tabular}{c|*{7}{c}}
+		\toprule[0.5mm]
+		$T/^{\circ}C$&0.0&23.5&40.7&55.3&70.0&84.4&100.3\\
+		\midrule
+		$U_{out}/mV$&0.00&17.83&31.02&42.14&53.12&63.99&75.89\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 非平衡电桥测量铂电阻温度系数线性拟合}
+	\includegraphics[width=10cm,height=7cm]  {非平衡电桥.png} 
+\end{figure}
+\begin{center}
+	$\therefore A=\dfrac{2k}{I_{0}R_{0}}=3.7964\times 10^{-3}(^{\circ}C)^{-1}$\\
+	$\sigma_{k,A}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}=1.444\times10^{-3}mV/^{\circ}C$\\
+	$\sigma_{k,u}=\dfrac{e_{u}/\sqrt{3}}{\sqrt{\sum\limits_{i=1}^{7}(T_{i}-\bar{T})^{2}}}=4.58\times10^{-4}mV/^{\circ}C$\\
+	$\sigma_{k,T}=\dfrac{ke_{T}/\sqrt{3}}{\sqrt{\sum\limits_{i=1}^{7}(T_{i}-\bar{T})^{2}}}=5.1\times10^{-4}mV/^{\circ}C$\\
+	$\therefore \sigma_{k}=\sqrt{\sigma_{k,A}^{2}+\sigma_{k,T}^{2}+\sigma_{k,u}^{2}}=1.598\times10^{-3}mV/^{\circ}C$ 
+\end{center}
+同理：
+\begin{center}
+	$\sigma_{I_{0}}=\dfrac{e_{I_{0}}}{\sqrt{3}}=0.01386mA$\\
+	$\sigma_{R_{0}}=\dfrac{90\times0.001+9\times0.005+0.7\times0.02}{\sqrt{3}}\Omega=0.07875\Omega$\\
+	$\therefore \sigma_{A}=A\sqrt{(\dfrac{\sigma_{k}}{k})^{2}+(\dfrac{\sigma_{I_{0}}}{I_{0}})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}=1.7\times10^{-5}(^{\circ}C)^{-1}$\\
+	$\therefore A=(3.796\pm 0.017)\times10^{-3}(^{\circ}C)^{-1}$
+\end{center}
+\subsection{平衡电桥测电阻}
+\subsubsection{测量$R_{x}$及电桥灵敏度$S$}
+\begin{center}
+	$E=4.0V$且粗测$R_{x1}=46.6\Omega,R_{x2}=370.3\Omega,R_{x3}=4050\Omega$
+\end{center}
+\begin{table}[H]
+	\centering
+	\caption{测量$R_{x}$及电桥灵敏度$S$数据表}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|r|}
+		\hline
+		$R_{x} $   & $\frac{R_{1}}{R_{2}}$ & $R_{0}/\Omega$ &    $R_{0}^{\prime}/\Omega$   &$\Delta n$(格)       & $R_{x}/\Omega$      & $\Delta R_{0}/\Omega$      &  $S$(格)     &$S_{\text{理论}}$(格)& $\sigma_{R_{x}}/\Omega$ \\
+		\hline \multirow{2}{*}{$R_{x1}$}&\multirow{2}{*}{$\frac{500\Omega}{500\Omega}$}&\multirow{2}{*}{47.05}&左：47.1&2.0&\multirow{2}{*}{47.05}&左：0.05&\multirow{2}{*}{$1.7\times10^{3}$}&\multirow{2}{*}{1.6$\times10^{3}$} &\multirow{2}{*}{0.06}\\
+		&&&右：47.0&1.7&&右：0.05&&&\\
+		\hline
+		$R_{x2}$   &  $\frac{50.0\Omega}{500\Omega}$     & 3706  & 3736  & 4.9   & 370.6 & 30    & $6.1\times10^{2}$ &$5.3\times10^{2}$ &0.4 \\
+		\hline
+		\multirow{2}{*}{交换$R_{1}R_{2}$}  &   $\frac{500\Omega}{500\Omega}$    & 370.7 & 371.7 & 4.5   & 370.7 & 1.0     & $1.6\times10^{3}$ & \multirow{2}{*}{1.4$\times10^{3}$}& \multirow{2}{*}{0.2}\\
+		 \cline{2-8} &  $\frac{500\Omega}{500\Omega}$     & 370.7 & 371.8 & 4.0  & 370.7 & 1.1   & $1.4\times10^{3}$ &&  \\
+		  \hline
+	 $R_{x3}$   &  $\frac{500\Omega}{500\Omega}$     & 4050  & 4120  & 5.2   & 4050  & 70    &  $3.0\times10^{2}$     &$2.8\times10^{2}$& 5 \\
+	 \hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{改变测量条件对电桥灵敏度的影响($R_{x2}$)}
+\begin{table}[H]
+	\centering
+	\caption{改变测量条件对电桥灵敏度的影响($R_{x2}$)数据表}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		测量条件&$R_{0}/\Omega$&$R^{\prime}_{0}/\Omega$&$\Delta n$(格)&$R_{x2}/\Omega$&$\Delta R_{0}$&$S$(格)&$S_{\text{理论}}$(格)\\
+		\hline
+		$E=4.0mV,\frac{R_{1}}{R_{2}}=\frac{500\Omega}{500\Omega}$&\multirow{2}{*}{370.7}&\multirow{2}{*}{371.7}&\multirow{2}{*}{4.2}&\multirow{2}{*}{370.7}&\multirow{2}{*}{1.0}&\multirow{2}{*}{$1.5\times10^{3}$}&\multirow{2}{*}{$1.4\times10^{3}$}\\
+		$R_{h}=0\Omega$&&&&&&&\\
+		\hline
+		$E=2.0mV,\frac{R_{1}}{R_{2}}=\frac{500\Omega}{500\Omega}$&\multirow{2}{*}{370.7}&\multirow{2}{*}{372.7}&\multirow{2}{*}{4.3}&\multirow{2}{*}{370.7}&\multirow{2}{*}{2.0}&\multirow{2}{*}{$7.9\times10^{2}$}&\multirow{2}{*}{7.0$\times10^{2}$}\\
+        $R_{h}=0\Omega$&&&&&&&\\
+        \hline
+        $E=4.0mV,\frac{R_{1}}{R_{2}}=\frac{500\Omega}{5000\Omega}$&\multirow{2}{*}{3707}&\multirow{2}{*}{3757}&\multirow{2}{*}{4.1}&\multirow{2}{*}{370.7}&\multirow{2}{*}{50}&\multirow{2}{*}{$3.0\times10^{2}$}&\multirow{2}{*}{2.7$\times10^{2}$}\\
+        $R_{h}=0\Omega$&&&&&&&\\
+        \hline
+        $E=4.0mV,\frac{R_{1}}{R_{2}}=\frac{500\Omega}{500\Omega}$&\multirow{2}{*}{370.7}&\multirow{2}{*}{377.7}&\multirow{2}{*}{4.2}&\multirow{2}{*}{370.7}&\multirow{2}{*}{7.0}&\multirow{2}{*}{$2.2\times10^{2}$}&\multirow{2}{*}{1.9$\times10^{2}$}\\
+        $R_{h}=3k\Omega$&&&&&&&\\
+        \hline
+	\end{tabular}
+\end{table}
+\subsection{平衡电桥测铂电阻温度系数}
+\begin{table}[H]
+	\centering
+	\caption{平衡电桥测铂电阻温度系数数据表}
+	\label{平衡电桥测铂电阻温度系数数据表}
+	\begin{tabular}{c|*{7}{c}}
+		\toprule[0.5mm]
+		$T/^{\circ}C$&0.0&25.1&40.3&55.1&70.0&84.4&99.9\\
+		\midrule
+		$R_{1}/\Omega$&100.1&109.8&115.6&121.3&127.0&132.6&138.4\\
+	    $R_{2}/\Omega$&100.0&109.7&115.7&121.2&126.9&132.6&138.5\\
+	    $\Delta V/mV$&0.73&-&-&-&-&-&0.62\\
+	    $\Delta R/\Omega$&0.35&-&-&-&-&-&0.25\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\caption{\label{1} 平衡电桥测量铂电阻温度系数线性拟合}
+	\includegraphics[width=10cm,height=7cm]  {平衡电桥.png} 
+\end{figure}
+\begin{center}
+	$\therefore A=\dfrac{k}{b}=3.845\times10^{-3}(^{\circ}C)^{-1}$\\
+	$\sigma_{k,A}=k\sqrt{\dfrac{1/r^{2}-1}{n-2}}=6.527\times10^{-4}\Omega/^{\circ}C$\\
+	$\sigma_{k,T}=\dfrac{ke_{T}/\sqrt{3}}{\sqrt{\sum\limits_{i=1}^{7}(T_{i}-\bar{T})^{2}}}=2.61\times10^{-4}\Omega/^{\circ}C$\\
+	$\sigma_{k,R}=\dfrac{e_{R}/\sqrt{3}}{\sqrt{\sum\limits_{i=1}^{7}(T_{i}-\bar{T})^{2}}}=1.22\times10^{-3}(^{\circ}C)^{-1}$\\
+	$\therefore \sigma_{k}=\sqrt{\sigma_{k,A}^{2}+\sigma_{k,R}^{2}+\sigma_{k,T}^{2}}=1.408\times10^{-3}\Omega/^{\circ}C$\\
+	$\sigma_{R_{0}}=\dfrac{e_{R_{0}}}{\sqrt{3}}=0.06\Omega$\\
+	$\therefore \sigma_{A}=A\sqrt{(\dfrac{\sigma_{k}}{k})^{2}+(\dfrac{\sigma_{R_{0}}}{R_{0}})^{2}}=1.4\times10^{-5}(^{\circ}C)^{-1}$\\
+	$\therefore A=(3.845\pm 0.014)(^{\circ}C)^{-1}$
+\end{center}
+所以$T=0.0^{\circ}C$时，$S=\dfrac{R\Delta V }{\Delta R}=2.1\times 10^{2}mV$；而$T=99.9^{\circ}C$时，$S=\dfrac{R\Delta V}{\Delta R}=3.4\times 10^{2}mV$
+\section{思考题}
+\subsection{思考题一}
+答：因为电桥灵敏度$S=\dfrac{S_{i}E}{R_{1}+R_{2}+R_{0}+R_{x}+R_{g}(2+\dfrac{R_{1}}{R_{x}}+\dfrac{R_{0}}{R_{2}})}$，所以电源电压大幅下降会导致灵敏度降低，增大实验误差；电源电压稍有波动也会改变电桥灵敏度增大实验误差；测量低电阻时导线电阻必须考虑，这是系统误差；检流计零点未校准也会增加系统误差；检流计灵敏度不高会导致电桥灵敏度不高，从而增加误差。
+\subsection{思考题二}
+答：实验中温度过高，温度测量不准未达到共温，导线电阻及接触电阻的存在均会存在输入输出的非线性误差。这些因素对于测量的影响会通过不确定度反映，当铂电阻改变较小时会产生很大的影响。本实验中首先采取了三线式接法来抵消导线电阻和接线电阻的影响，其次选取温度范围在二次项可以忽略的范围，并且测定温度是在一个稳定的区间内测定，从而改善实验的非线性误差。
+\subsection{思考题三}
+答：$U_{out}$-$T$拟合直线截距不为零是因为实验对于输出电压$U_{out}$与温度$T$的测量都有着不确定度，所以其实在测定的每个点数据内，都存在的一个小的波动范围，而真值存在于那个范围内，因此我们拟合出来的曲线不一定会经过原点。这并不会影响测温精度，这属于未定系统误差，我们可以将其纳入不确定度的计算中。
+\section{分析与讨论}
+\subsection{比较分析铂电阻温度系数的测量结果与理论值}
+答：对于非平衡电桥法测量铂电阻的温度系数，就算考虑上可能的不确定度，其测量值也是偏小的，这是因为在第一次电桥调平衡后电桥不再平衡，导致电流在节点分流时不是均分为一半，从而导致测量值偏小。而平衡电桥测铂电阻温度系数因为每次在每个温度点测量的电阻都是在电桥平衡时测量出其真实电阻，所以测量的精确度较高，至少原理上没有系统误差，而从测量值计算来看却实更加接近理论值。
+\subsection{比较灵敏度测量值与理论计算值；分析灵敏度与各个参数间的依赖关系}
+答：在数据处理的表格中我们计算了不同情况下的电桥$S$的理论值，因为估读最后一位偏转格数的时候人肉眼看上去会有误差，而且这样带来的偏差还不小，所以电桥灵敏度的测量值和理论值会有一定的偏差，但基本上电桥灵敏度测量值和理论值相吻合(实际数据见平衡电桥测量数据表)。因为电桥灵敏度$S=\dfrac{S_{i}E}{R_{1}+R_{2}+R_{0}+R_{x}+R_{g}(2+\dfrac{R_{1}}{R_{x}}+\dfrac{R_{0}}{R_{2}})}$，所以检流计灵敏度越大，电源电压越大，则电桥灵敏度越高；桥臂总的电阻值之和越小，检流计内阻越小，则电桥灵敏度越高；桥臂电阻比例$\dfrac{R_{1}}{R_{x}}$和$\dfrac{R_{0}}{R_{2}}$之和越小，则电桥灵敏度越高。
+\subsection{分析比较电阻不确定度中各成分贡献，了解各桥臂精度和电桥灵敏度对不确定度的影响}
+答：在计算电阻不确定度时，$\sigma_{R_{x}}=\sqrt{\delta R_{x}^{2}+(\dfrac{R_{0}}{R_{2}})^{2}\sigma_{R_{1}}^{2}+(\dfrac{R_{0}R_{1}}{R_{2}^{2}})^{2}\sigma_{R_{2}^{2}}+(\dfrac{R_{1}}{R_{2}})^{2}\sigma_{R_{0}}^{2}}$。在$\dfrac{R_{1}}{R_{2}}$等于1时，$R_{1}$和$R_{2}$的不确定度对于电阻不确定度影响相同，同时$R_{0}$的不确定度影响达到最小，在测量电阻$R_{x}$阻值较大时，$\delta R_{x}$的影响较大，因为由于灵敏度导致的电阻测量误差与电阻大小正相关，比如在计算$R_{x3}$不确定度时$\delta R_{x}$的影响很大。当电桥灵敏度较大时，则$\delta R_{x}$的影响较小，并且当$\dfrac{R_{1}}{R_{2}}$越小，即$R_{2}$越大，综合电桥桥臂对于不确定度的贡献就越小。因为交换桥臂后不确定度计算公式为$\sigma_{R_{x}}=\sqrt{\delta R_{x}^{2}+\dfrac{R_{01}}{4R_{02}}\sigma_{R_{02}}^{2}+\dfrac{R_{02}}{4R_{01}}\sigma_{R_{01}^{2}}}$，所以交换桥臂测量法从原理上就比单次测量法更精确，还有就是提高电桥灵敏度，比如增大电压减小桥臂电阻和之类的方法也可以提高测电阻的精度；对于小电阻，可以用开尔文电桥法测量来消除导线电阻与接触电阻的误差。
+\section{收获与感想}
+我们通过这次实验掌握了电桥法测量电阻的方法，但我们学到的不仅仅是测量电阻的方法，还有的是电桥法这一种方法，非平衡电桥为我们测量外界变量的微小变化给出了很好的示范，我们可以用传感器将外界变量的微小变化反馈到桥臂电阻的微小变化上去，从而通过测量输出电压，就可以计算出外界变量的微小变化量。同时我们还复习了误差处理部分，重温了不确定度的计算与合成，为我们以后的学习打下更好的基础。
+\end{document} 

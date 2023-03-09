@@ -1,0 +1,468 @@
+
+\documentclass[a4 paper,12pt]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{extramarks}
+\usepackage{ctex,amsmath,amsfonts,amssymb,bm,hyperref,graphicx}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\newcommand{\homework}[3]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 普物实验报告 \hfill} {\hfill {\rm #2} {\rm #3}} }
+        \vspace{4mm}
+        \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+        \vspace{3mm}}
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{document}
+\homework{测量介质中的声速}{1900011413}{吴熙楠}
+\tableofcontents
+\newpage
+\begin{abstract}
+	本实验使用声速测定仪,信号发生器,示波器,气压计,干湿球湿度计和温度计,光具座,直尺,透镜,扩束镜,激光发生器,通过极值法和相位法测量了空气中的声速,练习了熟练使用示波器和信号发生器的方法,通过声压光栅的方法测定了水中的声速,验证理论公式的正确性并与之比较分析误差来源.\\
+	\par\textbf{关键词:}声压光栅,相位法,极值法
+\end{abstract}
+\section{实验目的}
+\noindent
+(1)了解位移驻波的概念.\\
+(2)学习测定空气中声速的原理和方法.\\
+(3)测定空气中和水中的声速.\\
+(4)熟练使用示波器和信号发生器.
+\section{实验仪器}
+声速测定仪(分为空气中和水中两种),信号发生器,示波器,气压计,干湿球湿度计和温度计,光具座,直尺,透镜,扩束镜,激光发生器
+\section{实验数据处理}
+\subsection{极值法测量声速}
+\subsubsection{极值法测量声速数据表}
+\begin{table}[H]
+	\caption{极值法测量声速数据表$(f_{0}=39.65kHz,\theta=26.0^{\circ}C)$}
+	\label{极值法测量声速数据表}
+	\centering
+	\resizebox{\textwidth}{!}
+	{
+		\begin{tabular}{*{11}{c}}
+			\toprule[0.5mm]
+			$i$&0&1&2&3&4&5&6&7&8&9\\
+			\midrule
+			$x_{i}/mm$&132.175&127.882&123.494&119.203&114.902&110.579&106.240&101.869&97.529&93.217\\
+			\midrule
+			$U_{pp}/mV$&560&588&604&620&642&672&696&740&788&848\\
+			\bottomrule[0.5mm]
+			$x_{i}^{\prime}/mm$&93.217&97.648&101.929&106.329&110.721&114.985&119.349&123.656&127.971&132.325\\
+			\midrule
+			$U_{pp}^{\prime}/mV$&848&786&736&696&672&640&624&600&584&556\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	}
+\end{table}
+\subsubsection{逐差法处理第一组数据}
+\noindent
+对第一组数据每五个数据逐差可得:
+
+\begin{center}
+	$\dfrac{\bar{\lambda}}{2}=\dfrac{1}{25}\sum\limits_{i=0}^{4}(x_{i}-x_{i+5})=4.329mm$\\
+	$\bar{\lambda}=8.658mm$\\
+	$\bar{v}=f_{0}\bar{\lambda}=343.3m/s$
+\end{center}
+对$\lambda$的A类误差为(令$f_{i}=\frac{1}{5}(x_{i}-x_{i+5})$):
+\begin{center}
+	$\sigma_{\lambda A}=2\sqrt{\dfrac{\sum\limits_{i=0}^{n}(f_{i}-\bar{f})^{2}}{n(n-1)}}=0.00648mm$
+\end{center}
+对$\lambda$的B类误差为:
+\begin{center}
+	$\Delta=0.005mm$\\
+	$\sigma_{f_{i}}=\dfrac{\sqrt{2}}{5}\sigma_{x_{i}}\quad \sigma_{x_{i}}=\dfrac{\Delta}{\sqrt{3}}$\\
+	$\sigma_{\lambda B}=\dfrac{2\sqrt{2}}{5}\dfrac{\Delta}{\sqrt{3}}=0.001633mm$
+\end{center}
+合成$\lambda$误差为:
+\begin{center}
+	$\sigma_{\lambda}=\sqrt{\sigma_{\lambda A}^{2}+\sigma_{\lambda B}^{2}}=0.00668mm$
+\end{center}
+对$f_{0}$的误差为:
+\begin{center}
+	$\sigma_{f}=\dfrac{\Delta}{\sqrt{3}}=0.02887kHz$
+\end{center}
+合成相对不确定度为:
+\begin{center}
+	$\dfrac{\sigma_{v}}{v}=\sqrt{(\dfrac{\sigma_{\lambda}}{\lambda})^{2}+(\dfrac{\sigma_{f}}{f})^{2}}$
+\end{center}
+计算可得:
+\begin{center}
+	$\sigma_{v}=0.4m/s$\\
+	$\therefore v=(343.3\pm 0.4)m/s$
+\end{center}
+\subsubsection{逐差法处理第二组数据}
+\noindent
+对第二组数据每五个数据逐差可得:
+
+\begin{center}
+	$\dfrac{\bar{\lambda}}{2}=\dfrac{1}{25}\sum\limits_{i=0}^{4}(x_{i+5}^{\prime}-x_{i}^{\prime})=4.338mm$\\
+	$\bar{\lambda}=8.676mm$\\
+	$\bar{v}=f_{0}\bar{\lambda}=344.0m/s$
+\end{center}
+对$\lambda$的A类误差为(令$f_{i}=\frac{1}{5}(x_{i+5}^{\prime}-x_{i}^{\prime})$):
+\begin{center}
+	$\sigma_{\lambda A}=2\sqrt{\dfrac{\sum\limits_{i=0}^{n}(f_{i}-\bar{f})^{2}}{n(n-1)}}=0.01175mm$
+\end{center}
+对$\lambda$的B类误差为:
+\begin{center}
+	$\Delta=0.005mm$\\
+	$\sigma_{f_{i}}=\dfrac{\sqrt{2}}{5}\sigma_{x_{i}}\quad \sigma_{x_{i}}=\dfrac{\Delta}{\sqrt{3}}$\\
+	$\sigma_{\lambda B}=\dfrac{2\sqrt{2}}{5}\dfrac{\Delta}{\sqrt{3}}=0.001633mm$
+\end{center}
+合成$\lambda$误差为:
+\begin{center}
+	$\sigma_{\lambda}=\sqrt{\sigma_{\lambda A}^{2}+\sigma_{\lambda B}^{2}}=0.01186mm$
+\end{center}
+对$f_{0}$的误差为:
+\begin{center}
+	$\sigma_{f}=\dfrac{\Delta}{\sqrt{3}}=0.02887kHz$
+\end{center}
+合成相对不确定度为:
+\begin{center}
+	$\dfrac{\sigma_{v}}{v}=\sqrt{(\dfrac{\sigma_{\lambda}}{\lambda})^{2}+(\dfrac{\sigma_{f}}{f})^{2}}$
+\end{center}
+计算可得:
+\begin{center}
+	$\sigma_{v}=0.5m/s$\\
+	$\therefore v=(344.0\pm 0.5)m/s$
+\end{center}
+\subsection{相位法测量声速}
+\subsubsection{相位法测量声速数据表}
+\begin{table}[H]
+	\caption{相位法测量声速数据表$(f_{0}=39.65kHz,\theta=26.0^{\circ}C)$}
+	\label{相位法测量声速数据表}
+	\centering
+	\resizebox{\textwidth}{!}
+	{
+		\begin{tabular}{*{11}{c}}
+			\toprule[0.5mm]
+			$i$&0&1&2&3&4&5&6&7&8&9\\
+			\midrule
+			$x_{i}/mm$&140.172&131.290&122.242&113.270&104.770&95.912&87.112&78.486&69.585&60.765\\
+			\midrule
+			$x_{i}^{\prime}/mm$&60.765&69.568&78.512&87.215&96.000&104.800&113.330&122.225&131.300&140.092\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	}
+\end{table}
+\subsubsection{线性回归处理第一组数据}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} 相位法测量数据线性回归曲线1}
+	\includegraphics[width=13cm,height=10cm]  {相位法测量数据线性回归1.png} 
+\end{figure}
+\begin{center}
+	$v=f_{0}\lambda=349.1m/s$
+\end{center}
+A类误差计算:
+\begin{center}
+	$\sigma_{\lambda A}=\sqrt{\dfrac{\sum\limits_{i=1}^{n}(x_{i}-b+\lambda i)^{2}}{n-2}}=0.1496mm$
+\end{center}
+取仪器允差为:
+\begin{center}
+	$\Delta=0.005mm$
+\end{center}
+B类误差计算:
+\begin{center}
+	$\sigma_{\lambda B}=\dfrac{\Delta}{\sqrt{3}}=0.0028868mm$
+\end{center}
+合成误差为:
+\begin{center}
+	$\sigma=\sqrt{\sigma_{\lambda A}^{2}+\sigma_{\lambda B}^{2}}=0.14963mm$
+\end{center}
+合成不确定度为:
+\begin{center}
+	$\sigma_{\lambda}=\dfrac{\sigma}{\sqrt{\sum\limits_{k=1}^{n}(i-\bar{i})^{2}}}=0.01647mm$
+\end{center}
+取信号发生器允差为:
+\begin{center}
+	$\Delta=0.05kHz$
+\end{center}
+因此:
+\begin{center}
+	$\sigma_{f}=\dfrac{\Delta}{\sqrt{3}}$\\
+	$\dfrac{\sigma_{v}}{v}=\sqrt{(\dfrac{\sigma_{\lambda}}{\lambda})^{2}+(\dfrac{\sigma_{f}}{f})^{2}}$
+\end{center}
+计算可得:
+\begin{center}
+	$\sigma_{v}=0.7m/s$\\
+	$\therefore v=(349.1\pm 0.7)m/s$
+\end{center}
+\subsubsection{线性回归处理第二组数据}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} 相位法测量数据线性回归曲线2}
+	\includegraphics[width=13cm,height=10cm]  {相位法测量数据线性回归2.png} 
+\end{figure}
+\begin{center}
+	$v=f_{0}\lambda=348.9m/s$
+\end{center}
+A类误差计算:
+\begin{center}
+	$\sigma_{\lambda A}=\sqrt{\dfrac{\sum\limits_{i=1}^{n}(x_{i}-b-\lambda i)^{2}}{n-2}}=0.1264mm$
+\end{center}
+取仪器允差为:
+\begin{center}
+	$\Delta=0.005mm$
+\end{center}
+B类误差计算:
+\begin{center}
+	$\sigma_{\lambda B}=\dfrac{\Delta}{\sqrt{3}}=0.0028868mm$
+\end{center}
+合成误差为:
+\begin{center}
+	$\sigma=\sqrt{\sigma_{\lambda A}^{2}+\sigma_{\lambda B}^{2}}=0.1264mm$
+\end{center}
+合成不确定度为:
+\begin{center}
+	$\sigma_{\lambda}=\dfrac{\sigma}{\sqrt{\sum\limits_{k=1}^{n}(i-\bar{i})^{2}}}=0.01392mm$
+\end{center}
+取信号发生器允差为:
+\begin{center}
+	$\Delta=0.05kHz$
+\end{center}
+因此:
+\begin{center}
+	$\sigma_{f}=\dfrac{\Delta}{\sqrt{3}}$\\
+	$\dfrac{\sigma_{v}}{v}=\sqrt{(\dfrac{\sigma_{\lambda}}{\lambda})^{2}+(\dfrac{\sigma_{f}}{f})^{2}}$
+\end{center}
+计算可得:
+\begin{center}
+	$\sigma_{v}=0.6m/s$\\
+	$\therefore v=(348.9\pm 0.6)m/s$
+\end{center}
+\subsection{气体参量测量声速}
+\subsubsection{温度、压强、相对湿度和饱和蒸气压的测量数据表}
+\begin{table}[H]
+	\caption{温度、压强、相对湿度和饱和蒸气压的测量数据表}
+	\label{温度、压强、相对湿度和饱和蒸气压的测量数据表}
+	\centering
+	\begin{tabular}{*{5}{c}}
+		\toprule[0.5mm]
+		&$\theta/^{\circ}C$&$P_{s}/Pa$&$H/\%$&$P/mmHg$\\
+		\midrule
+		最小分度值&1&/&2&0.05\\
+		数据&26.0&3361.3&34&766.80\\
+		\bottomrule[0.5mm]
+\end{tabular}
+\end{table}
+\subsubsection{气体参量计算声速}
+\begin{center}
+	$P_{w}=P_{s}\times H=1142.8Pa$\\
+	$v=331.45\sqrt{(1+\frac{\theta}{T_{0}})(1+\frac{0.3192P_{w}}{P})}$
+\end{center}
+代入数据可得:
+\begin{center}
+	$v=347.5m/s$
+\end{center}
+我们取最小分度值一半为仪器允差:
+\begin{center}
+	$\Delta_{\theta}=0.5^{\circ}C,\Delta_{H}=1\%,\Delta_{P}=0.025mmHg$
+\end{center}
+仪器不确定度为:
+\begin{center}
+	$\sigma_{\theta}=\dfrac{\Delta_{\theta}}{\sqrt{3}},\sigma_{H}=\dfrac{\Delta_{H}}{\sqrt{3}},\sigma_{P}=\dfrac{\Delta_{P}}{\sqrt{3}}$
+\end{center}
+合成相对不确定度为:  
+\begin{center}
+	$\dfrac{\sigma_{v}}{v}=\sqrt{(\dfrac{\sigma_{\theta}}{2T_{0}(1+\frac{\theta}{T_{0}})})^{2}+(\dfrac{0.3192P_{s}\sigma_{H}}{2P(1+\frac{0.3192P_{w}}{P})})^{2}+(\dfrac{0.3192P_{w}\sigma_{P}}{2P^{2}(1+\frac{0.3192P_{w}}{P})})^{2}} $
+\end{center}
+计算可得:
+\begin{center}
+	$\sigma_{v}=0.2m/s$\\
+	$\therefore v=(347.5\pm 0.2)m/s$ 
+\end{center}
+\subsection{声压光栅法测量声速}
+\begin{table}[H]
+	\caption{水中声速测量数据表}
+	\label{水中声速测量数据表}
+	\centering
+	\begin{tabular}{*{6}{c}}
+		\toprule[0.5mm]
+		$k$&$f/MHz$&$\lambda_{\text{光}}/nm$&$\theta_{\text{水}}/^{\circ}C$&$2x/cm$&$L/cm$\\
+		\midrule
+		1&10.060&633&26.0&5.25&622.00\\
+		2&10.060&633&26.0&10.65&622.00\\
+		3&10.060&633&26.0&15.85&622.00\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+
+\begin{center}
+$\because \lambda sin\theta=k\lambda_{\text{光}},Ltan\theta=x$\\
+$\therefore \lambda=\dfrac{k\lambda_{\text{光}}\sqrt{x^{2}+L^{2}}}{x}$ 
+\end{center}
+\begin{table}[H]
+	\caption{$\theta$和$\lambda$记录表}
+	\label{衍射角和声波波长记录表}
+	\centering
+	\setlength{\tabcolsep}{7mm}{
+	\begin{tabular}{*{4}{c}}
+		\toprule[0.5mm]
+		$k$&$\theta/^{\circ}$&$\lambda/mm$&$\bar{\lambda}/mm$\\
+		\midrule
+		1&0.242&0.150&/\\
+		2&0.491&0.148&/\\
+		3&0.730&0.149&/\\
+		/&/&/&0.149\\
+		\bottomrule[0.5mm]
+	\end{tabular}}
+\end{table}
+\begin{center}
+$\therefore \bar{v}=f\bar{\lambda}=1.50\times10^{3}m/s$
+\end{center}
+\subsection{声波振幅衰减曲线图}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} 声波振幅衰减曲线}
+	\includegraphics[width=13cm,height=10cm]  {声波振幅衰减曲线1.png} 
+\end{figure}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1}声波振幅衰减曲线2}
+	\includegraphics[width=13cm,height=10cm]  {声波振幅衰减曲线2.png} 
+\end{figure}
+\begin{center}
+	因此可以看出声波振幅大致是呈现指数衰减的.
+\end{center}
+\section{分析与讨论}
+\subsection{误差来源讨论及相位法和极值法比较}
+\begin{center}
+	误差来源讨论
+\end{center}
+\par 通过分析极值法的数据我们发现,对于相对不确定度而言,$\lambda$和$f_{0}$的不确定度贡献差不多是同一个数量级的($10^{-3}$),$f_{0}$的误差来源于信号发生器的仪器误差,而对于$\lambda$而言,它的A类误差($10^{-2}mm$)比B类误差($10^{-3}mm$)也是差不多大一个数量级的.因此极值法测量空气中的声速误差主要来源于信号发生器的仪器允差(未定系统误差)以及测量距离时的随机误差.\\
+\par 通过分析相位法的数据我们发现,对于相对不确定度而言,$\lambda$和$f_{0}$的不确定度贡献差不多是同一个数量级的($10^{-3}$),$f_{0}$的误差来源于信号发生器的仪器误差,而对于$\lambda$而言,它的A类误差($10^{-1}mm$)远大于B类误差($10^{-3}mm$).因此相位法测量空气中的声速误差主要来源于信号发生器的仪器允差(未定系统误差)以及测量距离时的随机误差.\\
+\par 通过分析气体参量的数据我们发现,对于相对不确定度而言,温度的不确定度贡献($10^{-4}$)远大于湿度($10^{-5}$)以及气压($10^{-8}$)的不确定度贡献,本次测量只有一组数据因此没有测量随机误差.所以气体参量法测量空气中声速误差主要来源于温度计的仪器允差(未定系统误差).
+\begin{center}
+	相位法和极值法的比较
+\end{center}
+\par 极值法利用的是声压驻波的方法,相邻两个声压为波腹的点距离为声波波长的一半,以此来计算出声波波长,进而计算出空气中声速.在测量过程中会遇到图像有多个极值以及示波器显示起伏的问题.通过误差分析我们可以得到极值法测量空气中的声速误差来源于信号发生器以及声速测量仪的仪器允差(未定系统误差)以及测量距离时的随机误差.\\
+\par 相位法利用的是李萨如图形,比较声速测量仪发射端和接收端的声波相位差,相位改变一个周期则空间距离改变一个声波波长,以此来计算出声波波长,进而计算出空气中声速.在测量过程中与极值法一样会遇到示波器显示起伏的问题.通过误差分析我们可以得到相位法测量空气中的声速误差主要来源于信号发生器的仪器允差(未定系统误差)以及测量距离时的随机误差.
+\subsection{实验方法与设备改进}
+\begin{center}
+极值法测量空气中声速
+\end{center}
+\par \textcircled{1}实验方法：极值法用声压驻波的方法,改变声速测量仪两探头之间的距离,测量两个极值之间的距离即为声波长的一半.但在实验过程中会有因为因为反射面不为光滑面而导致的多极值影响,示波器显示的起伏影响也十分影响判断极值的位置.\\
+\par \textcircled{2}设备改进:声速测量仪的发射端和接收端应该尽量做得光滑以避免多极值情况的出现;将示波器和信号发生器以及声速测量仪打包成一个仪器,用金属壳和外界隔离,这样可以减少因为外界影响而导致的涨落变化.
+\begin{center}
+相位法测量空气中声速
+\end{center}
+\par \textcircled{1}实验方法:相位法采用李萨如图形,通过改变发射端和接收端的距离,测量两波形相位差相同时移动的距离,此距离即为声波波长.实验过程中同极值法相同会因为示波器显示的起伏导致判断位置的失误.\\
+\par \textcircled{2}设备改进:同极值法相同,将示波器和信号发生器以及声速测量仪打包成一个仪器,用金属壳和外界隔离,以减少因为外界影响而导致的涨落变化.
+\begin{center}
+	声压光栅法测量水中的声速
+\end{center}
+\par \textcircled{1}实验方法:利用超声波在液体传播形成疏密波,激光照射时会发生衍射现象,利用光栅衍射公式求得水中声波波长,进而求得水中声速.但由于水中有气泡,以及共轴调节不佳或者距离不够的原因导致测量值只是一个粗略值.\\
+\par \textcircled{2}设备改进:尽量将光具座延长,以及放置超声波发射器的平台应该与桌面齐平,在接收屏幕上最好能有刻度便于测量.
+\subsection{极值法图像出现多极值原因及处理方法}
+在我们运用极值法测量空气中声速的时候,我们通过改变声速测量仪两探头的距离,并观察示波器的图像可以发现,在实验过程中我们会有多个(一般为两个)不同极值出现影响我们测量.其形成原因为声速测量仪的声波反射面并不是为严格的光滑面,反射会形成多个声压驻波,因此就会形成多个振幅极值情况.因为主极值会较大于次极值,因此我们可以将信号发生器的电压幅值调低,使得次极值不太显现;或者将声速测量仪的两个探头稍微靠近一些,这样次极值的影响将会减小.
+\section{收获与感想}
+	在此次实验中我们通过极值法和相位法测量了空气中的声速,练习了熟练使用示波器和信号发生器的方法,学习了声压光栅的方法测定了水中的声速,验证理论公式的正确性并与之比较分析不同方法中的误差来源.其中声压光栅法测量水中的声速体现了实验过程中光学与声学的联系,培养了我们的实验素质.通过此次实验处理实验数据,我们对于实验数据的处理以及误差分析更加熟练,为以后的学习打下基础.
+\section{原始数据整理}
+\subsection{极值法测量声速原始数据表}
+\begin{table}[H]
+	\caption{极值法测量声速数据表$(f_{0}=39.65kHz,\theta=26.0^{\circ}C)$}
+	\label{极值法测量声速数据表}
+	\centering
+	\resizebox{\textwidth}{!}
+	{
+		\begin{tabular}{*{11}{c}}
+			\toprule[0.5mm]
+			$i$&0&1&2&3&4&5&6&7&8&9\\
+			\midrule
+			$x_{i}/mm$&132.175&127.882&123.494&119.203&114.902&110.579&106.240&101.869&97.529&93.217\\
+			\midrule
+			$U_{pp}/mV$&560&588&604&620&642&672&696&740&788&848\\
+			\bottomrule[0.5mm]
+			$x_{i}^{\prime}/mm$&93.217&97.648&101.929&106.329&110.721&114.985&119.349&123.656&127.971&132.325\\
+			\midrule
+			$U_{pp}^{\prime}/mV$&848&786&736&696&672&640&624&600&584&556\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	}
+\end{table}
+
+\subsection{相位法测量声速原始数据表}
+\begin{table}[H]
+	\caption{相位法测量声速数据表$(f_{0}=39.65kHz,\theta=26.0^{\circ}C)$}
+	\label{相位法测量声速数据表}
+	\centering
+	\resizebox{\textwidth}{!}
+	{
+		\begin{tabular}{*{11}{c}}
+			\toprule[0.5mm]
+			$i$&0&1&2&3&4&5&6&7&8&9\\
+			\midrule
+			$x_{i}/mm$&140.172&131.290&122.242&113.270&104.770&95.912&87.112&78.486&69.585&60.765\\
+			\midrule
+			$x_{i}^{\prime}/mm$&60.765&69.568&78.512&87.215&96.000&104.800&113.330&122.225&131.300&140.092\\
+			\bottomrule[0.5mm]
+		\end{tabular}
+	}
+\end{table}
+
+\subsection{温度、压强、相对湿度和饱和蒸气压的测量原始数据表}
+\begin{table}[H]
+	\caption{温度、压强、相对湿度和饱和蒸气压的测量数据表}
+	\label{温度、压强、相对湿度和饱和蒸气压的测量数据表}
+	\centering
+	\begin{tabular}{*{5}{c}}
+		\toprule[0.5mm]
+		&$\theta/^{\circ}C$&$P_{s}/Pa$&$H/\%$&$P/mmHg$\\
+		\midrule
+		最小分度值&1&/&2&0.05\\
+		数据&26.0&3361.3&34&766.80\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{水中声速测量原始数据表}
+\begin{table}[H]
+	\caption{水中声速测量数据表}
+	\label{水中声速测量数据表}
+	\centering
+	\begin{tabular}{*{6}{c}}
+		\toprule[0.5mm]
+		$k$&$f/MHz$&$\lambda_{\text{光}}/nm$&$\theta_{\text{水}}/^{\circ}C$&$2x/cm$&$L/cm$\\
+		\midrule
+		1&10.060&633&26.0&5.25&622.00\\
+		2&10.060&633&26.0&10.65&622.00\\
+		3&10.060&633&26.0&15.85&622.00\\
+		\bottomrule[0.5mm]
+	\end{tabular}
+\end{table}
+\subsection{python源代码}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} 相位法数据线性回归python源代码}
+	\includegraphics[width=14cm,height=10cm]  {python源代码2.png} 
+\end{figure}
+\begin{figure}[H] 
+	\centering
+	\caption{\label{1} 声波振幅衰减曲线绘图python源代码}
+	\includegraphics[width=14cm,height=10cm]  {python源代码1.png} 
+\end{figure}
+\end{document} 
