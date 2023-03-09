@@ -1,0 +1,208 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{Luo2013BrillouinRamanCO}{article}{}
+    \name{author}{7}{}{%
+      {{hash=LZ}{%
+         family={Luo},
+         familyi={L\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=YX}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={X.},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZZ}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={Zhihong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=YW}{%
+         family={Ye},
+         familyi={Y\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=ZC}{%
+         family={Zeng},
+         familyi={Z\bibinitperiod},
+         given={Chun},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=JJ}{%
+         family={Ji},
+         familyi={J\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LZ+1}
+    \strng{fullhash}{LZYXZZLKYWZCJJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1152\bibrangedash 4}
+    \field{title}{Brillouin/Raman compensation of the Kerr-effect-induced bias
+  in a nonlinear ring laser gyroscope.}
+    \field{volume}{38 7}
+    \field{journaltitle}{Optics letters}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Lihui2015MathematicalMO}{article}{}
+    \name{author}{6}{}{%
+      {{hash=LW}{%
+         family={Lihui},
+         familyi={L\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={Min},
+         familyi={M\bibinitperiod},
+         given={Cao},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=QcL}{%
+         family={Qing-chan},
+         familyi={Q\bibinithyphendelim c\bibinitperiod},
+         given={Liu},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WG}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Guangjin},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Bo},
+         familyi={B\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CL}{%
+         family={Cong},
+         familyi={C\bibinitperiod},
+         given={Lin},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LW+1}
+    \strng{fullhash}{LWMCQcLWGBLCL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{2937\bibrangedash 2940}
+    \field{title}{Mathematical models of light waves in Brillouin-scattering
+  fiber-optic gyroscope resonator}
+    \field{volume}{126}
+    \field{journaltitle}{Optik}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Nelson2019ReducingNI}{article}{}
+    \name{author}{6}{}{%
+      {{hash=NK}{%
+         family={Nelson},
+         familyi={N\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Puckett},
+         familyi={P\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Bose},
+         familyi={B\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Gundavarapu},
+         familyi={G\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Blumenthal},
+         familyi={B\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NK+1}
+    \strng{fullhash}{NKPMWJBDGSBD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1\bibrangedash 4}
+    \field{title}{Reducing Noise in a Ring-laser Gyro Based on Stimulated
+  Brillouin Scattering}
+    \field{journaltitle}{2019 IEEE International Symposium on Inertial Sensors
+  and Systems (INERTIAL)}
+    \field{year}{2019}
+  \endentry
+
+  \entry{洪伟2010布里渊光纤环形激光器的发展与应用}{article}{}
+    \name{author}{4}{}{%
+      {{hash=}{%
+         family={洪伟},
+         familyi={\bibinitperiod},
+      }}%
+      {{hash=}{%
+         family={李绪友},
+         familyi={\bibinitperiod},
+      }}%
+      {{hash=}{%
+         family={何周},
+         familyi={\bibinitperiod},
+      }}%
+      {{hash=}{%
+         family={张琛},
+         familyi={\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{01}
+    \field{pages}{115\bibrangedash 119}
+    \field{title}{布里渊光纤环形激光器的发展与应用}
+    \field{journaltitle}{中国惯性技术学报}
+    \field{year}{2010}
+  \endentry
+\enddatalist
+\endinput

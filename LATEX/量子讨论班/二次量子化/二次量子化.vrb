@@ -1,0 +1,25 @@
+\frametitle{\LaTeX {} 常用命令}
+\begin{exampleblock}{命令}
+^^I^^I^^I\centering
+^^I^^I^^I\footnotesize
+^^I^^I^^I\begin{tabular}{llll}
+^^I^^I^^I^^I\cmd{chapter} & \cmd{section} & \cmd{subsection} & \cmd{paragraph} \\
+^^I^^I^^I^^I章 & 节 & 小节 & 带题头段落 \\\hline
+^^I^^I^^I^^I\cmd{centering} & \cmd{emph} & \cmd{verb} & \cmd{url} \\
+^^I^^I^^I^^I居中对齐 & 强调 & 原样输出 & 超链接 \\\hline
+^^I^^I^^I^^I\cmd{footnote} & \cmd{item} & \cmd{caption} & \cmd{includegraphics} \\
+^^I^^I^^I^^I脚注 & 列表条目 & 标题 & 插入图片 \\\hline
+^^I^^I^^I^^I\cmd{label} & \cmd{cite} & \cmd{ref} \\
+^^I^^I^^I^^I标号 & 引用参考文献 & 引用图表公式等\\\hline
+^^I^^I^^I\end{tabular}
+^^I^^I\end{exampleblock}
+^^I^^I\begin{exampleblock}{环境}
+^^I^^I^^I\centering
+^^I^^I^^I\footnotesize
+^^I^^I^^I\begin{tabular}{lll}
+^^I^^I^^I^^I\env{table} & \env{figure} & \env{equation}\\
+^^I^^I^^I^^I表格 & 图片 & 公式 \\\hline
+^^I^^I^^I^^I\env{itemize} & \env{enumerate} & \env{description}\\
+^^I^^I^^I^^I无编号列表 & 编号列表 & 描述 \\\hline
+^^I^^I^^I\end{tabular}
+^^I^^I\end{exampleblock}

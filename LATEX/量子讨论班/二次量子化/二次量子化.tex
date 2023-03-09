@@ -1,0 +1,353 @@
+\documentclass{beamer}
+\usepackage{ctex, hyperref}
+\usepackage[T1]{fontenc}
+\usefonttheme[onlymath]{serif}
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+
+\author{吴熙楠}
+\title{Second Quantization}
+\subtitle{二次量子化}
+\institute{北京大学物理学院}
+\date{\today}
+\logo{\includegraphics[scale=0.04]{pic/PKU_logo.png}}
+\usepackage{PekingU}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	keywordstyle=\bfseries\color{deepblue},
+	emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+	stringstyle=\color{deepgreen},
+	numbers=left,
+	numberstyle=\small\color{halfgray},
+	rulesepcolor=\color{red!20!green!20!blue!20},
+	frame=shadowbox,
+}
+
+
+\begin{document}
+	
+	\kaishu
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+	\end{frame}
+
+	\section{简介}
+	\begin{frame}{简介}
+		\begin{itemize}
+			\item 量子力学基本原理指出，描写全同粒子系统的态矢量，对于任意一对粒子的对调来说必须是对称的（玻色子系统）或反对称的（费米子系统）。全同粒子系统的理论具有很多独有的特点,人们根据这些特点发展了一种特殊的理论形式，这种使用产生算符和消灭算符在对称化的希尔伯特空间处理全同粒子系统的方法，通常称为二次量子化方法。
+		\end{itemize}
+	\end{frame}
+\begin{frame}{简介}
+	\begin{center}
+		{\Huge\calligra Why? }
+	\end{center}
+\end{frame}
+   \subsection{全同粒子系统的坐标表象}
+	\begin{frame}{简介}
+	\begin{itemize}
+		\item 对于全同粒子组成的体系，由于粒子的全同性，任何两个粒子的置换并不会导致一个新的量子态，这种置换对称性对于全同粒子系统有着很强的限制作用，即在全同粒子系统中可能存在的量子态只可能是具有一定置换对称性的量子态。有可能是两个粒子交换不变的对称态(玻色系统)，也可能是两粒子交换改变正负号的反对称态(费米系统)。
+	\end{itemize}
+	\begin{block}{Pauli 原理}
+		\begin{itemize}
+			\item 不可能有两个全同费米子处于同一个单粒子态。
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}{简介}
+	\begin{block}{N个全同费米子体系量子态}
+		\begin{equation}
+			\begin{aligned}\psi_{\alpha\beta\cdots}^{A}(q_{1},q_{2},\cdots,q_{N})&=\frac{1}{\sqrt{N!}}
+				\begin{vmatrix}
+					\phi_{\alpha}(q_{1})&\cdots&\phi_{\alpha}(q_{N})\\
+					\phi_{\beta}(q_{1})&\cdots&\phi_{\beta}(q_{N})\\
+					\vdots&\cdots&\vdots
+				\end{vmatrix}\\
+				&=\frac{1}{\sqrt{N!}}\sum\limits_{P}\delta_{P}P[\phi_{\alpha}(q_{1})\phi_{\beta}(q_{2})\cdots]
+			\end{aligned}
+		\end{equation}
+	\end{block}
+	\begin{itemize}
+		\item $\delta_{P}(=\pm 1)$代表置换$P$的奇偶性。
+	\end{itemize}
+\end{frame}
+\begin{frame}{简介}
+	\begin{block}{N个全同玻色子体系量子态}
+		\begin{equation}
+			\begin{aligned}\psi_{n_{1}\cdots n_{N}}^{S}(q_{1},\cdots,q_{N})=\sqrt{\frac{\prod\limits_{i}n_{i}!}{N!}}\sum\limits_{P}P[\phi_{k1}(q_{1})\cdots\phi_{kN}(q_{N})]
+			\end{aligned}
+		\end{equation}
+	\end{block}
+	\begin{itemize}
+		\item 这里的$P$是指那些只对处于不同单粒子态的粒子进行对换所构成的置换，其总的项数为$N!/\prod\limits_{i}n_{i}!$。
+	\end{itemize}
+\end{frame}
+\begin{frame}{背景}
+	\begin{itemize}
+		\item 可见用坐标表象来描述全同粒子系统十分繁琐不方便，原因在于全同粒子系统的最主要的特点是粒子的不可分辨性，即粒子不可以区分、不可以编号；但是在坐标表象下，为了作数学上的描述，粒子又必须编号。
+		\item 事实上，我们只需要将处于每个单粒子态上的粒子数区分清楚，全同粒子系统的量子态也就完全确定了，并不需要了解每个单粒子态上的某一个粒子，为此我们引入粒子数表象。
+	\end{itemize}
+\end{frame}
+	\section{粒子数表象}
+	\begin{frame}{粒子数表象}
+		\begin{block}{Fock 空间}
+			\begin{itemize}
+				\item 考虑$n$个全同粒子组成的态空间$R_{n}=R^{(1)}\bigotimes R^{(2)}\bigotimes\cdots\bigotimes R^{(n)}$
+				\begin{itemize}
+					\item 我们在$R_{n}$中可以找到对称或者反对称的一组基$\{|n;\lambda_{a}\lambda_{b}\cdots\lambda_{z}\rangle|a,b,\cdots,n\in N\}$
+					\item 基矢满足的关系式为:\\$\sum\limits_{a,b,\cdots,z}|n;\lambda_{a}\lambda_{b}\cdots\lambda_{z}\rangle\langle n;\lambda_{a}\lambda_{b}\cdots\lambda_{z}|=I$
+				\end{itemize}
+			\item 考虑粒子数变化的态空间($Fock$ 空间):$R_{G}=\sum\limits_{n=0}^{\infty}\bigoplus R_{n}$
+			\begin{itemize}
+				\item $\sum\limits_{n=0}^{\infty}\sum\limits_{a,b,\cdots,z}|n;\lambda_{a}\lambda_{b}\cdots\lambda_{z}\rangle\langle n;\lambda_{a}\lambda_{b}\cdots\lambda_{z}|=I$
+				\item 在$F$空间不同子空间(不同粒子数的空间)彼此正交
+			\end{itemize}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{粒子数表象}
+		\begin{itemize}
+			\item 对于离散谱的空间, 我们可以找到一个更方便的记号来代替原来的对称或反对称基矢. 原来的基矢是$|n;\lambda_{a}\lambda_{b}\cdots\lambda_{z}\rangle$, 这种情况并不要求符号内态的排列顺序, 但是交换的时候可能会产生一个负号, 并且有多少个粒子就要写多少个态。
+			\item 我们将单粒子本征值按一定顺序编号:$\lambda_{a},\lambda_{b},\cdots,\lambda_{z}$,然后对系统的确定态我们数出各上述本征值对应本征子空间的粒子数且记为:$n_{1},n_{2},\cdots,n_{z}$,这样我们就可以用一个矢量$|n_{1},n_{2},\cdots,n_{z}\rangle$来表征这个系统的态。
+			\item $|n_{1},n_{2},\cdots,n_{z}\rangle=\pm |n;\lambda_{a}\lambda_{b}\cdots\lambda_{z}\rangle$
+		\end{itemize}
+		\end{frame}
+	\begin{frame}{粒子数表象}
+		\begin{block}{Fock 表象}
+			\begin{itemize}
+				\item $|n_{1},n_{2},\cdots,n_{z}\rangle$称为$Fock$态，其作为基矢的表象称作粒子数表象($Fock$表象)。
+				\begin{itemize}
+					\item 对于费米子因为$Pauli$原理限制，可以简单记为$|1_{\alpha} 1_{\beta} 1_{\gamma}\cdots\rangle$
+				\end{itemize}
+				\item $\sum\limits_{n_{1}n_{2}\cdots n_{z}}|n_{1},n_{2},\cdots,n_{z}\rangle\langle n_{1},n_{2},\cdots,n_{z}|=I$
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+    \section{产生、湮灭算符}
+    \subsection{一维谐振子的升降算符}
+    \begin{frame}{产生、湮灭算符}
+    	\begin{itemize}
+    		\item 一维谐振子的$Hamilton$量为:$H=\frac{1}{2}p^{2}+\frac{1}{2}x^{2}$
+    		\begin{itemize}
+    			\item 引入无量纲算符:$a_{\pm}=\frac{1}{\sqrt{2}}(x\mp ip)$
+    			\item $[a_{-},a_{+}]=1$
+    			\item $H=a_{+}a_{-}+\frac{1}{2}$
+    		\end{itemize}
+    	\item 令$\hat{N}=a_{+}a_{-}$,$\hat{N}|n\rangle=n|n\rangle$
+    	\begin{itemize}
+    		\item $|n\rangle=\frac{1}{\sqrt{n!}}(a_{+}^{n})|0\rangle$
+    		\item $a_{+}|n\rangle=\sqrt{n+1}|n+1\rangle$\qquad$a_{-}|n\rangle=\sqrt{n}|n-1\rangle$
+    	\end{itemize}
+    \item $a_{\pm}$可以看做谐振子相邻能级之间的升降算符
+    	\end{itemize}
+    \end{frame}
+\begin{frame}{产生、湮灭算符}
+	\begin{itemize}
+		\item 将$|0\rangle$看做真空态，$|n\rangle$看做有$n$个声子的激发态，每个声子的能量为$\hbar \omega$。这样能级升降相当于为声子的产生与湮灭，因此$a_{\pm}$也可以理解为声子的产生、湮灭算符。
+		\item $N$维谐振子引入相应声子产生算符$a_{i+}$与湮灭算符$a_{j-}$
+		\begin{itemize}
+			\item $[a_{i-},a_{j+}]=\delta_{ij}$
+			\item $[a_{i-},a_{j-}]=[a_{i+},a_{j+}]=0,\qquad i,j=1,2,\cdots,N$
+			\item $|n_{1}n_{2}\cdots\rangle=\frac{1}{n_{1}!n_{2}!\cdots}(a_{1+})^{n_{1}}(a_{2+})^{n_{2}}\cdots|0\rangle$
+			\item $E_{n_{1}n_{2}\cdots}=\sum\limits_{i=1}^{N}(n_{i}+\frac{1}{2})\hbar \omega$
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\subsection{产生算符与湮灭算符}
+\begin{frame}{产生、湮灭算符}
+	\begin{block}{产生算符}
+		\begin{itemize}
+			\item 定义一个场算符$a_{i}^{\dagger}$,它能使本征值为$\lambda_{i}$的粒子数多一个，即$a_{i}^{\dagger}|n_{1},n_{2},\cdots,n_{i},\cdots\rangle\propto |n_{1},n_{2},\cdots,n_{i}+1,\cdots\rangle$
+			\item $a_{i}^{\dagger}|0\rangle=|\lambda_{i}\rangle$
+			\begin{itemize}
+				\item $\langle \lambda_{i}|\lambda_{i}\rangle=1=\langle 0|a_{i}|\lambda_{i}\rangle\Rightarrow a_{i}|\lambda_{i}\rangle=|0\rangle$
+			\end{itemize}
+			\item $a_{i}^{\dagger}|n_{1},n_{2},\cdots,n_{i},\cdots\rangle=k_{i} |n_{1},n_{2},\cdots,n_{i}+1,\cdots\rangle$
+			\begin{itemize}
+				\item $\langle n_{1},n_{2},\cdots,n_{i},\cdots|a_{i}a_{i}^{\dagger}|n_{1},n_{2},\cdots,n_{i},\cdots\rangle=k_{i}^{2}=n_{i}+1$
+				\item $k_{i}=\sqrt{n_{i}+1}$
+			\end{itemize}
+			\item $a_{i}^{\dagger}|n_{1},n_{2},\cdots,n_{i},\cdots\rangle=\sqrt{n_{i}+1} |n_{1},n_{2},\cdots,n_{i}+1,\cdots\rangle$
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{产生、湮灭算符}
+	\begin{block}{湮灭算符}
+		\begin{itemize}
+			\item $a_{i}|\lambda_{i}\rangle=|0\rangle$相当于起到一个粒子湮灭作用，$a_{i}$为湮灭算符
+			\item $a_{i}|n_{1},n_{2},\cdots, n_{i},\cdots\rangle\propto |n_{1},n_{2},\cdots, n_{i}-1,\cdots\rangle$
+			\item $a_{i}|\lambda_{j}\rangle=\delta_{ij}|0\rangle$
+			\item $a_{i}|n_{1},n_{2},\cdots,n_{i},\cdots\rangle=k_{i}^{\prime} |n_{1},n_{2},\cdots,n_{i}-1,\cdots\rangle$
+			\begin{itemize}
+				\item $\langle n_{1},n_{2},\cdots,n_{i},\cdots|a_{i}^{\dagger}a_{i}|n_{1},n_{2},\cdots,n_{i},\cdots\rangle=k_{i}^{\prime2}=n_{i}$
+				\item $k_{i}^{\prime}=\sqrt{n_{i}}$
+			\end{itemize}
+			\item $a_{i}|n_{1},n_{2},\cdots,n_{i},\cdots\rangle=\sqrt{n_{i}} |n_{1},n_{2},\cdots,n_{i}-1,\cdots\rangle$
+		\end{itemize}
+	\end{block}
+\end{frame}
+    \begin{frame}{产生、湮灭算符}
+    	\begin{block}{玻色系统的产生与湮灭算符}
+    		\begin{itemize}
+    			\item\small{ $a_{i}^{\dagger}a_{j}^{\dagger}|n_{1},n_{2},\cdots,n_{i},\cdots,n_{j},\cdots\rangle=a_{j}^{\dagger}a_{i}^{\dagger}|n_{1},n_{2},\cdots,n_{i},\cdots,n_{j},\cdots\rangle$}
+    			\begin{itemize}
+    				\item $a_{i}^{\dagger}a_{j}^{\dagger}-a_{j}^{\dagger}a_{i}^{\dagger}=0\Rightarrow [a_{i}^{\dagger},a_{j}^{\dagger}]=0$
+    			\end{itemize}
+    			\item $[a_{i},a_{j}]=0$
+    			\item $|n_{1},n_{2},\cdots,n_{i},\cdots\rangle=\dfrac{1}{\sqrt{\prod\limits_{i}n_{i}!}}(a_{1}^{\dagger})^{n_{1}}(a_{2}^{\dagger})^{n_{2}}\cdots |0\rangle$
+    			\item $[a_{i},a_{j}^{\dagger}]=\delta_{ij}$
+    		\end{itemize}
+    	\end{block}
+    \end{frame}
+    \begin{frame}{产生、湮灭算符}
+	\begin{block}{费米系统的产生与湮灭算符}
+		\begin{itemize}
+			\item\small{ $a_{i}^{\dagger}a_{j}^{\dagger}|n_{1},\cdots,n_{i},\cdots,n_{j},\cdots\rangle=-a_{j}^{\dagger}a_{i}^{\dagger}|n_{1},\cdots,n_{i},\cdots,n_{j},\cdots\rangle$}
+			\begin{itemize}
+				\item $a_{i}^{\dagger}a_{j}^{\dagger}+a_{j}^{\dagger}a_{i}^{\dagger}=0\Rightarrow \{a_{i}^{\dagger},a_{j}^{\dagger}\}=0$
+				\item $a_{i}^{\dagger}a_{i}^{\dagger}=0$
+			\end{itemize}
+			\item $\{a_{i},a_{j}\}=0,\quad a_{i}a_{i}=0$
+			\item $a_{\alpha}|\beta \gamma\cdots\rangle=0,\quad a_{\alpha}|\alpha\beta \gamma\cdots\rangle=|\beta \gamma\cdots\rangle$
+			\item $\{a_{i},a_{j}^{\dagger}\}=\delta_{ij}$
+		\end{itemize}
+	\end{block}
+    \end{frame}
+\section{相干态与压缩态}
+\subsection{相干态}
+\begin{frame}{相干态与压缩态}
+	\begin{itemize}
+		\item 粒子数算符:$\hat{n}=a^{\dagger}a$
+		\item 光子数态:$|n\rangle=\frac{(a^{\dagger})^{n}|0\rangle}{\sqrt{n!}}$
+		\item 单模行波电场:$E_{j}(r)=\epsilon_{j}a_{j}e^{-i\omega t+ikr}+c.c.$
+		\begin{itemize}
+			\item $\langle E_{j}(r)\rangle=\langle n|E_{j}(r)|n\rangle=0$
+			\item $\langle E_{j}^{2}(r)\rangle=\langle n|E_{j}^{2}(r)|n\rangle=\epsilon_{j}^{2}n(2n+1)$
+		\end{itemize}
+	\item $E_{j}(r)=\sqrt{2}\epsilon_{j}[\frac{a_{j}+a_{j}^{\dagger}}{\sqrt{2}}cos(\omega t-kr)+\frac{a_{j}-a_{j}^{\dagger}}{\sqrt{2}}sin(\omega t-kr)]$
+	\begin{itemize}
+		\item $q=\dfrac{a_{j}+a_{j}^{\dagger}}{\sqrt{2}},\qquad p=\dfrac{a_{j}-a_{j}^{\dagger}}{\sqrt{2}}$
+		\item $[q,p]=i$
+	\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}{相干态与压缩态}
+	\begin{block}{相干态}
+		\begin{itemize}
+			\item 对谐振子基态$\psi_{0}(q)$进行一次空间平移得到相干态:\\$|\alpha\rangle=\psi_{0}(q-q_{0})$
+			\item 引入平移算符:$D(\alpha)=e^{\lambda a^{\dagger}-\lambda^{\star}a}\qquad(|\alpha\rangle=D(\alpha)|0\rangle)$
+			\item $a\psi_{0}(q)=0\Rightarrow a^{\prime}\psi_{0}(q-q_{0})=0$
+			\begin{itemize}
+				\item $\begin{aligned}
+					a^{\prime}\psi_{0}(q-q_{0})&=\frac{1}{\sqrt{2}}(-ip+(q-q_{0}))\psi_{0}(q-q_{0})\\&=a\psi_{0}(q-q_{0})-\dfrac{q_{0}}{\sqrt{2}}\psi_{0}(q-q_{0})\\&=0
+				\end{aligned}$ 
+			\item 令$\lambda=\dfrac{q_{0}}{\sqrt{2}}\Rightarrow a|\alpha\rangle=\lambda|\alpha\rangle$
+			\begin{itemize}
+				\item 即相干态为湮灭算符的本征态
+			\end{itemize}
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}{相干态与压缩态}
+	\begin{block}{相干态在光子数表象的表示}
+		\begin{itemize}
+			\item $\langle n|\alpha\rangle=\langle 0|\frac{a^{n}}{\sqrt{n!}}|\alpha\rangle=\frac{\lambda^{n}}{\sqrt{n!}}\langle 0|\alpha\rangle$
+			\item 相干态为:$|\alpha\rangle=\sum\limits_{n}|n\rangle\langle n|\alpha\rangle=\sum\limits_{n}\frac{\lambda^{n}}{\sqrt{n!}}\langle 0|\alpha\rangle|n\rangle$\footnote{\tiny{相干态光子数分布满足泊松分布$p=e^{-\bar{n}}\cdot\frac{\bar{n}^{n}}{n!}$}}
+			\begin{itemize}
+				\item $\begin{aligned}
+					\langle \alpha|\alpha\rangle=|\langle 0|\alpha\rangle|^{2}\sum\limits_{n}\dfrac{|\lambda|^{2n}}{n!}
+					=|\langle 0|\alpha\rangle|^{2}e^{|\lambda|^{2}}
+				\end{aligned}$
+			\item $\begin{aligned}
+				|\alpha\rangle=e^{-\frac{1}{2}|\lambda|^{2}}\sum\limits_{n}\dfrac{\lambda^{n}}{\sqrt{n!}}|n\rangle=e^{-\frac{1}{2}|\lambda|^{2}}e^{\lambda a^{\dagger}}|0\rangle
+			\end{aligned}$
+		\item $|\alpha\rangle=e^{-\frac{1}{2}|\lambda|^{2}}e^{\lambda a^{\dagger}}e^{-\lambda^{\star}a}|0\rangle$
+		\begin{itemize}
+			\item $e^{-\lambda^{\star}a}|0\rangle=(1-\lambda^{\star}a+\cdots)|0\rangle=|0\rangle$
+		\end{itemize}
+			\end{itemize}
+		\item $D(\alpha)=e^{-\frac{1}{2}|\lambda|^{2}}e^{\lambda a^{\dagger}}e^{-\lambda^{\star}a}=e^{\lambda a^{\dagger}-\lambda^{\star}a}$
+		\begin{itemize}
+			\item $e^{A+B}=e^{-[A,B]/2}e^{A}e^{B}$
+		\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
+\subsection{压缩态}
+\begin{frame}{相干态与压缩态}
+	\begin{block}{压缩态的构造}
+		\begin{itemize}
+			\item 构造收缩的势$V^{\prime}(q)=(\frac{1}{2}+C)q^{2}$
+			\item $H=\frac{1}{2}p^{2}+V^{\prime}(q)=C_{0}(a^{\dagger}a+\frac{1}{2})+C_{1}(a^{2}+a^{\dagger 2})$
+			\begin{itemize}
+				\item 我们发现多出来$a^{2}+a^{\dagger 2}$项，即双光子产生和湮灭过程
+			\end{itemize}
+		\item 令压缩参量$\xi=re^{i\theta}$,构造压缩算符$S(\xi)=e^{\frac{1}{2}(\xi^{\star}a^{2}-\xi a^{\dagger 2})}$
+		\item 压缩真空态:$|\xi\rangle=S(\xi)|0\rangle$
+		\item 压缩相干态:$|\alpha,\xi\rangle=S(\xi)D(\alpha)|0\rangle$
+		\begin{itemize}
+			\item\footnotesize{因为$D(\alpha)$与$S(\xi)$不对易，因此$S(\xi)D(\alpha)|0\rangle\neq D(\alpha)S(\xi)|0\rangle$} 
+		\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}{相干态与压缩态}
+	\begin{block}{压缩态的本征方程}
+		\begin{itemize}
+			\item $\begin{aligned}
+				S^{\dagger}aS&=a(1+\frac{|\xi|^{2}}{2!}+\frac{|\xi|^{4}}{4!}+\cdots)-a^{\dagger}(\xi+\frac{\xi|\xi|^{2}}{3!}+\frac{\xi|\xi|^{4}}{5!}+\cdots)\\
+				&=acoshr-a^{\dagger}e^{i\theta}sinhr\\
+				&=\mu a-\nu a^{\dagger}
+			\end{aligned}$
+		\item $S^{\dagger}a^{\dagger}S=\mu a^{\dagger}-\nu^{\star}a$
+		\item $\langle \xi|a|\xi\rangle=\lambda\mu-\lambda^{\star}\nu$\qquad$\langle \xi|a^{\dagger}|\xi\rangle=\lambda^{\star}\mu-\lambda\nu^{\star}$
+		\item $(SaS^{\dagger})S|\alpha\rangle=Sa|\alpha\rangle=\lambda S|\alpha\rangle$\footnote{\scriptsize{其中可以证明$S^{\dagger}S=I$}}
+		\item\footnotesize{因此压缩态$|\xi\rangle(=S|\alpha\rangle)$为$\hat{A}(=SaS^{\dagger})$的本征态,本征值为$\lambda$} 
+		\item 压缩态平均光子数为:$\bar{n}=\langle \xi|\hat{n}|\xi\rangle=|\lambda|^{2}+sinh^{2}r$
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}{相干态与压缩态}
+	\begin{block}{双光子过程}
+		\begin{itemize}
+			\item 简并参量下转换过程为,一个频率为$\omega_{p}=2\omega$的泵浦光子，经过二阶非线性极化率为$\chi^{(2)}$的非线性晶体作用，转化为两个频率为$\omega$的信号光子,此过程的$Hamilton$量写为:\\$H=a^{\dagger}a+2b^{\dagger}b+i\chi^{(2)}(a^{2}b^{\dagger}-a^{\dagger2}b)$
+			\begin{itemize}
+				\item 其中$a,b$分别为信号光与泵浦光的光子湮灭算符
+			\end{itemize}
+		\item 我们取参量近似($b\rightarrow \beta e^{-i\omega_{p} t}$),变换到相互作用绘景($a\rightarrow e^{-i\omega t}$),令$\eta=\beta\chi^{(2)}$,$Hamilton$量可以简化为:\\$H=i(\eta^{\star}a^{2}-\eta a^{\dagger2})$
+		\item 时间演化算符变为:$U(t)=e^{-iHt}=e^{(\eta^{\star}a^{2}-\eta a^{\dagger2})t}$
+		\item \small{此双光子过程的时间演化算符相当于压缩算符，真空态在此\\$Hamilton$量作用下将演化为压缩真空态}
+		\end{itemize}
+	\end{block}
+\end{frame}
+\section{参考文献}
+\begin{frame}[allowframebreaks]
+	\begin{thebibliography}{99}
+		\bibitem{ref1}曾谨言.量子力学(卷II):第五版[M].北京:科学出版社,2014.
+		\bibitem{ref2}Sakurai,J.J,Napolitano,J.现代量子力学[M].北京:世界图书出版公司北京公司,2014.
+		\bibitem{ref3}K'yarnac phlegthor.Second Quantization[EB/OL].2020.\\ \url{https://zhuanlan.zhihu.com/p/97685686}.
+	\end{thebibliography}
+\end{frame}
+
+	\begin{frame}
+		\begin{center}
+			{\Huge\calligra Thanks!}
+		\end{center}
+	\end{frame}
+	
+\end{document}

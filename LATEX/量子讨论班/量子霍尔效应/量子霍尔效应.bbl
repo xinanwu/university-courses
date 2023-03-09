@@ -1,0 +1,78 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{meng2018integer}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MS}{%
+         family={Meng},
+         familyi={M\bibinitperiod},
+         given={Severin},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MS1}
+    \strng{fullhash}{MS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Integer Quantum Hall Effect}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Abouzaid2018TheIQ}{article}{}
+    \name{author}{5}{}{%
+      {{hash=AA}{%
+         family={Abouzaid},
+         familyi={A\bibinitperiod},
+         given={Aly},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DJ}{%
+         family={Dai},
+         familyi={D\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=FS}{%
+         family={Feiler},
+         familyi={F\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Kessler},
+         familyi={K\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Waddell},
+         familyi={W\bibinitperiod},
+         given={Christopher},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AA+1}
+    \strng{fullhash}{AADJFSKPWC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{The Integer Quantum Hall Effect}
+    \field{year}{2018}
+  \endentry
+\enddatalist
+\endinput

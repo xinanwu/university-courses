@@ -1,0 +1,21 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{背景}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{1}{经典霍尔效应}{4}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{2}{整数霍尔效应}{7}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{朗道能级}{10}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{$SdH$振荡}{13}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{1}{边缘态}{14}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{2}{霍尔电导量子化简单理解}{17}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{3}{样品中的缺陷}{21}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{参考文献}{32}{0}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{参考文献}
