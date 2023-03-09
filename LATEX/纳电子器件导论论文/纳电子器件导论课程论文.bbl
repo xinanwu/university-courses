@@ -1,0 +1,267 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{sadki2019spontaneous}{article}{}
+    \name{author}{6}{}{%
+      {{hash=SS}{%
+         family={Sadki},
+         familyi={S\bibinitperiod},
+         given={Siham},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GFSM}{%
+         family={Guimar{\~a}es},
+         familyi={G\bibinitperiod},
+         given={Filipe Souza\bibnamedelima Mendes},
+         giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Bouaziz},
+         familyi={B\bibinitperiod},
+         given={Juba},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=IAJ}{%
+         family={Iba{\~n}ez-Azpiroz},
+         familyi={I\bibinithyphendelim A\bibinitperiod},
+         given={Julen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DLB}{%
+         family={Drissi},
+         familyi={D\bibinitperiod},
+         given={Lalla\bibnamedelima Btissam},
+         giveni={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Lounis},
+         familyi={L\bibinitperiod},
+         given={Samir},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SS+1}
+    \strng{fullhash}{SSGFSMBJIAJDLBLS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Spontaneous and externally driven quantum spin fluctuations
+  of 3d and 4d single atoms adsorbed on graphene}
+    \field{journaltitle}{arXiv preprint arXiv:1912.09938}
+    \field{year}{2019}
+  \endentry
+
+  \entry{haffad2018effect}{article}{}
+    \name{author}{7}{}{%
+      {{hash=HS}{%
+         family={Haffad},
+         familyi={H\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=BL}{%
+         family={Benchallal},
+         familyi={B\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+      {{hash=LL}{%
+         family={Lamiri},
+         familyi={L\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+      {{hash=BF}{%
+         family={Boubenider},
+         familyi={B\bibinitperiod},
+         given={F},
+         giveni={F},
+      }}%
+      {{hash=ZH}{%
+         family={Zitoune},
+         familyi={Z\bibinitperiod},
+         given={H},
+         giveni={H},
+      }}%
+      {{hash=KB}{%
+         family={Kahouadji},
+         familyi={K\bibinitperiod},
+         given={B},
+         giveni={B},
+      }}%
+      {{hash=SM}{%
+         family={Samah},
+         familyi={S\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+    }
+    \strng{namehash}{HS+1}
+    \strng{fullhash}{HSBLLLBFZHKBSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{1307}
+    \field{title}{Effect of vacancies on electronic and magnetic properties of
+  hydrogen passivated graphene nanoribbons}
+    \field{volume}{133}
+    \field{journaltitle}{Acta Physical Polonica A}
+    \field{year}{2018}
+  \endentry
+
+  \entry{septya2021electronic}{inproceedings}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{3}{}{%
+      {{hash=SMM}{%
+         family={Septya},
+         familyi={S\bibinitperiod},
+         given={Maya\bibnamedelima Mahirotul},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Asih},
+         familyi={A\bibinitperiod},
+         given={Retno},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Arifin},
+         familyi={A\bibinitperiod},
+         given={Rizal},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{SMM+1}
+    \strng{fullhash}{SMMARAR+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Journal of Physics: Conference Series}
+    \field{number}{1}
+    \field{pages}{012012}
+    \field{title}{Electronic and magnetic properties of single vacancy graphene
+  with hydrogen adsorptions analyzed using density functional theory method}
+    \field{volume}{1951}
+    \field{year}{2021}
+  \endentry
+
+  \entry{gonzalez2016atomic}{article}{}
+    \name{author}{10}{}{%
+      {{hash=GHH}{%
+         family={Gonz{\'a}lez-Herrero},
+         familyi={G\bibinithyphendelim H\bibinitperiod},
+         given={H{\'e}ctor},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=GRJM}{%
+         family={G{\'o}mez-Rodr{\'\i}guez},
+         familyi={G\bibinithyphendelim R\bibinitperiod},
+         given={Jos{\'e}\bibnamedelima M},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mallet},
+         familyi={M\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Moaied},
+         familyi={M\bibinitperiod},
+         given={Mohamed},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PJJ}{%
+         family={Palacios},
+         familyi={P\bibinitperiod},
+         given={Juan\bibnamedelima Jos{\'e}},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Salgado},
+         familyi={S\bibinitperiod},
+         given={Carlos},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=UMM}{%
+         family={Ugeda},
+         familyi={U\bibinitperiod},
+         given={Miguel\bibnamedelima M},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=VJY}{%
+         family={Veuillen},
+         familyi={V\bibinitperiod},
+         given={Jean-Yves},
+         giveni={J\bibinithyphendelim Y\bibinitperiod},
+      }}%
+      {{hash=YF}{%
+         family={Yndurain},
+         familyi={Y\bibinitperiod},
+         given={F{\'e}lix},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BI}{%
+         family={Brihuega},
+         familyi={B\bibinitperiod},
+         given={Iv{\'a}n},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{GHH+1}
+    \strng{fullhash}{GHHGRJMMPMMPJJSCUMMVJYYFBI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6284}
+    \field{pages}{437\bibrangedash 441}
+    \field{title}{Atomic-scale control of graphene magnetism by using hydrogen
+  atoms}
+    \field{volume}{352}
+    \field{journaltitle}{Science}
+    \field{year}{2016}
+  \endentry
+
+  \entry{ray2018electronic}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RSC}{%
+         family={Ray},
+         familyi={R\bibinitperiod},
+         given={Sekhar\bibnamedelima Chandra},
+         giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RSC1}
+    \strng{fullhash}{RSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1002}
+    \field{title}{Electronic and Magnetic Behaviors of Hydrogen Functionalized
+  Graphene Nanostructure Material}
+    \field{volume}{1}
+    \field{journaltitle}{Frontier Research Today}
+    \field{year}{2018}
+  \endentry
+\enddatalist
+\endinput

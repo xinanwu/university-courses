@@ -1,0 +1,17 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}引言}{1}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}想法内容}{2}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}拟实施的途径或方案}{2}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}想法基于的原理}{3}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}期待的结果}{4}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}总结与展望}{4}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}致谢}{4}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{参考文献}{4}{section*.2}%

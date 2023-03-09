@@ -1,0 +1,159 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{mandal2013single}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MS}{%
+         family={Mandal},
+         familyi={M\bibinitperiod},
+         given={Sanjita},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Citeseer}%
+    }
+    \strng{namehash}{MS1}
+    \strng{fullhash}{MS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{title}{Single Electron Transistor}
+    \field{volume}{2}
+    \field{journaltitle}{International Journal of Innovations in Engineering
+  and Technology (IJIET)}
+    \field{year}{2013}
+  \endentry
+
+  \entry{MOULHIM2020114078}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MA}{%
+         family={Moulhim},
+         familyi={M\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TB}{%
+         family={Tripathi},
+         familyi={T\bibinitperiod},
+         given={Brijesh},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Manoj},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MA+1}
+    \strng{fullhash}{MATBKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{issn}{0038-1098}
+    \field{pages}{114078}
+    \field{title}{Investigating the effect of quantized confining energy on the
+  quantum coulomb blockade phenomena in single-electron transistor}
+    \field{volume}{322}
+    \field{journaltitle}{Solid State Communications}
+    \field{year}{2020}
+  \endentry
+
+  \entry{ali2020single}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=AH}{%
+         family={Ali},
+         familyi={A\bibinitperiod},
+         given={Hassan},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Jing},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PK}{%
+         family={Peng},
+         familyi={P\bibinitperiod},
+         given={Kai},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={SiBai},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Falak},
+         familyi={F\bibinitperiod},
+         given={Attia},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SF}{%
+         family={Song},
+         familyi={S\bibinitperiod},
+         given={FeiLong},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={ShiYao},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=QC}{%
+         family={Qian},
+         familyi={Q\bibinitperiod},
+         given={ChenJiang},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Meng},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={XiTian},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{AH+1}
+    \strng{fullhash}{AHTJPKSSFASFWSQCWMZX+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{1\bibrangedash 8}
+    \field{title}{Single-electron pumping in a ZnO single-nanobelt quantum dot
+  transistor}
+    \field{volume}{63}
+    \field{journaltitle}{SCIENCE CHINA Physics, Mechanics \& Astronomy}
+    \field{year}{2020}
+  \endentry
+\enddatalist
+\endinput

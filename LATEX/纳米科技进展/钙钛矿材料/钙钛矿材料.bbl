@@ -1,0 +1,838 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{stranks2015metal}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SSD}{%
+         family={Stranks},
+         familyi={S\bibinitperiod},
+         given={Samuel\bibnamedelima D},
+         giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=SHJ}{%
+         family={Snaith},
+         familyi={S\bibinitperiod},
+         given={Henry\bibnamedelima J},
+         giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{SSD+1}
+    \strng{fullhash}{SSDSHJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{391\bibrangedash 402}
+    \field{title}{Metal-halide perovskites for photovoltaic and light-emitting
+  devices}
+    \field{volume}{10}
+    \field{journaltitle}{Nature nanotechnology}
+    \field{year}{2015}
+  \endentry
+
+  \entry{sutherland2016perovskite}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SBR}{%
+         family={Sutherland},
+         familyi={S\bibinitperiod},
+         given={Brandon\bibnamedelima R},
+         giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SEH}{%
+         family={Sargent},
+         familyi={S\bibinitperiod},
+         given={Edward\bibnamedelima H},
+         giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{SBR+1}
+    \strng{fullhash}{SBRSEH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{295\bibrangedash 302}
+    \field{title}{Perovskite photonic sources}
+    \field{volume}{10}
+    \field{journaltitle}{Nature Photonics}
+    \field{year}{2016}
+  \endentry
+
+  \entry{swarnkar2016quantum}{article}{}
+    \name{author}{8}{}{%
+      {{hash=SA}{%
+         family={Swarnkar},
+         familyi={S\bibinitperiod},
+         given={Abhishek},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MAR}{%
+         family={Marshall},
+         familyi={M\bibinitperiod},
+         given={Ashley\bibnamedelima R},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SEM}{%
+         family={Sanehira},
+         familyi={S\bibinitperiod},
+         given={Erin\bibnamedelima M},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=CBD}{%
+         family={Chernomordik},
+         familyi={C\bibinitperiod},
+         given={Boris\bibnamedelima D},
+         giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=MDT}{%
+         family={Moore},
+         familyi={M\bibinitperiod},
+         given={David\bibnamedelima T},
+         giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=CJA}{%
+         family={Christians},
+         familyi={C\bibinitperiod},
+         given={Jeffrey\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CT}{%
+         family={Chakrabarti},
+         familyi={C\bibinitperiod},
+         given={Tamoghna},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LJM}{%
+         family={Luther},
+         familyi={L\bibinitperiod},
+         given={Joseph\bibnamedelima M},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{SA+1}
+    \strng{fullhash}{SAMARSEMCBDMDTCJACTLJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6308}
+    \field{pages}{92\bibrangedash 95}
+    \field{title}{Quantum dot--induced phase stabilization of $\alpha$-CsPbI3
+  perovskite for high-efficiency photovoltaics}
+    \field{volume}{354}
+    \field{journaltitle}{Science}
+    \field{year}{2016}
+  \endentry
+
+  \entry{becker2018bright}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=BMA}{%
+         family={Becker},
+         familyi={B\bibinitperiod},
+         given={Michael\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=VR}{%
+         family={Vaxenburg},
+         familyi={V\bibinitperiod},
+         given={Roman},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NG}{%
+         family={Nedelcu},
+         familyi={N\bibinitperiod},
+         given={Georgian},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SPC}{%
+         family={Sercel},
+         familyi={S\bibinitperiod},
+         given={Peter\bibnamedelima C},
+         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Shabaev},
+         familyi={S\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MMJ}{%
+         family={Mehl},
+         familyi={M\bibinitperiod},
+         given={Michael\bibnamedelima J},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MJG}{%
+         family={Michopoulos},
+         familyi={M\bibinitperiod},
+         given={John\bibnamedelima G},
+         giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=LSG}{%
+         family={Lambrakos},
+         familyi={L\bibinitperiod},
+         given={Samuel\bibnamedelima G},
+         giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=BN}{%
+         family={Bernstein},
+         familyi={B\bibinitperiod},
+         given={Noam},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=LJL}{%
+         family={Lyons},
+         familyi={L\bibinitperiod},
+         given={John\bibnamedelima L},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{BMA+1}
+    \strng{fullhash}{BMAVRNGSPCSAMMJMJGLSGBNLJL+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{7687}
+    \field{pages}{189\bibrangedash 193}
+    \field{title}{Bright triplet excitons in caesium lead halide perovskites}
+    \field{volume}{553}
+    \field{journaltitle}{Nature}
+    \field{year}{2018}
+  \endentry
+
+  \entry{yakunin2015low}{article}{}
+    \name{author}{10}{}{%
+      {{hash=YS}{%
+         family={Yakunin},
+         familyi={Y\bibinitperiod},
+         given={Sergii},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Protesescu},
+         familyi={P\bibinitperiod},
+         given={Loredana},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=KF}{%
+         family={Krieg},
+         familyi={K\bibinitperiod},
+         given={Franziska},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BMI}{%
+         family={Bodnarchuk},
+         familyi={B\bibinitperiod},
+         given={Maryna\bibnamedelima I},
+         giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=NG}{%
+         family={Nedelcu},
+         familyi={N\bibinitperiod},
+         given={Georgian},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Humer},
+         familyi={H\bibinitperiod},
+         given={Markus},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DLG}{%
+         family={De\bibnamedelima Luca},
+         familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+         given={Gabriele},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fiebig},
+         familyi={F\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HW}{%
+         family={Heiss},
+         familyi={H\bibinitperiod},
+         given={Wolfgang},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=KMV}{%
+         family={Kovalenko},
+         familyi={K\bibinitperiod},
+         given={Maksym\bibnamedelima V},
+         giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{YS+1}
+    \strng{fullhash}{YSPLKFBMINGHMDLGFMHWKMV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 9}
+    \field{title}{Low-threshold amplified spontaneous emission and lasing from
+  colloidal nanocrystals of caesium lead halide perovskites}
+    \field{volume}{6}
+    \field{journaltitle}{Nature communications}
+    \field{year}{2015}
+  \endentry
+
+  \entry{li2016cspbx3}{article}{}
+    \name{author}{7}{}{%
+      {{hash=LX}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Xiaoming},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Ye},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Shengli},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Cai},
+         familyi={C\bibinitperiod},
+         given={Bo},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Gu},
+         familyi={G\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Song},
+         familyi={S\bibinitperiod},
+         given={Jizhong},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zeng},
+         familyi={Z\bibinitperiod},
+         given={Haibo},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{LX+1}
+    \strng{fullhash}{LXWYZSCBGYSJZH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{15}
+    \field{pages}{2435\bibrangedash 2445}
+    \field{title}{CsPbX3 quantum dots for lighting and displays:
+  room-temperature synthesis, photoluminescence superiorities, underlying
+  origins and white light-emitting diodes}
+    \field{volume}{26}
+    \field{journaltitle}{Advanced Functional Materials}
+    \field{year}{2016}
+  \endentry
+
+  \entry{cho2020role}{article}{}
+    \name{author}{8}{}{%
+      {{hash=CC}{%
+         family={Cho},
+         familyi={C\bibinitperiod},
+         given={Changsoon},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ZB}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Baodan},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=TGD}{%
+         family={Tainter},
+         familyi={T\bibinitperiod},
+         given={Gregory\bibnamedelima D},
+         giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=LJY}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Jung-Yong},
+         giveni={J\bibinithyphendelim Y\bibinitperiod},
+      }}%
+      {{hash=FRH}{%
+         family={Friend},
+         familyi={F\bibinitperiod},
+         given={Richard\bibnamedelima H},
+         giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=DD}{%
+         family={Di},
+         familyi={D\bibinitperiod},
+         given={Dawei},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DF}{%
+         family={Deschler},
+         familyi={D\bibinitperiod},
+         given={Felix},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GNC}{%
+         family={Greenham},
+         familyi={G\bibinitperiod},
+         given={Neil\bibnamedelima C},
+         giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{CC+1}
+    \strng{fullhash}{CCZBTGDLJYFRHDDDFGNC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 8}
+    \field{title}{The role of photon recycling in perovskite light-emitting
+  diodes}
+    \field{volume}{11}
+    \field{journaltitle}{Nature communications}
+    \field{year}{2020}
+  \endentry
+
+  \entry{wang2016stability}{article}{}
+    \name{author}{4}{}{%
+      {{hash=WD}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Dian},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wright},
+         familyi={W\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ENK}{%
+         family={Elumalai},
+         familyi={E\bibinitperiod},
+         given={Naveen\bibnamedelima Kumar},
+         giveni={N\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=UA}{%
+         family={Uddin},
+         familyi={U\bibinitperiod},
+         given={Ashraf},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{WD+1}
+    \strng{fullhash}{WDWMENKUA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{255\bibrangedash 275}
+    \field{title}{Stability of perovskite solar cells}
+    \field{volume}{147}
+    \field{journaltitle}{Solar Energy Materials and Solar Cells}
+    \field{year}{2016}
+  \endentry
+
+  \entry{xiao2017efficient}{article}{}
+    \name{author}{8}{}{%
+      {{hash=XZ}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Zhengguo},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=KRA}{%
+         family={Kerner},
+         familyi={K\bibinitperiod},
+         given={Ross\bibnamedelima A},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=ZL}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Lianfeng},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=TNL}{%
+         family={Tran},
+         familyi={T\bibinitperiod},
+         given={Nhu\bibnamedelima L},
+         giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=LKM}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Kyung\bibnamedelima Min},
+         giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=KTW}{%
+         family={Koh},
+         familyi={K\bibinitperiod},
+         given={Tae-Wook},
+         giveni={T\bibinithyphendelim W\bibinitperiod},
+      }}%
+      {{hash=SGD}{%
+         family={Scholes},
+         familyi={S\bibinitperiod},
+         given={Gregory\bibnamedelima D},
+         giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=RBP}{%
+         family={Rand},
+         familyi={R\bibinitperiod},
+         given={Barry\bibnamedelima P},
+         giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{XZ+1}
+    \strng{fullhash}{XZKRAZLTNLLKMKTWSGDRBP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{108\bibrangedash 115}
+    \field{title}{Efficient perovskite light-emitting diodes featuring
+  nanometre-sized crystallites}
+    \field{volume}{11}
+    \field{journaltitle}{Nature Photonics}
+    \field{year}{2017}
+  \endentry
+
+  \entry{wang2019trifluoroacetate}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=WH}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Haoran},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xiaoyu},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WQ}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Qianqian},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Fan},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=YD}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Dongwen},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Shang},
+         familyi={S\bibinitperiod},
+         given={Yuequn},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=NZ}{%
+         family={Ning},
+         familyi={N\bibinitperiod},
+         given={Zhijun},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZW}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=ZW}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Weitao},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Yanfa},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{WH+1}
+    \strng{fullhash}{WHZXWQCFYDSYNZZWZWYY+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 10}
+    \field{title}{Trifluoroacetate induced small-grained CsPbBr 3 perovskite
+  films result in efficient and stable light-emitting devices}
+    \field{volume}{10}
+    \field{journaltitle}{Nature communications}
+    \field{year}{2019}
+  \endentry
+
+  \entry{zhang2016high}{article}{}
+    \name{author}{6}{}{%
+      {{hash=ZQ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Qing},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Su},
+         familyi={S\bibinitperiod},
+         given={Rui},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Xinfeng},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=XJ}{%
+         family={Xing},
+         familyi={X\bibinitperiod},
+         given={Jun},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=STC}{%
+         family={Sum},
+         familyi={S\bibinitperiod},
+         given={Tze\bibnamedelima Chien},
+         giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=XQ}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Qihua},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{ZQ+1}
+    \strng{fullhash}{ZQSRLXXJSTCXQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{34}
+    \field{pages}{6238\bibrangedash 6245}
+    \field{title}{High-quality whispering-gallery-mode lasing from cesium lead
+  halide perovskite nanoplatelets}
+    \field{volume}{26}
+    \field{journaltitle}{Advanced Functional Materials}
+    \field{year}{2016}
+  \endentry
+
+  \entry{yang2018high}{article}{}
+    \name{author}{10}{}{%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Zhenqian},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=DY}{%
+         family={Deng},
+         familyi={D\bibinitperiod},
+         given={Yuhao},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xiaowei},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Suo},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CH}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Huazhou},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Sui},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Khurgin},
+         familyi={K\bibinitperiod},
+         given={Jacob},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=FNX}{%
+         family={Fang},
+         familyi={F\bibinitperiod},
+         given={Nicholas\bibnamedelima X},
+         giveni={N\bibinitperiod\bibinitdelim X\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xiang},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Renmin},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{YZ+1}
+    \strng{fullhash}{YZDYZXWSCHYSKJFNXZXMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{8}
+    \field{pages}{1704333}
+    \field{title}{High-performance single-crystalline perovskite thin-film
+  photodetector}
+    \field{volume}{30}
+    \field{journaltitle}{Advanced Materials}
+    \field{year}{2018}
+  \endentry
+
+  \entry{du2016high}{article}{}
+    \name{author}{10}{}{%
+      {{hash=DZ}{%
+         family={Du},
+         familyi={D\bibinitperiod},
+         given={Zhihong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Hailei},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yi},
+         familyi={Y\bibinitperiod},
+         given={Sha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=XQ}{%
+         family={Xia},
+         familyi={X\bibinitperiod},
+         given={Qing},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Gong},
+         familyi={G\bibinitperiod},
+         given={Yue},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CX}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Xing},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gu},
+         familyi={G\bibinitperiod},
+         given={Lin},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Świerczek},
+         familyi={S\bibinitperiod},
+         given={Konrad},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{DZ+1}
+    \strng{fullhash}{DZZHYSXQGYZYCXLYGLSK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{8660\bibrangedash 8669}
+    \field{title}{High-performance anode material Sr2FeMo0. 65Ni0. 35O6-
+  $\delta$ with in situ exsolved nanoparticle catalyst}
+    \field{volume}{10}
+    \field{journaltitle}{ACS nano}
+    \field{year}{2016}
+  \endentry
+\enddatalist
+\endinput
