@@ -1,0 +1,105 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{txfonts} 
+\usepackage{physics}
+\usepackage{float}
+\usepackage{tikz}
+\newcommand*{\circled}[1]{\lower.7ex\hbox{\tikz\draw (0pt, 0pt)%
+		circle (.5em) node {\makebox[1em][c]{\small #1}};}}
+\author{1900011413 吴熙楠}
+\title{理论力学第三次作业}
+\begin{document}
+    \maketitle
+1.\\
+(1)解:由题意得：瞬心在AO连线上，设距离A为x，则：\\
+$v_{1}=\omega x,v_{2}=\omega(2a-x)\\
+\therefore \omega=\frac{v_{1}+v_{2}}{2a},x=\frac{2av_{1}}{v_{1}+v_{2}}\\
+\therefore $距离A为$x=\frac{2av_{1}}{v_{1}+v_{2}}\\
+(2)$解：因为O速度一定，其加速度为0\\
+O相对瞬心加速度为$\omega^{2}(a-x)\\
+\because $A相对瞬心加速度为$\omega^{2}x\\
+\therefore$A相对地面即相对O加速度为:$\omega^{2}a=\frac{(v_{1}+v_{2})^{2}}{4a}\\
+\therefore a_{A}=\frac{(v_{1}+v_{2})^{2}}{4a}$,方向指向O点$\\
+2.\\
+$解：令$\frac{I}{I_{0}}=x,$求解本征值问题：$\\
+\frac{M}{I_{0}}=\begin{pmatrix}
+8-x & -3&-3\\-3&8-x &-3\\-3&-3&8-x\end{pmatrix}\\
+\because det(M)=0\qquad\therefore x_{1}=x_{2}=11,x_{3}=2\\
+$本征矢量$\eta_{1}=[0,1,-1]^{T},\eta_{2}=[1,0,-1]^{T},\eta_{3}=[1,1,1]^{T}\\
+\therefore$主转动惯量$I_{xx}=I_{yy}=11I_{0},I_{zz}=2I_{0}$\\
+惯量主轴的方向余弦为：$ox^{\prime}=(0,\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}),oy^{\prime}=(\frac{\sqrt{2}}{2},0,-\frac{\sqrt{2}}{2}),oz^{\prime}=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})\\
+3.$解：\\在转动系内能量守恒：
+$\frac{1}{2}ma^{2}\dot{\theta}^{2}-\frac{1}{2}m\omega^{2}a^{2}(sin^{2}\theta-\frac{1}{2})=mga(\frac{\sqrt{2}}{2}-cos\theta)\\
+$化简可得:$a^{2}\dot{\theta}^{2}=2ga(\frac{\sqrt{2}}{2}-cos\theta)+\omega^{2}a^{2}(sin^{2}\theta-\frac{1}{2})\\$且$\dot{\theta}=0$时反向$\\
+\therefore cos\theta_{1}=\frac{\sqrt{2}}{2},cos\theta_{2}=-(\frac{\sqrt{2}}{2}+\frac{2g}{a\omega^{2}})\\
+\circled{1}\omega^{2}<\frac{2(2+\sqrt{2})g}{a},$小球将在$\theta=\frac{7\pi}{4}$处速度为0，然后反向\\
+$\circled{2}\omega^{2}=\frac{2(2+\sqrt{2})g}{a},$小球将在$\theta=\pi$处速度为0，然后停止运动$\\
+\circled{3}\omega^{2}>\frac{2(2+\sqrt{2})g}{a},\theta=arccos(-(\frac{\sqrt{2}}{2}+\frac{2g}{a\omega^{2}}))=\pi-arccos(\frac{\sqrt{2}}{2}+\frac{2g}{a\omega^{2}})\\
+4.\\
+(1)\because p_{i}=\frac{\partial S}{\partial x_{i}}\\
+\therefore \frac{\partial S}{\partial t}+\frac{1}{2m}[(\frac{\partial S}{\partial x_{1}})^{2}+(\frac{\partial S}{\partial x_{2}})^{2}]+\frac{m}{2}\omega^{2}(x_{1}^{2}+x_{2}^{2})=0\\
+(2)$分离变量，H不显含时间t,令$\frac{\partial S}{\partial t}=-E,$则$T=-Et\\\frac{1}{2m}[(\frac{\partial S}{\partial x_{1}})^{2}+(\frac{\partial S}{\partial x_{2}})^{2}]+\frac{m}{2}\omega^{2}(x_{1}^{2}+x_{2}^{2})=E\\
+\frac{1}{2m}(\frac{dS_{1}}{dx_{1}})^{2}+\frac{m}{2}\omega^{2}x_{1}^{2}=E-\frac{1}{2m}(\frac{dS_{2}}{dx_{2}})^{2}-\frac{m}{2}\omega^{2}x_{2}^{2}\\
+$因为左边与右边变量分别独立，相等只可能是同时等于一个常数，令其等于$\lambda$则：\\$
+\frac{1}{2m}(\frac{dS_{1}}{dx_{1}})^{2}+\frac{m}{2}\omega^{2}x_{1}^{2}=E-\frac{1}{2m}(\frac{dS_{2}}{dx_{2}})^{2}-\frac{m}{2}\omega^{2}x_{2}^{2}=\lambda\\
+\therefore \begin{cases} T=-Et\\
+\frac{dS_{1}}{dx_{1}}=\sqrt{2m\lambda-m^{2}\omega^{2}x_{1}^{2}}\\
+\frac{dS_{2}}{dx_{2}}=\sqrt{2m(E-\lambda)-m^{2}\omega^{2}x_{2}^{2}}   \end{cases}\\
+(3)$由题意得：$E=Q_{1}+Q_{2},\lambda=Q_{1}\\
+T=-(Q_{1}+Q_{2})t\\
+S_{i}=\int\sqrt{2mQ_{i}-m^{2}\omega^{2}x_{i}^{2}}\,dx_{i}\\
+\therefore S=-(Q_{1}+Q_{2})t+\int\sqrt{2mQ_{1}-m^{2}\omega^{2}x_{1}^{2}}\,dx_{1}+\int\sqrt{2mQ_{2}-m^{2}\omega^{2}x_{2}^{2}}\,dx_{2}\\
+(4)P_{i}=-\frac{\partial S}{\partial Q_{i}}=t-\int\frac{m}{\sqrt{2mQ_{i}-m^{2}\omega^{2}x_{i}^{2}}}\,dx_{i}\\
+\therefore P_{i}=t-\frac{1}{\omega}arccos(\frac{-x_{i}}{\sqrt{\frac{2Q_{i}}{m\omega^{2}}}})\\$
+令$P_{i}=t_{i},$则：$x_{i}=-\sqrt{\frac{2Q_{i}}{m\omega^{2}}}cos\omega(t-t_{i})\\
+\because P_{i}$表达式显含位移$x_{i}\therefore P_{i}$与振动位相相关联\\
+(5)因为两个方向上的振动频率相同，所以经过一个周期粒子回到原来位置，轨道闭合\\
+$\therefore \frac{m\omega^{2}x_{1}^{2}}{2Q_{1}}+\frac{m\omega^{2}x_{2}^{2}}{2Q_{2}}-\frac{m\omega^{2}cos\omega(t_{1}-t_{2})}{\sqrt{Q_{1}Q_{2}}}x_{1}x_{2}=sin^{2}\omega(t_{1}-t_{2})\\
+$$\circled{1}$两位移相位相同时，轨道为直线(可看作退化的椭圆)$\\\circled{2}$两位移相位不同时，轨道为椭圆$\\
+(6)$令$\frac{\partial S}{\partial t}=-E,$代入方程化简可得：$\\
+(\frac{d\Theta}{d\theta})^{2}=2mr^{2}E-m^{2}\omega^{2}r^{4}-r^{2}(\frac{dR}{dr})^{2}\\$
+因为左边与右边变量分别独立，相等只可能是同时等于一个常数，令其等于$M^{2}$则：$
+\Theta=M\theta,\frac{dR}{dr}=\sqrt{2mE-m^{2}\omega^{2}r^{2}-\frac{M^{2}}{r^{2}}}\\
+S=-Et+M\theta+\int \sqrt{2mE-m^{2}\omega^{2}r^{2}-\frac{M^{2}}{r^{2}}}\,dr\\
+(7)$令$\frac{\partial S}{\partial M}=0$,则：\\
+$\theta$=$\int \frac{\frac{M}{r^{2}}}{\sqrt{2mE-m^{2}\omega^{2}r^{2}-\frac{M^{2}}{r^{2}}}}\,dr$\\
+令$u=\frac{1}{r^{2}},$则：$\theta=-\frac{M}{2}\int \frac{du}{\sqrt{2mEu-m^{2}\omega^{2}-M^{2}u^{2}}}\\
+\theta=-\frac{1}{2}arccos(\frac{\frac{2mE}{M^{2}}-2u}{\sqrt{\frac{4m^{2}E^{2}}{M^{4}}-\frac{4m^{2}\omega^{2}}{M^{2}}}})+\theta_{0}\\
+\therefore u=\frac{m}{M^{2}}[E-\sqrt{E^{2}-\omega^{2}M^{2}}cos2(\theta-\theta_{0})]\\
+\therefore r=\frac{M}{\sqrt{m[E-\sqrt{E^{2}-\omega^{2}M^{2}}cos2(\theta-\theta_{0})]}}\\
+$令$x=rcos\theta,y=rsin\theta,$取$\theta_{0}=0,$可得:$\\
+\circled{1}M=0,$对于同一角度,r的值不定，轨道形状为过力心的直线$\\
+\circled{2}M\neq 0,a^{2}=\frac{E}{m\omega^{2}}(1+\sqrt{1-\frac{\omega^{2}M^{2}}{E^{2}}}),b^{2}=\frac{E}{m\omega^{2}}(1-\sqrt{1-\frac{\omega^{2}M^{2}}{E^{2}}})\\
+$可得:$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1,
+\therefore$轨道为椭圆$\\
+5.\\
+(1)$解：因为这为开普勒运动，即平面运动，所以可用极坐标系$\\
+\frac{d\vec{A}}{dt}=[\vec{A},H]+\frac{\partial \vec{A}}{\partial t}$\\
+因为A不显含时间t,所以即证明$[\vec{A},H]=0\\
+\vec{A}=m(\dot{r}\hat{r}+r\dot{\theta}\hat{\theta})\times (mr^{2}\dot{\theta}\hat{z})-mk\hat{r}\\
+A_{r}=\frac{p_{\theta}^{2}}{r}-mk,A_{\theta}=-p_{r}p_{\theta}\\
+\vec{A}=A_{r}\hat{r}+A_{\theta}\hat{\theta},H=\frac{1}{2m}(p_{r}^{2}+\frac{p_{\theta}^{2}}{r^{2}})-\frac{k}{r}\\
+\because [\vec{A},H]=\frac{\partial \vec{A}}{\partial q_{i}}\frac{\partial H}{\partial p_{i}}-\frac{\partial \vec{A}}{\partial p_{i}}\frac{\partial H}{\partial q_{i}}\\
+$其中$\frac{\partial \hat{r}}{\partial \theta}=\hat{\theta},\frac{\partial \hat{\theta}}{\partial \theta}=-\hat{r}\\
+\therefore [\vec{A},H]=\frac{\partial \vec{A}}{\partial r}\frac{\partial H}{\partial p_{r}}-\frac{\partial \vec{A}}{\partial p_{r}}\frac{\partial H}{\partial r}+\frac{\partial \vec{A}}{\partial \theta}\frac{\partial H}{\partial p_{\theta}}-\frac{\partial \vec{A}}{\partial p_{\theta}}\frac{\partial H}{\partial \theta}\\
+\therefore [\vec{A},H]=-\frac{p_{\theta}^{2}p_{r}}{mr^{2}}\hat{r}+\frac{kp_{\theta}}{r^{2}}\hat{\theta}-\frac{p_{\theta}^{3}}{mr^{3}}\hat{\theta}+\frac{p_{\theta}}{mr^{2}}[(\frac{p_{\theta}^{2}}{r}-mk)\hat{\theta}+p_{r}p_{\theta}\hat{r}]\\
+\therefore[\vec{A},H]=0,\frac{d\vec{A}}{dt}=[\vec{A},H]+\frac{\partial \vec{A}}{\partial t}=0\\
+$所以$\vec{A}$是守恒量\\
+(2)解：令i=1,2,3分别代表x,y,z方向上的分量，则：$\\
+A_{1}=xp_{y}^{2}-yp_{x}p_{y}-mk\frac{x}{\sqrt{x^{2}+y^{2}}},A_{2}=yp_{x}^{2}-xp_{x}p_{y}-mk\frac{y}{\sqrt{x^{2}+y^{2}}},A_{3}=0\\
+L_{1}=L_{2}=0,L_{3}=xp_{y}-yp_{x}\\
+\therefore$除了$[A_{1},L_{3}],[A_{2},L_{3}]$外的所有$[A_{i},L_{j}]$的组合的值均为0$\\
+\because [A_{1},L_{3}]=\frac{\partial A_{1}}{\partial x}\frac{\partial L_{3}}{\partial p_{x}}-\frac{\partial A_{1}}{\partial p_{x}}\frac{\partial L_{3}}{\partial x}+\frac{\partial A_{1}}{\partial y}\frac{\partial L_{3}}{\partial p_{y}}-\frac{\partial A_{1}}{\partial p_{y}}\frac{\partial L_{3}}{\partial y}\\
+\therefore [A_{1},L_{3}]=(p_{y}^{2}-mk\frac{y^{2}}{(x^{2}+y^{2})^{1.5}})(-y)+yp_{y}^{2}+x(-p_{x}p_{y}+mk\frac{xy}{(x^{2}+y^{2})^{1.5}})+p_{x}(2xp_{y}-yp_{x})\\
+=mk\frac{y}{\sqrt{x^{2}+y^{2}}}+xp_{x}p_{y}-yp_{x}^{2}=-A_{2}\\
+\therefore [A_{1},L_{3}]=\epsilon_{132}A_{2}=-A_{2}\\
+\because [A_{2},L_{3}]=\frac{\partial A_{2}}{\partial x}\frac{\partial L_{3}}{\partial p_{x}}-\frac{\partial A_{2}}{\partial p_{x}}\frac{\partial L_{3}}{\partial x}+\frac{\partial A_{2}}{\partial y}\frac{\partial L_{3}}{\partial p_{y}}-\frac{\partial A_{2}}{\partial p_{y}}\frac{\partial L_{3}}{\partial y}\\
+\therefore [A_{2},L_{3}]=(-p_{x}p_{y}+mk\frac{xy}{(x^{2}+y^{2})^{1.5}})(-y)-p_{y}(2yp_{x}-xp_{y})+x(p_{x}^{2}-mk\frac{x^{2}}{(x^{2}+y^{2})^{1.5}})-xp_{x}^{2}\\
+=xp_{y}^{2}-yp_{x}p_{y}-mk\frac{x}{\sqrt{x^{2}+y^{2}}}=A_{1}\\
+\therefore [A_{2},L_{3}]=\epsilon_{231}A_{1}=A_{1}\\$
+而对于除开$[A_{1},L_{3}],[A_{2},L_{3}]$外的所有$[A_{i},L_{j}]$的组合的值均为0,显然也满足$[A_{i},L_{j}]=\epsilon_{ijk}A_{k}\\
+\therefore$综上所述:$[A_{i},L_{j}]=\epsilon_{ijk}A_{k}$成立
+   \end{document} 

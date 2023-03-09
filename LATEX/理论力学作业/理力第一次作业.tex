@@ -1,0 +1,106 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{txfonts} 
+\usepackage{physics}
+\author{1900011413 吴熙楠}
+\title{理论力学第一次作业}
+\begin{document}
+	\maketitle
+1.
+解：以旋转圆环系为参考系，环心为重力势能零点\\
+$    \because T=\frac{1}{2}ma^{2}\dot{\theta}^{2},V=-\frac{1}{2}m\omega^{2}a^{2}\sin^{2}\theta-mga\cos\theta\\
+\therefore L=T-V=\frac{1}{2}ma^{2}\dot{\theta}^{2}+\frac{1}{2}m\omega^{2}a^{2}\sin^{2}\theta+mga\cos\theta\ $\\
+由欧拉拉格朗日方程：$  \frac{d}{dt}\frac{\partial L}{\partial \dot{\theta}}=\frac{\partial L}{\partial \theta} $
+代入可得： $\ddot{\theta}=-\frac{g}{a}\sin\theta+\omega^{2}\sin\theta\cos\theta $\\
+又由于L不显含时间，故能量为初积分\\
+ $\therefore E=\dot{\theta}\frac{\partial L}{\partial \dot{\theta}}-L=\frac{1}{2}ma^{2}\dot{\theta}^{2}-\frac{1}{2}m\omega^{2}a^{2}\sin^{2}\theta-mga\cos\theta\\
+ \ddot{\theta}=0\\
+ \theta_{1}=0,\theta_{2}=\arccos\frac{g}{\omega^{2}a}$ \\
+  $ \therefore $要使底部有一个解不存在，则：$\frac{g}{\omega^{2}a}>1 \\
+  \omega<\sqrt{\frac{g}{a}}$时，底部$ \theta_{2} $解不存在  $
+$\\
+2.
+解：\\
+$\because\vec{J}=m\vec{r}\times\vec{v}\\
+\therefore U=V(\vec{r})+\vec{\sigma}\cdot\vec{J}\\
+=V(\vec{r})+\vec{\sigma}\cdot(m\vec{r}\times\vec{v})$\\
+ $\because $ 广义力$\vec{Q}=-\nabla U+\frac{d}{dt}\frac{\partial U}{\partial \vec{v}}\\
+\therefore \vec{Q}=-\nabla V+2m(\vec{\sigma}\times\vec{v}) \\
+$$ \therefore $由欧拉拉格朗日方程$  \frac{d}{dt}\frac{\partial L}{\partial \vec{v}}=\frac{\partial L}{\partial \vec{r}} $可得：\\
+$ m\frac{d\vec{v}}{dt}=-\nabla U+\frac{d}{dt}\frac{\partial U}{\partial \vec{v}}\\
+=-\nabla V+2m(\vec{\sigma}\times\vec{v}) $\\
+3.\\
+(a)证明：\\
+$ \because \Box^{\prime 2}=\partial_{\mu}\partial^{\mu}=\Lambda^{ \gamma}_{\mu}\partial \gamma\Lambda^{\mu}_{\lambda}\partial^{\lambda}\\
+=\delta^{\gamma}_{\lambda}\partial_{\gamma}\partial^{\lambda}=\partial_{\gamma}\partial^{\gamma}\\
+=\Box^{2}$\\
+$ \therefore $  $d^{,} $Alembert算符具有洛伦兹不变性\\
+(b)证明： \\
+$ \because $对于四阶反对称张量$ A^{\mu\gamma\alpha\beta}=\begin{cases} A \qquad if\ (\mu,\gamma,\alpha,\beta)\ is\ an\ even\ permuation\ of\ (0, 1, 2, 3) \\ -A \qquad if\ (\mu,\gamma,\alpha,\beta)\ is\ an\ odd\ permuation\ of\ (0, 1, 2, 3) \\ 0 \qquad otherwise \end{cases}\\$
+$ \therefore $由定义可得：$ A^{\mu\gamma\alpha\beta}=A\epsilon^{\mu\gamma\alpha\beta}\\
+\therefore A^{\prime\mu\gamma\alpha\beta}=A\epsilon^{lkmn}=\Lambda^{l}_{\mu}\Lambda^{k}_{\gamma}\Lambda^{m}_{\alpha}\Lambda^{n}_{\beta}A^{\mu\gamma\alpha\beta}=A\Lambda^{l}_{\mu}\Lambda^{k}_{\gamma}\Lambda^{m}_{\alpha}\Lambda^{n}_{\beta}\epsilon^{\mu\gamma\alpha\beta}\\
+\therefore \epsilon^{lkmn}=\Lambda^{l}_{\mu}\Lambda^{k}_{\gamma}\Lambda^{m}_{\alpha}\Lambda^{n}_{\beta}\epsilon^{\mu\gamma\alpha\beta}\\
+\therefore \epsilon^{\mu\gamma\alpha\beta} $为洛伦兹变换下四阶反对称张量$ \\
+\epsilon^{\mu\gamma\alpha\beta}F_{\mu\gamma}F_{\alpha\beta}=\Lambda^{\mu}_{l}\Lambda^{\gamma}_{k}\Lambda^{\alpha}_{m}\Lambda^{\beta}_{n}\Lambda^{x}_{\mu}\Lambda^{y}_{\gamma}\Lambda^{z}_{\alpha}\Lambda^{\lambda}_{\beta}\epsilon^{lkmn}F_{xy}F_{z\lambda}\\
+=\delta^{x}_{l}\delta^{y}_{k}\delta^{z}_{m}\delta^{\lambda}_{n}\epsilon^{lkmn}F_{xy}F_{z\lambda}\\
+=\epsilon^{lkmn}F_{lk}F_{mn}\\
+\therefore \epsilon^{\mu\gamma\alpha\beta}F_{\mu\gamma}F_{\alpha\beta} $为洛伦兹不变量 \\
+4.
+解：$ \\
+A=\int 2\pi x\, ds=\int^{y_{2}}_{y_{1}} 2\pi x\sqrt{1+x^{\prime2}}\, dy,\ F=x\sqrt{1+x^{\prime2}}\\
+\because\delta A=0\qquad \therefore 2\pi\int^{y_{2}}_{y_{1}}(\frac{\partial F}{\partial x}\delta x+\frac{\partial F}{\partial x^{\prime}}\delta x^{\prime})\,dy=0\\
+$对第一项分部积分可得：$ \frac{\partial F}{\partial x^{\prime}}\delta x\vert_{y_{1}}^{y_{2}}+\int^{y_{2}}_{y_{1}} (\frac{\partial F}{\partial x}-\frac{d}{dy}\frac{\partial F}{\partial x^{\prime}})\delta x\,dy=0\\
+\because \delta x$ 的任意性且边界项为0 $
+\therefore \frac{\partial F}{\partial x}=\frac{d}{dy}\frac{\partial F}{\partial x^{\prime}} $ \\
+化简可得：$ xx^{\prime\prime}=1+x^{\prime2} $\\
+积分后可得：$ 1+x^{\prime2}=Cx^{2}\qquad\qquad  $C 为常数\\
+5.
+解：$ \\
+\because S=-mc\int\,ds=-mc\int\,(g_{\mu\nu}dx^{\mu}dx^{\nu})^{\frac{1}{2}}\\
+\therefore \delta S=-\frac{mc}{2}\int\frac{g_{\mu\nu}(dx^{\mu}d\delta x^{\nu}+dx^{\nu}d\delta x^{\mu})+dx^{\mu}dx^{\nu}\frac{\partial g_{\mu\nu}}{\partial x^{\lambda}}\delta x^{\lambda}}{ds} $\\
+对其前两项进行分部积分，且$ \because $边界项为0$ \therefore $舍掉边界项可得：$ \\
+\delta S=\frac{mc}{2}\int [\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}\frac{\partial g_{\mu\nu}}{\partial x^{\lambda}}\delta x^{\lambda}-\frac{d}{ds}(g_{\mu\nu}\frac{dx^{\nu}}{ds})\delta x^{\mu}-\frac{d}{ds}(g_{\mu\nu}\frac{dx^{\mu}}{ds})\delta x^{\nu}]\,ds $\\
+将后两项的哑标$ \mu $和$ \nu $替换后可得：$ \\
+\delta S=\frac{mc}{2}\int [\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}\frac{\partial g_{\mu\nu}}{\partial x^{\lambda}}-2\frac{d}{ds}(g_{\lambda\nu}\frac{dx^{\nu}}{ds})]\delta x^{\lambda}\,ds\\
+\because \delta S=0\\
+\therefore $由$ \delta x^{\lambda} $的独立性可得：$ \\
+\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}\frac{\partial g_{\mu\nu}}{\partial x^{\lambda}}-2\frac{d}{ds}(g_{\lambda\nu}\frac{dx^{\nu}}{ds})=0 $\\
+$ \therefore $运动方程为：$ \frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}\frac{\partial g_{\mu\nu}}{\partial x^{\lambda}}-2\frac{d}{ds}(g_{\lambda\nu}\frac{dx^{\nu}}{ds})=0\\ $
+6.
+(a)解：$ \\
+\because S=\int \mathcal{L}\,d^{4}x\\
+\therefore \delta S=\int (\frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi)}\delta (\partial_{\mu}\phi)+\frac{\partial \mathcal{L}}{\partial \phi}\delta \phi)\,d^{4}x=0$\\
+对第一项分部积分可得：$ \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi)}\delta \phi\vert_{x_{1}}^{x_{2}}+\int(\frac{\partial \mathcal{L}}{\partial \phi}-\partial_{\mu}\frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi)})\delta \phi\,d^{4}x=0 $\\
+$   \therefore $由$ \delta \phi $的任意性且边界项为0，
+化简可得：\\$ \frac{\partial \mathcal{L}}{\partial \phi}=\partial_{\mu}\frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi)} $\\
+代入$ \mathcal{L} $可得：$ \partial_{\mu}\partial^{\mu}\phi+m^{2}\phi=0\\
+\therefore (\Box^{2}+m^{2})\phi=0 $\\
+(b)解：$ \\
+\because \frac{\partial \mathcal{L}}{\partial \phi}=\partial_{\mu}\frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi)},\frac{\partial \mathcal{L}}{\partial \phi^{*}}=\partial^{\mu}\frac{\partial \mathcal{L}}{\partial (\partial^{\mu}\phi^{*})}\\
+\therefore $ 代入$ \mathcal{L} $化简可得：$ \begin{cases} (\Box^{2}+m^{2})\phi=0 \\ (\Box^{2}+m^{2})\phi^{*}=0  \end{cases} $\\
+(c)证明：$ \\
+\because \partial^{\mu}j_{\mu}=\partial^{\mu}\phi^{*}\partial_{\mu}\phi+(\Box^{2}\phi)\phi^{*}-\partial^{\mu}\phi\partial_{\mu}\phi^{*}-(\Box^{2}\phi^{*})\phi $\\
+将（b）计算结果代入可得：$ \\
+\partial^{\mu}j_{\mu}=(\partial^{\mu}\phi^{*}\partial_{\mu}\phi-m^{2}\phi\phi^{*})-(\partial^{\mu}\phi\partial_{\mu}\phi^{*}-m^{2}\phi\phi^{*})\\
+=2\mathcal{L}-2\mathcal{L}\\
+=0\\
+\therefore \partial^{\mu}j_{\mu}=0\\
+\because \int_{all\ space} \partial_{\mu}j^{\mu}\,d^{3}x \\
+=\int_{all\ space} \partial_{0}j^{0}\,d^{3}x+\oiint_{S} j^{i}\,dS\qquad i=1,2,3\\
+=0\\
+\because  $对于无穷大全空间而言，第二项面积分趋于0$\\ 
+\therefore \int_{all\ space} \partial_{0}j^{0}\,d^{3}x=0\\
+\because Q=\int_{all\ space} j^{0}\,d^{3}x\\
+\therefore \frac{d}{dt}Q=c\int_{all\ space} \partial_{0}j^{0}\,d^{3}x=0\\
+\therefore Q $为一个守恒荷\\
+(d)解：$  \\
+\because \frac{\partial \mathcal{L}}{\partial \phi}=\partial_{\mu}\frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi)},\frac{\partial \mathcal{L}}{\partial \phi^{*}}=\partial^{\mu}\frac{\partial \mathcal{L}}{\partial (\partial^{\mu}\phi^{*})}\\
+\therefore $ 代入$ \mathcal{L} $化简可得：$ \begin{cases} (\Box^{2}+m^{2})\phi=2[\partial_{\mu}(A^{\mu}\phi)+A^{\mu}(\partial_{\mu}\phi)]\\ (\Box^{2}+m^{2})\phi^{*}=-2[\partial_{\mu}(A^{\mu}\phi^{*})+A^{\mu}(\partial_{\mu}\phi^{*})]  \end{cases} \\
+\therefore \partial^{\mu}j_{\mu}=\partial^{\mu}\phi^{*}\partial_{\mu}\phi+(\Box^{2}\phi)\phi^{*}-\partial^{\mu}\phi\partial_{\mu}\phi^{*}-(\Box^{2}\phi^{*})\phi\\
+=(\partial^{\mu}\phi^{*}\partial_{\mu}\phi-m^{2}\phi\phi^{*})-(\partial^{\mu}\phi\partial_{\mu}\phi^{*}-m^{2}\phi\phi^{*})+2[\partial_{\mu}(A^{\mu}\phi)+A^{\mu}(\partial_{\mu}\phi)+\partial_{\mu}(A^{\mu}\phi^{*})+A^{\mu}(\partial_{\mu}\phi^{*})]\\
+=4\partial_{\mu}(A^{\mu}\phi\phi^{*})\\
+\therefore\partial^{\mu}j_{\mu}=4\partial_{\mu}(A^{\mu}\phi\phi^{*}) $
+   \end{document} 

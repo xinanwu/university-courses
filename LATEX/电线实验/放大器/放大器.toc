@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}实验目的}{2}{section.1}%
+\contentsline {section}{\numberline {2}实验器材}{2}{section.2}%
+\contentsline {section}{\numberline {3}实验原理}{2}{section.3}%
+\contentsline {section}{\numberline {4}实验内容（测量单级放大器的幅频特性）}{2}{section.4}%
+\contentsline {section}{\numberline {5}实验数据处理}{3}{section.5}%
+\contentsline {subsection}{\numberline {5.1}开关全合向“1”位置}{3}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}开关$K_{4}$合向“0”位置}{4}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}开关$K_{5}$合向“0”位置}{4}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}开关$K_{6}$合向“0”位置}{5}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}开关$K_{7}$合向“0”位置}{6}{subsection.5.5}%
+\contentsline {section}{\numberline {6}思考题}{6}{section.6}%
+\contentsline {section}{\numberline {A}原始数据整理}{7}{appendix.a.A}%
